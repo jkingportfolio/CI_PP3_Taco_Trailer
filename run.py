@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+import pyfiglet
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -11,3 +12,7 @@ CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('taco_trailer')
+
+TITLE = 'Welcome to the Taco Trailer'
+
+print(pyfiglet.figlet_format(TITLE))
