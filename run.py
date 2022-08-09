@@ -22,6 +22,48 @@ def welcome():
     print(pyfiglet.figlet_format(title))
 
 
+def delivery_type():
+    """
+    Determine delivery type
+    """
+
+
+def display_menu():
+    """
+    Display the menu
+    """
+
+
+def order_item():
+    """
+    Order function
+    """
+
+
+def preview_order():
+    """
+    Preview order so far function
+    """
+
+
+def print_order():
+    """
+    Function to print order
+    """
+
+
+def append_sales():
+    """
+    Function to add sold items and value to google sheets
+    """
+
+
+def thank_you():
+    """
+    Function to add sold items and value to google sheets
+    """
+
+
 def main():
     """
     Run all program functions
