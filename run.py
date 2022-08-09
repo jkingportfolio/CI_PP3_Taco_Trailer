@@ -16,3 +16,11 @@ SHEET = GSPREAD_CLIENT.open('taco_trailer')
 TITLE = 'Welcome to the Taco Trailer'
 
 print(pyfiglet.figlet_format(TITLE))
+
+def main():
+    """
+    Run all program functions
+    """
+    print('Testing main function')
+
+main()
