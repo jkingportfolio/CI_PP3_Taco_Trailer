@@ -13,14 +13,21 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('taco_trailer')
 
-TITLE = 'Welcome to the Taco Trailer'
 
-print(pyfiglet.figlet_format(TITLE))
+def welcome():
+    """
+    Display welcome message
+    """
+    title = 'Welcome to the Taco Trailer'
+    print(pyfiglet.figlet_format(title))
+
 
 def main():
     """
     Run all program functions
     """
+    welcome()
     print('Testing main function')
+
 
 main()
