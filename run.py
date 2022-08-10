@@ -30,7 +30,7 @@ def welcome():
             admin_access()
             break
         elif place_order == 'NO':
-            delivery_type()
+            thank_you()
             break
         else:
             print('Please enter a valid input')
@@ -85,6 +85,8 @@ def thank_you():
     """
     Function to add sold items and value to google sheets
     """
+    title = 'Thanks for visting!'
+    print(pyfiglet.figlet_format(title))
 
 
 def main():
