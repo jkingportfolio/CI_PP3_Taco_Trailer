@@ -50,16 +50,24 @@ def delivery_type():
     """
     Determine delivery type
     """
-    print('Is this order for delivery or collection?')
+    print('Is this order for Delivery or Collection?\n')
     while True:
         delivery_method = input('Please enter delivery or collection: \n')
         delivery_method = delivery_method.upper()
         if delivery_method == 'DELIVERY':
-            return delivery_method
+            print()
+            print(
+                f'You selected {delivery_method.capitalize()} for your order.')
+            break
         elif delivery_method == 'COLLECTION':
-            return delivery_method
+            print()
+            print(
+                f'You selected {delivery_method.capitalize()} for your order.')
+            break
         else:
+            print()
             print('Please enter a valid input.')
+    return delivery_method
 
 
 def display_menu():
