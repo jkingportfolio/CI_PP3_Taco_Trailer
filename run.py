@@ -27,7 +27,7 @@ def welcome():
         place_order = place_order.upper()
 
         if place_order == 'YES':
-            admin_access()
+            delivery_type()
             break
         elif place_order == 'NO':
             thank_you()
@@ -48,7 +48,16 @@ def delivery_type():
     """
     Determine delivery type
     """
-    print('This test also worked')
+    print('Is this order for delivery or collection?')
+    while True:
+        delivery_method = input('Please enter delivery or collection: ')
+        delivery_method = delivery_method.upper()
+        if delivery_method == 'DELIVERY':
+            return delivery_method
+        elif delivery_method == 'COLLECTION':
+            return delivery_method
+        else:
+            print('Please enter a valid input.')
 
 
 def display_menu():
