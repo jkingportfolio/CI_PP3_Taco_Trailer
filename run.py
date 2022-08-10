@@ -21,15 +21,17 @@ def welcome():
 
     title = 'Welcome to the Taco Trailer'
     print(pyfiglet.figlet_format(title))
-    print('Hello, would you like to place an order?')
+    print('Hello, would you like to place an order?\n')
     while True:
-        place_order = input("Enter yes or no: ")
+        place_order = input("Enter yes or no:\n")
         place_order = place_order.upper()
 
         if place_order == 'YES':
+            print()
             delivery_type()
             break
         elif place_order == 'NO':
+            print()
             thank_you()
             break
         else:
@@ -50,7 +52,7 @@ def delivery_type():
     """
     print('Is this order for delivery or collection?')
     while True:
-        delivery_method = input('Please enter delivery or collection: ')
+        delivery_method = input('Please enter delivery or collection: \n')
         delivery_method = delivery_method.upper()
         if delivery_method == 'DELIVERY':
             return delivery_method
