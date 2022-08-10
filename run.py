@@ -18,20 +18,37 @@ def welcome():
     """
     Display welcome message
     """
+
     title = 'Welcome to the Taco Trailer'
     print(pyfiglet.figlet_format(title))
+    print('Hello, would you like to place an order?')
+    while True:
+        place_order = input("Enter yes or no: ")
+        place_order = place_order.upper()
+
+        if place_order == 'YES':
+            admin_access()
+            break
+        elif place_order == 'NO':
+            delivery_type()
+            break
+        else:
+            print('Please enter a valid input')
+
 
 def admin_access():
     """
     Password to access admin area where prices
     can be updated and tables of sales generated
-    """  
+    """
+    print('Test worked')
 
 
 def delivery_type():
     """
     Determine delivery type
     """
+    print('This test also worked')
 
 
 def display_menu():
@@ -75,7 +92,6 @@ def main():
     Run all program functions
     """
     welcome()
-    print('Testing main function')
 
 
 main()
