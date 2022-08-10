@@ -21,6 +21,12 @@ def welcome():
     title = 'Welcome to the Taco Trailer'
     print(pyfiglet.figlet_format(title))
 
+def admin_access():
+    """
+    Password to access admin area where prices
+    can be updated and tables of sales generated
+    """  
+
 
 def delivery_type():
     """
