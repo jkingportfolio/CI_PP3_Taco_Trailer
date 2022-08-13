@@ -23,7 +23,8 @@ def welcome():
     print(pyfiglet.figlet_format(title))
     print('Hello, would you like to place an order?\n')
     while True:
-        place_order = input("Please enter Yes or No. Or for Admin Access enter 'Admin':\n")
+        place_order = input(
+            "Please enter Yes or No. Or for Admin Access enter 'Admin':\n")
         place_order = place_order.upper()
 
         if place_order == 'YES':
@@ -46,7 +47,15 @@ def admin_access():
     Password to access admin area where prices
     can be updated and tables of sales generated
     """
-    print('Admin access Test worked')
+    while True:
+        admin_password = input("Please enter Admin Password:\n")
+
+        if admin_password == 'TACOtrailer':
+            print('Access granted')
+            break
+        else:
+            print(
+                'Incorrect password. Remaining password attempts "x"\n')
 
 
 def delivery_type():
@@ -61,11 +70,13 @@ def delivery_type():
             print()
             print(
                 f'You selected {delivery_method.capitalize()} for your order.')
+            display_menu()
             break
         elif delivery_method == 'COLLECTION':
             print()
             print(
                 f'You selected {delivery_method.capitalize()} for your order.')
+            display_menu()
             break
         else:
             print()
