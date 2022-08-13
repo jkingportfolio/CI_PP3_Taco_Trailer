@@ -23,7 +23,7 @@ def welcome():
     print(pyfiglet.figlet_format(title))
     print('Hello, would you like to place an order?\n')
     while True:
-        place_order = input("Enter yes or no:\n")
+        place_order = input("Please enter Yes or No. Or for Admin Access enter 'Admin':\n")
         place_order = place_order.upper()
 
         if place_order == 'YES':
@@ -34,6 +34,9 @@ def welcome():
             print()
             thank_you()
             break
+        elif place_order == 'ADMIN':
+            admin_access()
+            break
         else:
             print('Please enter a valid input')
 
@@ -43,7 +46,7 @@ def admin_access():
     Password to access admin area where prices
     can be updated and tables of sales generated
     """
-    print('Test worked')
+    print('Admin access Test worked')
 
 
 def delivery_type():
@@ -74,6 +77,7 @@ def display_menu():
     """
     Display the menu
     """
+    print('Now this will show the menu')
 
 
 def order_item():
