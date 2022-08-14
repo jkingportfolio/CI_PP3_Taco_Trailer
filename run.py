@@ -140,12 +140,16 @@ def print_order(order):
     """
     print('passed to print order function succesfully')
     print(order)
+    append_sales(order)
 
 
-def append_sales():
+def append_sales(order):
     """
     Function to add sold items and value to google sheets
     """
+    worksheet_to_update = SHEET.worksheet('Sales')
+    worksheet_to_update.append_row(order)
+    print("worksheet updated successfully\n")
 
 
 def thank_you():
