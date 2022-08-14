@@ -2,6 +2,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 import pyfiglet
 import getpass
+import pandas as pd
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -89,9 +90,10 @@ def display_menu():
     """
     Display the menu
     """
-    print('Now this will show the menu')
+    print('Now this will show the menu\n')
     menu = SHEET.worksheet("Menu").get_all_values()
-    print(menu)
+    menu_df = pd.DataFrame(menu, columns=['Item', 'Name', 'Cost'])
+    print(f'{menu_df}\n')
     order_item()
 
 
@@ -100,7 +102,8 @@ def order_item():
     Order function
     """
     while True:
-        food_item = input('What would you like to order?')
+        order = []
+        food_item = input('What would you like to order? ')
         if food_item == "Q":
             break
         else:
