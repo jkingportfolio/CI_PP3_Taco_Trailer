@@ -107,23 +107,34 @@ def order_item():
         if food_item == "Q":
             break
         elif food_item == "0":
+            preview_order(order)
             break
         else:
             print(food_item)
             order.append(food_item)
-            print(order)
 
 
-def preview_order():
+def preview_order(order):
     """
     Preview order so far function
     """
+    print(f'\nYou ordered {order}')
+    while True:
+        order_more = input('Would you like to add to your order? ')
+        if order_more == 'Yes':
+            order_item()
+        elif order_more == 'No':
+            print_order()
+            break
+        else:
+            print('That is not a valid input')
 
 
 def print_order():
     """
     Function to print order
     """
+    print('passed to print order function succesfully')
 
 
 def append_sales():
