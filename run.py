@@ -92,12 +92,19 @@ def display_menu():
     print('Now this will show the menu')
     menu = SHEET.worksheet("Menu").get_all_values()
     print(menu)
+    order_item()
 
 
 def order_item():
     """
     Order function
     """
+    while True:
+        food_item = input('What would you like to order?')
+        if food_item == "Q":
+            break
+        else:
+            print(food_item)
 
 
 def preview_order():
