@@ -103,7 +103,7 @@ def order_item():
     """
     order = []
     food_item = input('What would you like to order? ')
-    
+
     while True:
         food_item = food_item.upper()
         if food_item == "Q":
@@ -128,17 +128,18 @@ def preview_order(order):
             order_item()
             break
         elif order_more == 'No':
-            print_order()
+            print_order(order)
             break
         else:
             print('That is not a valid input')
 
 
-def print_order():
+def print_order(order):
     """
     Function to print order
     """
     print('passed to print order function succesfully')
+    print(order)
 
 
 def append_sales():
