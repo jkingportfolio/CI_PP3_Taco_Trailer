@@ -102,8 +102,9 @@ def order_item():
     Order function
     """
     order = []
+    food_item = input('What would you like to order? ')
     while True:
-        food_item = input('What would you like to order? ')
+        # food_item = input('What would you like to order? ')
         if food_item == "Q":
             break
         elif food_item == "0":
@@ -112,6 +113,7 @@ def order_item():
         else:
             print(food_item)
             order.append(food_item)
+            food_item = input('add another item? ')
 
 
 def preview_order(order):
@@ -123,6 +125,7 @@ def preview_order(order):
         order_more = input('Would you like to add to your order? ')
         if order_more == 'Yes':
             order_item()
+            break
         elif order_more == 'No':
             print_order()
             break
