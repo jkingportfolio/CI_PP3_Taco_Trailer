@@ -34,7 +34,7 @@ def welcome():
 
         if place_order == 'YES':
             print()
-            delivery_type()
+            display_menu()
             break
         elif place_order == 'NO':
             print()
@@ -71,32 +71,6 @@ def admin_access():
                 welcome()
 
 
-def delivery_type():
-    """
-    Determine delivery type
-    """
-    print('Is this order for Delivery or Collection?\n')
-    while True:
-        delivery_method = input('Please enter delivery or collection: \n')
-        delivery_method = delivery_method.upper()
-        if delivery_method == 'DELIVERY':
-            print()
-            print(
-                f'You selected {delivery_method.capitalize()} for your order.')
-            display_menu()
-            break
-        elif delivery_method == 'COLLECTION':
-            print()
-            print(
-                f'You selected {delivery_method.capitalize()} for your order.')
-            display_menu()
-            break
-        else:
-            print()
-            print('Please enter a valid input.')
-    return delivery_method
-
-
 def display_menu():
     """
     Display the menu
@@ -120,12 +94,39 @@ def order_item():
         if food_item == "Q":
             break
         elif food_item == "NO":
-            preview_order(order)
+            delivery_type()
+            # preview_order(order)
             break
         else:
             print(food_item)
             order.append(food_item)
             food_item = input('What other item would you like? ')
+
+
+def delivery_type():
+    """
+    Determine delivery type
+    """
+    print('Is this order for Delivery or Collection?\n')
+    while True:
+        delivery_method = input('Please enter delivery or collection: \n')
+        delivery_method = delivery_method.upper()
+        if delivery_method == 'DELIVERY':
+            print()
+            print(
+                f'You selected {delivery_method.capitalize()} for your order.')
+            preview_order(order)
+            break
+        elif delivery_method == 'COLLECTION':
+            print()
+            print(
+                f'You selected {delivery_method.capitalize()} for your order.')
+            preview_order(order)
+            break
+        else:
+            print()
+            print('Please enter a valid input.')
+    return delivery_method
 
 
 def preview_order(order):
