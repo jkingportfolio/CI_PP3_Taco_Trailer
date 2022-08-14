@@ -18,6 +18,8 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('taco_trailer')
 
+order = []
+
 
 def welcome():
     """
@@ -86,7 +88,6 @@ def order_item():
     """
     Order function
     """
-    order = []
     food_item = input('What would you like to order? ')
 
     while True:
