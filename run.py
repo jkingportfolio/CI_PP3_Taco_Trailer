@@ -103,17 +103,18 @@ def order_item():
     """
     order = []
     food_item = input('What would you like to order? ')
+    
     while True:
-        # food_item = input('What would you like to order? ')
+        food_item = food_item.upper()
         if food_item == "Q":
             break
-        elif food_item == "0":
+        elif food_item == "NO":
             preview_order(order)
             break
         else:
             print(food_item)
             order.append(food_item)
-            food_item = input('add another item? ')
+            food_item = input('What other item would you like? ')
 
 
 def preview_order(order):
