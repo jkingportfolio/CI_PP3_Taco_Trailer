@@ -1,6 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import pyfiglet
+import getpass
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -48,7 +49,7 @@ def admin_access():
     can be updated and tables of sales generated
     """
     while True:
-        admin_password = input("Please enter Admin Password:\n")
+        admin_password = getpass.getpass("Please enter Admin Password:\n")
 
         if admin_password == 'TACOtrailer':
             print('Access granted')
