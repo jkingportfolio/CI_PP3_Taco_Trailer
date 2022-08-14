@@ -49,6 +49,7 @@ def admin_access():
     Password to access admin area where prices
     can be updated and tables of sales generated
     """
+    password_guesses = 3
     while True:
         admin_password = getpass.getpass("Please enter Admin Password:\n")
 
@@ -56,8 +57,15 @@ def admin_access():
             print('Access granted')
             break
         else:
-            print(
-                'Incorrect password. Remaining password attempts "x"\n')
+            password_guesses -= 1
+            if password_guesses > 0:
+                print(
+                    f'Incorrect password. Remaining password \
+                    attempts {password_guesses}\n')
+            elif password_guesses == 0:
+                print(
+                    'Im sorry you have guessed wrong more than 3 times\n')
+                welcome()
 
 
 def delivery_type():
