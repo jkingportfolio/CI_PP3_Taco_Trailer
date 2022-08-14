@@ -90,6 +90,8 @@ def display_menu():
     Display the menu
     """
     print('Now this will show the menu')
+    menu = SHEET.worksheet("Menu").get_all_values()
+    print(menu)
 
 
 def order_item():
