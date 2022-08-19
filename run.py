@@ -29,7 +29,6 @@ def welcome():
     """
     Display welcome message
     """
-
     title = 'Welcome to the Taco Trailer'
     print(pyfiglet.figlet_format(title))
     print('Hello, would you like to place an order?\n')
@@ -121,12 +120,27 @@ def order_item():
             else:
                 print('Im sorry i need a valid input')
         elif food_item == "NO":
+            complete_order()
             break
         else:
             print(food_item)
             order_list.append(food_item)
             print(order_list)
             food_item = input('What other item would you like? ')
+
+
+def complete_order():
+    print('Are ready to complete your order?\n')
+    while True:
+        order_complete = input('Yes, No, Cancel Order')
+        order_complete = order_complete.upper()
+        if order_complete == 'YES':
+            this_order = Order(name, delivery_type, address, order_list)
+            this_order.print_receipt()
+        elif order_complete == 'NO':
+            order_item()
+        else:
+            print('Please enter a valid input')
 
 
 def admin_access():

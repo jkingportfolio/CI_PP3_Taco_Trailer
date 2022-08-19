@@ -20,7 +20,7 @@ class Order:
         """
         print(f'\nYou ordered {order_list}')
 
-    def print_receipt(self):
+    def print_receipt(self, name, delivery_type, address, order_list):
         """
         Function to print order
         """
