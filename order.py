@@ -1,18 +1,3 @@
-import gspread
-from google.oauth2.service_account import Credentials
-import pandas as pd
-
-SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-]
-
-CREDS = Credentials.from_service_account_file('creds.json')
-SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('taco_trailer')
-
 """
 Class that will take an order
 """
@@ -29,18 +14,7 @@ class Order:
         self.items_ordered = items_ordered
         self.total_cost = total_cost
 
-    def display_menu(self):
-        """
-        Display the menu
-        """
-
-        print('Now this will show the menu\n')
-        menu = SHEET.worksheet("Menu").get_all_values()
-        menu_df = pd.DataFrame(menu, columns=['Item', 'Name', 'Cost'])
-        print(f'{menu_df}\n')
-        order_item()
-
-    def delivery_type():
+    def delivery_type(self, delivery):
         """
         Determine delivery type
         """
@@ -51,13 +25,15 @@ class Order:
             if delivery_method == 'DELIVERY':
                 print()
                 print(
-                    f'You selected {delivery_method.capitalize()} for your order.')
+                    f'You selected {delivery_method.capitalize()} \
+                    for your order.')
                 preview_order(order)
                 break
             elif delivery_method == 'COLLECTION':
                 print()
                 print(
-                    f'You selected {delivery_method.capitalize()} for your order.')
+                    f'You selected {delivery_method.capitalize()} \
+                        for your order.')
                 preview_order(order)
                 break
             else:
@@ -65,7 +41,7 @@ class Order:
                 print('Please enter a valid input.')
         return delivery_method
 
-    def order_item():
+    def order_item(self):
         """
         Order function
         """
@@ -84,7 +60,7 @@ class Order:
                 order.append(food_item)
                 food_item = input('What other item would you like? ')
 
-    def preview_order(order):
+    def preview_order(self, order):
         """
         Preview order so far function
         """
@@ -100,7 +76,7 @@ class Order:
             else:
                 print('That is not a valid input')
 
-    def print_order(order):
+    def print_order(self, order):
         """
         Function to print order
         """
@@ -108,7 +84,7 @@ class Order:
         print(order)
         append_sales(order)
 
-    def append_sales(order):
+    def append_sales(self, order):
         """
         Function to add sold items and value to google sheets
         """

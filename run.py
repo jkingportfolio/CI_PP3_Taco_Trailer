@@ -2,12 +2,22 @@
 Main python file
 """
 import getpass
-
+import gspread
+from google.oauth2.service_account import Credentials
 import pyfiglet
 import pandas as pd
+import order
 
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+]
 
-order = []
+CREDS = Credentials.from_service_account_file('creds.json')
+SCOPED_CREDS = CREDS.with_scopes(SCOPE)
+GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
+SHEET = GSPREAD_CLIENT.open('taco_trailer')
 
 
 def welcome():
@@ -36,6 +46,18 @@ def welcome():
             break
         else:
             print('Please enter a valid input')
+            
+
+def display_menu():
+    """
+    Display the menu
+    """
+
+    print('Now this will show the menu\n')
+    menu = SHEET.worksheet("Menu").get_all_values()
+    menu_df = pd.DataFrame(menu, columns=['Item', 'Name', 'Cost'])
+    print(f'{menu_df}\n')
+    # order_item()
 
 
 def admin_access():
