@@ -19,6 +19,8 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('taco_trailer')
 
+order_list = []
+
 
 def welcome():
     """
@@ -59,7 +61,8 @@ def customer_details():
             print(f'Hi {name}!')
             break
         else:
-            print('Please enter a valid name that does not contain numbers or special characters')
+            print(
+                'Please enter a valid name that does not contain numbers or special characters')
     while True:
         delivery_type = input('Please enter your delivery type: ')
         delivery_type = delivery_type.upper()
@@ -85,7 +88,6 @@ def display_menu():
     """
     Display the menu
     """
-
     print('Please take a look at our menu!\n')
     menu = SHEET.worksheet("Menu").get_all_values()
     menu_df = pd.DataFrame(menu, columns=['Item', 'Name', 'Cost'])
@@ -97,18 +99,26 @@ def order_item():
     """
     Order function
     """
-    order_list = []
     food_item = input('What would you like to order? ')
 
     while True:
         food_item = food_item.upper()
         if food_item == "Q":
-            break
+            quit = input('Are you sure you want to cancel the order?')
+            quit = quit.upper()
+            if quit == 'YES':
+                welcome()
+            elif quit == 'NO':
+                order_item()
+                break
+            else:
+                print('Im sorry i need a valid input')
         elif food_item == "NO":
             break
         else:
             print(food_item)
             order_list.append(food_item)
+            print(order_list)
             food_item = input('What other item would you like? ')
 
 
