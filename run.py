@@ -90,6 +90,25 @@ def display_menu():
     order_item()
 
 
+def order_item():
+    """
+    Order function
+    """
+    order_list = []
+    food_item = input('What would you like to order? ')
+
+    while True:
+        food_item = food_item.upper()
+        if food_item == "Q":
+            break
+        elif food_item == "NO":
+            break
+        else:
+            print(food_item)
+            order_list.append(food_item)
+            food_item = input('What other item would you like? ')
+
+
 def admin_access():
     """
     Password to access admin area where prices
