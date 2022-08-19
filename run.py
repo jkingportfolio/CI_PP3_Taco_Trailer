@@ -6,7 +6,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 import pyfiglet
 import pandas as pd
-import order
+from order import Order
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
