@@ -130,10 +130,6 @@ def order_item():
 
 
 def complete_order():
-    global name
-    global delivery_type
-    global address
-    global order_list
     print('Are ready to complete your order?\n')
     while True:
         order_complete = input('Yes, No, Cancel Order')
