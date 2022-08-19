@@ -95,9 +95,6 @@ def display_menu():
     """
     Display the menu
     """
-    print(name)
-    print(delivery_type)
-    print(address)
     print('Please take a look at our menu!\n')
     menu = SHEET.worksheet("Menu").get_all_values()
     menu_df = pd.DataFrame(menu, columns=['Item', 'Name', 'Cost'])

@@ -8,31 +8,21 @@ class Order:
     self
     """
 
-    def __init__(self, name, delivery, items_ordered, total_cost):
+    def __init__(self, name, delivery_type, address, order_list):
         self.name = name
-        self.delivery = delivery
-        self.items_ordered = items_ordered
-        self.total_cost = total_cost
+        self.delivery_type = delivery_type
+        self.address = address
+        self.order_list = order_list
 
 
 
-    def preview_order(self, order):
+    def preview_order(self):
         """
         Preview order so far function
         """
-        print(f'\nYou ordered {order}')
-        while True:
-            order_more = input('Would you like to add to your order? ')
-            if order_more == 'Yes':
-                order_item()
-                break
-            elif order_more == 'No':
-                print_order(order)
-                break
-            else:
-                print('That is not a valid input')
+        print(f'\nYou ordered {order_list}')
 
-    def print_order(self, order):
+    def print_receipt(self):
         """
         Function to print order
         """
@@ -40,7 +30,7 @@ class Order:
         print(order)
         append_sales(order)
 
-    def append_sales(self, order):
+    def append_sales(self):
         """
         Function to add sold items and value to google sheets
         """
