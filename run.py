@@ -49,10 +49,14 @@ def welcome():
 
 
 def customer_details():
-    print('We would like to take your details')
-    name = input('Please enter your name: ')
-    # if validate_name(name):
-    #     print(f'Hi {name}!')    
+    print('We would like to take your details.')
+    while True:
+        name = input('Please enter your name: ')
+        if name.isalpha():
+            print(f'Hi {name}!')
+            break
+        else:
+            print('Please enter a valid name that does not contain numbers or special characters')
     while True:
         delivery_type = input('Please enter your delivery type: ')
         delivery_type = delivery_type.upper()
