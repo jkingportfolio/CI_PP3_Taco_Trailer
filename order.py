@@ -14,24 +14,7 @@ class Order:
         self.items_ordered = items_ordered
         self.total_cost = total_cost
 
-    def order_item(self):
-        """
-        Order function
-        """
-        food_item = input('What would you like to order? ')
 
-        while True:
-            food_item = food_item.upper()
-            if food_item == "Q":
-                break
-            elif food_item == "NO":
-                delivery_type()
-                # preview_order(order)
-                break
-            else:
-                print(food_item)
-                order.append(food_item)
-                food_item = input('What other item would you like? ')
 
     def preview_order(self, order):
         """

@@ -49,6 +49,9 @@ def welcome():
 
 
 def customer_details():
+    """
+    Collect user details via input
+    """
     print('We would like to take your details.')
     while True:
         name = input('Please enter your name: ')
