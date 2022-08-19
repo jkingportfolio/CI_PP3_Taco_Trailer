@@ -14,33 +14,6 @@ class Order:
         self.items_ordered = items_ordered
         self.total_cost = total_cost
 
-    def delivery_type(self, delivery):
-        """
-        Determine delivery type
-        """
-        print('Is this order for Delivery or Collection?\n')
-        while True:
-            delivery_method = input('Please enter delivery or collection: \n')
-            delivery_method = delivery_method.upper()
-            if delivery_method == 'DELIVERY':
-                print()
-                print(
-                    f'You selected {delivery_method.capitalize()} \
-                    for your order.')
-                preview_order(order)
-                break
-            elif delivery_method == 'COLLECTION':
-                print()
-                print(
-                    f'You selected {delivery_method.capitalize()} \
-                        for your order.')
-                preview_order(order)
-                break
-            else:
-                print()
-                print('Please enter a valid input.')
-        return delivery_method
-
     def order_item(self):
         """
         Order function

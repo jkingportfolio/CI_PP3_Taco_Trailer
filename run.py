@@ -35,7 +35,7 @@ def welcome():
 
         if place_order == 'YES':
             print()
-            display_menu()
+            customer_details()
             break
         elif place_order == 'NO':
             print()
@@ -46,7 +46,31 @@ def welcome():
             break
         else:
             print('Please enter a valid input')
-            
+
+
+def customer_details():
+    print('We would like to take your details')
+    name = input('Please enter your name: ')
+    # if validate_name(name):
+    #     print(f'Hi {name}!')    
+    while True:
+        delivery_type = input('Please enter your delivery type: ')
+        delivery_type = delivery_type.upper()
+        if delivery_type == 'DELIVERY':
+            print()
+            print(
+                f'You selected {delivery_type.capitalize()} for your order.')
+            break
+        elif delivery_type == 'COLLECTION':
+            print()
+            print(
+                f'You selected {delivery_type.capitalize()} for your order.')
+            break
+        else:
+            print()
+            print('Please enter a valid input.')
+    address = input('Please enter your address: ')
+
 
 def display_menu():
     """
@@ -57,7 +81,7 @@ def display_menu():
     menu = SHEET.worksheet("Menu").get_all_values()
     menu_df = pd.DataFrame(menu, columns=['Item', 'Name', 'Cost'])
     print(f'{menu_df}\n')
-    # order_item()
+    order_item()
 
 
 def admin_access():
