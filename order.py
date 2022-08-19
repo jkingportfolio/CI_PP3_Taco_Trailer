@@ -14,8 +14,6 @@ class Order:
         self.address = address
         self.order_list = order_list
 
-
-
     def preview_order(self):
         """
         Preview order so far function
@@ -27,8 +25,11 @@ class Order:
         Function to print order
         """
         print('passed to print order function succesfully')
-        print(order)
-        append_sales(order)
+        print('***** Order Receipt *****')
+        print(name)
+        print(delivery_type)
+        print(address)
+        print(order_list)
 
     def append_sales(self):
         """
