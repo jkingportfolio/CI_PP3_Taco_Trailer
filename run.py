@@ -74,6 +74,8 @@ def customer_details():
             print()
             print('Please enter a valid input.')
     address = input('Please enter your address: ')
+    print('Thank you for your details!\n')
+    display_menu()
 
 
 def display_menu():
@@ -81,7 +83,7 @@ def display_menu():
     Display the menu
     """
 
-    print('Now this will show the menu\n')
+    print('Please take a look at our menu!\n')
     menu = SHEET.worksheet("Menu").get_all_values()
     menu_df = pd.DataFrame(menu, columns=['Item', 'Name', 'Cost'])
     print(f'{menu_df}\n')
