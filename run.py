@@ -130,6 +130,10 @@ def order_item():
 
 
 def complete_order():
+    global name
+    global delivery_type
+    global address
+    global order_list
     print('Are ready to complete your order?\n')
     while True:
         order_complete = input('Yes, No, Cancel Order')
@@ -137,8 +141,10 @@ def complete_order():
         if order_complete == 'YES':
             this_order = Order(name, delivery_type, address, order_list)
             this_order.print_receipt()
+            break
         elif order_complete == 'NO':
             order_item()
+            break
         else:
             print('Please enter a valid input')
 

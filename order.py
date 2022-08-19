@@ -18,18 +18,18 @@ class Order:
         """
         Preview order so far function
         """
-        print(f'\nYou ordered {order_list}')
+        print(f'\nYou ordered {self.order_list}')
 
-    def print_receipt(self, name, delivery_type, address, order_list):
+    def print_receipt(self):
         """
         Function to print order
         """
         print('passed to print order function succesfully')
         print('***** Order Receipt *****')
-        print(name)
-        print(delivery_type)
-        print(address)
-        print(order_list)
+        print(self.name)
+        print(self.delivery_type)
+        print(self.address)
+        print(self.order_list)
 
     def append_sales(self):
         """
