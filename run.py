@@ -20,6 +20,9 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('taco_trailer')
 
 order_list = []
+name = None
+delivery_type = None
+address = None
 
 
 def welcome():
@@ -54,6 +57,10 @@ def customer_details():
     """
     Collect user details via input
     """
+    global name
+    global delivery_type
+    global address
+
     print('We would like to take your details.')
     while True:
         name = input('Please enter your name: ')
@@ -88,6 +95,9 @@ def display_menu():
     """
     Display the menu
     """
+    print(name)
+    print(delivery_type)
+    print(address)
     print('Please take a look at our menu!\n')
     menu = SHEET.worksheet("Menu").get_all_values()
     menu_df = pd.DataFrame(menu, columns=['Item', 'Name', 'Cost'])
