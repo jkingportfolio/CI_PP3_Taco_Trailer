@@ -30,7 +30,7 @@ class Order:
         print(f'Delivery Type: {self.delivery_type}')
         print(f'Address: {self.address}\n')
         print('***** Order Summary *****\n')
-        print(self.order_list)
+        print('\n'.join(map(str, self.order_list)))
 
     def append_sales(self):
         """
