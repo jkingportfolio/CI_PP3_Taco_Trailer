@@ -125,9 +125,10 @@ def order_item():
             break
         else:
             food_item = int(food_item) - 1
-            print(menu[food_item])
             order_list.append(menu[food_item])
-            print(order_list)
+            this_item = (menu[food_item])
+            # print(order_list)
+            print(f'You ordered the {this_item[1]}\n')
             food_item = input('What other item would you like? ')
 
 
