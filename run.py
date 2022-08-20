@@ -107,15 +107,17 @@ def order_item():
     """
     Order function
     """
-    food_item = input('What would you like to order? ')
+    food_item = input('Please enter a valid input? ')
 
     while True:
         food_item = food_item.upper()
         if food_item == "Q":
-            quit = input('Are you sure you want to cancel the order?')
+            quit = input('Are you sure you want to cancel the order? (Yes/No)\n')
             quit = quit.upper()
             if quit == 'YES':
+                order_list.clear()
                 welcome()
+                break
             elif quit == 'NO':
                 order_item()
                 break
