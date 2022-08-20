@@ -19,6 +19,7 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('taco_trailer')
 
+menu = SHEET.worksheet("Menu").get_all_values()
 order_list = []
 name = None
 delivery_type = None
@@ -95,7 +96,7 @@ def display_menu():
     Display the menu
     """
     print('Please take a look at our menu!\n')
-    menu = SHEET.worksheet("Menu").get_all_values()
+    # menu = SHEET.worksheet("Menu").get_all_values()
     menu_df = pd.DataFrame(menu, columns=['Item', 'Name', 'Cost'])
     print(menu_df.to_string(index=False))
     order_item()
@@ -123,7 +124,8 @@ def order_item():
             complete_order()
             break
         else:
-            print(food_item)
+            food_item = int(food_item)
+            print(menu[food_item])
             order_list.append(food_item)
             print(order_list)
             food_item = input('What other item would you like? ')
