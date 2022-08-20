@@ -126,7 +126,7 @@ def order_item():
         else:
             food_item = int(food_item) - 1
             print(menu[food_item])
-            order_list.append(food_item)
+            order_list.append(menu[food_item])
             print(order_list)
             food_item = input('What other item would you like? ')
 
@@ -134,7 +134,7 @@ def order_item():
 def complete_order():
     print('Are ready to complete your order?\n')
     while True:
-        order_complete = input('Yes, No, Cancel Order')
+        order_complete = input('Yes, No, Cancel Order ')
         order_complete = order_complete.upper()
         if order_complete == 'YES':
             this_order = Order(name, delivery_type, address, order_list)
