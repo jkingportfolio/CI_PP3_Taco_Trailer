@@ -127,12 +127,17 @@ def order_item():
             remove_item()
             break
         else:
-            food_item = int(food_item) - 1
-            order_list.append(menu[food_item])
-            this_item = (menu[food_item])
-            print(order_list)
-            print(f'You ordered the {this_item[1]}\n')
-            food_item = input('What other item would you like? ')
+            try:
+                food_item = int(food_item) - 1
+                order_list.append(menu[food_item])
+                this_item = (menu[food_item])
+                print(order_list)
+                print(f'You ordered the {this_item[1]}\n')
+                food_item = input('What other item would you like? ')
+            except IndexError:
+                print(f'Im sorry Item {food_item + 1} does not exist. Please enter a valid item number')
+                order_item()
+                break
 
 
 def remove_item():
