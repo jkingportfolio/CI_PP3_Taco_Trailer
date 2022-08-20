@@ -147,6 +147,9 @@ def remove_item():
 
 
 def complete_order():
+    """
+    Function to complete order and arguments to Order class and its functions
+    """
     print('Are ready to complete your order?\n')
     while True:
         order_complete = input('Yes, No, Cancel Order ')
