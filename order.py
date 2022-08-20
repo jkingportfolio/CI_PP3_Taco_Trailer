@@ -1,3 +1,5 @@
+from datetime import datetime, timedelta
+
 """
 Class that will take an order
 """
@@ -25,6 +27,7 @@ class Order:
         Function to print order
         """
         print()
+        print(f'Order time: {datetime.now()}')
         print('***** Order Receipt *****\n')
         print(f'Name: {self.name}')
         print(f'Delivery Type: {self.delivery_type.capitalize()}')
@@ -32,7 +35,8 @@ class Order:
         print('***** Order Summary *****\n')
         print('\n'.join(map(str, self.order_list)))
         print()
-        self.total_order_cost()
+        self.total_order_cost()      
+        print(f'Your order will be ready at {datetime.now() + timedelta(minutes=10)}\n')
 
     def append_sales(self):
         """
