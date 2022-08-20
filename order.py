@@ -1,4 +1,6 @@
 from datetime import datetime, timedelta
+import os
+from time import sleep
 
 """
 Class that will take an order
@@ -27,6 +29,7 @@ class Order:
         Function to print order
         """
         print()
+        self.clear_screen()
         print(f'Order time: {datetime.now()}')
         print('***** Order Receipt *****\n')
         print(f'Name: {self.name}')
@@ -35,8 +38,9 @@ class Order:
         print('***** Order Summary *****\n')
         print('\n'.join(map(str, self.order_list)))
         print()
-        self.total_order_cost()      
-        print(f'Your order will be ready at {datetime.now() + timedelta(minutes=10)}\n')
+        self.total_order_cost()
+        print(
+            f'Your order will be ready at {datetime.now() + timedelta(minutes=10)}\n')
 
     def append_sales(self):
         """
@@ -61,6 +65,17 @@ class Order:
             order_cost = order_cost + delivery_charge
             print(f'There is a delivery charge of £{float(delivery_charge)}')
             print(f'Total cost calculated with delivery £{float(order_cost)}')
-        else:            
+        else:
             print(f'The total cost of your order is £{order_cost}')
             print('There is no delivery charge')
+
+    def clear_screen(self):
+        """
+        Function to clear screen
+        """
+        print("os name is :", os.name)
+        sleep(2)
+        if (os.name == 'posix'):
+            os.system('clear')
+        else:
+            os.system('cls')
