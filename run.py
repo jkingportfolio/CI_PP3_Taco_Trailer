@@ -99,6 +99,7 @@ def display_menu():
     # menu = SHEET.worksheet("Menu").get_all_values()
     menu_df = pd.DataFrame(menu, columns=['Item', 'Name', 'Cost'])
     print(menu_df.to_string(index=False))
+    print()
     order_item()
 
 
@@ -140,7 +141,7 @@ def order_item():
                 order_item()
                 break
         else:
-            print(f'Im sorry but {food_item} is not a menu option. Please enter a valid input')
+            print(f'Im sorry but {food_item.capitalize()} is not a menu option. Please enter a valid input')
             order_item()
             break
 
