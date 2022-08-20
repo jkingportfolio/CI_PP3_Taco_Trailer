@@ -27,7 +27,7 @@ class Order:
         print()
         print('***** Order Receipt *****\n')
         print(f'Name: {self.name}')
-        print(f'Delivery Type: {self.delivery_type}')
+        print(f'Delivery Type: {self.delivery_type.capitalize()}')
         print(f'Address: {self.address}\n')
         print('***** Order Summary *****\n')
         print('\n'.join(map(str, self.order_list)))
@@ -47,7 +47,15 @@ class Order:
         Calculate total order cost as per order list
         """
         order_cost = 0
+        delivery_charge = 10
+
         for item in self.order_list:
             order_cost = order_cost + float(item[-1])
 
-        print(f'The total cost of your order is £{order_cost}')
+        if self.delivery_type == "DELIVERY":
+            order_cost = order_cost + delivery_charge
+            print(f'There is a delivery charge of £{float(delivery_charge)}')
+            print(f'Total cost calculated with delivery £{float(order_cost)}')
+        else:
+            print('There is no delivery charge')
+            print(f'The total cost of your order is £{order_cost}')
