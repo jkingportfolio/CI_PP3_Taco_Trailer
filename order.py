@@ -31,6 +31,8 @@ class Order:
         print(f'Address: {self.address}\n')
         print('***** Order Summary *****\n')
         print('\n'.join(map(str, self.order_list)))
+        print()
+        self.total_order_cost()
 
     def append_sales(self):
         """
@@ -39,3 +41,13 @@ class Order:
         worksheet_to_update = SHEET.worksheet('Sales')
         worksheet_to_update.append_row(order)
         print("worksheet updated successfully\n")
+
+    def total_order_cost(self):
+        """
+        Calculate total order cost as per order list
+        """
+        order_cost = 0
+        for item in self.order_list:
+            order_cost = order_cost + float(item[-1])
+
+        print(f'The total cost of your order is £{order_cost}')
