@@ -126,7 +126,7 @@ def order_item():
         elif food_item == '*':
             remove_item()
             break
-        else:
+        elif food_item.isdigit():
             try:
                 food_item = int(food_item) - 1
                 order_list.append(menu[food_item])
@@ -135,9 +135,14 @@ def order_item():
                 print(f'You ordered the {this_item[1]}\n')
                 food_item = input('What other item would you like? ')
             except IndexError:
-                print(f'Im sorry Item {food_item + 1} does not exist. Please enter a valid item number')
+                print(
+                    f'Im sorry Item {food_item + 1} does not exist. Please enter a valid item number')
                 order_item()
                 break
+        else:
+            print(f'Im sorry but {food_item} is not a menu option. Please enter a valid input')
+            order_item()
+            break
 
 
 def remove_item():
