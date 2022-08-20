@@ -194,8 +194,7 @@ def admin_access():
             password_guesses -= 1
             if password_guesses > 0:
                 print(
-                    f'Incorrect password. Remaining password \
-                    attempts {password_guesses}\n')
+                    f'Incorrect password. Remaining password attempts {password_guesses}\n')
             elif password_guesses == 0:
                 print(
                     'Im sorry you have guessed wrong more than 3 times\n')
