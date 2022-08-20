@@ -97,7 +97,7 @@ def display_menu():
     print('Please take a look at our menu!\n')
     menu = SHEET.worksheet("Menu").get_all_values()
     menu_df = pd.DataFrame(menu, columns=['Item', 'Name', 'Cost'])
-    print(f'{menu_df}\n')
+    print(menu_df.to_string(index=False))
     order_item()
 
 
