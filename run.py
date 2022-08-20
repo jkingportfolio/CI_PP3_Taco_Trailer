@@ -124,7 +124,7 @@ def order_item():
             complete_order()
             break
         else:
-            food_item = int(food_item)
+            food_item = int(food_item) - 1
             print(menu[food_item])
             order_list.append(food_item)
             print(order_list)
