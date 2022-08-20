@@ -123,13 +123,27 @@ def order_item():
         elif food_item == "NO":
             complete_order()
             break
+        elif food_item == '*':
+            remove_item()
+            break
         else:
             food_item = int(food_item) - 1
             order_list.append(menu[food_item])
             this_item = (menu[food_item])
-            # print(order_list)
+            print(order_list)
             print(f'You ordered the {this_item[1]}\n')
             food_item = input('What other item would you like? ')
+
+
+def remove_item():
+    """
+    Pop last item added to menu
+    """
+    removed_item = order_list[-1]
+    print(f'you have removed {removed_item} from your order')
+    order_list.pop()
+    print(order_list)
+    order_item()
 
 
 def complete_order():
