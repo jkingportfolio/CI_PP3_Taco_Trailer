@@ -24,11 +24,12 @@ class Order:
         """
         Function to print order
         """
-        print('passed to print order function succesfully')
-        print('***** Order Receipt *****')
-        print(self.name)
-        print(self.delivery_type)
-        print(self.address)
+        print()
+        print('***** Order Receipt *****\n')
+        print(f'Name: {self.name}')
+        print(f'Delivery Type: {self.delivery_type}')
+        print(f'Address: {self.address}\n')
+        print('***** Order Summary *****\n')
         print(self.order_list)
 
     def append_sales(self):
