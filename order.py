@@ -53,7 +53,7 @@ class Order:
         delivery_charge = 10
 
         for item in self.order_list:
-            order_cost = order_cost + float(item[-1])
+            order_cost = order_cost + float(item[-1].replace('£',''))
 
         if self.delivery_type == "DELIVERY":
             print(f'The subtotal of your order is £{float(order_cost):.2f}')
