@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
 import os
 from time import sleep
+from tabulate import tabulate
 
 
 class Order:
@@ -32,10 +33,15 @@ class Order:
         print(f'Delivery Type: {self.delivery_type.capitalize()}')
         print(f'Address: {self.address}\n')
         print('***** Order Summary *****\n')
-        print('\n'.join(map(str, self.order_list)))
+        # print('\n'.join(map(str, self.order_list)))
+        self.format_order_list()
         print()
         self.total_order_cost()
         self.delivery_time()
+
+    def format_order_list(self):
+        print(tabulate(self.order_list, headers=[
+            'Item', 'Name', 'Cost (£)'], tablefmt="simple", numalign="center"))
 
     def append_sales(self):
         """
@@ -53,12 +59,13 @@ class Order:
         delivery_charge = 10
 
         for item in self.order_list:
-            order_cost = order_cost + float(item[-1].replace('£',''))
+            order_cost = order_cost + float(item[-1].replace('£', ''))
 
         if self.delivery_type == "DELIVERY":
             print(f'The subtotal of your order is £{float(order_cost):.2f}')
             order_cost = order_cost + delivery_charge
-            print(f'There is a delivery charge of £{float(delivery_charge):.2f}')
+            print(
+                f'There is a delivery charge of £{float(delivery_charge):.2f}')
             print(
                 f'Total cost calculated with delivery £{float(order_cost):.2f}\n')
         else:
