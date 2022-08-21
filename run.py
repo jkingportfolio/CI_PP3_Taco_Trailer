@@ -7,6 +7,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 import pyfiglet
 from tabulate import tabulate
+from time import sleep
 from order import Order
 
 SCOPE = [
@@ -87,7 +88,9 @@ def customer_details():
             print('Please enter a valid input.\n')
     address = input('Please enter your address: ')
     clear_screen()
-    print('Thank you for your details!\n')   
+    print('Thank you for your details!\n')
+    sleep(2)  
+    clear_screen()
     display_menu()
 
 
@@ -117,6 +120,10 @@ def order_item():
             quit = quit.upper()
             if quit == 'YES':
                 order_list.clear()
+                clear_screen()
+                thank_you()
+                sleep(2)
+                clear_screen()
                 welcome()
                 break
             elif quit == 'NO':
