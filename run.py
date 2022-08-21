@@ -5,8 +5,8 @@ import getpass
 import gspread
 from google.oauth2.service_account import Credentials
 import pyfiglet
-import pandas as pd
 from order import Order
+from tabulate import tabulate
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -69,7 +69,8 @@ def customer_details():
             break
         else:
             print(
-                'Please enter a valid name that does not contain numbers or special characters')
+                'Please enter a valid name that does not contain numbers or \
+                 special characters')
     while True:
         delivery_type = input('Please enter your delivery type: ')
         delivery_type = delivery_type.upper()
@@ -96,9 +97,8 @@ def display_menu():
     Display the menu
     """
     print('Please take a look at our menu!\n')
-    # menu = SHEET.worksheet("Menu").get_all_values()
-    menu_df = pd.DataFrame(menu, columns=['Item', 'Name', 'Cost'])
-    print(menu_df.to_string(index=False))
+    menu = SHEET.worksheet("Menu").get_all_values()
+    print(tabulate(menu, headers=['Item', 'Name', 'Cost (£)'], tablefmt="simple", numalign="center"))
     print()
     order_item()
 

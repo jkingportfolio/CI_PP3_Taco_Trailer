@@ -2,14 +2,10 @@ from datetime import datetime, timedelta
 import os
 from time import sleep
 
-"""
-Class that will take an order
-"""
-
 
 class Order:
     """
-    self
+    Class that will take an order
     """
 
     def __init__(self, name, delivery_type, address, order_list):
@@ -63,7 +59,8 @@ class Order:
             print(f'The subtotal of your order is £{float(order_cost)}')
             order_cost = order_cost + delivery_charge
             print(f'There is a delivery charge of £{float(delivery_charge)}')
-            print(f'Total cost calculated with delivery £{float(order_cost)}\n')
+            print(
+                f'Total cost calculated with delivery £{float(order_cost)}\n')
         else:
             print(f'The total cost of your order is £{order_cost}')
             print('There is no delivery charge\n')
@@ -72,7 +69,7 @@ class Order:
         """
         Function to clear screen
         """
-        print('"os name is :", os.name')
+        print('"Processing order...')
         sleep(2)
         if (os.name == 'posix'):
             os.system('clear')
