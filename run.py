@@ -224,7 +224,7 @@ def thank_you():
     """
     Function to add sold items and value to google sheets
     """
-    title = 'Thanks for visting!'
+    title = 'Thanks for visiting!'
     print(pyfiglet.figlet_format(title))
 
 
