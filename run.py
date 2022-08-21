@@ -37,7 +37,8 @@ def welcome():
     print('Hello, would you like to place an order?\n')
     while True:
         place_order = input(
-            "Please enter a valid input (Yes/No) or for Admin Access enter (Admin).\n")
+            'Please enter a valid input (Yes/No) or for'
+            ' Admin Access enter(Admin).\n')
         place_order = place_order.upper()
 
         if place_order == 'YES':
@@ -69,9 +70,11 @@ def customer_details():
             break
         else:
             print(
-                '\nPlease enter a valid name that does not contain numbers or special characters\n')
+                '\nPlease enter a valid name that does not'
+                ' contain numbers or special characters\n')
     while True:
-        delivery_type = input('Please enter your delivery type (Delivery/Collection): ')
+        delivery_type = input('Please enter your delivery'
+                              ' type (Delivery/Collection): ')
         delivery_type = delivery_type.upper()
         if delivery_type == 'DELIVERY':
             print()
@@ -88,10 +91,11 @@ def customer_details():
         else:
             print()
             print('Please enter a valid input.\n')
-    
+
     clear_screen()
     print('Thank you for your details!\n')
-    sleep(2)  
+    print('Loading our menu...\n')
+    sleep(2)
     clear_screen()
     display_menu()
 
@@ -100,7 +104,6 @@ def display_menu():
     """
     Display the menu
     """
-    print('Please take a look at our menu!\n')
     menu = SHEET.worksheet("Menu").get_all_values()
     print(tabulate(menu, headers=[
           'Item', 'Name', 'Cost (£)'], tablefmt="simple", numalign="center"))
@@ -144,16 +147,20 @@ def order_item():
                 food_item = int(food_item) - 1
                 order_list.append(menu[food_item])
                 this_item = (menu[food_item])
-                print(f'You ordered Item {this_item[0]}, {this_item[1]} priced at {this_item[2]}\n')
+                print(
+                    f'You ordered Item {this_item[0]}, {this_item[1]}'
+                    ' priced at {this_item[2]}\n')
                 food_item = input('What other item would you like? ')
             except IndexError:
                 print(
-                    f'Im sorry Item {food_item + 1} does not exist. Please enter a valid item number')
+                    f'Im sorry Item {food_item + 1} does not exist.'
+                    ' Please enter a valid item number')
                 order_item()
                 break
         else:
             print(
-                f'Im sorry but {food_item.capitalize()} is not a menu option. Please enter a valid input')
+                f'Im sorry but {food_item.capitalize()} is not a menu'
+                ' option. Please enter a valid input')
             order_item()
             break
 
@@ -204,7 +211,8 @@ def admin_access():
             password_guesses -= 1
             if password_guesses > 0:
                 print(
-                    f'Incorrect password. Remaining password attempts {password_guesses}\n')
+                    f'Incorrect password. Remaining password'
+                    f' attempts {password_guesses}\n')
             elif password_guesses == 0:
                 print(
                     'Im sorry you have guessed wrong more than 3 times\n')
