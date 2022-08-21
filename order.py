@@ -56,13 +56,13 @@ class Order:
             order_cost = order_cost + float(item[-1])
 
         if self.delivery_type == "DELIVERY":
-            print(f'The subtotal of your order is £{float(order_cost)}')
+            print(f'The subtotal of your order is £{float(order_cost):.2f}')
             order_cost = order_cost + delivery_charge
-            print(f'There is a delivery charge of £{float(delivery_charge)}')
+            print(f'There is a delivery charge of £{float(delivery_charge):.2f}')
             print(
-                f'Total cost calculated with delivery £{float(order_cost)}\n')
+                f'Total cost calculated with delivery £{float(order_cost):.2f}\n')
         else:
-            print(f'The total cost of your order is £{order_cost}')
+            print(f'The total cost of your order is £{float(order_cost):.2f}')
             print('There is no delivery charge\n')
 
     def clear_screen(self):
