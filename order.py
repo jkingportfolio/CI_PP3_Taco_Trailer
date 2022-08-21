@@ -30,8 +30,8 @@ class Order:
         """
         print()
         self.clear_screen()
-        print(f'Order time: {datetime.now()}')
         print('***** Order Receipt *****\n')
+        print(f'Order time: {datetime.now()}\n')
         print(f'Name: {self.name}')
         print(f'Delivery Type: {self.delivery_type.capitalize()}')
         print(f'Address: {self.address}\n')
@@ -40,7 +40,7 @@ class Order:
         print()
         self.total_order_cost()
         print(
-            f'Your order will be ready at {datetime.now() + timedelta(minutes=10)}\n')
+            f'\nYour order will be ready at {datetime.now() + timedelta(minutes=15)}\n')
 
     def append_sales(self):
         """
@@ -73,7 +73,7 @@ class Order:
         """
         Function to clear screen
         """
-        print("os name is :", os.name)
+        print('"os name is :", os.name')
         sleep(2)
         if (os.name == 'posix'):
             os.system('clear')
