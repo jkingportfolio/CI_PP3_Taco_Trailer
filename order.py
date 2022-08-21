@@ -31,7 +31,7 @@ class Order:
         print()
         self.clear_screen()
         print('***** Order Receipt *****\n')
-        print(f'Order time: {datetime.now()}\n')
+        print(f'Order time: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n')
         print(f'Name: {self.name}')
         print(f'Delivery Type: {self.delivery_type.capitalize()}')
         print(f'Address: {self.address}\n')
@@ -79,3 +79,9 @@ class Order:
             os.system('clear')
         else:
             os.system('cls')
+
+    def order_times(self):
+        """
+        Calculate current time and delivery time
+        """
+        
