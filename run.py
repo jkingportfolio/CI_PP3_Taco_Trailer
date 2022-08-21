@@ -1,6 +1,7 @@
 """
 Main python file
 """
+import os
 import getpass
 import gspread
 from google.oauth2.service_account import Credentials
@@ -35,22 +36,20 @@ def welcome():
     print('Hello, would you like to place an order?\n')
     while True:
         place_order = input(
-            "Please enter Yes or No. Or for Admin Access enter 'Admin':\n")
+            "Please enter a valid input (Yes/No) or for Admin Access enter (Admin).\n")
         place_order = place_order.upper()
 
         if place_order == 'YES':
-            print()
+            clear_screen()
             customer_details()
             break
         elif place_order == 'NO':
-            print()
+            clear_screen()
             thank_you()
             break
         elif place_order == 'ADMIN':
             admin_access()
             break
-        else:
-            print('Please enter a valid input')
 
 
 def customer_details():
@@ -88,7 +87,8 @@ def customer_details():
             print()
             print('Please enter a valid input.')
     address = input('Please enter your address: ')
-    print('Thank you for your details!\n')
+    clear_screen()
+    print('Thank you for your details!\n')   
     display_menu()
 
 
@@ -98,7 +98,8 @@ def display_menu():
     """
     print('Please take a look at our menu!\n')
     menu = SHEET.worksheet("Menu").get_all_values()
-    print(tabulate(menu, headers=['Item', 'Name', 'Cost (£)'], tablefmt="simple", numalign="center"))
+    print(tabulate(menu, headers=[
+          'Item', 'Name', 'Cost (£)'], tablefmt="simple", numalign="center"))
     print()
     order_item()
 
@@ -112,7 +113,8 @@ def order_item():
     while True:
         food_item = food_item.upper()
         if food_item == "Q":
-            quit = input('Are you sure you want to cancel the order? (Yes/No)\n')
+            quit = input(
+                'Are you sure you want to cancel the order? (Yes/No)\n')
             quit = quit.upper()
             if quit == 'YES':
                 order_list.clear()
@@ -143,7 +145,8 @@ def order_item():
                 order_item()
                 break
         else:
-            print(f'Im sorry but {food_item.capitalize()} is not a menu option. Please enter a valid input')
+            print(
+                f'Im sorry but {food_item.capitalize()} is not a menu option. Please enter a valid input')
             order_item()
             break
 
@@ -199,6 +202,16 @@ def admin_access():
                 print(
                     'Im sorry you have guessed wrong more than 3 times\n')
                 welcome()
+
+
+def clear_screen():
+    """
+    Function to clear screen
+    """
+    if (os.name == 'posix'):
+        os.system('clear')
+    else:
+        os.system('cls')
 
 
 def thank_you():
