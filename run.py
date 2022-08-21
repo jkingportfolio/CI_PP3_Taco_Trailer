@@ -144,8 +144,7 @@ def order_item():
                 food_item = int(food_item) - 1
                 order_list.append(menu[food_item])
                 this_item = (menu[food_item])
-                print(order_list)
-                print(f'You ordered the {this_item[1]}\n')
+                print(f'You ordered Item {this_item[0]}, {this_item[1]} priced at {this_item[2]}\n')
                 food_item = input('What other item would you like? ')
             except IndexError:
                 print(
