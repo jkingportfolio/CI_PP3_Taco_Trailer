@@ -77,16 +77,18 @@ def customer_details():
             print()
             print(
                 f'You selected {delivery_type.capitalize()} for your order.\n')
+            address = input('Please enter your address: ')
             break
         elif delivery_type == 'COLLECTION':
             print()
             print(
                 f'You selected {delivery_type.capitalize()} for your order.\n')
+            address = 'The Taco Trailer'
             break
         else:
             print()
             print('Please enter a valid input.\n')
-    address = input('Please enter your address: ')
+    
     clear_screen()
     print('Thank you for your details!\n')
     sleep(2)  
