@@ -60,32 +60,31 @@ def customer_details():
     global delivery_type
     global address
 
-    print('We would like to take your details.')
+    print('We would like to take your details.\n')
     while True:
         name = input('Please enter your name: ')
         if name.isalpha():
-            print(f'Hi {name}!')
+            print(f'\nHi {name}!\n')
             break
         else:
             print(
-                'Please enter a valid name that does not contain numbers or \
-                 special characters')
+                '\nPlease enter a valid name that does not contain numbers or special characters\n')
     while True:
-        delivery_type = input('Please enter your delivery type: ')
+        delivery_type = input('Please enter your delivery type (Delivery/Collection): ')
         delivery_type = delivery_type.upper()
         if delivery_type == 'DELIVERY':
             print()
             print(
-                f'You selected {delivery_type.capitalize()} for your order.')
+                f'You selected {delivery_type.capitalize()} for your order.\n')
             break
         elif delivery_type == 'COLLECTION':
             print()
             print(
-                f'You selected {delivery_type.capitalize()} for your order.')
+                f'You selected {delivery_type.capitalize()} for your order.\n')
             break
         else:
             print()
-            print('Please enter a valid input.')
+            print('Please enter a valid input.\n')
     address = input('Please enter your address: ')
     clear_screen()
     print('Thank you for your details!\n')   
