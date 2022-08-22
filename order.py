@@ -28,12 +28,6 @@ class Order:
         self.address = address
         self.order_list = order_list
 
-    def preview_order(self):
-        """
-        Preview order so far function
-        """
-        print(f'\nYou ordered {self.order_list}')
-
     def print_receipt(self):
         """
         Function to print order
