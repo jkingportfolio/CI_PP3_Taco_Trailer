@@ -115,8 +115,11 @@ def order_item():
     """
     Order function
     """
-    food_item = input('Please enter a valid input? ')
-
+    print("Add item by entering item number.\n"
+          "To remove last item enter '*'.\n"
+          "To cancel order enter 'Q'.\n"
+          "To complete order enter 'X'.\n")
+    food_item = input("Please enter a valid input: ")
     while True:
         food_item = food_item.upper()
         if food_item == "Q":
@@ -135,10 +138,10 @@ def order_item():
                 order_item()
                 break
             else:
-                print('Im sorry i need a valid input')
-        elif food_item == "NO":
-            complete_order()
-            break
+                print('Im sorry i need a valid input: ')
+        elif food_item == "X":
+                complete_order()
+                break
         elif food_item == '*':
             remove_item()
             break
@@ -149,7 +152,7 @@ def order_item():
                 this_item = (menu[food_item])
                 print(
                     f'You ordered Item {this_item[0]}, {this_item[1]}'
-                    ' priced at {this_item[2]}\n')
+                    f' priced at {this_item[2]}\n')
                 food_item = input('What other item would you like? ')
             except IndexError:
                 print(
