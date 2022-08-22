@@ -140,7 +140,13 @@ def order_item():
             else:
                 print('Im sorry i need a valid input: ')
         elif food_item == "X":
+            complete = input(
+                'Are you sure you want to complete the order? (Yes/No)\n')
+            complete = complete.upper()
+            if complete == 'YES':
                 complete_order()
+                break
+            elif complete == 'NO':
                 break
         elif food_item == '*':
             remove_item()
