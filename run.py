@@ -198,6 +198,7 @@ def complete_order():
         order_complete = order_complete.upper()
         if order_complete == 'YES':
             this_order = Order(name, delivery_type, address, order_list)
+            this_order.append_sales()
             this_order.print_receipt()
             break
         elif order_complete == 'NO':
