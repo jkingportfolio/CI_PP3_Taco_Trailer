@@ -149,7 +149,12 @@ def order_item():
             elif complete == 'NO':
                 break
         elif food_item == '*':
-            remove_item()
+            if len(order_list) == 0:
+                print('\nNothing to remove, basket is empty\n')
+                order_item()
+                break
+            else:
+                remove_item()
             break
         elif food_item.isdigit():
             try:
