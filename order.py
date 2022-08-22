@@ -26,7 +26,7 @@ class Order:
         Function to print order
         """
         print()
-        self.clear_screen()
+        self.processing_order()
         print('***** Order Receipt *****\n')
         print(f'Order time: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n')
         print(f'Name: {self.name}')
@@ -72,7 +72,7 @@ class Order:
             print(f'The total cost of your order is £{float(order_cost):.2f}')
             print('There is no delivery charge\n')
 
-    def clear_screen(self):
+    def processing_order(self):
         """
         Function to clear screen
         """
