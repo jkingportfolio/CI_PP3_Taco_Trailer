@@ -140,6 +140,11 @@ def order_item():
             else:
                 print('Im sorry i need a valid input: ')
         elif food_item == "X":
+            if len(order_list) == 0:
+                print('\nCannot complete order, basket is empty.\n')
+                order_item()
+                break
+            else:
                 complete_order()
                 break
         elif food_item == '*':
