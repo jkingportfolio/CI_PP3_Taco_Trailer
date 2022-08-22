@@ -22,6 +22,8 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('taco_trailer')
 
 menu = SHEET.worksheet("Menu").get_all_values()
+formatted_menu = (tabulate(menu, headers=['Item', 'Name', 'Cost (£)'],
+                           tablefmt="simple", numalign="center"))
 order_list = []
 name = None
 delivery_type = None
@@ -104,9 +106,7 @@ def display_menu():
     """
     Display the menu
     """
-    menu = SHEET.worksheet("Menu").get_all_values()
-    print(tabulate(menu, headers=[
-          'Item', 'Name', 'Cost (£)'], tablefmt="simple", numalign="center"))
+    print(formatted_menu)
     print()
     order_item()
 
@@ -193,7 +193,8 @@ def complete_order():
     Function to complete order and arguments to Order class and its functions
     """
     while True:
-        order_complete = input("Are you ready to complete your order? (Yes/No). To cancel your order enter 'C'.\n")
+        order_complete = input(
+            "Are you ready to complete your order? (Yes/No). To cancel your order enter 'C'.\n")
         order_complete = order_complete.upper()
         if order_complete == 'YES':
             this_order = Order(name, delivery_type, address, order_list)
