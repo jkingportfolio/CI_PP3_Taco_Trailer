@@ -141,6 +141,8 @@ def order_item():
                 print('Im sorry i need a valid input: ')
         elif food_item == "X":
             if len(order_list) == 0:
+                clear_screen()
+                print(formatted_menu)
                 print('\nCannot complete order, basket is empty.\n')
                 order_item()
                 break
@@ -150,6 +152,8 @@ def order_item():
         elif food_item == '*':
             if len(order_list) == 0:
                 print('\nNothing to remove, basket is empty\n')
+                clear_screen()
+                print(formatted_menu)
                 order_item()
                 break
             else:
@@ -160,11 +164,15 @@ def order_item():
                 food_item = int(food_item) - 1
                 order_list.append(menu[food_item])
                 this_item = (menu[food_item])
+                clear_screen()
+                print(formatted_menu)
                 print(
                     f'You ordered Item {this_item[0]}, {this_item[1]}'
                     f' priced at {this_item[2]}\n')
                 food_item = input('What other item would you like? ')
             except IndexError:
+                clear_screen()
+                print(formatted_menu)
                 print(
                     f'Im sorry Item {food_item + 1} does not exist.'
                     ' Please enter a valid item number')
