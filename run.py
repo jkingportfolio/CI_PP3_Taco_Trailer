@@ -184,9 +184,8 @@ def remove_item():
     Pop last item added to menu
     """
     removed_item = order_list[-1]
-    print(f'you have removed {removed_item} from your order')
+    print(f'You have removed {removed_item[1]} from your order.\n')
     order_list.pop()
-    print(order_list)
     order_item()
 
 
