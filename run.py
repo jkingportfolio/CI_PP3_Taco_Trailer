@@ -24,6 +24,7 @@ SHEET = GSPREAD_CLIENT.open('taco_trailer')
 menu = SHEET.worksheet("Menu").get_all_values()
 formatted_menu = (tabulate(menu, headers=['Item', 'Name', 'Cost (£)'],
                            tablefmt="simple", numalign="center"))
+password = SHEET.worksheet("Password").acell('A1').value
 order_list = []
 name = None
 delivery_type = None
@@ -240,7 +241,7 @@ def admin_access():
     while True:
         admin_password = getpass.getpass("Please enter Admin Password:\n")
 
-        if admin_password == 'TACOtrailer':
+        if admin_password == password:
             print('Access granted')
             break
         else:
