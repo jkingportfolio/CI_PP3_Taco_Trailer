@@ -192,9 +192,8 @@ def complete_order():
     """
     Function to complete order and arguments to Order class and its functions
     """
-    print('Are ready to complete your order?\n')
     while True:
-        order_complete = input('Yes, No, Cancel Order ')
+        order_complete = input("Are you ready to complete your order? (Yes/No). To cancel your order enter 'C'.\n")
         order_complete = order_complete.upper()
         if order_complete == 'YES':
             this_order = Order(name, delivery_type, address, order_list)
@@ -203,6 +202,21 @@ def complete_order():
         elif order_complete == 'NO':
             order_item()
             break
+        elif order_complete == 'C':
+            quit = input(
+                'Are you sure you want to cancel the order? (Yes/No)\n')
+            quit = quit.upper()
+            if quit == 'YES':
+                order_list.clear()
+                clear_screen()
+                thank_you()
+                sleep(2)
+                clear_screen()
+                welcome()
+                break
+            elif quit == 'NO':
+                order_item()
+                break
         else:
             print('Please enter a valid input')
 
