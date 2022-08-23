@@ -10,11 +10,12 @@ class Order:
     Class that will take an order
     """
 
-    def __init__(self, name, delivery_type, address, order_list):
+    def __init__(self, name, delivery_type, address, order_list, order_number):
         self.name = name
         self.delivery_type = delivery_type
         self.address = address
         self.order_list = order_list
+        self.order_number = order_number
 
     def print_receipt(self):
         """
@@ -24,6 +25,7 @@ class Order:
         self.processing_order()
         print('***** Order Receipt *****\n')
         print(f'Order time: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n')
+        print(f'Order Number: {self.order_number}')
         print(f'Name: {self.name}')
         print(f'Delivery Type: {self.delivery_type.capitalize()}')
         print(f'Address: {self.address}\n')
@@ -43,7 +45,7 @@ class Order:
         Function to add sold items and value to google sheets
         """
         append_order_data = [self.name, self.delivery_type,
-                             self.address, 'Ordered items', 'Cost', 'Order time']
+                             self.address, 'Ordered items', 'Cost', 'Order time', self.order_number ]
         worksheet_to_update = SHEET.worksheet('Sales')
         worksheet_to_update.append_row(append_order_data)
         print("worksheet updated successfully\n")

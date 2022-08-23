@@ -109,9 +109,9 @@ def order_item():
     Order function
     """
     instructions = ("\nAdd item by entering item number.\n"
-                         "To remove last item enter '*'.\n"
-                         "To cancel order enter 'Q'.\n"
-                         "To complete order enter 'X'.\n")
+                    "To remove last item enter '*'.\n"
+                    "To cancel order enter 'Q'.\n"
+                    "To complete order enter 'X'.\n")
 
     print(instructions)
     food_item = input("Please enter a valid input: ")
@@ -206,7 +206,8 @@ def complete_order():
             "Are you ready to complete your order? (Yes/No). To cancel your order enter 'C'.\n")
         order_complete = order_complete.capitalize()
         if order_complete == 'Yes':
-            this_order = Order(name, delivery_type, address, order_list)
+            this_order = Order(name, delivery_type, address,
+                               order_list, generate_order_number(SALES_WORKSHEET))
             this_order.append_sales()
             this_order.print_receipt()
             break
