@@ -45,7 +45,7 @@ class Order:
         Function to add sold items and value to google sheets
         """
         append_order_data = [self.name, self.delivery_type,
-                             self.address, 'Ordered items', 'Cost', self.order_time(), self.order_number]
+                             self.address, 'Ordered items', self.order_cost_output(), self.order_time(), self.order_number]
         worksheet_to_update = SHEET.worksheet('Sales')
         worksheet_to_update.append_row(append_order_data)
         print("worksheet updated successfully\n")
@@ -71,6 +71,16 @@ class Order:
         else:
             print(f'The total cost of your order is £{float(order_cost):.2f}')
             print('There is no delivery charge\n')
+        return order_cost
+
+    def order_cost_output(self):
+        order_cost = 0
+        delivery_charge = 10
+
+        for item in self.order_list:
+            order_cost = order_cost + float(item[-1].replace('£', ''))
+        return order_cost
+
 
     def processing_order(self):
         """
