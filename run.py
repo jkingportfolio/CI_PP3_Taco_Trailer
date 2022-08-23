@@ -21,8 +21,8 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('taco_trailer')
 
-menu = SHEET.worksheet("Menu").get_all_values()
-formatted_menu = (tabulate(menu, headers=['Item', 'Name', 'Cost (£)'],
+MENU = SHEET.worksheet("Menu").get_all_values()
+formatted_menu = (tabulate(MENU, headers=['Item', 'Name', 'Cost (£)'],
                            tablefmt="simple", numalign="center"))
 sales_worksheet = SHEET.worksheet("Sales")
 PASSWORD = SHEET.worksheet("Password").acell('A1').value
@@ -173,8 +173,8 @@ def order_item():
         elif food_item.isdigit():
             try:
                 food_item = int(food_item) - 1
-                order_list.append(menu[food_item])
-                this_item = (menu[food_item])
+                order_list.append(MENU[food_item])
+                this_item = (MENU[food_item])
                 clear_screen()
                 print(formatted_menu)
                 print(
