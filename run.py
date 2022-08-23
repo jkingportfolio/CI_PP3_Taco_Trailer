@@ -92,7 +92,6 @@ def display_menu():
     Display the menu
     """
     print(FORMATTED_MENU)
-    print()
     order_item()
 
 
@@ -109,10 +108,12 @@ def order_item():
     """
     Order function
     """
-    print("Add item by entering item number.\n"
-          "To remove last item enter '*'.\n"
-          "To cancel order enter 'Q'.\n"
-          "To complete order enter 'X'.\n")
+    instructions = ("\nAdd item by entering item number.\n"
+                         "To remove last item enter '*'.\n"
+                         "To cancel order enter 'Q'.\n"
+                         "To complete order enter 'X'.\n")
+
+    print(instructions)
     food_item = input("Please enter a valid input: ")
     while True:
         food_item = food_item.capitalize()
@@ -129,6 +130,9 @@ def order_item():
                 welcome()
                 break
             elif quit == 'No':
+                clear_screen()
+                print(FORMATTED_MENU)
+                print(instructions)
                 order_item()
                 break
             else:
@@ -137,6 +141,7 @@ def order_item():
             if len(order_list) == 0:
                 clear_screen()
                 print(FORMATTED_MENU)
+                print(instructions)
                 print('\nCannot complete order, basket is empty.\n')
                 order_item()
                 break
@@ -148,6 +153,7 @@ def order_item():
                 print('\nNothing to remove, basket is empty\n')
                 clear_screen()
                 print(FORMATTED_MENU)
+                print(instructions)
                 order_item()
                 break
             else:
@@ -160,6 +166,7 @@ def order_item():
                 this_item = (MENU[food_item])
                 clear_screen()
                 print(FORMATTED_MENU)
+                print(instructions)
                 print(
                     f'You ordered Item {this_item[0]}, {this_item[1]}'
                     f' priced at {this_item[2]}\n')
