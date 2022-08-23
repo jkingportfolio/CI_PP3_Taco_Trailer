@@ -1,20 +1,8 @@
-import gspread
-from google.oauth2.service_account import Credentials
+from google_sheet import *
 from datetime import datetime, timedelta
 import os
 from time import sleep
 from tabulate import tabulate
-
-SCOPE = [
-    "https://www.googleapis.com/auth/spreadsheets",
-    "https://www.googleapis.com/auth/drive.file",
-    "https://www.googleapis.com/auth/drive"
-]
-
-CREDS = Credentials.from_service_account_file('creds.json')
-SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('taco_trailer')
 
 
 class Order:
@@ -54,7 +42,8 @@ class Order:
         """
         Function to add sold items and value to google sheets
         """
-        append_order_data = [self.name, self.delivery_type, self.address, 'Ordered items', 'Cost', 'Order time']
+        append_order_data = [self.name, self.delivery_type,
+                             self.address, 'Ordered items', 'Cost', 'Order time']
         worksheet_to_update = SHEET.worksheet('Sales')
         worksheet_to_update.append_row(append_order_data)
         print("worksheet updated successfully\n")

@@ -5,7 +5,6 @@ import os
 import getpass
 from google_sheet import *
 import pyfiglet
-# from tabulate import tabulate
 from time import sleep
 from order import Order
 
