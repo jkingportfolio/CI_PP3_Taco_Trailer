@@ -100,7 +100,6 @@ def generate_order_number(worksheet):
     Parse google sheets sales page to find next row, this will be the order number
     """
     row_list = list(filter(None, worksheet.col_values(1)))
-    print(str(len(row_list)+1))
     return str(len(row_list)+1)
 
 
