@@ -30,7 +30,6 @@ class Order:
         print(f'Delivery Type: {self.delivery_type.capitalize()}')
         print(f'Address: {self.address}\n')
         print('***** Order Summary *****\n')
-        # print('\n'.join(map(str, self.order_list)))
         self.format_order_list()
         print()
         self.total_order_cost()
@@ -48,7 +47,6 @@ class Order:
                              self.address, str(self.order_list), self.order_cost_output(), self.order_time(), self.order_number]
         worksheet_to_update = SHEET.worksheet('Sales')
         worksheet_to_update.append_row(append_order_data)
-        print("worksheet updated successfully\n")
         sleep(2)
 
     def total_order_cost(self):
