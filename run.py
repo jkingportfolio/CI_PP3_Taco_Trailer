@@ -26,6 +26,7 @@ FORMATTED_MENU = (tabulate(MENU, headers=['Item', 'Name', 'Cost (£)'],
                            tablefmt="simple", numalign="center"))
 SALES_WORKSHEET = SHEET.worksheet("Sales")
 PASSWORD = SHEET.worksheet("Password").acell('A1').value
+
 order_list = []
 name = None
 delivery_type = None
