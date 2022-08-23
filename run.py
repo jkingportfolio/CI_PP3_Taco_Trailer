@@ -22,7 +22,7 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('taco_trailer')
 
 MENU = SHEET.worksheet("Menu").get_all_values()
-formatted_menu = (tabulate(MENU, headers=['Item', 'Name', 'Cost (£)'],
+FORMATTED_MENU = (tabulate(MENU, headers=['Item', 'Name', 'Cost (£)'],
                            tablefmt="simple", numalign="center"))
 sales_worksheet = SHEET.worksheet("Sales")
 PASSWORD = SHEET.worksheet("Password").acell('A1').value
@@ -108,7 +108,7 @@ def display_menu():
     """
     Display the menu
     """
-    print(formatted_menu)
+    print(FORMATTED_MENU)
     print()
     order_item()
 
@@ -153,7 +153,7 @@ def order_item():
         elif food_item == "X":
             if len(order_list) == 0:
                 clear_screen()
-                print(formatted_menu)
+                print(FORMATTED_MENU)
                 print('\nCannot complete order, basket is empty.\n')
                 order_item()
                 break
@@ -164,7 +164,7 @@ def order_item():
             if len(order_list) == 0:
                 print('\nNothing to remove, basket is empty\n')
                 clear_screen()
-                print(formatted_menu)
+                print(FORMATTED_MENU)
                 order_item()
                 break
             else:
@@ -176,14 +176,14 @@ def order_item():
                 order_list.append(MENU[food_item])
                 this_item = (MENU[food_item])
                 clear_screen()
-                print(formatted_menu)
+                print(FORMATTED_MENU)
                 print(
                     f'You ordered Item {this_item[0]}, {this_item[1]}'
                     f' priced at {this_item[2]}\n')
                 food_item = input('What other item would you like? ')
             except IndexError:
                 clear_screen()
-                print(formatted_menu)
+                print(FORMATTED_MENU)
                 print(
                     f'Im sorry Item {food_item + 1} does not exist.'
                     ' Please enter a valid item number')
