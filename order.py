@@ -45,7 +45,7 @@ class Order:
         Function to add sold items and value to google sheets
         """
         append_order_data = [self.name, self.delivery_type,
-                             self.address, 'Ordered items', self.order_cost_output(), self.order_time(), self.order_number]
+                             self.address, str(self.order_list), self.order_cost_output(), self.order_time(), self.order_number]
         worksheet_to_update = SHEET.worksheet('Sales')
         worksheet_to_update.append_row(append_order_data)
         print("worksheet updated successfully\n")
