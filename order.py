@@ -61,7 +61,7 @@ class Order:
         for item in self.order_list:
             order_cost = order_cost + float(item[-1].replace('£', ''))
 
-        if self.delivery_type == "DELIVERY":
+        if self.delivery_type == "Delivery":
             print(f'The subtotal of your order is £{float(order_cost):.2f}')
             order_cost = order_cost + delivery_charge
             print(
@@ -71,7 +71,6 @@ class Order:
         else:
             print(f'The total cost of your order is £{float(order_cost):.2f}')
             print('There is no delivery charge\n')
-        return order_cost
 
     def order_cost_output(self):
         order_cost = 0
@@ -79,8 +78,12 @@ class Order:
 
         for item in self.order_list:
             order_cost = order_cost + float(item[-1].replace('£', ''))
-        return order_cost
 
+        if self.delivery_type == "Delivery":
+            order_cost = order_cost + float(delivery_charge)
+            return order_cost
+        else:
+            return order_cost
 
     def processing_order(self):
         """
