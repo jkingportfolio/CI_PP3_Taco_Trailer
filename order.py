@@ -45,7 +45,7 @@ class Order:
         Function to add sold items and value to google sheets
         """
         append_order_data = [self.name, self.delivery_type,
-                             self.address, 'Ordered items', 'Cost', 'Order time', self.order_number ]
+                             self.address, 'Ordered items', 'Cost', self.order_time(), self.order_number]
         worksheet_to_update = SHEET.worksheet('Sales')
         worksheet_to_update.append_row(append_order_data)
         print("worksheet updated successfully\n")
@@ -96,3 +96,10 @@ class Order:
         elif self.delivery_type == "Collection":
             print(
                 f'Your order will be ready for collection at {order_ready_time}\n')
+
+    def order_time(self):
+        """
+        Get order time
+        """
+        order_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        return order_time
