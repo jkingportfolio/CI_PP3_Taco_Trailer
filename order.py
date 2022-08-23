@@ -89,8 +89,8 @@ class Order:
         order_ready_time = current_time + timedelta(minutes=15)
         order_ready_time = order_ready_time.strftime("%Y-%m-%d %H:%M:%S")
 
-        if self.delivery_type == "DELIVERY":
+        if self.delivery_type == "Delivery":
             print(f'Your order will be delivered at {order_ready_time}\n')
-        elif self.delivery_type == "COLLECTION":
+        elif self.delivery_type == "Collection":
             print(
                 f'Your order will be ready for collection at {order_ready_time}\n')

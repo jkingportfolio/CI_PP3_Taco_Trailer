@@ -26,17 +26,17 @@ def welcome():
         place_order = input(
             'Please enter a valid input (Yes/No) or for'
             ' Admin Access enter(Admin).\n')
-        place_order = place_order.upper()
+        place_order = place_order.capitalize()
 
-        if place_order == 'YES':
+        if place_order == 'Yes':
             clear_screen()
             customer_details()
             break
-        elif place_order == 'NO':
+        elif place_order == 'No':
             clear_screen()
             thank_you()
             break
-        elif place_order == 'ADMIN':
+        elif place_order == 'Admin':
             admin_access()
             break
 
@@ -62,14 +62,14 @@ def customer_details():
     while True:
         delivery_type = input('Please enter your delivery'
                               ' type (Delivery/Collection): ')
-        delivery_type = delivery_type.upper()
-        if delivery_type == 'DELIVERY':
+        delivery_type = delivery_type.capitalize()
+        if delivery_type == 'Delivery':
             print()
             print(
                 f'You selected {delivery_type.capitalize()} for your order.\n')
             address = input('Please enter your address: ')
             break
-        elif delivery_type == 'COLLECTION':
+        elif delivery_type == 'Collection':
             print()
             print(
                 f'You selected {delivery_type.capitalize()} for your order.\n')
@@ -115,12 +115,12 @@ def order_item():
           "To complete order enter 'X'.\n")
     food_item = input("Please enter a valid input: ")
     while True:
-        food_item = food_item.upper()
+        food_item = food_item.capitalize()
         if food_item == "Q":
             quit = input(
                 'Are you sure you want to cancel the order? (Yes/No)\n')
-            quit = quit.upper()
-            if quit == 'YES':
+            quit = quit.capitalize()
+            if quit == 'Yes':
                 order_list.clear()
                 clear_screen()
                 thank_you()
@@ -128,7 +128,7 @@ def order_item():
                 clear_screen()
                 welcome()
                 break
-            elif quit == 'NO':
+            elif quit == 'No':
                 order_item()
                 break
             else:
@@ -197,20 +197,20 @@ def complete_order():
     while True:
         order_complete = input(
             "Are you ready to complete your order? (Yes/No). To cancel your order enter 'C'.\n")
-        order_complete = order_complete.upper()
-        if order_complete == 'YES':
+        order_complete = order_complete.capitalize()
+        if order_complete == 'Yes':
             this_order = Order(name, delivery_type, address, order_list)
             this_order.append_sales()
             this_order.print_receipt()
             break
-        elif order_complete == 'NO':
+        elif order_complete == 'No':
             order_item()
             break
         elif order_complete == 'C':
             quit = input(
                 'Are you sure you want to cancel the order? (Yes/No)\n')
-            quit = quit.upper()
-            if quit == 'YES':
+            quit = quit.capitalize()
+            if quit == 'Yes':
                 order_list.clear()
                 clear_screen()
                 thank_you()
@@ -218,7 +218,7 @@ def complete_order():
                 clear_screen()
                 welcome()
                 break
-            elif quit == 'NO':
+            elif quit == 'No':
                 order_item()
                 break
         else:
