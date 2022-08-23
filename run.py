@@ -25,7 +25,7 @@ menu = SHEET.worksheet("Menu").get_all_values()
 formatted_menu = (tabulate(menu, headers=['Item', 'Name', 'Cost (£)'],
                            tablefmt="simple", numalign="center"))
 sales_worksheet = SHEET.worksheet("Sales")
-password = SHEET.worksheet("Password").acell('A1').value
+PASSWORD = SHEET.worksheet("Password").acell('A1').value
 order_list = []
 name = None
 delivery_type = None
@@ -251,7 +251,7 @@ def admin_access():
     while True:
         admin_password = getpass.getpass("Please enter Admin Password:\n")
 
-        if admin_password == password:
+        if admin_password == PASSWORD:
             print('Access granted')
             break
         else:
