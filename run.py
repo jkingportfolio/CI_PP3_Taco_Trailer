@@ -24,6 +24,7 @@ SHEET = GSPREAD_CLIENT.open('taco_trailer')
 menu = SHEET.worksheet("Menu").get_all_values()
 formatted_menu = (tabulate(menu, headers=['Item', 'Name', 'Cost (£)'],
                            tablefmt="simple", numalign="center"))
+sales_worksheet = SHEET.worksheet("Sales")
 password = SHEET.worksheet("Password").acell('A1').value
 order_list = []
 name = None
@@ -110,6 +111,15 @@ def display_menu():
     print(formatted_menu)
     print()
     order_item()
+
+
+def generate_order_number(worksheet):
+    """
+    Parse google sheets sales page to find next row, this will be the order number
+    """
+    row_list = list(filter(None, worksheet.col_values(1)))
+    print(str(len(row_list)+1))
+    return str(len(row_list)+1)
 
 
 def order_item():
