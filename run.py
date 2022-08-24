@@ -54,7 +54,8 @@ def customer_details():
     while True:
         name = input('Please enter your name: ')
         if name.isalpha():
-            print(f'\nHi {name}!\n')
+            clear_screen()
+            print(pyfiglet.figlet_format(f'Hi {name}!\n'))
             break
         else:
             print(
