@@ -13,10 +13,10 @@ def admin_dashboard():
             print('Thats not an option')
         break
 
-def sales_info():
+# def sales_info():
 
-def pending_orders():
+# def pending_orders():
 
-def view_records():
+# def view_records():
 
-def update_menu():
+# def update_menu():

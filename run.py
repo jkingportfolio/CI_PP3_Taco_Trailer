@@ -159,7 +159,7 @@ def order_item():
             else:
                 remove_item()
             break
-        elif food_item.isdigit():
+        elif food_item.isdigit() and int(food_item) > 0:
             try:
                 food_item = int(food_item) - 1
                 order_list.append(MENU[food_item])
@@ -181,7 +181,7 @@ def order_item():
                 break
         else:
             print(
-                f'Im sorry but {food_item.capitalize()} is not a menu'
+                f'Im sorry but {food_item} is not a menu'
                 ' option. Please enter a valid input')
             order_item()
             break
@@ -208,7 +208,7 @@ def complete_order():
         if order_complete == 'Yes':
             this_order = Order(name, delivery_type, address,
                                order_list, generate_order_number(SALES_WORKSHEET))
-            this_order.print_receipt()                   
+            this_order.print_receipt()
             this_order.append_sales()
             break
         elif order_complete == 'No':
