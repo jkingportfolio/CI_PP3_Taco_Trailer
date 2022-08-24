@@ -6,6 +6,7 @@ import getpass
 from admin import *
 from google_sheet import *
 import pyfiglet
+import termcolor
 from time import sleep
 from order import Order
 
