@@ -207,8 +207,8 @@ def complete_order():
         if order_complete == 'Yes':
             this_order = Order(name, delivery_type, address,
                                order_list, generate_order_number(SALES_WORKSHEET))
+            this_order.print_receipt()                   
             this_order.append_sales()
-            this_order.print_receipt()
             break
         elif order_complete == 'No':
             order_item()
