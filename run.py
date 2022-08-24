@@ -6,7 +6,7 @@ import getpass
 from admin import *
 from google_sheet import *
 import pyfiglet
-import termcolor
+from termcolor import colored
 from time import sleep
 from order import Order
 
@@ -41,6 +41,9 @@ def welcome():
         elif place_order == 'Admin':
             admin_access()
             break
+        else:
+            print(
+                colored(f'{place_order} is not a valid input, please try again!', 'red'))
 
 
 def customer_details():
@@ -59,9 +62,9 @@ def customer_details():
             print(pyfiglet.figlet_format(f'Hi {name}!\n'))
             break
         else:
-            print(
+            print(colored(
                 '\nPlease enter a valid name that does not'
-                ' contain numbers or special characters\n')
+                ' contain numbers or special characters\n', 'red'))
     while True:
         delivery_type = input('Please enter your delivery'
                               ' type (Delivery/Collection): ')
@@ -120,8 +123,8 @@ def order_item():
     while True:
         food_item = food_item.capitalize()
         if food_item == "Q":
-            quit = input(
-                'Are you sure you want to cancel the order? (Yes/No)\n')
+            quit = input(colored(
+                'Are you sure you want to cancel the order? (Yes/No)\n', 'red'))
             quit = quit.capitalize()
             if quit == 'Yes':
                 order_list.clear()
@@ -138,13 +141,13 @@ def order_item():
                 order_item()
                 break
             else:
-                print('Im sorry i need a valid input: ')
+                print(colored('Im sorry i need a valid input: ', 'red'))
         elif food_item == "X":
             if len(order_list) == 0:
                 clear_screen()
                 print(FORMATTED_MENU)
                 print(instructions)
-                print('\nCannot complete order, basket is empty.\n')
+                print(colored('\nCannot complete order, basket is empty.\n', 'red'))
                 order_item()
                 break
             else:
@@ -176,15 +179,15 @@ def order_item():
             except IndexError:
                 clear_screen()
                 print(FORMATTED_MENU)
-                print(
+                print(colored(
                     f'Im sorry Item {food_item + 1} does not exist.'
-                    ' Please enter a valid item number')
+                    ' Please enter a valid item number', 'red'))
                 order_item()
                 break
         else:
-            print(
+            print(colored(
                 f'Im sorry but {food_item} is not a menu'
-                ' option. Please enter a valid input')
+                ' option. Please enter a valid input', 'red'))
             order_item()
             break
 
@@ -217,8 +220,8 @@ def complete_order():
             order_item()
             break
         elif order_complete == 'C':
-            quit = input(
-                'Are you sure you want to cancel the order? (Yes/No)\n')
+            quit = input(colored(
+                'Are you sure you want to cancel the order? (Yes/No)\n', 'red'))
             quit = quit.capitalize()
             if quit == 'Yes':
                 order_list.clear()
@@ -232,7 +235,7 @@ def complete_order():
                 order_item()
                 break
         else:
-            print('Please enter a valid input')
+            print(colored('Please enter a valid input','red'))
 
 
 def admin_access():
@@ -258,7 +261,7 @@ def admin_access():
                 print(
                     f'Incorrect password. Remaining password'
                     f' attempts {password_guesses}\n')
-            elif password_guesses == 0:                
+            elif password_guesses == 0:
                 print(pyfiglet.figlet_format('Access denied!'))
                 sleep(2)
                 welcome()
