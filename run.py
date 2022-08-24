@@ -250,14 +250,15 @@ def admin_access():
             welcome()
             break
         else:
+            clear_screen()
             password_guesses -= 1
             if password_guesses > 0:
                 print(
                     f'Incorrect password. Remaining password'
                     f' attempts {password_guesses}\n')
-            elif password_guesses == 0:
-                print(
-                    'Im sorry you have guessed wrong more than 3 times\n')
+            elif password_guesses == 0:                
+                print(pyfiglet.figlet_format('Access denied!'))
+                sleep(2)
                 welcome()
 
 
