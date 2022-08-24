@@ -242,7 +242,9 @@ def admin_access():
         admin_password = getpass.getpass("Please enter Admin Password:\n")
 
         if admin_password == PASSWORD:
-            print('Access granted')
+            clear_screen()
+            print(pyfiglet.figlet_format('Access granted!'))
+            sleep(2)
             break
         else:
             password_guesses -= 1
