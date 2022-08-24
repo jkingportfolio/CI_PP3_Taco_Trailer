@@ -3,6 +3,7 @@ Main python file
 """
 import os
 import getpass
+from admin import *
 from google_sheet import *
 import pyfiglet
 from time import sleep
@@ -245,6 +246,8 @@ def admin_access():
             clear_screen()
             print(pyfiglet.figlet_format('Access granted!'))
             sleep(2)
+            admin_dashboard()
+            welcome()
             break
         else:
             password_guesses -= 1
