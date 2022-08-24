@@ -12,3 +12,11 @@ def admin_dashboard():
         else:
             print('Thats not an option')
         break
+
+def sales_info():
+
+def pending_orders():
+
+def view_records():
+
+def update_menu():
