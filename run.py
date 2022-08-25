@@ -170,7 +170,7 @@ def order_item():
                 print(FORMATTED_MENU)
                 print(colored(
                     f'\nYou ordered Item {this_item[0]}, {this_item[1]}'
-                    f' priced at {this_item[2]}','green'))
+                    f' priced at {this_item[2]}', 'green'))
                 print(instructions)
                 food_item = input('What other item would you like? ')
             except IndexError:
@@ -234,7 +234,7 @@ def complete_order():
                 order_item()
                 break
         else:
-            print(colored('Please enter a valid input','red'))
+            print(colored('Please enter a valid input', 'red'))
 
 
 def admin_access():
@@ -242,7 +242,9 @@ def admin_access():
     Password to access admin area where prices
     can be updated and tables of sales generated
     """
+    clear_screen()
     password_guesses = 3
+    print(f'You have {password_guesses} remaining guesses.\n')
     while True:
         admin_password = getpass.getpass("Please enter Admin Password:\n")
 
