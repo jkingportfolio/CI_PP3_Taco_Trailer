@@ -146,7 +146,7 @@ def order_item():
             if len(order_list) == 0:
                 clear_screen()
                 print(FORMATTED_MENU)
-                print(colored('\nCannot complete order, basket is empty.\n', 'red'))
+                print(colored('\nCannot complete order, basket is empty.', 'red'))
                 order_item()
                 break
             else:
@@ -208,6 +208,7 @@ def complete_order():
     """
     Function to complete order and arguments to Order class and its functions
     """
+    clear_screen()
     while True:
         order_complete = input(
             "Are you ready to complete your order? (Yes/No). To cancel your order enter 'C'.\n")
@@ -219,6 +220,8 @@ def complete_order():
             this_order.append_sales()
             break
         elif order_complete == 'No':
+            clear_screen()
+            print(FORMATTED_MENU)
             order_item()
             break
         elif order_complete == 'C':
@@ -234,10 +237,16 @@ def complete_order():
                 welcome()
                 break
             elif quit == 'No':
+                clear_screen()
+                print(FORMATTED_MENU)
                 order_item()
                 break
+            else:
+                clear_screen()
+                print(colored(f'Im sorry "{order_complete}" is an invalid input', 'red'))
         else:
-            print(colored('Please enter a valid input', 'red'))
+            clear_screen()
+            print(colored(f'Im sorry "{order_complete}" is an invalid input', 'red'))
 
 
 def admin_access():
