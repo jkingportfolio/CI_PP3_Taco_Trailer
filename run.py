@@ -177,7 +177,7 @@ def order_item():
                 clear_screen()
                 print(FORMATTED_MENU)
                 print(colored(
-                    f'Im sorry Item {food_item + 1} does not exist.'
+                    f'\nIm sorry Item {food_item + 1} does not exist.'
                     ' Please enter a valid item number', 'red'))
                 order_item()
                 break
@@ -185,7 +185,7 @@ def order_item():
             clear_screen()
             print(FORMATTED_MENU)
             print(colored(
-                f'Im sorry but {food_item} is not a menu'
+                f'\nIm sorry but {food_item} is not a menu'
                 ' option. Please enter a valid input', 'red'))
             order_item()
             break
