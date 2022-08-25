@@ -211,7 +211,7 @@ def complete_order():
     clear_screen()
     while True:
         order_complete = input(
-            "Are you ready to complete your order? (Yes/No). To cancel your order enter 'C'.\n")
+            "Are you ready to complete your order? (Yes/No).\n")
         order_complete = order_complete.capitalize()
         if order_complete == 'Yes':
             this_order = Order(name, delivery_type, address,
@@ -241,9 +241,6 @@ def complete_order():
                 print(FORMATTED_MENU)
                 order_item()
                 break
-            else:
-                clear_screen()
-                print(colored(f'Im sorry "{order_complete}" is an invalid input', 'red'))
         else:
             clear_screen()
             print(colored(f'Im sorry "{order_complete}" is an invalid input', 'red'))
