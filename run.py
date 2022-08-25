@@ -195,8 +195,10 @@ def remove_item():
     """
     Pop last item added to menu
     """
+    clear_screen()
+    print(FORMATTED_MENU)
     removed_item = order_list[-1]
-    print(f'You have removed {removed_item[1]} from your order.\n')
+    print(colored(f'\nYou have removed {removed_item[1]} from your order.','green'))
     order_list.pop()
     order_item()
 
