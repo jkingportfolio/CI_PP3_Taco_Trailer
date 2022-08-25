@@ -7,7 +7,7 @@ from tabulate import tabulate
 
 class Order:
     """
-    Class that will take an order
+    Class that will create an order
     """
 
     def __init__(self, name, delivery_type, address, order_list, order_number):
@@ -19,7 +19,7 @@ class Order:
 
     def print_receipt(self):
         """
-        Function to print order
+        Prints formatted order
         """
         print()
         self.processing_order()
@@ -36,12 +36,15 @@ class Order:
         self.delivery_time()
 
     def format_order_list(self):
+        """
+        Formats order list to a table
+        """
         print(tabulate(self.order_list, headers=[
             'Item', 'Name', 'Cost (£)'], tablefmt="simple", numalign="center"))
 
     def append_sales(self):
         """
-        Function to add sold items and value to google sheets
+        Append sold items and value to google sheets sales worksheet
         """
         append_order_data = [self.name, self.delivery_type,
                              self.address, str(self.order_list), self.order_cost_output(), self.order_time(), self.order_number]
@@ -71,6 +74,9 @@ class Order:
             print('There is no delivery charge\n')
 
     def order_cost_output(self):
+        """
+        Output order cost and add delivery charge value
+        """
         order_cost = 0
         delivery_charge = 10
 
@@ -85,7 +91,7 @@ class Order:
 
     def processing_order(self):
         """
-        Function to clear screen
+        Print to screen processing order 
         """
         print('"Processing order...')
         sleep(2)
@@ -110,7 +116,7 @@ class Order:
 
     def order_time(self):
         """
-        Get order time
+        Generate order timestamp
         """
         order_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         return order_time
