@@ -137,7 +137,6 @@ def order_item():
             elif quit == 'No':
                 clear_screen()
                 print(FORMATTED_MENU)
-                print(instructions)
                 order_item()
                 break
             else:
@@ -146,7 +145,6 @@ def order_item():
             if len(order_list) == 0:
                 clear_screen()
                 print(FORMATTED_MENU)
-                print(instructions)
                 print(colored('\nCannot complete order, basket is empty.\n', 'red'))
                 order_item()
                 break
@@ -158,7 +156,6 @@ def order_item():
                 print('\nNothing to remove, basket is empty\n')
                 clear_screen()
                 print(FORMATTED_MENU)
-                print(instructions)
                 order_item()
                 break
             else:
@@ -171,10 +168,10 @@ def order_item():
                 this_item = (MENU[food_item])
                 clear_screen()
                 print(FORMATTED_MENU)
-                print(instructions)
                 print(
                     f'You ordered Item {this_item[0]}, {this_item[1]}'
                     f' priced at {this_item[2]}\n')
+                print(instructions)
                 food_item = input('What other item would you like? ')
             except IndexError:
                 clear_screen()
@@ -185,6 +182,8 @@ def order_item():
                 order_item()
                 break
         else:
+            clear_screen()
+            print(FORMATTED_MENU)
             print(colored(
                 f'Im sorry but {food_item} is not a menu'
                 ' option. Please enter a valid input', 'red'))
