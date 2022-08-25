@@ -153,9 +153,9 @@ def order_item():
                 break
         elif food_item == '*':
             if len(order_list) == 0:
-                print('\nNothing to remove, basket is empty\n')
                 clear_screen()
                 print(FORMATTED_MENU)
+                print(colored('\nNothing to remove, basket is empty','red'))
                 order_item()
                 break
             else:
