@@ -19,7 +19,8 @@ address = None
 
 def welcome():
     """
-    Display welcome message
+    Display welcome message and ask for user 
+    input to place order or admin access
     """
     title = 'Welcome to the Taco Trailer'
     print(pyfiglet.figlet_format(title))
@@ -48,7 +49,7 @@ def welcome():
 
 def customer_details():
     """
-    Collect user details via input
+    Collect users name, delivery and address via input
     """
     global name
     global delivery_type
@@ -95,7 +96,7 @@ def customer_details():
 
 def display_menu():
     """
-    Display the menu
+    Display the formatted menu
     """
     print(FORMATTED_MENU)
     order_item()
@@ -103,7 +104,7 @@ def display_menu():
 
 def generate_order_number(worksheet):
     """
-    Parse google sheets sales page to find next row, this will be the order number
+    Parse google sheets sales page to find next row, this row is the current order number
     """
     row_list = list(filter(None, worksheet.col_values(1)))
     return str(len(row_list)+1)
@@ -111,7 +112,7 @@ def generate_order_number(worksheet):
 
 def order_item():
     """
-    Order function
+    Order function to add/remove items to order list, cancel/complete order 
     """
     instructions = ("\nAdd item by entering item number.\n"
                     "To remove last item enter '*'.\n"
@@ -194,7 +195,7 @@ def order_item():
 
 def remove_item():
     """
-    Pop last item added to menu
+    Pop last item added to order list
     """
     clear_screen()
     print(FORMATTED_MENU)
@@ -206,7 +207,7 @@ def remove_item():
 
 def complete_order():
     """
-    Function to complete order and arguments to Order class and its functions
+    Function to complete order and pass arguments to Order class and its functions
     """
     clear_screen()
     while True:
@@ -248,8 +249,8 @@ def complete_order():
 
 def admin_access():
     """
-    Password to access admin area where prices
-    can be updated and tables of sales generated
+    Password to access admin dashboard that has access to records and
+    ability to edit the menu
     """
     clear_screen()
     password_guesses = 3
@@ -290,7 +291,7 @@ def clear_screen():
 
 def thank_you():
     """
-    Function to add sold items and value to google sheets
+    Function to display thank you message
     """
     title = 'Thanks for visiting!'
     print(pyfiglet.figlet_format(title))
