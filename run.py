@@ -26,8 +26,8 @@ def welcome():
     print('Hello, would you like to place an order?\n')
     while True:
         place_order = input(
-            'Please enter a valid input (Yes/No) or for'
-            ' Admin Access enter(Admin).\n')
+            'Please enter a valid input (Yes/No). Or for'
+            ' Admin Access enter (Admin).\n')
         place_order = place_order.capitalize()
 
         if place_order == 'Yes':
