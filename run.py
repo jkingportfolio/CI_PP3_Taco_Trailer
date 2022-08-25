@@ -265,6 +265,7 @@ def admin_access():
             elif password_guesses == 0:
                 print(pyfiglet.figlet_format('Access denied!'))
                 sleep(2)
+                clear_screen()
                 welcome()
 
 
