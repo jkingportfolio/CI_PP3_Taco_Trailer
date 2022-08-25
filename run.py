@@ -123,6 +123,7 @@ def order_item():
     while True:
         food_item = food_item.capitalize()
         if food_item == "Q":
+            clear_screen()
             quit = input(colored(
                 'Are you sure you want to cancel the order? (Yes/No)\n', 'red'))
             quit = quit.capitalize()
