@@ -57,7 +57,7 @@ def customer_details():
 
     print('We would like to take your details.\n')
     while True:
-        name = input('Please enter your name: ')
+        name = input('Please enter your name: \n')
         if name.isalpha():
             clear_screen()
             print(pyfiglet.figlet_format(f'Hi {name}!\n'))
@@ -68,13 +68,13 @@ def customer_details():
                 ' contain numbers or special characters\n', 'red'))
     while True:
         delivery_type = input('Please enter your delivery'
-                              ' type (Delivery/Collection): ')
+                              ' type (Delivery/Collection): \n')
         delivery_type = delivery_type.capitalize()
         if delivery_type == 'Delivery':
             print()
             print(
                 f'You selected {delivery_type.capitalize()} for your order.\n')
-            address = input('Please enter your address: ')
+            address = input('Please enter your address: \n')
             break
         elif delivery_type == 'Collection':
             print()
@@ -120,7 +120,7 @@ def order_item():
                     "To complete order enter 'X'.\n")
 
     print(instructions)
-    food_item = input("Please enter a valid input: ")
+    food_item = input("Please enter a valid input: \n")
     while True:
         food_item = food_item.capitalize()
         if food_item == "Q":
@@ -174,7 +174,7 @@ def order_item():
                     f'\nYou ordered Item {this_item[0]}, {this_item[1]}'
                     f' priced at {this_item[2]}', 'green'))
                 print(instructions)
-                food_item = input('What other item would you like? ')
+                food_item = input('What other item would you like? \n')
             except IndexError:
                 clear_screen()
                 print(FORMATTED_MENU)
