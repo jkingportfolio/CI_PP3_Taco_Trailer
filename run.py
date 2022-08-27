@@ -115,7 +115,7 @@ def order_item():
     Order function to add/remove items to order list, cancel/complete order 
     """
     instructions = ("\nAdd item by entering item number.\n"
-                    "To remove last item enter '*'.\n"
+                    "To remove last item enter 'R'.\n"
                     "To cancel order enter 'Q'.\n"
                     "To complete order enter 'X'.\n")
 
@@ -153,7 +153,7 @@ def order_item():
             else:
                 complete_order()
                 break
-        elif food_item == '*':
+        elif food_item == 'R':
             if len(order_list) == 0:
                 clear_screen()
                 print(FORMATTED_MENU)
