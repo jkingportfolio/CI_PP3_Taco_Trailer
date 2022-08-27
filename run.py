@@ -59,15 +59,24 @@ def customer_details():
 
     print('We would like to take your details.\n')
     while True:
-        name = input('Please enter your name: \n')
-        if name.isalpha():
-            clear_screen()
-            print(pyfiglet.figlet_format(f'Hi {name}!\n'))
+        first_name = input('Please enter your first name: \n')
+        if first_name.isalpha():
             break
         else:
             print(colored(
                 '\nPlease enter a valid name that does not'
                 ' contain numbers or special characters\n', 'red'))
+    while True:
+        surname = input('Please enter your surname: \n')
+        if surname.isalpha():
+            break
+        else:
+            print(colored(
+                '\nPlease enter a valid name that does not'
+                ' contain numbers or special characters\n', 'red'))
+    name = (f'{first_name} {surname}')
+    clear_screen()
+    print(pyfiglet.figlet_format(f'Hi {name}!\n'))
     while True:
         delivery_type = input('Please enter your delivery'
                               ' type. Delivery (D) Collection (C): \n')
