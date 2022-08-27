@@ -10,12 +10,13 @@ class Order:
     Class that will create an order
     """
 
-    def __init__(self, name, delivery_type, address, order_list, order_number):
+    def __init__(self, name, delivery_type, address, order_list, order_number, order_time):
         self.name = name
         self.delivery_type = delivery_type
         self.address = address
         self.order_list = order_list
         self.order_number = order_number
+        self.order_time = order_time
 
     def print_receipt(self):
         """
@@ -24,7 +25,7 @@ class Order:
         print()
         self.processing_order()
         print('***** Order Receipt *****\n')
-        print(f'Order time: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n')
+        print(f'Order time: {self.order_time.strftime("%H:%M:%S (%Y-%m-%d)")}\n')
         print(f'Order Number: {self.order_number}')
         print(f'Name: {self.name}')
         print(f'Delivery Type: {self.delivery_type.capitalize()}')
@@ -47,7 +48,7 @@ class Order:
         Append sold items and value to google sheets sales worksheet
         """
         append_order_data = [self.name, self.delivery_type,
-                             self.address, str(self.order_list), self.order_cost_output(), self.order_time(), self.order_number]
+                             self.address, str(self.order_list), self.order_cost_output(), str(self.order_time), self.order_number]
         worksheet_to_update = SHEET.worksheet('Sales')
         worksheet_to_update.append_row(append_order_data)
         sleep(2)
@@ -105,8 +106,8 @@ class Order:
         Calculate current time and delivery time
         """
         current_time = datetime.now()
-        order_ready_time = current_time + timedelta(minutes=15)
-        order_ready_time = order_ready_time.strftime("%Y-%m-%d %H:%M:%S")
+        order_ready_time = current_time + timedelta(hours=1, minutes=15)
+        order_ready_time = order_ready_time.strftime("%H:%M:%S (%Y-%m-%d)")
 
         if self.delivery_type == "Delivery":
             print(f'Your order will be delivered at {order_ready_time}\n')

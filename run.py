@@ -7,6 +7,7 @@ from admin import *
 from google_sheet import *
 import pyfiglet
 from termcolor import colored
+from datetime import datetime, timedelta
 from time import sleep
 from order import Order
 
@@ -211,6 +212,7 @@ def complete_order():
     """
     Function to complete order and pass arguments to Order class and its functions
     """
+    order_time = datetime.now() + timedelta(hours=1)
     clear_screen()
     while True:
         order_complete = input(
@@ -218,7 +220,7 @@ def complete_order():
         order_complete = order_complete.capitalize()
         if order_complete == 'Y':
             this_order = Order(name, delivery_type, address,
-                               order_list, generate_order_number(SALES_WORKSHEET))
+                               order_list, generate_order_number(SALES_WORKSHEET), order_time)
             this_order.print_receipt()
             this_order.append_sales()
             break
