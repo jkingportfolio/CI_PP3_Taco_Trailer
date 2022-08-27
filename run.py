@@ -212,24 +212,24 @@ def complete_order():
     clear_screen()
     while True:
         order_complete = input(
-            "Are you ready to complete your order? (Yes/No).\n")
+            "Are you ready to complete your order? (Y/N).\n")
         order_complete = order_complete.capitalize()
-        if order_complete == 'Yes':
+        if order_complete == 'Y':
             this_order = Order(name, delivery_type, address,
                                order_list, generate_order_number(SALES_WORKSHEET))
             this_order.print_receipt()
             this_order.append_sales()
             break
-        elif order_complete == 'No':
+        elif order_complete == 'N':
             clear_screen()
             print(FORMATTED_MENU)
             order_item()
             break
         elif order_complete == 'C':
             quit = input(colored(
-                'Are you sure you want to cancel the order? (Yes/No)\n', 'red'))
+                'Are you sure you want to cancel the order? (Y/N)\n', 'red'))
             quit = quit.capitalize()
-            if quit == 'Yes':
+            if quit == 'Y':
                 order_list.clear()
                 clear_screen()
                 thank_you()
@@ -237,7 +237,7 @@ def complete_order():
                 clear_screen()
                 welcome()
                 break
-            elif quit == 'No':
+            elif quit == 'N':
                 clear_screen()
                 print(FORMATTED_MENU)
                 order_item()
