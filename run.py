@@ -245,6 +245,20 @@ def complete_order():
         else:
             clear_screen()
             print(colored(f'Im sorry "{order_complete}" is an invalid input', 'red'))
+    
+    while True:
+        finish = input("Please press 'Q' to quit or 'O' to begin a new order: \n")
+        finish = finish.capitalize()
+        if finish == 'Q':
+            clear_screen()
+            thank_you()
+            break
+        elif finish == 'O':
+            clear_screen()
+            welcome()
+            break
+        else:
+            print('Im sorry that is an invalid input.')
 
 
 def admin_access():
