@@ -18,8 +18,8 @@ def admin_dashboard():
         total_rec_int = int(total_records)
         admin_option = input('Please select an option: \n')
         if admin_option == '1':
-            while True:
-                print('Option 1 selected\n')
+            print('Option 1 selected\n')
+            while True:                
                 print(f'There are {total_records} records available')
                 record_number = input('Please enter record number to display or 0 to go back: ')
                 clear_screen()
@@ -47,13 +47,16 @@ def admin_dashboard():
 def view_records(record_number):
     print(f'You are viewing order number: {record_number}')
     record_formatted = ORDER_RECORDS[record_number - 1]
+    print('*' * 25)
+    print(f'Order Number: {record_formatted[6]}')
+    print(f'Order Time: {record_formatted[5]}')
     print(f'Name: {record_formatted[0]}')
     print(f'Order Type: {record_formatted[1]}')
     print(f'Address: {record_formatted[2]}')
     print(f'Items: {record_formatted[3]}')
     print(f'Cost: {record_formatted[4]}')
-    print(f'Order Time: {record_formatted[5]}')
-    print(f'Order Number: {record_formatted[6]}')
+    print('*' * 25)
+
     # find last row
     # record numbers = last row number (Record: 1 of {last_row})
     # ask user how many records to show
