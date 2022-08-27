@@ -77,7 +77,22 @@ def customer_details():
             print()
             print(
                 f'You selected {delivery_type.capitalize()} for your order.\n')
-            address = input('Please enter your address: \n')
+            while True:
+                address_number = input('Please enter your house number: \n')
+                if address_number.isdigit():
+                    address_number = int(address_number)
+                    break
+                else:
+                    print(
+                        f'"{address_number}" is not a number. Please enter a number')
+            while True:
+                address_street = input('Please enter your street name: \n')
+                if address_street != '' and all(chr.isalpha() or chr.isspace() for chr in address_street):
+                    break
+                else:
+                    print(
+                        f'"{address_street}" contains numbers/special character. Please enter a valid input')
+            address = (f'{address_number} {address_street}')
             break
         elif delivery_type == 'C':
             delivery_type = 'Collection'
