@@ -255,25 +255,14 @@ def complete_order():
 
     while True:
         finish = input(
-            "Please press 'Q' to quit or 'O' to begin a new order: \n")
+            "Please press 'Q' to quit. \n")
         finish = finish.capitalize()
         if finish == 'Q':
             clear_screen()
             thank_you()
             break
-        elif finish == 'O':
-            clear_screen()
-            reset_order()
-            welcome()
-            break
         else:
             print('Im sorry that is an invalid input.')
-
-
-def reset_order():
-    clear_screen()
-    order_list = []
-    this_item = Order(name, delivery_type, address, order_list, generate_order_number(SALES_WORKSHEET), order_time='TBC')
 
 
 def admin_access():
