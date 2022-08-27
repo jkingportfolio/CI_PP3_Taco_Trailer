@@ -23,6 +23,7 @@ def welcome():
     Display welcome message and ask for user 
     input to place order or admin access
     """
+    clear_screen()
     title = 'Welcome to the Taco Trailer'
     print(pyfiglet.figlet_format(title))
     print('Hello, would you like to place an order?\n')
@@ -160,7 +161,7 @@ def order_item():
             if len(order_list) == 0:
                 clear_screen()
                 print(FORMATTED_MENU)
-                print(colored('\nNothing to remove, basket is empty','red'))
+                print(colored('\nNothing to remove, basket is empty', 'red'))
                 order_item()
                 break
             else:
@@ -203,7 +204,8 @@ def remove_item():
     clear_screen()
     print(FORMATTED_MENU)
     removed_item = order_list[-1]
-    print(colored(f'\nYou have removed {removed_item[1]} from your order.','green'))
+    print(
+        colored(f'\nYou have removed {removed_item[1]} from your order.', 'green'))
     order_list.pop()
     order_item()
 
@@ -248,10 +250,12 @@ def complete_order():
                 break
         else:
             clear_screen()
-            print(colored(f'Im sorry "{order_complete}" is an invalid input', 'red'))
-    
+            print(
+                colored(f'Im sorry "{order_complete}" is an invalid input', 'red'))
+
     while True:
-        finish = input("Please press 'Q' to quit or 'O' to begin a new order: \n")
+        finish = input(
+            "Please press 'Q' to quit or 'O' to begin a new order: \n")
         finish = finish.capitalize()
         if finish == 'Q':
             clear_screen()
@@ -259,10 +263,17 @@ def complete_order():
             break
         elif finish == 'O':
             clear_screen()
+            reset_order()
             welcome()
             break
         else:
             print('Im sorry that is an invalid input.')
+
+
+def reset_order():
+    clear_screen()
+    order_list = []
+    this_item = Order(name, delivery_type, address, order_list, generate_order_number(SALES_WORKSHEET), order_time='TBC')
 
 
 def admin_access():
@@ -289,7 +300,7 @@ def admin_access():
             if password_guesses > 0:
                 print(colored(
                     f'Incorrect password. Remaining password'
-                    f' attempts {password_guesses}\n','red'))
+                    f' attempts {password_guesses}\n', 'red'))
             elif password_guesses == 0:
                 print(pyfiglet.figlet_format('Access denied!'))
                 sleep(2)
