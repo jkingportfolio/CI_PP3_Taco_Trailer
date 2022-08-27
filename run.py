@@ -68,15 +68,17 @@ def customer_details():
                 ' contain numbers or special characters\n', 'red'))
     while True:
         delivery_type = input('Please enter your delivery'
-                              ' type (Delivery/Collection): \n')
+                              ' type. Delivery (D) Collection (C): \n')
         delivery_type = delivery_type.capitalize()
-        if delivery_type == 'Delivery':
+        if delivery_type == 'D':
+            delivery_type = 'Delivery'
             print()
             print(
                 f'You selected {delivery_type.capitalize()} for your order.\n')
             address = input('Please enter your address: \n')
             break
-        elif delivery_type == 'Collection':
+        elif delivery_type == 'C':
+            delivery_type = 'Collection'
             print()
             print(
                 f'You selected {delivery_type.capitalize()} for your order.\n')
