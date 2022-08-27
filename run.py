@@ -126,9 +126,9 @@ def order_item():
         if food_item == "Q":
             clear_screen()
             quit = input(colored(
-                'Are you sure you want to cancel the order? (Yes/No)\n', 'red'))
+                'Are you sure you want to cancel the order? (Y/N)\n', 'red'))
             quit = quit.capitalize()
-            if quit == 'Yes':
+            if quit == 'Y':
                 order_list.clear()
                 clear_screen()
                 thank_you()
@@ -136,7 +136,7 @@ def order_item():
                 clear_screen()
                 welcome()
                 break
-            elif quit == 'No':
+            elif quit == 'N':
                 clear_screen()
                 print(FORMATTED_MENU)
                 order_item()
