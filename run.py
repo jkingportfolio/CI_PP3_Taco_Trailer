@@ -46,7 +46,7 @@ def welcome():
             break
         else:
             print(
-                colored(f'{place_order} is not a valid input, please try again!', 'red'))
+                colored(f'{place_order} is not a valid input, please try again!', 'yellow'))
 
 
 def customer_details():
@@ -65,7 +65,7 @@ def customer_details():
         else:
             print(colored(
                 '\nPlease enter a valid name that does not'
-                ' contain numbers or special characters\n', 'red'))
+                ' contain numbers or special characters\n', 'yellow'))
     while True:
         surname = input('Please enter your surname: \n')
         if surname.isalpha():
@@ -73,7 +73,7 @@ def customer_details():
         else:
             print(colored(
                 '\nPlease enter a valid name that does not'
-                ' contain numbers or special characters\n', 'red'))
+                ' contain numbers or special characters\n', 'yellow'))
     name = (f'{first_name} {surname}')
     clear_screen()
     print(pyfiglet.figlet_format(f'Hi {name}!\n'))
@@ -112,7 +112,7 @@ def customer_details():
             break
         else:
             print()
-            print('Please enter a valid input.\n')
+            print(colored('Please enter a valid input.\n','yellow'))
 
     clear_screen()
     print('Thank you for your details!\n')
@@ -155,7 +155,7 @@ def order_item():
         if food_item == "Q":
             clear_screen()
             quit = input(colored(
-                'Are you sure you want to cancel the order? (Y/N)\n', 'red'))
+                'Are you sure you want to cancel the order? (Y/N)\n', 'yellow'))
             quit = quit.capitalize()
             if quit == 'Y':
                 order_list.clear()
@@ -171,12 +171,12 @@ def order_item():
                 order_item()
                 break
             else:
-                print(colored('Im sorry i need a valid input: ', 'red'))
+                print(colored('Im sorry i need a valid input: ', 'yellow'))
         elif food_item == "X":
             if len(order_list) == 0:
                 clear_screen()
                 print(FORMATTED_MENU)
-                print(colored('\nCannot complete order, basket is empty.', 'red'))
+                print(colored('\nCannot complete order, basket is empty.', 'yellow'))
                 order_item()
                 break
             else:
@@ -186,7 +186,7 @@ def order_item():
             if len(order_list) == 0:
                 clear_screen()
                 print(FORMATTED_MENU)
-                print(colored('\nNothing to remove, basket is empty', 'red'))
+                print(colored('\nNothing to remove, basket is empty', 'yellow'))
                 order_item()
                 break
             else:
@@ -205,7 +205,7 @@ def order_item():
                 order_item()
                 break
             else:
-                print(colored('Im sorry i need a valid input: ', 'red'))
+                print(colored('Im sorry i need a valid input: ', 'yellow'))
         elif food_item.isdigit() and int(food_item) > 0:
             try:
                 food_item = int(food_item) - 1
@@ -223,7 +223,7 @@ def order_item():
                 print(FORMATTED_MENU)
                 print(colored(
                     f'\nIm sorry Item {food_item + 1} does not exist.'
-                    ' Please enter a valid item number', 'red'))
+                    ' Please enter a valid item number', 'yellow'))
                 order_item()
                 break
         else:
@@ -231,7 +231,7 @@ def order_item():
             print(FORMATTED_MENU)
             print(colored(
                 f'\nIm sorry but {food_item} is not a menu'
-                ' option. Please enter a valid input', 'red'))
+                ' option. Please enter a valid input', 'yellow'))
             order_item()
             break
 
@@ -272,7 +272,7 @@ def complete_order():
             break
         elif order_complete == 'C':
             quit = input(colored(
-                'Are you sure you want to cancel the order? (Y/N)\n', 'red'))
+                'Are you sure you want to cancel the order? (Y/N)\n', 'yellow'))
             quit = quit.capitalize()
             if quit == 'Y':
                 order_list.clear()
@@ -290,7 +290,7 @@ def complete_order():
         else:
             clear_screen()
             print(
-                colored(f'Im sorry "{order_complete}" is an invalid input', 'red'))
+                colored(f'Im sorry "{order_complete}" is an invalid input\n', 'yellow'))
 
     while True:
         finish = input(
@@ -328,7 +328,7 @@ def admin_access():
             if password_guesses > 0:
                 print(colored(
                     f'Incorrect password. Remaining password'
-                    f' attempts {password_guesses}\n', 'red'))
+                    f' attempts {password_guesses}\n', 'yellow'))
             elif password_guesses == 0:
                 print(pyfiglet.figlet_format('Access denied!'))
                 sleep(2)
