@@ -1,7 +1,6 @@
 """
 Main python file
 """
-import os
 import getpass
 from admin import *
 from google_sheet import *
@@ -9,6 +8,7 @@ import pyfiglet
 from termcolor import colored
 from datetime import datetime, timedelta
 from time import sleep
+from command_line import clear_screen
 from order import Order
 
 
@@ -112,7 +112,7 @@ def customer_details():
             break
         else:
             print()
-            print(colored('Please enter a valid input.\n','yellow'))
+            print(colored('Please enter a valid input.\n', 'yellow'))
 
     clear_screen()
     print('Thank you for your details!\n')
@@ -193,7 +193,7 @@ def order_item():
                 remove_item()
             break
         elif food_item == "P":
-            clear_screen()            
+            clear_screen()
             print(tabulate(order_list, headers=['Item', 'Name', 'Cost (£)'],
                            tablefmt="simple", numalign="center"))
             close_preview = input(colored(
@@ -336,14 +336,14 @@ def admin_access():
                 welcome()
 
 
-def clear_screen():
-    """
-    Function to clear screen
-    """
-    if (os.name == 'posix'):
-        os.system('clear')
-    else:
-        os.system('cls')
+# def clear_screen():
+#     """
+#     Function to clear screen
+#     """
+#     if (os.name == 'posix'):
+#         os.system('clear')
+#     else:
+#         os.system('cls')
 
 
 def thank_you():
