@@ -17,7 +17,9 @@ def admin_dashboard():
         record_count = list(filter(None, SALES_WORKSHEET.col_values(1)))
         total_records = str(len(record_count)+1)
         total_rec_int = int(total_records)
+        print('To view records, enter (1)\nTo view pending orders enter (2)\n')
         admin_option = input('Please select an option: \n')
+        clear_screen()
         if admin_option == '1':
             print('Option 1 selected\n')
             while True:
@@ -26,7 +28,7 @@ def admin_dashboard():
                     'Please enter record number to display or 0 to go back: ')
                 clear_screen()
                 record_number = int(record_number)
-                if record_number <= total_rec_int and record_number > 1:
+                if record_number < total_rec_int and record_number > 1:
                     try:
                         view_records(record_number)
                     except IndexError:
