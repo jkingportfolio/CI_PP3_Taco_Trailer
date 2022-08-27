@@ -27,19 +27,19 @@ def welcome():
     print('Hello, would you like to place an order?\n')
     while True:
         place_order = input(
-            'Please enter a valid input (Yes/No). Or for'
-            ' Admin Access enter (Admin).\n')
+            'Please enter a valid input (Y/N). Or for'
+            ' Admin Access enter (A).\n')
         place_order = place_order.capitalize()
 
-        if place_order == 'Yes':
+        if place_order == 'Y':
             clear_screen()
             customer_details()
             break
-        elif place_order == 'No':
+        elif place_order == 'N':
             clear_screen()
             thank_you()
             break
-        elif place_order == 'Admin':
+        elif place_order == 'A':
             admin_access()
             break
         else:
