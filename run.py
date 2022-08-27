@@ -145,6 +145,7 @@ def order_item():
     instructions = ("\nAdd item by entering item number.\n"
                     "To remove last item enter 'R'.\n"
                     "To cancel order enter 'Q'.\n"
+                    "To preview order enter 'P'.\n"
                     "To complete order enter 'X'.\n")
 
     print(instructions)
@@ -191,6 +192,20 @@ def order_item():
             else:
                 remove_item()
             break
+        elif food_item == "P":
+            clear_screen()            
+            print(tabulate(order_list, headers=['Item', 'Name', 'Cost (£)'],
+                           tablefmt="simple", numalign="center"))
+            close_preview = input(colored(
+                '\nRetun to order screen? (Y)\n', 'green'))
+            close_preview = close_preview.capitalize()
+            if close_preview == 'Y':
+                clear_screen()
+                print(FORMATTED_MENU)
+                order_item()
+                break
+            else:
+                print(colored('Im sorry i need a valid input: ', 'red'))
         elif food_item.isdigit() and int(food_item) > 0:
             try:
                 food_item = int(food_item) - 1
