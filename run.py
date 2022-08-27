@@ -95,7 +95,7 @@ def customer_details():
                     print(
                         f'"{address_number}" is not a number. Please enter a number')
             while True:
-                address_street = input('Please enter your street name: \n')
+                address_street = input('\nPlease enter your street name: \n')
                 if address_street != '' and all(chr.isalpha() or chr.isspace() for chr in address_street):
                     break
                 else:
