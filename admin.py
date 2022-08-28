@@ -43,9 +43,7 @@ def admin_dashboard():
             break
         else:
             print('Thats not an option')
-
-
-# def sales_info():
+            
 
 # def pending_orders():
     # calculate time now
@@ -64,6 +62,3 @@ def view_records(record_number):
     print(f'Items: {record_formatted[3]}')
     print(f'Cost: {record_formatted[4]}')
     print('*' * 25)
-
-# def update_menu():
-    #
