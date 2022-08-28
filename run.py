@@ -336,16 +336,6 @@ def admin_access():
                 welcome()
 
 
-# def clear_screen():
-#     """
-#     Function to clear screen
-#     """
-#     if (os.name == 'posix'):
-#         os.system('clear')
-#     else:
-#         os.system('cls')
-
-
 def thank_you():
     """
     Function to display thank you message
