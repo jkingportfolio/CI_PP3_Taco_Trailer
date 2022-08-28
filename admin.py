@@ -6,12 +6,11 @@ from tabulate import tabulate
 from command_line import clear_screen
 from datetime import datetime, timedelta
 from time import sleep
-import pandas as pd
 
 
-ORDER_RECORDS = SALES_WORKSHEET.get_all_values()
-FORMATTED_ORDERS = (tabulate(ORDER_RECORDS, headers=['Name', 'Order Type', 'Address', 'Items', 'Cost (£)', 'Order Time / Date', 'Order Number'],
-                             tablefmt="simple", numalign="center"))
+ORDER_RECORDS = SALES_WORKSHEET.get_all_records()
+# FORMATTED_ORDERS = (tabulate(ORDER_RECORDS, headers=['Name', 'Order Type', 'Address', 'Items', 'Cost (£)', 'Order Time / Date', 'Order Number'],
+#                              tablefmt="simple", numalign="center"))
 
 
 def admin_dashboard():
@@ -56,26 +55,38 @@ def pending_orders(total_rec_int):
         local_time = current_time + timedelta(hours=1)
         print(f'Local time is now :{local_time}')
         print(type(local_time))
-        print(SALES_WORKSHEET)
-        df = pd.DataFrame(SALES_WORKSHEET.get_all_records(), columns=['Name', 'Order Type', 'Address', 'Items', 'Cost', 'Order Time/Date', 'Order Number'])
-        df = df.drop(columns=['Name', 'Address','Items', 'Cost', 'Order Type'])
-        df['Order Time/Date'] = pd.to_datetime(df['Order Time/Date'], format='%H:%M:%S %Y-%m-%d')
-        df = df.reset_index(drop=True)
-        print(df)
-        print('\n\n\n')
+        # FORMATTED_SALES = (tabulate(ORDER_RECORDS, headers=['Name', 'Order Type', 'Address', 'Items', 'Cost (£)', 'Order Time/Date','Order Number'],
+        #                    tablefmt="simple", numalign="center"))
+        FORMATTED_SALES = ORDER_RECORDS
+        print(type(FORMATTED_SALES))     
+
+        
+        # printing original list
+        print("The original list is :")
+        print(FORMATTED_SALES)
+        print('\n\n\n\n')
+
+        # # initializing key 
+        del_key = 'Items'
+        # del_key_one = ('Address')
+        # del_key_two = ('Order Type')
+        
+        # Remove Key from Dictionary List
+        # Using loop + del
+        for items in FORMATTED_SALES:
+            if del_key in items:
+                del items[del_key]
+
+        print(tabulate(FORMATTED_SALES, headers='keys',
+                            tablefmt="simple", numalign="center"))
 
 
-        order_offset = local_time + timedelta(minutes=15)
-        # order_offset = local_time + DateOffset(minutes=15)
-        print(type(order_offset))
-        print(f'Offset time is: {order_offset}')
-        order_offset = order_offset.replace(microsecond=0)
-        print(type(order_offset))
-        print(f'Offset time is: {order_offset}')
 
-        rslt_df = df.loc[df['Order Time/Date'] > order_offset]
-        print(rslt_df)  
-        test_hold = input('Holding')
+
+        test_hold = input('Press 0 to go back')
+        if test_hold == '0':
+            break
+
 
 def view_records(record_number):
     print(f'You are viewing order number: {record_number}')
