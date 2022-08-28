@@ -305,7 +305,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Help Modal  | Click on the Help link from the Nav Bar  | The Help link from the nav bar is clicked and the help modal with information on the aim of the game, how to play and user controls is displayed     | Works as intended |
+|   |   |     |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -316,7 +316,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| New game modal  | Click on the New game modal from the Nav Bar  |  The New Game link from the nav bar is clicked and the new game modal will display. From there two buttons are presented, one being human the other being computer. The desired opponent button is clicked and the yes button is clicked to confirm and start the new game    | Works as intended |
+|   |   |    |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -327,7 +327,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Notification Bar  | Play a game and the notification bar will display the correct notification  | Whilst in game the notification bar will be updated to state which player currently has a turn to take    | Works as intended |
+|  |  |  |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -338,8 +338,8 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Notification Bar  | Try to place a counter on an invalid cell  | Whilst in game the notification bar will be updated to state invalid move if the user clicks on a cell which is either occupied or does not have a counter beneath it     | Works as intended |
-| Vibration Alert | Try to place a counter on an invalid cell | If a user is playing on a device which supports vibration, the device will vibrate to indicate a wrong move | Works as intended |
+|   |   |  |
+|  |  |  |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -350,7 +350,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Notification Bar  | Play a game and the notification bar will display the correct notification |  When a player achieves 4 in a row the notification bar will update to state who won and disable all clicks    | Works as intended |
+|   |  |     |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -361,7 +361,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Stats Button  | Hover over the stats button on Desktop or click if on a Mobile / Tablet device  | Whilst hover / click occurs the stats information will display to show the total number of player 1 wins, player 2 wins and draws     | Works as intended |
+|   |   |  |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -372,8 +372,8 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Settings modal  | Click on the Settings link in the Nav Bar, from the settings modal set music / sounds to be on or off | To be able to control if music / sounds are on or off whilst playing the game     | Works as intended |
-| Master mute button  | Locate master mute button below the game board and click on it  | If clicked on it will turn both music and sounds off or on dependant on what state the sounds currently are     | Works as intended |
+|   |  |  |
+|   |   |  |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -385,7 +385,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Contact modal  | Click on the Contact link in the Nav Bar, from the contact modal enter relevant information  | To be presented with the contact modal which once populated, entered information validated and submit button clicked will send the information to the site owner and a message will display to let the user know if the submission was successful or not      | Works as intended |
+|   |  |   | |
 
 <details>
 <summary>Screenshots</summary>
@@ -396,7 +396,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Play again button  | Click on the Play Again button  | On game end the Play again button would appear and when clicked, the board will clear and a new game will commence  | Works as intended |
+|   |   |  |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -407,7 +407,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Nav Bar  | Click on the desired Nav Bar link  |  To display the desired modal dependant on the choice of the user   | Works as intended |
+|  |  |    |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -418,7 +418,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Main game area  | Open the game on a mobile device  | The site to show a high level of responsiveness to adjust to the mobile device screen     | Works as intended |
+|   |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -432,7 +432,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Contact modal  | Click on the Contact link in the Nav Bar  | To be presented with the contact modal which once populated, entered information validated and submit button clicked will send the information to the site owner and a message will display to let the user know if the submission was successful or not      | Works as intended |
+|   |   |    |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -444,7 +444,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Footer  | Scroll to the bottom of the page and locate the social icons  | Social pages to open in new window if clicked on from the footer     | Works as intended |
+|   |   |    |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -455,7 +455,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| 404 page      | Try to access a page which does not exist   |  The user will be presented with a 404 error page indicating that the page does not exist    | Works as intended |
+|      |    |      |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -466,7 +466,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| 404 page return button  | Locate the Return Home button and click on it  | To be returned to the main page to be able to start a new game     | Works as intended |
+|   |   |     |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -477,7 +477,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Orientation warning modal  |  On a mobile device rotate the screen from portrait to landscape |  On first instance of this orientation change the Orientation Warning modal will display. Once it has been shown once it will not be shown again until the page is reloaded.   | Works as intended |
+|   |   |     |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -488,7 +488,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Welcome modal  | Navigate to the connect 4 website  | On page load the welcome modal will display automatically     | Works as intended |
+|   |   |   |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -504,19 +504,19 @@ During the project i encountered a number of bugs some of which were solved some
 
 | Bug           | Fix           |
 | ------------- | ------------- |
-| Computer opponent not placing a counter and turn reverting back to player 1  | This bug was due to the cells array adding 7 to the total length of the array when trying to validate if there was a counter underneath it thus trying to find a number outside of the array length if one of the randomly selected cells for placement was on the last row of the board, to fix this a variable called maxCells was added. Then the game play functioned as expected |
-| Multiple turns for player 1 whilst it is computer player 2s turn  | There was no code to stop clicks, a function called disableClicks was added which would loop all cells and add the disable-click class to them which had pointer events set to none. This would then limit clicks by player one whilst the computer took its turn. | 
-| Multiple wins within one game  | If there was an instance in which a player managed to get multiple 4 in a rows due to the loop looking for a match on all combinations a win could be counted multiple times in one game, a simple break was added to the function which would exit the function once one had been found. |
-| Sound button does not update to reflect set values in settings modal  | A function was added to the click event listener for the buttons located in settings which if both buttons are set to off would be reflected by the master sound button displaying the muted symbol and if both music and sound settings were set to on the image would display the on symbol |
-| In vs computer game, on game end the invalid move sound will still sound if clicked  | This bug happened due to the disable-click class being removed as soon as it was added. To fix this, the gameActive variable was added to control if the onePlayerGame function should run, previously it would by default which would be the cause of removal for disable-click class thus creating the bug in which the invalid move sound would still play. |
-| Viewport height glitch whilst Player 2 animation running  | This glitch only happens when it is player 2s turn. The height of the page is set to 100vh and when the computer players turn animation runs the page can be scrolled down. This then stops once the animation stops running. After spending a lot of time trying to fix this I could not find the reason behind the bug and due to this bug self fixing and not effecting the user experience i decided to leave it as a known bug |
+|   |  |
+|   | | 
+|   |  |
+|   |  |
+|  |  |
+|   |  |
 
 ### Console Bugs
 
 | Bug           | Reason           |
 | ------------- | ---------------- |
-| Interest cohort error | When the page is reloaded using Chrome there is an error message in the console `Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.` Research online has shown that this is an effort to protect the privacy of users whilst using GitHub pages sites. As this bug is outwith my own control and does not affect functionality or User Experience it has been left as a known bug.|
-| Navigator user agent error |When using Chrome there is an issue `Audit usage of navigator.userAgent, navigator.appVersion, and navigator.platform`. According to Chrome documentation this is done to "limit browser data shared to remove sensitive information and reduce fingerprints. As this bug is outwith my own control and does not affect functionality or User Experience it has been left as a known bug.|
+|  | |
+| |
 
 <details>
 <summary>Screenshots</summary>
