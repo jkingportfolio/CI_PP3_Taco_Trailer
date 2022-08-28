@@ -7,7 +7,6 @@ from command_line import clear_screen
 from datetime import datetime, timedelta
 from time import sleep
 import pandas as pd
-from pandas.tseries.offsets import DateOffset
 
 
 ORDER_RECORDS = SALES_WORKSHEET.get_all_values()
