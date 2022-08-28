@@ -9,8 +9,6 @@ from time import sleep
 
 
 ORDER_RECORDS = SALES_WORKSHEET.get_all_records()
-# FORMATTED_ORDERS = (tabulate(ORDER_RECORDS, headers=['Name', 'Order Type', 'Address', 'Items', 'Cost (£)', 'Order Time / Date', 'Order Number'],
-#                              tablefmt="simple", numalign="center"))
 
 
 def admin_dashboard():
@@ -49,39 +47,26 @@ def admin_dashboard():
 
 
 def pending_orders(total_rec_int):
-    # calculate time now
     while True:
         current_time = datetime.now()
         local_time = current_time + timedelta(hours=1)
         print(f'Local time is now :{local_time}')
         print(type(local_time))
-        # FORMATTED_SALES = (tabulate(ORDER_RECORDS, headers=['Name', 'Order Type', 'Address', 'Items', 'Cost (£)', 'Order Time/Date','Order Number'],
-        #                    tablefmt="simple", numalign="center"))
         FORMATTED_SALES = ORDER_RECORDS
-        print(type(FORMATTED_SALES))     
+        print(type(FORMATTED_SALES))
 
-        
-        # printing original list
         print("The original list is :")
         print(FORMATTED_SALES)
         print('\n\n\n\n')
 
-        # # initializing key 
         del_key = 'Items'
-        # del_key_one = ('Address')
-        # del_key_two = ('Order Type')
-        
-        # Remove Key from Dictionary List
-        # Using loop + del
+
         for items in FORMATTED_SALES:
             if del_key in items:
                 del items[del_key]
 
         print(tabulate(FORMATTED_SALES, headers='keys',
-                            tablefmt="simple", numalign="center"))
-
-
-
+                       tablefmt="simple", numalign="center"))
 
         test_hold = input('Press 0 to go back')
         if test_hold == '0':
