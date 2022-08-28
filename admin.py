@@ -52,15 +52,23 @@ def admin_dashboard():
 def pending_orders(total_rec_int):
     # calculate time now
     while True:
-        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        current_time = datetime.now()
+        local_time = current_time + timedelta(hours=1, minutes=15)
+        local_time = local_time.strftime("%Y-%m-%d %H:%M:%S")
+        print(type(local_time))
+        print(local_time)
+        local_time = datetime.strptime(local_time, '%Y-%m-%d %H:%M:%S')
+        print(type(local_time))
+        print(local_time)
         df = pd.DataFrame(SALES_WORKSHEET.get_all_records(), columns=['Name', 'Order Type', 'Address', 'Items', 'Cost', 'Order Time/Date', 'Order Number'])
         df = df.drop(columns=['Name', 'Address','Items', 'Cost', 'Order Type'])
-        df['Order Time/Date'] =  pd.to_datetime(df['Order Time/Date'], format='%Y-%m-%d %H:%M:%S')
-        df.head()
+        df['Order Time/Date'] = pd.to_datetime(df['Order Time/Date'], format='%Y-%m-%d %H:%M:%S')
+        df = df.reset_index(drop=True)
         print(df)
+        print (df.dtypes)
         print()
         print()
-        rslt_df = df[df['Order Time/Date'] > current_time]  
+        rslt_df = df[df['Order Time/Date'] > local_time]  
         print('\nResult dataframe :\n', rslt_df)            
         test_hold = input('Holding')
 
