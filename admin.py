@@ -59,17 +59,9 @@ def pending_orders(total_rec_int):
         print(FORMATTED_SALES)
         print('\n\n\n\n')
 
-        del_key = 'Items'
-    
-        for items in FORMATTED_SALES:
-            if del_key in items:
-                del items[del_key]
-
-        del_key = 'Address'
-
-        for items in FORMATTED_SALES:
-            if del_key in items:
-                del items[del_key]
+        for item in FORMATTED_SALES:
+            for key in ('Items', 'Address', 'Name'):
+                del item[key]
 
         print(tabulate(FORMATTED_SALES, headers='keys',
                        tablefmt="simple", numalign="center"))
