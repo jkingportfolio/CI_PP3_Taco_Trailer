@@ -114,10 +114,3 @@ class Order:
         elif self.delivery_type == "Collection":
             print(
                 f'Your order will be ready for collection at {order_ready_time}\n')
-
-    # def order_time(self):
-    #     """
-    #     Generate order timestamp
-    #     """
-    #     order_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    #     return order_time
