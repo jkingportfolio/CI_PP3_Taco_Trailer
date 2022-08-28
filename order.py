@@ -107,7 +107,7 @@ class Order:
         """
         current_time = datetime.now()
         order_ready_time = current_time + timedelta(hours=1, minutes=15)
-        order_ready_time = order_ready_time.strftime("%H:%M:%S (%Y-%m-%d)")
+        order_ready_time = order_ready_time.strftime("%H:%M:%S %Y-%m-%d")
 
         if self.delivery_type == "Delivery":
             print(f'Your order will be delivered at {order_ready_time}\n')

@@ -7,6 +7,7 @@ from command_line import clear_screen
 from datetime import datetime, timedelta
 from time import sleep
 import pandas as pd
+from pandas.tseries.offsets import DateOffset
 
 
 ORDER_RECORDS = SALES_WORKSHEET.get_all_values()
@@ -53,23 +54,28 @@ def pending_orders(total_rec_int):
     # calculate time now
     while True:
         current_time = datetime.now()
-        local_time = current_time + timedelta(hours=1, minutes=15)
-        local_time = local_time.strftime("%Y-%m-%d %H:%M:%S")
+        local_time = current_time + timedelta(hours=1)
+        print(f'Local time is now :{local_time}')
         print(type(local_time))
-        print(local_time)
-        local_time = datetime.strptime(local_time, '%Y-%m-%d %H:%M:%S')
-        print(type(local_time))
-        print(local_time)
+        print(SALES_WORKSHEET)
         df = pd.DataFrame(SALES_WORKSHEET.get_all_records(), columns=['Name', 'Order Type', 'Address', 'Items', 'Cost', 'Order Time/Date', 'Order Number'])
         df = df.drop(columns=['Name', 'Address','Items', 'Cost', 'Order Type'])
-        df['Order Time/Date'] = pd.to_datetime(df['Order Time/Date'], format='%Y-%m-%d %H:%M:%S')
+        df['Order Time/Date'] = pd.to_datetime(df['Order Time/Date'], format='%H:%M:%S %Y-%m-%d')
         df = df.reset_index(drop=True)
         print(df)
-        print (df.dtypes)
-        print()
-        print()
-        rslt_df = df[df['Order Time/Date'] > local_time]  
-        print('\nResult dataframe :\n', rslt_df)            
+        print('\n\n\n')
+
+
+        order_offset = local_time + timedelta(minutes=15)
+        # order_offset = local_time + DateOffset(minutes=15)
+        print(type(order_offset))
+        print(f'Offset time is: {order_offset}')
+        order_offset = order_offset.replace(microsecond=0)
+        print(type(order_offset))
+        print(f'Offset time is: {order_offset}')
+
+        rslt_df = df.loc[df['Order Time/Date'] > order_offset]
+        print(rslt_df)  
         test_hold = input('Holding')
 
 def view_records(record_number):

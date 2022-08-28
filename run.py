@@ -254,7 +254,7 @@ def complete_order():
     Function to complete order and pass arguments to Order class and its functions
     """
     order_time = datetime.now() + timedelta(hours=1)
-    order_time = order_time.strftime("%H:%M:%S (%Y-%m-%d)")
+    order_time = order_time.strftime("%H:%M:%S %Y-%m-%d")
     clear_screen()
     while True:
         order_complete = input(
