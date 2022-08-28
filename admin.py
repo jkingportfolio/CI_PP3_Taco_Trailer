@@ -61,31 +61,8 @@ def pending_orders(total_rec_int):
         print()
         print()
         rslt_df = df[df['Order Time/Date'] > current_time]  
-        print('\nResult dataframe :\n', rslt_df)
-            
+        print('\nResult dataframe :\n', rslt_df)            
         test_hold = input('Holding')
-        # list_of_dicts = SALES_WORKSHEET.get_all_records()
-        # key_to_delete = 'Items'
-        # new_dict = {}
-        # print(result)
-        # input = input('stop')
-        
-        # print(current_time)
-        # order_list = []
-        # pending_order_list = []
-        # for r in range(2, total_rec_int):
-        #     row = SALES_WORKSHEET.row_values(r)
-        #     order_list.append(row)
-        # print(order_list)
-        # print(FORMATTED_ORDERS)
-        # user_input = input('\nPress 0 to exit\n')
-        # if user_input == '0':
-        #     break
-        # else:
-        #     print('Please enter 0')
-        # parse times ordered
-        # if time now minus time ordered < 15 minutes print order
-
 
 def view_records(record_number):
     print(f'You are viewing order number: {record_number}')
