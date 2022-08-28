@@ -49,6 +49,9 @@ def pending_orders(total_rec_int):
         local_time = current_time + timedelta(hours=1)
         print(f'Local time is now :{local_time}')
         print(type(local_time))
+        local_time = local_time.strftime("%H:%M:%S %Y-%m-%d")
+        print(type(local_time))
+
         FORMATTED_SALES = ORDER_RECORDS
         print(type(FORMATTED_SALES))
 
@@ -57,6 +60,12 @@ def pending_orders(total_rec_int):
         print('\n\n\n\n')
 
         del_key = 'Items'
+    
+        for items in FORMATTED_SALES:
+            if del_key in items:
+                del items[del_key]
+
+        del_key = 'Address'
 
         for items in FORMATTED_SALES:
             if del_key in items:
