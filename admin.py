@@ -17,7 +17,7 @@ def admin_dashboard():
         record_count = list(filter(None, SALES_WORKSHEET.col_values(1)))
         total_records = str(len(record_count)+1)
         total_rec_int = int(total_records)
-        print('To view records, enter (1)\nTo view pending orders enter (2)\n')
+        print('Logged in as Administrator\n\nTo view records enter (1)\nTo view pending orders enter (2)\n')
         admin_option = input('Please select an option: \n')
         clear_screen()
         if admin_option == '1':
@@ -64,12 +64,6 @@ def view_records(record_number):
     print(f'Items: {record_formatted[3]}')
     print(f'Cost: {record_formatted[4]}')
     print('*' * 25)
-
-    # find last row
-    # record numbers = last row number (Record: 1 of {last_row})
-    # ask user how many records to show
-    # show records
-    # plus and minus buttons to go to next and back
 
 # def update_menu():
     #
