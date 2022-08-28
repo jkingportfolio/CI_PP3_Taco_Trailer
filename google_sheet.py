@@ -20,4 +20,6 @@ MENU = SHEET.worksheet("Menu").get_all_values()
 FORMATTED_MENU = (tabulate(MENU, headers=['Item', 'Name', 'Cost (£)'],
                            tablefmt="simple", numalign="center"))
 SALES_WORKSHEET = SHEET.worksheet("Sales")
+ORDER_RECORDS = SALES_WORKSHEET.get_all_records()
 PASSWORD = SHEET.worksheet("Password").acell('A1').value
+

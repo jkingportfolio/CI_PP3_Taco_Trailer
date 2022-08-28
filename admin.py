@@ -8,9 +8,6 @@ from datetime import datetime, timedelta
 from time import sleep
 
 
-ORDER_RECORDS = SALES_WORKSHEET.get_all_records()
-
-
 def admin_dashboard():
     clear_screen()
     while True:
