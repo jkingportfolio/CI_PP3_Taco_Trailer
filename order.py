@@ -25,7 +25,7 @@ class Order:
         print()
         self.processing_order()
         print('***** Order Receipt *****\n')
-        print(f'Order time: {self.order_time.strftime("%H:%M:%S (%Y-%m-%d)")}\n')
+        print(f'Order time: {self.order_time}\n')
         print(f'Order Number: {self.order_number}')
         print(f'Name: {self.name}')
         print(f'Delivery Type: {self.delivery_type.capitalize()}')
@@ -115,9 +115,9 @@ class Order:
             print(
                 f'Your order will be ready for collection at {order_ready_time}\n')
 
-    def order_time(self):
-        """
-        Generate order timestamp
-        """
-        order_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        return order_time
+    # def order_time(self):
+    #     """
+    #     Generate order timestamp
+    #     """
+    #     order_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    #     return order_time
