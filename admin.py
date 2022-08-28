@@ -6,6 +6,7 @@ from tabulate import tabulate
 from command_line import clear_screen
 from datetime import datetime, timedelta
 from time import sleep
+import pandas as pd
 
 
 ORDER_RECORDS = SALES_WORKSHEET.get_all_values()
@@ -34,23 +35,57 @@ def admin_dashboard():
                     try:
                         view_records(record_number)
                     except IndexError:
-                        print(f'Record "{record_number}" does not exist, please enter valid record number')
+                        print(
+                            f'Record "{record_number}" does not exist, please enter valid record number')
                 elif record_number == 0:
                     break
                 else:
                     print(
                         f'Record "{record_number}" does not exist, please enter valid record number')
         elif admin_option == '2':
-            print('Option 2 selected')
+            pending_orders(total_rec_int)
             break
         else:
             print('Thats not an option')
 
 
-# def pending_orders():
+def pending_orders(total_rec_int):
     # calculate time now
-    # parse times ordered
-    # if time now minus time ordered < 15 minutes print order
+    while True:
+        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        df = pd.DataFrame(SALES_WORKSHEET.get_all_records(), columns=['Name', 'Order Type', 'Address', 'Items', 'Cost', 'Order Time/Date', 'Order Number'])
+        df = df.drop(columns=['Name', 'Address','Items', 'Cost', 'Order Type'])
+        df['Order Time/Date'] =  pd.to_datetime(df['Order Time/Date'], format='%Y-%m-%d %H:%M:%S')
+        df.head()
+        print(df)
+        print()
+        print()
+        rslt_df = df[df['Order Time/Date'] > current_time]  
+        print('\nResult dataframe :\n', rslt_df)
+            
+        test_hold = input('Holding')
+        # list_of_dicts = SALES_WORKSHEET.get_all_records()
+        # key_to_delete = 'Items'
+        # new_dict = {}
+        # print(result)
+        # input = input('stop')
+        
+        # print(current_time)
+        # order_list = []
+        # pending_order_list = []
+        # for r in range(2, total_rec_int):
+        #     row = SALES_WORKSHEET.row_values(r)
+        #     order_list.append(row)
+        # print(order_list)
+        # print(FORMATTED_ORDERS)
+        # user_input = input('\nPress 0 to exit\n')
+        # if user_input == '0':
+        #     break
+        # else:
+        #     print('Please enter 0')
+        # parse times ordered
+        # if time now minus time ordered < 15 minutes print order
+
 
 def view_records(record_number):
     print(f'You are viewing order number: {record_number}')
