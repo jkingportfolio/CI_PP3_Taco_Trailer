@@ -4,6 +4,8 @@ Admin functions module
 from google_sheet import *
 from tabulate import tabulate
 from command_line import clear_screen
+from datetime import datetime, timedelta
+from time import sleep
 
 
 ORDER_RECORDS = SALES_WORKSHEET.get_all_values()
@@ -43,7 +45,7 @@ def admin_dashboard():
             break
         else:
             print('Thats not an option')
-            
+
 
 # def pending_orders():
     # calculate time now
