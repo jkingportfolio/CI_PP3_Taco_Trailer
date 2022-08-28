@@ -20,7 +20,7 @@ def admin_dashboard():
         if admin_option == '1':
             print('Option 1 selected\n')
             while True:
-                print(f'There are {total_records} records available')
+                print(f'There are {total_rec_int - 1} records available')
                 record_number = input(
                     'Please enter record number to display or 0 to go back:\n ')
                 clear_screen()
