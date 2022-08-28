@@ -22,7 +22,7 @@ def admin_dashboard():
             while True:
                 print(f'There are {total_records} records available')
                 record_number = input(
-                    'Please enter record number to display or 0 to go back: ')
+                    'Please enter record number to display or 0 to go back:\n ')
                 clear_screen()
                 record_number = int(record_number)
                 if record_number < total_rec_int and record_number > 1:
@@ -44,6 +44,7 @@ def admin_dashboard():
 
 
 def pending_orders(total_rec_int):
+    clear_screen()
     while True:
         current_time = datetime.now()
         local_time = current_time + timedelta(hours=1)
@@ -66,14 +67,14 @@ def pending_orders(total_rec_int):
         print(tabulate(FORMATTED_SALES, headers='keys',
                        tablefmt="simple", numalign="center"))
 
-        test_hold = input('Press 0 to go back')
+        test_hold = input('\nPress 0 to go back\n')
         if test_hold == '0':
             break
 
 
 def view_records(record_number):
     print(f'You are viewing order number: {record_number}')
-    record_formatted = ORDER_RECORDS[record_number - 1]
+    record_formatted = ORDER_RECORD_VALUES[record_number - 1]
     print('*' * 25)
     print(f'Order Number: {record_formatted[6]}')
     print(f'Order Time: {record_formatted[5]}')
