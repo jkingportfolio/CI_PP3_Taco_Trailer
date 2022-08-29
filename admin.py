@@ -20,27 +20,7 @@ def admin_dashboard():
         clear_screen()
         if admin_option == '1':
             print('Option 1 selected\n')
-            while True:
-                try:
-                    while True:
-                        print(f'There are {total_rec_int - 1} records available')
-                        record_number = input(
-                            'Please enter record number to display or 0 to go back:\n')
-                        clear_screen()
-                        record_number = int(record_number)
-                        if record_number < total_rec_int and record_number > 1:
-                            try:
-                                view_records(record_number)
-                            except IndexError:
-                                print(
-                                    f'Record "{record_number}" does not exist, please enter valid record number')
-                        elif record_number == 0:
-                            break
-                        else:
-                            print(
-                                f'Record "{record_number}" does not exist, please enter valid record number')
-                except ValueError:
-                    print(colored(f'"{record_number}" is an invalid entry please try again.\n', 'yellow'))
+            search_records(total_rec_int)
         elif admin_option == '2':
             pending_orders(total_rec_int)
             break
@@ -53,17 +33,9 @@ def pending_orders(total_rec_int):
     while True:
         current_time = datetime.now()
         local_time = current_time + timedelta(hours=1)
-        print(f'Local time is now :{local_time}')
-        print(type(local_time))
+        print(f'Local time is now: {local_time}')
         local_time = local_time.strftime("%H:%M:%S %Y-%m-%d")
-        print(type(local_time))
-
         FORMATTED_SALES = ORDER_RECORDS
-        print(type(FORMATTED_SALES))
-
-        print("The original list is :")
-        print(FORMATTED_SALES)
-        print('\n\n\n\n')
 
         for item in FORMATTED_SALES:
             for key in ('Items', 'Address', 'Name'):
@@ -74,7 +46,32 @@ def pending_orders(total_rec_int):
 
         test_hold = input('\nPress 0 to go back\n')
         if test_hold == '0':
+            admin_dashboard()
             break
+
+
+def search_records(total_rec_int):
+    while True:
+        try:
+            print(f'There are {total_rec_int - 1} records available')
+            record_number = input(
+                'Please enter record number to display or 0 to go back:\n')
+            clear_screen()
+            record_number = int(record_number)
+            if record_number < total_rec_int and record_number > 1:
+                try:
+                    view_records(record_number)
+                except IndexError:
+                    print(
+                        f'Record "{record_number}" does not exist, please enter valid record number')
+            elif record_number == 0:
+                break
+            else:
+                print(
+                    f'Record "{record_number}" does not exist, please enter valid record number')
+        except ValueError:
+            print(
+                colored(f'"{record_number}" is an invalid entry please try again.\n', 'yellow'))
 
 
 def view_records(record_number):
@@ -90,7 +87,7 @@ def view_records(record_number):
     try:
         record_formatted[3] = record_formatted[3].strip('[]').split('], [')
         for i in range(0, len(record_formatted[3])):
-            record_formatted[3][i] = record_formatted[3][i].replace("'","")
+            record_formatted[3][i] = record_formatted[3][i].replace("'", "")
             print(f'- Item Number: {record_formatted[3][i]}')
     except AttributeError:
         for i in range(0, len(record_formatted[3])):
