@@ -3,6 +3,7 @@ from datetime import datetime, timedelta
 import os
 from time import sleep
 from tabulate import tabulate
+from command_line import *
 
 
 class Order:
@@ -94,12 +95,15 @@ class Order:
         """
         Print to screen processing order 
         """
-        print('"Processing order...')
-        sleep(2)
-        if (os.name == 'posix'):
-            os.system('clear')
-        else:
-            os.system('cls')
+        clear_screen()
+        i = 0
+        load_message = 'Processing order.'
+        for i in range(5):
+            print(load_message)
+            sleep(0.75)
+            load_message = load_message + ('.')
+            clear_screen()
+            i = + 1
 
     def delivery_time(self):
         """
