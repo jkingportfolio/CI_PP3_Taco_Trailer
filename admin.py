@@ -15,13 +15,15 @@ def admin_dashboard():
         record_count = list(filter(None, SALES_WORKSHEET.col_values(1)))
         total_records = str(len(record_count)+1)
         total_rec_int = int(total_records)
-        print('Logged in as Administrator\n\nPlease enter a valid input\n(1) View records\n(2) View pending orders\n')
+        print('Logged in as Administrator\n\nPlease enter a valid input\n(1) View records\n(2) View pending orders\n(3) Exit admin dashboard\n')
         admin_option = input('Please select an option: \n')
         clear_screen()
         if admin_option == '1':
             search_records(total_rec_int)
         elif admin_option == '2':
             pending_orders(total_rec_int)
+            break
+        elif admin_option == '3':
             break
         else:
             print('Thats not an option')
@@ -52,7 +54,8 @@ def pending_orders(total_rec_int):
 def search_records(total_rec_int):
     while True:
         try:
-            print(f'There are {total_rec_int - 1} records available\nPlease note there is no record for order 1 as this is the database header')
+            print(
+                f'There are {total_rec_int - 1} records available\nPlease note there is no record for order 1 as this is the database header')
             record_number = input(
                 'Please enter record number to display or 0 to go back:\n')
             clear_screen()
@@ -62,12 +65,12 @@ def search_records(total_rec_int):
                     view_records(record_number)
                 except IndexError:
                     print(colored(
-                        f'Record "{record_number}" does not exist, please enter valid record number','yellow'))
+                        f'Record "{record_number}" does not exist, please enter valid record number', 'yellow'))
             elif record_number == 0:
                 break
             else:
                 print(colored(
-                    f'Record "{record_number}" does not exist, please enter valid record number.\n','yellow'))
+                    f'Record "{record_number}" does not exist, please enter valid record number.\n', 'yellow'))
         except ValueError:
             print(
                 colored(f'"{record_number}" is an invalid entry please try again.\n', 'yellow'))
@@ -92,4 +95,4 @@ def view_records(record_number):
         for i in range(0, len(record_formatted[3])):
             print(f'- Item Number: {record_formatted[3][i]}')
     print(f'Total order cost: {record_formatted[4]}')
-    print('*' * 25 +'\n')
+    print('*' * 25 + '\n')
