@@ -89,7 +89,7 @@ class Order:
             order_cost = order_cost + float(delivery_charge)
             return order_cost
         else:
-            return order_cost1
+            return order_cost
 
     def delivery_time(self):
         """
