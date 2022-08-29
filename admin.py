@@ -74,7 +74,7 @@ def search_records(total_rec_int):
 
 
 def view_records(record_number):
-    print(f'You are viewing order number: {record_number}')
+    print(f'You are viewing order number: {record_number}\n')
     record_formatted = ORDER_RECORD_VALUES[record_number - 1]
     print('*' * 25)
     print(f'Order Number: {record_formatted[6]}')
@@ -92,4 +92,4 @@ def view_records(record_number):
         for i in range(0, len(record_formatted[3])):
             print(f'- Item Number: {record_formatted[3][i]}')
     print(f'Total order cost: {record_formatted[4]}')
-    print('*' * 25)
+    print('*' * 25 +'\n')
