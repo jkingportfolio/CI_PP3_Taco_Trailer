@@ -205,7 +205,13 @@ def order_item():
                 order_item()
                 break
             else:
-                print(colored('Im sorry i need a valid input: ', 'yellow'))
+                clear_screen()
+                print(tabulate(order_list, headers=['Item', 'Name', 'Cost (£)'],
+                            tablefmt="simple", numalign="center"))
+                print('')
+                print(colored('Im sorry i need a valid input.', 'yellow'))
+                sleep(3)
+                
         elif food_item.isdigit() and int(food_item) > 0:
             try:
                 food_item = int(food_item) - 1
