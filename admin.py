@@ -6,7 +6,7 @@ from tabulate import tabulate
 from command_line import clear_screen
 from datetime import datetime, timedelta
 from time import sleep
-from ast import *
+from termcolor import colored
 
 
 def admin_dashboard():
@@ -21,22 +21,26 @@ def admin_dashboard():
         if admin_option == '1':
             print('Option 1 selected\n')
             while True:
-                print(f'There are {total_rec_int - 1} records available')
-                record_number = input(
-                    'Please enter record number to display or 0 to go back:\n')
-                clear_screen()
-                record_number = int(record_number)
-                if record_number < total_rec_int and record_number > 1:
-                    try:
-                        view_records(record_number)
-                    except IndexError:
-                        print(
-                            f'Record "{record_number}" does not exist, please enter valid record number')
-                elif record_number == 0:
-                    break
-                else:
-                    print(
-                        f'Record "{record_number}" does not exist, please enter valid record number')
+                try:
+                    while True:
+                        print(f'There are {total_rec_int - 1} records available')
+                        record_number = input(
+                            'Please enter record number to display or 0 to go back:\n')
+                        clear_screen()
+                        record_number = int(record_number)
+                        if record_number < total_rec_int and record_number > 1:
+                            try:
+                                view_records(record_number)
+                            except IndexError:
+                                print(
+                                    f'Record "{record_number}" does not exist, please enter valid record number')
+                        elif record_number == 0:
+                            break
+                        else:
+                            print(
+                                f'Record "{record_number}" does not exist, please enter valid record number')
+                except ValueError:
+                    print(colored(f'"{record_number}" is an invalid entry please try again.\n', 'yellow'))
         elif admin_option == '2':
             pending_orders(total_rec_int)
             break
