@@ -24,7 +24,7 @@ class Order:
         Prints formatted order
         """
         print()
-        self.processing_order()
+        load_animation('Processing order.')
         print('***** Order Receipt *****\n')
         print(f'Order time: {self.order_time}\n')
         print(f'Order Number: {self.order_number}')
@@ -91,19 +91,19 @@ class Order:
         else:
             return order_cost
 
-    def processing_order(self):
-        """
-        Print to screen processing order 
-        """
-        clear_screen()
-        i = 0
-        load_message = 'Processing order.'
-        for i in range(5):
-            print(load_message)
-            sleep(0.75)
-            load_message = load_message + ('.')
-            clear_screen()
-            i = + 1
+    # def processing_order(self):
+    #     """
+    #     Print to screen processing order 
+    #     """
+    #     clear_screen()
+    #     i = 0
+    #     load_message = 'Processing order.'
+    #     for i in range(5):
+    #         print(load_message)
+    #         sleep(0.75)
+    #         load_message = load_message + ('.')
+    #         clear_screen()
+    #         i = + 1
 
     def delivery_time(self):
         """
