@@ -8,7 +8,7 @@ import pyfiglet
 from termcolor import colored
 from datetime import datetime, timedelta
 from time import sleep
-from command_line import clear_screen
+from command_line import clear_screen, load_animation
 from order import Order
 
 
@@ -116,8 +116,9 @@ def customer_details():
 
     clear_screen()
     print('Thank you for your details!\n')
-    print('Loading our menu...\n')
+    # print('Loading our menu...\n')
     sleep(2)
+    load_animation('Loading menu.')
     clear_screen()
     display_menu()
 
