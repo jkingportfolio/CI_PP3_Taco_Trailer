@@ -52,7 +52,7 @@ def pending_orders(total_rec_int):
 def search_records(total_rec_int):
     while True:
         try:
-            print(f'There are {total_rec_int - 1} records available\nPlease note there is record for order 1 as this is the database header')
+            print(f'There are {total_rec_int - 1} records available\nPlease note there is no record for order 1 as this is the database header')
             record_number = input(
                 'Please enter record number to display or 0 to go back:\n')
             clear_screen()
