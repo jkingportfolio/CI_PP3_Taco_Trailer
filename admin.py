@@ -19,7 +19,6 @@ def admin_dashboard():
         admin_option = input('Please select an option: \n')
         clear_screen()
         if admin_option == '1':
-            print('Option 1 selected\n')
             search_records(total_rec_int)
         elif admin_option == '2':
             pending_orders(total_rec_int)
@@ -53,7 +52,7 @@ def pending_orders(total_rec_int):
 def search_records(total_rec_int):
     while True:
         try:
-            print(f'There are {total_rec_int - 1} records available')
+            print(f'There are {total_rec_int - 1} records available\nPlease note there is record for order 1 as this is the database header')
             record_number = input(
                 'Please enter record number to display or 0 to go back:\n')
             clear_screen()
@@ -62,13 +61,13 @@ def search_records(total_rec_int):
                 try:
                     view_records(record_number)
                 except IndexError:
-                    print(
-                        f'Record "{record_number}" does not exist, please enter valid record number')
+                    print(colored(
+                        f'Record "{record_number}" does not exist, please enter valid record number','yellow'))
             elif record_number == 0:
                 break
             else:
-                print(
-                    f'Record "{record_number}" does not exist, please enter valid record number')
+                print(colored(
+                    f'Record "{record_number}" does not exist, please enter valid record number.\n','yellow'))
         except ValueError:
             print(
                 colored(f'"{record_number}" is an invalid entry please try again.\n', 'yellow'))
