@@ -87,9 +87,13 @@ def view_records(record_number):
     print(f'Order Type: {record_formatted[1]}')
     print(f'Address: {record_formatted[2]}')
     print('Ordered Items:')
-    record_formatted[3] = record_formatted[3].strip('[]').split('], [')
-    for i in range(0, len(record_formatted[3])):
-        record_formatted[3][i] = record_formatted[3][i].replace("'","")
-        print(f'- Item Number: {record_formatted[3][i]}')
+    try:
+        record_formatted[3] = record_formatted[3].strip('[]').split('], [')
+        for i in range(0, len(record_formatted[3])):
+            record_formatted[3][i] = record_formatted[3][i].replace("'","")
+            print(f'- Item Number: {record_formatted[3][i]}')
+    except AttributeError:
+        for i in range(0, len(record_formatted[3])):
+            print(f'- Item Number: {record_formatted[3][i]}')
     print(f'Total order cost: {record_formatted[4]}')
     print('*' * 25)
