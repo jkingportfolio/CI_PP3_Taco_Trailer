@@ -319,7 +319,7 @@ def admin_access():
     """
     clear_screen()
     password_guesses = 3
-    print(f'You have {password_guesses} remaining guesses.\n')
+    print(colored(f'You have {password_guesses} remaining guesses.\n','yellow'))
     while True:
         admin_password = getpass.getpass("Please enter Admin Password:\n")
 
