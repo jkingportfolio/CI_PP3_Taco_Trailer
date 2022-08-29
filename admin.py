@@ -10,6 +10,9 @@ from termcolor import colored
 
 
 def admin_dashboard():
+    """
+    Display admin dashboard with range of admin options
+    """
     clear_screen()
     while True:
         record_count = list(filter(None, SALES_WORKSHEET.col_values(1)))
@@ -30,6 +33,9 @@ def admin_dashboard():
 
 
 def pending_orders(total_rec_int):
+    """
+    Return pending orders that current time is less than delivered time and display in formatted table
+    """
     clear_screen()
     while True:
         current_time = datetime.now()
@@ -60,6 +66,9 @@ def pending_orders(total_rec_int):
 
 
 def search_records(total_rec_int):
+    """
+    Retreive sales records from google sheets and display in the CLI via user input of record number
+    """
     while True:
         try:
             print(
@@ -85,6 +94,9 @@ def search_records(total_rec_int):
 
 
 def view_records(record_number):
+    """
+    Return formatted record based on based arguement of record number
+    """
     print(f'You are viewing order number: {record_number}\n')
     record_formatted = ORDER_RECORD_VALUES[record_number - 1]
     print('*' * 25)
