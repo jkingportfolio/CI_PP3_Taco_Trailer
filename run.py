@@ -18,7 +18,7 @@ delivery_type = None
 address = None
 
 
-def welcome():
+def welcome(message='Hello, would you like to place an order?\n'):
     """
     Display welcome message and ask for user 
     input to place order or admin access
@@ -26,7 +26,7 @@ def welcome():
     clear_screen()
     title = 'Welcome to the Taco Trailer'
     print(pyfiglet.figlet_format(title))
-    print('Hello, would you like to place an order?\n')
+    print(message)
     while True:
         place_order = input(
             'Please enter a valid input (Y/N). Or for'
@@ -45,8 +45,8 @@ def welcome():
             admin_access()
             break
         else:
-            print(
-                colored(f'{place_order} is not a valid input, please try again!', 'yellow'))
+            welcome(colored(f'{place_order} is not a valid input, please try again!\n', 'yellow'))
+            break
 
 
 def customer_details():
