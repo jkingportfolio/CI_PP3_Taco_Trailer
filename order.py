@@ -89,21 +89,7 @@ class Order:
             order_cost = order_cost + float(delivery_charge)
             return order_cost
         else:
-            return order_cost
-
-    # def processing_order(self):
-    #     """
-    #     Print to screen processing order 
-    #     """
-    #     clear_screen()
-    #     i = 0
-    #     load_message = 'Processing order.'
-    #     for i in range(5):
-    #         print(load_message)
-    #         sleep(0.75)
-    #         load_message = load_message + ('.')
-    #         clear_screen()
-    #         i = + 1
+            return order_cost1
 
     def delivery_time(self):
         """
