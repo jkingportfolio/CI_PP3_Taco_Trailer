@@ -32,8 +32,8 @@ def pending_orders(total_rec_int):
     while True:
         current_time = datetime.now()
         local_time = current_time + timedelta(hours=1)
-        print(f'Local time is now: {local_time}')
         local_time = local_time.strftime("%H:%M:%S %Y-%m-%d")
+        print(f'The current time and date is: {local_time}\n')
         FORMATTED_SALES = ORDER_RECORDS
 
         for item in FORMATTED_SALES:
