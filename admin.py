@@ -15,7 +15,7 @@ def admin_dashboard():
         record_count = list(filter(None, SALES_WORKSHEET.col_values(1)))
         total_records = str(len(record_count)+1)
         total_rec_int = int(total_records)
-        print('Logged in as Administrator\n\nTo view records enter (1)\nTo view pending orders enter (2)\n')
+        print('Logged in as Administrator\n\nPlease enter a valid input\n(1) View records\n(2) View pending orders\n')
         admin_option = input('Please select an option: \n')
         clear_screen()
         if admin_option == '1':
