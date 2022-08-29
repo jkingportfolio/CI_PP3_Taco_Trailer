@@ -59,7 +59,7 @@ def customer_details():
 
     print('We would like to take your details.\n')
     while True:
-        first_name = input('Please enter your first name: \n')
+        first_name = input('Please enter your first name: \n').strip()
         if first_name.isalpha():
             break
         else:
@@ -67,7 +67,7 @@ def customer_details():
                 '\nPlease enter a valid name that does not'
                 ' contain numbers or special characters\n', 'yellow'))
     while True:
-        surname = input('Please enter your surname: \n')
+        surname = input('Please enter your surname: \n').strip()
         if surname.isalpha():
             break
         else:
