@@ -6,6 +6,7 @@ from tabulate import tabulate
 from command_line import clear_screen
 from datetime import datetime, timedelta
 from time import sleep
+from ast import *
 
 
 def admin_dashboard():
@@ -22,7 +23,7 @@ def admin_dashboard():
             while True:
                 print(f'There are {total_rec_int - 1} records available')
                 record_number = input(
-                    'Please enter record number to display or 0 to go back:\n ')
+                    'Please enter record number to display or 0 to go back:\n')
                 clear_screen()
                 record_number = int(record_number)
                 if record_number < total_rec_int and record_number > 1:
@@ -81,6 +82,10 @@ def view_records(record_number):
     print(f'Name: {record_formatted[0]}')
     print(f'Order Type: {record_formatted[1]}')
     print(f'Address: {record_formatted[2]}')
-    print(f'Items: {record_formatted[3]}')
-    print(f'Cost: {record_formatted[4]}')
+    print('Ordered Items:')
+    record_formatted[3] = record_formatted[3].strip('[]').split('], [')
+    for i in range(0, len(record_formatted[3])):
+        record_formatted[3][i] = record_formatted[3][i].replace("'","")
+        print(f'- Item Number: {record_formatted[3][i]}')
+    print(f'Total order cost: {record_formatted[4]}')
     print('*' * 25)
