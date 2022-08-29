@@ -47,35 +47,9 @@ def pending_orders(total_rec_int):
         except KeyError:
             pass
 
-            # for item in FORMATTED_SALES:
-            #     for value in item:
-            #         for text in value:
-            #             print(text)
-            #         # del item[key]
-
-            # print(tabulate(FORMATTED_SALES, headers='keys',
-            #                tablefmt="simple", numalign="center"))
-            # print(type(FORMATTED_SALES))
-            # print(FORMATTED_SALES)
         print('\n')
-
-        # print(FORMATTED_SALES[-1]['Order Time/Date'])
-        # #Check date.time is a string for comparison with local time
-        # print(type(FORMATTED_SALES[0]['Order Time/Date']))
-
-        # for item in FORMATTED_SALES:
-        #     if key == ['Order Time/Date'] and value > local_time:
-        #         pending_order_list.append(item)
-        #         print('This is not old')
-        #     else:
-        #         print('This is old')
-
-        # print(pending_order_list)
-        print(f'The pending order time and date is: {pending_order_time}\n')
         pending_order_list = list(
             filter(lambda x: x['Order Time/Date'] > pending_order_time, FORMATTED_SALES))
-        # print(filtered)
-
         print(tabulate(pending_order_list, headers='keys',
                        tablefmt="simple", numalign="center"))
 
