@@ -119,9 +119,7 @@ All colours contrast was tested using [EightShapes contrast grid](http://eightsh
 
 ### Structure
 
-The website's structure was carefully constructed whilst making it recognizable, user friendly and simple. On arrival to the website the user will be presented with a notification that indicates click to play and a navigation bar which in which page modals can be accessed. The website is made of one main page, a 404 page and 4 modals:
-
-- A homepage, which houses the game and comes with a nav bar which on click will display the desired modal.
+The website's structure consits of a simple white page with command line interface and button located on the right hand side. As this project is only intended for use on large screen devices there was no need to incorporate responsivness to the page. On arrival to the apps hosting page the user will be presented with a welcome message and instructions on user input choices.
 
 ### Flowchart
 
