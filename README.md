@@ -179,32 +179,9 @@ In the future as my skills grow I would like to implement the following features
 
 ## Testing
 
-### HTML Validation
-[W3C Markup Validation](https://validator.w3.org/) was used to validate the HTML code of The Connect 4 website. All pages passed and produced no errors.
-<details>
-<summary>Index</summary>
-<img src="docs/validation-html/validation-index-html.png">
-</details>
-<details>
-<summary>404 page</summary>
-<img src="docs/validation-html/validation-404-html.png">
-</details>
-
-### CSS Validation
-
-[W3C Jigsaw CSS validation](https://jigsaw.w3.org/css-validator/) was used to validate the CSS used in the website. The file passed and produced no errors if testing my own CSS however it did produce some warnings which are related to Bootstrap 5.0.2
-<details>
-<summary>CSS styles</summary>
-<img src="docs/validation-css/validation-css-style.png">
-</details>
-<details>
-<summary>Bootstrap warnings</summary>
-<img src="docs/validation-css/validation-bootstrap-css-warnings.png">
-</details>
-
 ### Python Validation
 
-[PEP-8 Validation](http://pep8online.com/) was used to validate the Python used in the app. <>
+[PEP-8 Validation](http://pep8online.com/) was used to validate the Python code used in the app. <>
 
 <details>
 <summary>Python file - run.py</summary>
@@ -226,31 +203,6 @@ In the future as my skills grow I would like to implement the following features
 <summary>Python file - command_line.py</summary>
 <img src="docs/validation-js/validation-jshint-contact.png">
 </details>
-
-### Accessibility
-
-[The WAVE WebAIM](https://wave.webaim.org/) tool for evaluating accessibility of a webpage was used to verify that all pages of the site met the needs for users with disabilities.
-
-<details>
-<summary>Index</summary>
-<img src="docs/validation-accessibility/accessibility-validation-index.png">
-</details>
-
-- Icons from Font Awesome are used in the site. Font Awesome already populates the code to be copied with an aria-hidden="true" attribute to accommodate accessibility.
-
-### Performance
-
-[Chrome dev tools lighthouse](https://developers.google.com/web/tools/lighthouse) was used to test all pages for performance, accessibility, best practices and SEO.
-
-<details>
-<summary>Index</summary>
-<img src="docs/validation-performance-lighthouse/lighthouse-performance-index.png">
-</details>
-<details>
-<summary>404 page</summary>
-<img src="docs/validation-performance-lighthouse/lighthouse-performance-404.png">
-</details>
-
 
 ### Device Testing
 
