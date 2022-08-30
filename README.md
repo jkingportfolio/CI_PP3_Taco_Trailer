@@ -133,7 +133,7 @@ A flowchart was created during the design process to help identify functions tha
 ## Technologies Used
 
 ### Coding Languages
-- Python - Used to create <>
+- Python - Used to create the command line based app.
 
 ### Frameworks and Tools
 - Balsamiq - Used to create wireframes.
