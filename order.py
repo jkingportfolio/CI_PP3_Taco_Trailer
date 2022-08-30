@@ -52,8 +52,7 @@ class Order:
                              self.address, str(self.order_list), self.order_cost_output(), str(self.order_time), self.order_number]
         worksheet_to_update = SHEET.worksheet('Sales')
         worksheet_to_update.append_row(append_order_data)
-        sleep(2)
-
+        
     def total_order_cost(self):
         """
         Calculate total order cost as per order list
