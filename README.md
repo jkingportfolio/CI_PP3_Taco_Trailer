@@ -145,7 +145,7 @@ A flowchart was created during the design process to help identify functions tha
 
 ## Features
 
-In its entirety the website consists of one main page, <>
+In its entirety the website consists of one main page, with a mock terminal within that page to run The Taco Trailer app. <>
 
 ### Existing features
 
