@@ -486,6 +486,6 @@ The source of where I learned how to produce a GitHub fork and clone was from th
 I would like to also thank the following:
 - My wife and family for their support and feedback whilst doing this project
 - My fellow Code Institute students whom i have bounced ideas and problems back and forth with via Slack
-- Carina Browning for testing and providing feedback through out the project
+- [Carina Browning](https://github.com/carinaAJ) for testing and providing feedback through out the project
 - Code Institute tutor support who helped with an issue i had with iteration of list of dictionaries.
 - My Code Institute mentor Mo Shami for his guidance through this project.
