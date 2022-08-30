@@ -103,21 +103,11 @@ This app was designed using Code Institutes Python Essentials Template. The temp
 
 ### Colours
 
-The colour palette for the website is made up of 5 main colours:
+The colour palette for the website is made up of 3 main colours:
 
-- #FFFFFF (White)
-- #000000 (Black)
-- #FF0000 (Red)
-- #FFFF00 (Yellow)
-- #2B2EE2 (Blue)
-
-The background gradient consists of <> colours:
-
-- #E0B5B5 
-- #EABFB0
-- #ECCBAD
-- #D6DAAF
-- #DAE9BA
+- #FFFFFF (White - Text)
+- #000000 (Black - Command Line Background)
+- #C39D00 (Yellow - Input warning messages)
 
 All colours contrast was tested using [EightShapes contrast grid](http://eightshapes.com/)
 
