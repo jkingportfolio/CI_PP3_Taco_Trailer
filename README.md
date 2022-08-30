@@ -403,7 +403,6 @@ During the project i encountered a number of bugs some of which were solved some
 </details>
 
 
-
 ## Deployment
 
 ### Heroku
@@ -470,9 +469,9 @@ Font images produced in this app were produced using the Pyfiglet library.
 
 The use of reference books were used throughout the creation of this project and are credited below:
 
-- Python Crash Course by <>, published by No Startch Press
-- Python from beinnger to professional by <>, published by Packt Publishing
-- JavaScript Pocket Reference by David Flanagan, published by O'Reilly
+- Python Crash Course by Eric Matthes, published by No Startch Press
+- Learn Python Programming by Fabrizio Romano & Heinrich Kruger, published by Packt Publishing
+- Python Object-Orientated Programming - Fourth Edition by Steven F. Lott & Dusty Phillips, published by Packt Publishing
 
 ### Misc
 
