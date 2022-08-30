@@ -72,13 +72,10 @@ Developer: Jamie King
 
 ### User Requirements and Expectations
 
-- <>.
-- <>.
-- <>.
-- <>.
-- <>.
-- <>.
-- <>.
+- The ability to seamlessly navigate through the app.
+- To use an app that provides feedback to the user.
+- To have validation that an order has been placed.
+- To view a receipt of the order with all relevant details such as time order and ordered items presented in an easy to read format.
 
 ### User stories
 
