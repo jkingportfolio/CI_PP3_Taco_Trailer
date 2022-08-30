@@ -19,7 +19,7 @@ def admin_dashboard():
         total_records = str(len(record_count)+1)
         total_rec_int = int(total_records)
         print('Logged in as Administrator\n\nPlease enter a valid input\n(1) View records\n(2) View pending orders\n(3) Exit admin dashboard\n')
-        admin_option = input('Please select an option: \n')
+        admin_option = input('Please select an option: \n').strip()
         clear_screen()
         if admin_option == '1':
             search_records(total_rec_int)
@@ -74,7 +74,7 @@ def search_records(total_rec_int):
             print(
                 f'There are {total_rec_int - 1} records available\nPlease note there is no record for order 1 as this is the database header')
             record_number = input(
-                'Please enter record number to display or 0 to go back:\n')
+                'Please enter record number to display or 0 to go back:\n').strip()
             clear_screen()
             record_number = int(record_number)
             if record_number < total_rec_int and record_number > 1:

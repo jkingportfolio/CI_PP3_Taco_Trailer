@@ -87,7 +87,7 @@ def customer_details():
             print(
                 f'You selected {delivery_type.capitalize()} for your order.\n')
             while True:
-                address_number = input('Please enter your house number: \n')
+                address_number = input('Please enter your house number: \n').strip()
                 if address_number.isdigit():
                     address_number = int(address_number)
                     break
