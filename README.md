@@ -99,7 +99,7 @@ Developer: Jamie King
 
 ### Design Choices
 
-The app was designed with a clean simple design in mind. <>. 
+This app was designed using Code Institutes Python Essentials Template. The template creates a command line interface within a blank page with a run button located above the command line interface. As this app is command line based, there is a simple design intent of a black background, white text and a yellow error message text. <>. 
 
 ### Colours
 
