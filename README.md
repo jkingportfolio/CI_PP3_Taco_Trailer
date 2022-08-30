@@ -18,10 +18,8 @@ Developer: Jamie King
 3. [Design](#design)
     1. [Design Choices](#design-choices)
     2. [Colours](#colours)
-    3. [Fonts](#fonts)
-    4. [Structure](#structure)
-    5. [Wireframes](#wireframes)
-    6. [Game Flowchart](#game-flowchart)
+    3. [Structure](#structure)
+    4. [App Flowchart](#app-flowchart)
 4. [Technologies Used](#technologies-used)
     1. [Coding Languages](#coding-languages)
     2. [Frameworks and Tools](#frameworks-and-tools)
@@ -128,26 +126,12 @@ All colours contrast was tested using [EightShapes contrast grid](http://eightsh
 <img src="docs/validation-colour-contrast.png">
 </details>
 
-### Fonts
-
-There were 2 fonts used in this project, as stated below:
-- <>.
-- <>.
 
 ### Structure
 
 The website's structure was carefully constructed whilst making it recognizable, user friendly and simple. On arrival to the website the user will be presented with a notification that indicates click to play and a navigation bar which in which page modals can be accessed. The website is made of one main page, a 404 page and 4 modals:
 
 - A homepage, which houses the game and comes with a nav bar which on click will display the desired modal.
-
-### Wireframes
-
-Balsamiq was used in the initial design stage to layout sketches of each page and its design intent
-
-<details>
-<summary>Index</summary>
-<img src="docs/wireframes/index.html.png">
-</details>
 
 ### Flowchart
 
