@@ -79,7 +79,7 @@ def customer_details():
     print(pyfiglet.figlet_format(f'Hi {name}!\n'))
     while True:
         delivery_type = input('Please enter your delivery'
-                              ' type. Delivery (D) Collection (C): \n')
+                              ' type. Delivery (D) Collection (C): \n').strip()
         delivery_type = delivery_type.capitalize()
         if delivery_type == 'D':
             delivery_type = 'Delivery'
@@ -150,7 +150,7 @@ def order_item():
                     "To complete order enter 'X'.\n")
 
     print(instructions)
-    food_item = input("Please enter a valid input: \n")
+    food_item = input("Please enter a valid input: \n").strip()
     while True:
         food_item = food_item.capitalize()
         if food_item == "Q":
@@ -265,7 +265,7 @@ def complete_order():
     clear_screen()
     while True:
         order_complete = input(
-            "Are you ready to complete your order? (Y/N).\n")
+            "Are you ready to complete your order? (Y/N).\n").strip()
         order_complete = order_complete.capitalize()
         if order_complete == 'Y':
             this_order = Order(name, delivery_type, address,
@@ -302,7 +302,7 @@ def complete_order():
 
     while True:
         finish = input(
-            "Please press 'Q' to quit. \n")
+            "Please press 'Q' to quit. \n").strip()
         finish = finish.capitalize()
         if finish == 'Q':
             clear_screen()
