@@ -215,7 +215,7 @@ In addition to testing on physical devices, <>
 ### Browser Compatibility
 
 The website was tested on the following web browsers:
-- Google Chrome (Version 103.0.5060.114)
+- Google Chrome (Version 104.0.5112.102)
 - DuckDuckGo
 
 ### Testing User Stories
