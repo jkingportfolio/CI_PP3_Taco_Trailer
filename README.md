@@ -47,18 +47,21 @@ Developer: Jamie King
 
 ### User Goals
 
-- A user would want to <>.
-- A user would want to <>.
-- A user would want to <>.
-- A user would want to <>.
-- A user would want to <>.
+- A user would want to be able to easily interact with the app to order food.
+- A user would want to state if order is for pick up or delivery.
+- A user would want to be able to navigate the app seamlessly.
+- A user would want to be given clear instructions on their current input options.
+- A user would want to be provided negative and postive feedback based on their inputs.
+- A user would want to be provided negative and postive feedback based on their inputs.
 
 ### Site Owner Goals
 
-- As the site owner i wanted to <>.
-- As the site owner i wanted to <>. 
-- As the site owner i wanted to <>.
-- As the site owner i wanted to <>.
+- As the site owner i wanted to be able to give potential customers an easy to use app to order food from The Taco Trailer.
+- As the site owner i wanted to have an admin area in which i could access information intended for staff only. 
+- As the site owner i wanted to secure the admin area of the app with a password.
+- As the site owner i wanted to have the ability to view previous orders that had been placed.
+- As the site owner i wanted to have the ability to view current orders that have yet to be picked up or delivered.
+- As the site owner i wanted to have all user inputs validated as to not provide issues with orders.
 
 ## User Experience
 
