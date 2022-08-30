@@ -3,7 +3,7 @@ Developer: Jamie King
 
 ![Responsive image](docs/am-i-responsive.png)
 
-[The Taco Trailer](https://taco-trailer.herokuapp.com/) website has been developed to provide users the chance to <>. 
+[The Taco Trailer](https://taco-trailer.herokuapp.com/) website has been developed to provide users the chance to order food for delivery or pick-up via a command line based interface. 
 
 ## Table of Contents
 
