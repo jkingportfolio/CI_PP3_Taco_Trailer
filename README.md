@@ -426,7 +426,7 @@ The website was deployed using Heroku by "following these steps:
 We can make a copy of the original repository on our GitHub account to view or make changes too without affecting the original repository, this is known as forking. Forking in GitHub can be done via the following steps:
 
 1. Navigate to www.github.com and log in.
-2. Once logged in navigate to the desired [GitHub Repository](https://github.com/jkingportfolio/CI_PP2_Connect4) that you would like to fork.
+2. Once logged in navigate to the desired [GitHub Repository](https://github.com/jkingportfolio/CI_PP3_Taco_Trailer) that you would like to fork.
 3. At the top right corner of the page click on the fork icon.
 4. There should now be a copy of your original repository in your GitHub account.
 
@@ -437,13 +437,13 @@ Please note if you are not a member of an organisation on GitHub then you will n
 You can make a local clone of a repository via the following steps: 
 
 1. Navigate to www.github.com and log in.
-2. Once logged in navigate to the desired [GitHub Repository](https://github.com/jkingportfolio/CI_PP2_Connect4) that you would like to clone.
+2. Once logged in navigate to the desired [GitHub Repository](https://github.com/jkingportfolio/CI_PP3_Taco_Trailer) that you would like to clone.
 3. Locate the code button at the top, above the repository file structure.
 4. Select the preferred clone method from HTTPS. SSH or GitHub CLI then click the copy button to copy the URL to your clipboard.
 5. Open Git Bash
 6. Update the current working direction to the location in which you would like the clone directory to be created.
 7. Type `git clone` and paste the previously copied URL at Step 4.
-8. `$ clone https://github.com/jkingportfolio/CI_PP2_Connect4`
+8. `$ clone https://github.com/jkingportfolio/CI_PP3_Taco_Trailer`
 9. Now press enter and the local clone will be created at the desired local location
 
 ## Credits
