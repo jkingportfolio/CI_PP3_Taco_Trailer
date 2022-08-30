@@ -208,6 +208,7 @@ In the future as my skills grow I would like to implement the following features
 
 As this app is only intended to be used on desktops the website was tested on the following devices:
 - Windows 10 PC with a 24" MSI Curved gaming monitor
+- Raspberry Pi 4 with a 24" MSI Curved gaming monitor
 
 In addition to testing on physical devices, <>
 
