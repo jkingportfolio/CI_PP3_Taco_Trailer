@@ -89,11 +89,11 @@ Developer: Jamie King
 
 ### Site Owner Stories
 
-12. As the site owner, I would want users to be greeted with a welcome message to give a friendly feel to the app.
-13. As the site owner, I would want to be able to access a password locked admin area.
-14. As the site owner, I would want to be able to access all previous order records.
-15. As the site owner, I would want to be able to access a list of pending orders.
-16. As the site owner, I would not want the user to have to restart the app due to bugs in the code. 
+10. As the site owner, I would want users to be greeted with a welcome message to give a friendly feel to the app.
+11. As the site owner, I would want to be able to access a password locked admin area.
+12. As the site owner, I would want to be able to access all previous order records.
+13. As the site owner, I would want to be able to access a list of pending orders.
+14. As the site owner, I would not want the user to have to restart the app due to bugs in the code. 
 
 ## Design
 
@@ -222,7 +222,7 @@ The website was tested on the following web browsers:
 
 #### Users
 
-1. As a user, I want to <>.
+1. As a user, I want to be provided with clear instructions throughout the app.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -233,7 +233,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-1.png">
 </details>
 
-2. As a user, I want to <>.
+2. As a user, I want to be able to view the menu.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -244,7 +244,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-2.png">
 </details>
 
-3. As a user, I want to <>.
+3. As a user, I want to be able to add items to my order.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -255,7 +255,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-3.png">
 </details>
 
-4. As a user, I want to be <>.
+4. As a user, I want to be able to remove items from my order.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -267,7 +267,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-4.png">
 </details>
 
-5. As a user, I want to be <>.
+5. As a user, I want to be able to preview an order.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -278,7 +278,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-5.png">
 </details>
 
-6. As a user, I want to be able to <>.
+6. As a user, I want to be able to cancel an unplaced order.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -289,7 +289,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-6.png">
 </details>
 
-7. As a user, I want to be able to <>.
+7. As a user, I want to be able to place an order.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -302,7 +302,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-7.1.png">
 </details>
 
-8. As a user, I want to be able to <>.
+8. As a user, I want to be shown a receipt.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -313,7 +313,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-8.png">
 </details>
 
-9. As a user, I want to be able to <>.
+9. As a user, I want to be able to exit the app.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -324,7 +324,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-9.png">
 </details>
 
-10. As a user, I want to be able to <>.
+10. As the site owner, I would want users to be greeted with a welcome message to give a friendly feel to the app.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -335,7 +335,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-10.png">
 </details>
 
-11. As a user, I want to be able to <>.
+11. As the site owner, I would want to be able to access a password locked admin area.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -346,10 +346,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-11.png">
 </details>
 
-
-
-
-12. As the site owner, I want users to be able to <>.
+12. As the site owner, I would want to be able to access all previous order records.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -360,8 +357,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-12.png">
 </details>
 
-
-13. As the site owner, I want to <>.
+13. As the site owner, I would want to be able to access a list of pending orders.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -372,7 +368,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-13.png">
 </details>
 
-14. As the site owner, I would want the user to <>.
+14. As the site owner, I would not want the user to have to restart the app due to bugs in the code.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -381,39 +377,6 @@ The website was tested on the following web browsers:
 <details>
 <summary>Screenshots</summary>
 <img src="docs/testing-user-stories/testing-user-stories-14.png">
-</details>
-
-15. As the site owner, I would not want the user to have to result in using the browser back button to navigate back to the site if a 404 error occurs.
-
-| Feature       | Action        | Expected Result  | Actual Result |
-| ------------- | ------------- | -------------    | ------------- |
-|   |   |     |  |
-
-<details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-15.png">
-</details>
-
-16. As the site owner, I would want users to be <>.
-
-| Feature       | Action        | Expected Result  | Actual Result |
-| ------------- | ------------- | -------------    | ------------- |
-|   |   |     |  |
-
-<details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-16.png">
-</details>
-
-17. As the site owner, I want users to be greeted with a welcome message to give a friendly feel to the site.
-
-| Feature       | Action        | Expected Result  | Actual Result |
-| ------------- | ------------- | -------------    | ------------- |
-|   |   |   |  |
-
-<details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-17.png">
 </details>
 
 
