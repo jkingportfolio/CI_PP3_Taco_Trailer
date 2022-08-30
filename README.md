@@ -79,26 +79,23 @@ Developer: Jamie King
 
 ### User stories
 
-1. As a user, I want to <>.
-2. As a user, I want to <>.
-3. As a user, I want to be <>.
-4. As a user, I want to be <>.
-5. As a user, I want to be <>.
-6. As a user, I want to be <>.
-7. As a user, I want to be able to <>.
-8. As a user, I want to be able to <>.
-9. As a user, I want to be able to <>.
-10. As a user, I want to be able to <>.
-11. As a user, I want to be able to <>.
+1. As a user, I want to be provided with clear instructions throughout the app.
+2. As a user, I want to be able to view the menu.
+3. As a user, I want to be able to add items to my order.
+4. As a user, I want to be able to remove items from my order.
+5. As a user, I want to be able to preview an order.
+6. As a user, I want to be able to cancel an unplaced order.
+7. As a user, I want to be able to place an order.
+8. As a user, I want to be shown a receipt.
+9. As a user, I want to be able to exit the app.
 
 ### Site Owner Stories
 
-12. As the site owner, I want <>.
-13. As the site owner, I want <>.
-14. As the site owner, I would want the user to <>.
-15. As the site owner, I would not want the user to have to result in using the browser back button to navigate back to the site if a 404 error occurs.
-16. As the site owner, I would want <>.
-17. As the site owner, I want users to be greeted with a welcome message to give a friendly feel to the site. 
+12. As the site owner, I would want users to be greeted with a welcome message to give a friendly feel to the app.
+13. As the site owner, I would want to be able to access a password locked admin area.
+14. As the site owner, I would want to be able to access all previous order records.
+15. As the site owner, I would want to be able to access a list of pending orders.
+16. As the site owner, I would not want the user to have to restart the app due to bugs in the code. 
 
 ## Design
 
