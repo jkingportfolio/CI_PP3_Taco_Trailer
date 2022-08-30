@@ -52,7 +52,7 @@ Developer: Jamie King
 - A user would want to be able to navigate the app seamlessly.
 - A user would want to be given clear instructions on their current input options.
 - A user would want to be provided negative and postive feedback based on their inputs.
-- A user would want to be provided negative and postive feedback based on their inputs.
+- A user would want to be able to remove items from an order or cancel the order prior to submission.
 
 ### Site Owner Goals
 
@@ -67,9 +67,8 @@ Developer: Jamie King
 
 ### Target Audience
 
-- <>.
-- <>.
-- <>.
+- People looking to have food ordered for delivery.
+- People looking to pick up food from the store.
 
 ### User Requirements and Expectations
 
