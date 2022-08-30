@@ -395,12 +395,6 @@ During the project i encountered a number of bugs some of which were solved some
 |  |  |
 |   |  |
 
-### Console Bugs
-
-| Bug           | Reason           |
-| ------------- | ---------------- |
-|  | |
-| |
 
 <details>
 <summary>Screenshots</summary>
