@@ -111,12 +111,6 @@ def login_screen(error_message=''):
         else:
             print('Password does not match please try again')
 
-    # search list of logins dictionaires for name
-    # if match compare username to dictionary password
-    # if true populate global variables with name etc and display_menu()
-    # if no match display error message and continue loop - option to exit
-    # if username does not exist, option to try again, create login or ext
-
 
 def create_account():
     clear_screen()
@@ -136,7 +130,7 @@ def create_account():
         else:
             clear_screen()
             print(f'Currently entered username: {user_name}\n')
-            validate_password(password)            
+            validate_password(password)
     first_name = input('Please enter your first name: \n').strip()
     surname = input('Please enter your surname: \n').strip()
     name = first_name + '' + surname
