@@ -115,21 +115,46 @@ def member_delivery_choice():
     clear_screen()
     global delivery_type
     global address
-    delivery_choice = input('What delivery type would you like?')
-    if delivery_choice == 'D':
-        accept_delivery = input(
-            f'This order is for delivery. We have your address as {address}. Is this correct?')
-        if accept_delivery == 'Y':
-            delivery_type = 'Delivery'
-        elif accept_delivery == 'N':
-            address_number = input('Please enter house number')
-            address_street = input('Please enter street name')
-            address = address_number + '' + address_street
-            delivery_type = 'Delivery'
-    elif delivery_choice == 'C':
-        address = 'The Taco Trailer'
-        delivery_type = 'Collection'
-    display_menu()
+    while True:
+        print('What delivery type would you like?\n\n[D] - Delivery\n[C] - Collection\n[Q] - Quit to main menu\n')
+        delivery_choice = input('Please select a valid input: \n').capitalize()
+        clear_screen()
+        if delivery_choice == 'D':
+            print(
+                f'This order is for delivery.\n\nWe have your address listed as {address}.\n\nIs this correct?\n[Y] - Yes\n[N] - No')
+            accept_delivery = input('').capitalize()
+            if accept_delivery == 'Y':
+                clear_screen()
+                delivery_type = 'Delivery'
+                load_animation('Processing delivery details.')
+                display_menu()
+                break
+            elif accept_delivery == 'N':
+                print('Please enter delivery details required.\n')
+                address_number = input('Please enter house number\n')
+                address_street = input('Please enter street name\n')
+                address = address_number + '' + address_street
+                clear_screen()
+                delivery_type = 'Delivery'
+                load_animation('Processing delivery details')
+                display_menu()
+                break
+        elif delivery_choice == 'C':
+            address = 'The Taco Trailer'
+            delivery_type = 'Collection'
+            clear_screen()
+            load_animation('Processing delivery details')
+            display_menu()
+            break
+        elif delivery_choice == 'Q':
+            clear_screen()
+            load_animation('Cancelling all user inputs.')
+            welcome()
+            break
+        else:
+            clear_screen()
+            print(
+                f'Im sorry but "{delivery_choice}" in not an option/ Please enter a valid input.\n')
 
 
 def create_account():
