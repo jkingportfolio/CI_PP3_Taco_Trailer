@@ -30,8 +30,8 @@ def welcome(message='Hello, would you like to place an order?\n'):
     print(message)
     while True:
         place_order = input(
-            'Please enter a valid input\n(Y) - Yes\n(N) - No\n'
-            '(A) - Admin Access\n').strip()
+            'Please enter a valid input\n[Y] - Yes\n[N] - No\n'
+            '[A] - Admin Access\n').strip()
         place_order = place_order.capitalize()
 
         if place_order == 'Y':
