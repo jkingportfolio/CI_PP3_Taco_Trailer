@@ -21,7 +21,7 @@ address = None
 
 def welcome(message='Hello, would you like to place an order?\n'):
     """
-    Display welcome message and ask for user 
+    Display welcome message and ask for user
     input to place order or admin access
     """
     clear_screen()
@@ -104,12 +104,32 @@ def login_screen(error_message=''):
             member_name = logins[member_number].get('Name')
             name = member_name
             print(member_name)
-            delivery_type = 'Collection'
             sleep(2)
-            display_menu()
+            member_delivery_choice()
             break
         else:
             print('Password does not match please try again')
+
+
+def member_delivery_choice():
+    clear_screen()
+    global delivery_type
+    global address
+    delivery_choice = input('What delivery type would you like?')
+    if delivery_choice == 'D':
+        accept_delivery = input(
+            f'This order is for delivery. We have your address as {address}. Is this correct?')
+        if accept_delivery == 'Y':
+            delivery_type = 'Delivery'
+        elif accept_delivery == 'N':
+            address_number = input('Please enter house number')
+            address_street = input('Please enter street name')
+            address = address_number + '' + address_street
+            delivery_type = 'Delivery'
+    elif delivery_choice == 'C':
+        address = 'The Taco Trailer'
+        delivery_type = 'Collection'
+    display_menu()
 
 
 def create_account():
