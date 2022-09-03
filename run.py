@@ -80,17 +80,13 @@ def login_screen(error_message=''):
     while True:
         user_name = input('Username: \n')
         if user_name in users:
-            print(f'{user_name} is in our database')
             member_number = (
                 next((i for i, x in enumerate(logins) if x["User Name"] == user_name), None))
-            print(f'{user_name}s id is {member_number}')
             user_password = logins[member_number].get('Password')
-            print(f'{user_name}s password is {user_password}')
-            print(logins[member_number])
             break
         else:
             clear_screen()
-            message = 'Im sorry that username does not exist.'
+            message = f'Im sorry but {user_name} does not exist.'
             login_screen(message)
             break
     while True:
@@ -108,7 +104,9 @@ def login_screen(error_message=''):
             member_delivery_choice()
             break
         else:
-            print('Password does not match please try again')
+            clear_screen()
+            print('Incorrect password, please try again.\n')
+            print(f'Currently attempting to sign in as {user_name}.\n')
 
 
 def member_delivery_choice():
