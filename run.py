@@ -120,8 +120,11 @@ def create_account():
     user_name = input('Please enter a user name: \n').strip()
     while True:
         password = getpass.getpass('Please enter a password: \n').strip()
-        validate_password(password)
-    # password_validation()
+        if validate_password(password):
+            break
+        elif not validate_password(password):
+            clear_screen()
+            print(f'Username: {user_name}')
     first_name = input('Please enter your first name: \n').strip()
     surname = input('Please enter your surname: \n').strip()
     name = first_name + '' + surname
