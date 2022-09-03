@@ -68,12 +68,13 @@ def user_login():
             print('Im sorry that is an invalid choice, please enter a valid input.')
 
 
-def login_screen():
+def login_screen(error_message=''):
     global name
     global delivery_type
     global address
     clear_screen()
-    print('\nPlease enter your credentials.\n')
+    print('\nPlease enter your credentials.')
+    print(error_message)
     logins = LOGINS
     users = user_name_list()
     while True:
@@ -88,7 +89,10 @@ def login_screen():
             print(logins[member_number])
             break
         else:
-            print('Im sorry that username does not exist.')
+            clear_screen()
+            message = 'Im sorry that username does not exist.'
+            login_screen(message)
+            break
     while True:
         password = getpass.getpass('Password: \n')
         if password == user_password:
