@@ -10,6 +10,7 @@ from datetime import datetime, timedelta
 from time import sleep
 from command_line import clear_screen, load_animation
 from order import Order
+from user import User
 
 
 order_list = []
@@ -74,7 +75,7 @@ def login_screen():
     clear_screen()
     print('\nPlease enter your credentials.\n')
     logins = LOGINS
-    users = user_name_list()    
+    users = user_name_list()
     while True:
         user_name = input('Username: \n')
         if user_name in users:
@@ -117,16 +118,20 @@ def create_account():
     print('\nPlease provide the following details to create an account\n')
     admin_access = '0'
     user_name = input('Please enter a user name: \n').strip()
-    password = password_validation()
+    password = input('Please enter a password: \n').strip()
+    # password_validation()
     first_name = input('Please enter your first name: \n').strip()
     surname = input('Please enter your surname: \n').strip()
+    name = first_name + '' + surname
     address_number = input(
         'Please enter your house number: \n').strip()
     address_street = input('\nPlease enter your street name: \n')
+    address = address_number + '' + address_street
     clear_screen()
     load_animation('Thank you for your details. Creating account.')
-    new_user = User(admin_access, user_name, password,
-                    first_name, surname, address_number, address_street)
+    new_user = User(user_name, password, admin_access,
+                    name, address)
+    new_user.append_user()
 
 
 def customer_details():
