@@ -4,6 +4,7 @@ Google sheets module
 from tabulate import tabulate
 import gspread
 from google.oauth2.service_account import Credentials
+from taco_trailer_command_line import clear_screen
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -32,12 +33,19 @@ def user_name_list():
         USER_NAMES.append((login.get('User Name')))
     return USER_NAMES
 
+
 def validate_new_username(new_username):
-    USER_NAMES = user_name_list()    
+    USER_NAMES = user_name_list()
     if new_username in USER_NAMES:
+        clear_screen()
+        print(f'Username {new_username} is already taken.\n')
+        return False
+    elif ' ' in new_username:
+        clear_screen()
+        print(f'Username "{new_username}" cannot be created as it has whitespaces.')
         return False
     else:
+        clear_screen()
         print(f'Username "{new_username}" is valid and created')
         USER_NAMES.append(new_username)
-        print(USER_NAMES)
         return True

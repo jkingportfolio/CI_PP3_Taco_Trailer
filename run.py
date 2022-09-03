@@ -114,7 +114,8 @@ def member_delivery_choice():
     global delivery_type
     global address
     while True:
-        print('What delivery type would you like?\n\n[D] - Delivery\n[C] - Collection\n[Q] - Quit to main menu\n')
+        print(
+            'What delivery type would you like?\n\n[D] - Delivery\n[C] - Collection\n[Q] - Quit to main menu\n')
         delivery_choice = input('Please select a valid input: \n').capitalize()
         clear_screen()
         if delivery_choice == 'D':
@@ -160,12 +161,10 @@ def create_account():
     print('\nPlease provide the following details to create an account\n')
     admin_access = '0'
     while True:
-        user_name = input('Please enter a user name: \n').strip()
+        user_name = input('Please enter a user name: \n')
         if validate_new_username(user_name):
             break
-        elif not validate_new_username(user_name):
-            clear_screen()
-            print(f'"{user_name}" is already taken. Please try again.\n')
+
     while True:
         password = getpass.getpass('Please enter a password: \n').strip()
         if validate_password(password):
