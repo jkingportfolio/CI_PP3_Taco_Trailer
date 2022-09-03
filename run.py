@@ -73,11 +73,11 @@ def login_screen():
     global address
     clear_screen()
     print('\nPlease enter your credentials.\n')
-    user_name = input('Username: \n')
-    password = getpass.getpass('Password: \n')
     logins = LOGINS
-    for login in logins:
-        if login["User Name"] == user_name:
+    users = user_name_list()    
+    while True:
+        user_name = input('Username: \n')
+        if user_name in users:
             print(f'{user_name} is in our database')
             member_number = (
                 next((i for i, x in enumerate(logins) if x["User Name"] == user_name), None))
@@ -85,26 +85,27 @@ def login_screen():
             user_password = logins[member_number].get('Password')
             print(f'{user_name}s password is {user_password}')
             print(logins[member_number])
-            if password == user_password:
-                clear_screen()
-                print('Passwords match!')
-                sleep(2)                
-                member_address = logins[member_number].get('Address')
-                address = member_address
-                member_name = logins[member_number].get('Name')
-                name = member_name
-                print(member_name)
-                delivery_type = 'Collection'
-                sleep(2) 
-                display_menu()
-                break
-            else:
-                print('Password does not match please try again')
-                break
-    else:
-        print('Im sorry no username found')
-        sleep(2)
-        login_screen()
+            break
+        else:
+            print('Im sorry that username does not exist.')
+    while True:
+        password = getpass.getpass('Password: \n')
+        if password == user_password:
+            clear_screen()
+            print('Passwords match!')
+            sleep(2)
+            member_address = logins[member_number].get('Address')
+            address = member_address
+            member_name = logins[member_number].get('Name')
+            name = member_name
+            print(member_name)
+            delivery_type = 'Collection'
+            sleep(2)
+            display_menu()
+            break
+        else:
+            print('Password does not match please try again')
+
     # search list of logins dictionaires for name
     # if match compare username to dictionary password
     # if true populate global variables with name etc and display_menu()

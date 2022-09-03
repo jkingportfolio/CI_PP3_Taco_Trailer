@@ -24,3 +24,10 @@ ORDER_RECORDS = SALES_WORKSHEET.get_all_records()
 ORDER_RECORD_VALUES = SALES_WORKSHEET.get_all_values()
 PASSWORD = SHEET.worksheet("Password").acell('A1').value
 LOGINS = SHEET.worksheet('Users').get_all_records()
+
+
+def user_name_list():
+    USER_NAMES = []
+    for login in LOGINS:
+        USER_NAMES.append((login.get('User Name')))
+    return USER_NAMES
