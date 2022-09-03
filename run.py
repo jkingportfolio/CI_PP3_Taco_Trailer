@@ -78,6 +78,20 @@ def login_screen():
     #if no match display error message and continue loop - option to exit
     # if username does not exist, option to try again, create login or ext
 
+def create_account():
+    print('\nPlease provide the following details to create an account\n')
+    user_name = input('Please enter a user name: \n').strip()
+    password = password_validation()
+    first_name = input('Please enter your first name: \n').strip()
+    surname = input('Please enter your surname: \n').strip()
+    address_number = input(
+                    'Please enter your house number: \n').strip()
+    address_street = input('\nPlease enter your street name: \n')
+    clear_screen()
+    load_animation('Thank you for your details. Creating account.')
+    new_user = User(user_name, password, first_name, surname, address_number, address_street)
+    
+
 def customer_details():
     """
     Collect users name, delivery and address via input
