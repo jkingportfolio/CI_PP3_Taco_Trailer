@@ -36,7 +36,6 @@ def welcome(message='Hello, would you like to place an order?\n'):
         if place_order == 'Y':
             clear_screen()
             user_login()
-            # customer_details()
             break
         elif place_order == 'N':
             clear_screen()
@@ -57,11 +56,11 @@ def user_login():
         '[1] - To login\n[2] - To create as account\n[3] - Continue as guest')
     while True:
         if user_login_answer == '1':
-            # login_screen()
-            pass
+            login_screen()
+            break
         elif user_login_answer == '2':
-            # create_account()
-            pass
+            create_account()
+            break
         elif user_login_answer == '3':
             customer_details()
         else:
@@ -80,6 +79,7 @@ def login_screen():
 
 def create_account():
     print('\nPlease provide the following details to create an account\n')
+    admin_access = '0'
     user_name = input('Please enter a user name: \n').strip()
     password = password_validation()
     first_name = input('Please enter your first name: \n').strip()
@@ -89,7 +89,7 @@ def create_account():
     address_street = input('\nPlease enter your street name: \n')
     clear_screen()
     load_animation('Thank you for your details. Creating account.')
-    new_user = User(user_name, password, first_name, surname, address_number, address_street)
+    new_user = User(admin_access, user_name, password, first_name, surname, address_number, address_street)
     
 
 def customer_details():
