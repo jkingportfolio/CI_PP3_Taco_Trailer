@@ -31,3 +31,13 @@ def user_name_list():
     for login in LOGINS:
         USER_NAMES.append((login.get('User Name')))
     return USER_NAMES
+
+def validate_new_username(new_username):
+    USER_NAMES = user_name_list()    
+    if new_username in USER_NAMES:
+        return False
+    else:
+        print(f'Username "{new_username}" is valid and created')
+        USER_NAMES.append(new_username)
+        print(USER_NAMES)
+        return True

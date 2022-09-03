@@ -115,16 +115,24 @@ def login_screen():
 
 
 def create_account():
+    clear_screen()
     print('\nPlease provide the following details to create an account\n')
     admin_access = '0'
-    user_name = input('Please enter a user name: \n').strip()
+    while True:
+        user_name = input('Please enter a user name: \n').strip()
+        if validate_new_username(user_name):
+            break
+        elif not validate_new_username(user_name):
+            clear_screen()
+            print(f'"{user_name}" is already taken. Please try again.\n')
     while True:
         password = getpass.getpass('Please enter a password: \n').strip()
         if validate_password(password):
             break
-        elif not validate_password(password):
+        else:
             clear_screen()
-            print(f'Username: {user_name}')
+            print(f'Currently entered username: {user_name}\n')
+            validate_password(password)            
     first_name = input('Please enter your first name: \n').strip()
     surname = input('Please enter your surname: \n').strip()
     name = first_name + '' + surname
