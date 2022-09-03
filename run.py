@@ -8,7 +8,7 @@ import pyfiglet
 from termcolor import colored
 from datetime import datetime, timedelta
 from time import sleep
-from command_line import clear_screen, load_animation
+from command_line import clear_screen, load_animation, validate_password
 from order import Order
 from user import User
 
@@ -118,7 +118,9 @@ def create_account():
     print('\nPlease provide the following details to create an account\n')
     admin_access = '0'
     user_name = input('Please enter a user name: \n').strip()
-    password = getpass.getpass('Please enter a password: \n').strip()
+    while True:
+        password = getpass.getpass('Please enter a password: \n').strip()
+        validate_password(password)
     # password_validation()
     first_name = input('Please enter your first name: \n').strip()
     surname = input('Please enter your surname: \n').strip()
