@@ -69,8 +69,8 @@ def user_login():
 def login_screen():
     print('\nPlease enter your credentials.\n')
     user_name = input('Username: \n')
-    password = input('Password: \n')
-    #login list from google sheets
+    password = getpass.getpass('Password: \n')
+    logins = logins_list() 
     #search list of logins dictionaires for name
     #if match compare username to dictionary password
     # if true populate global variables with name etc and display_menu() 
