@@ -8,7 +8,7 @@ import pyfiglet
 from termcolor import colored
 from datetime import datetime, timedelta
 from time import sleep
-from command_line import clear_screen, load_animation, validate_password
+from taco_trailer_command_line import clear_screen, load_animation, validate_password
 from order import Order
 from user import User
 

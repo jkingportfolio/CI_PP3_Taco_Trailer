@@ -200,7 +200,7 @@ In the future as my skills grow I would like to implement the following features
 <img src="docs/validation-js/validation-jshint-contact.png">
 </details>
 <details>
-<summary>Python file - command_line.py</summary>
+<summary>Python file - taco_trailer_command_line.py</summary>
 <img src="docs/validation-js/validation-jshint-contact.png">
 </details>
 
