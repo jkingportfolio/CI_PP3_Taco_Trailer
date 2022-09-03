@@ -118,7 +118,7 @@ def create_account():
     print('\nPlease provide the following details to create an account\n')
     admin_access = '0'
     user_name = input('Please enter a user name: \n').strip()
-    password = input('Please enter a password: \n').strip()
+    password = getpass.getpass('Please enter a password: \n').strip()
     # password_validation()
     first_name = input('Please enter your first name: \n').strip()
     surname = input('Please enter your surname: \n').strip()
