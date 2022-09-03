@@ -185,6 +185,21 @@ def create_account():
     new_user = User(user_name, password, admin_access,
                     name, address)
     new_user.append_user()
+    members_area()
+
+
+def members_area():
+    print('What would you like to do?\n[1] - Make an order\n[2] - View previous orders\n[3] - Change password')
+    while True:
+        user_choice = input('User input:\n')
+        if user_choice == '1':
+            print('Option 1 selected')
+        elif user_choice == '2':
+            print('Option 2 selected')
+        elif user_choice == '3':
+            print('Option 3 selected')
+        else:
+            print('Please enter a valid input.\n')
 
 
 def customer_details():
