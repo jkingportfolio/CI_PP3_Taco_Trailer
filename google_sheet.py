@@ -23,4 +23,4 @@ SALES_WORKSHEET = SHEET.worksheet("Sales")
 ORDER_RECORDS = SALES_WORKSHEET.get_all_records()
 ORDER_RECORD_VALUES = SALES_WORKSHEET.get_all_values()
 PASSWORD = SHEET.worksheet("Password").acell('A1').value
-
+LOGINS = SHEET.worksheet('Users').get_all_records()

@@ -66,16 +66,51 @@ def user_login():
         else:
             print('Im sorry that is an invalid choice, please enter a valid input.')
 
+
 def login_screen():
+    global name
+    global delivery_type
+    global address
+    clear_screen()
     print('\nPlease enter your credentials.\n')
     user_name = input('Username: \n')
     password = getpass.getpass('Password: \n')
-    logins = logins_list() 
-    #search list of logins dictionaires for name
-    #if match compare username to dictionary password
-    # if true populate global variables with name etc and display_menu() 
-    #if no match display error message and continue loop - option to exit
+    logins = LOGINS
+    for login in logins:
+        if login["User Name"] == user_name:
+            print(f'{user_name} is in our database')
+            member_number = (
+                next((i for i, x in enumerate(logins) if x["User Name"] == user_name), None))
+            print(f'{user_name}s id is {member_number}')
+            user_password = logins[member_number].get('Password')
+            print(f'{user_name}s password is {user_password}')
+            print(logins[member_number])
+            if password == user_password:
+                clear_screen()
+                print('Passwords match!')
+                sleep(2)                
+                member_address = logins[member_number].get('Address')
+                address = member_address
+                member_name = logins[member_number].get('Name')
+                name = member_name
+                print(member_name)
+                delivery_type = 'Collection'
+                sleep(2) 
+                display_menu()
+                break
+            else:
+                print('Password does not match please try again')
+                break
+    else:
+        print('Im sorry no username found')
+        sleep(2)
+        login_screen()
+    # search list of logins dictionaires for name
+    # if match compare username to dictionary password
+    # if true populate global variables with name etc and display_menu()
+    # if no match display error message and continue loop - option to exit
     # if username does not exist, option to try again, create login or ext
+
 
 def create_account():
     print('\nPlease provide the following details to create an account\n')
@@ -85,12 +120,13 @@ def create_account():
     first_name = input('Please enter your first name: \n').strip()
     surname = input('Please enter your surname: \n').strip()
     address_number = input(
-                    'Please enter your house number: \n').strip()
+        'Please enter your house number: \n').strip()
     address_street = input('\nPlease enter your street name: \n')
     clear_screen()
     load_animation('Thank you for your details. Creating account.')
-    new_user = User(admin_access, user_name, password, first_name, surname, address_number, address_street)
-    
+    new_user = User(admin_access, user_name, password,
+                    first_name, surname, address_number, address_street)
+
 
 def customer_details():
     """
