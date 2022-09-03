@@ -35,7 +35,8 @@ def welcome(message='Hello, would you like to place an order?\n'):
 
         if place_order == 'Y':
             clear_screen()
-            customer_details()
+            user_login()
+            # customer_details()
             break
         elif place_order == 'N':
             clear_screen()
@@ -45,8 +46,26 @@ def welcome(message='Hello, would you like to place an order?\n'):
             admin_access()
             break
         else:
-            welcome(colored(f'{place_order} is not a valid input, please try again!\n', 'yellow'))
+            welcome(
+                colored(f'{place_order} is not a valid input, please try again!\n', 'yellow'))
             break
+
+
+def user_login():
+    print('\nPlease enter a valid input.\n')
+    user_login_answer = input(
+        '[1] - To login\n[2] - To create as account\n[3] - Continue as guest')
+    while True:
+        if user_login_answer == '1':
+            # login_screen()
+            pass
+        elif user_login_answer == '2':
+            # create_account()
+            pass
+        elif user_login_answer == '3':
+            customer_details()
+        else:
+            print('Im sorry that is an invalid choice, please enter a valid input.')
 
 
 def customer_details():
@@ -87,7 +106,8 @@ def customer_details():
             print(
                 f'You selected {delivery_type.capitalize()} for your order.\n')
             while True:
-                address_number = input('Please enter your house number: \n').strip()
+                address_number = input(
+                    'Please enter your house number: \n').strip()
                 if address_number.isdigit():
                     address_number = int(address_number)
                     break
@@ -208,11 +228,11 @@ def order_item():
             else:
                 clear_screen()
                 print(tabulate(order_list, headers=['Item', 'Name', 'Cost (£)'],
-                            tablefmt="simple", numalign="center"))
+                               tablefmt="simple", numalign="center"))
                 print('')
                 print(colored('Im sorry i need a valid input.', 'yellow'))
                 sleep(3)
-                
+
         elif food_item.isdigit() and int(food_item) > 0:
             try:
                 food_item = int(food_item) - 1
@@ -319,7 +339,8 @@ def admin_access():
     """
     clear_screen()
     password_guesses = 3
-    print(colored(f'You have {password_guesses} remaining guesses.\n','yellow'))
+    print(
+        colored(f'You have {password_guesses} remaining guesses.\n', 'yellow'))
     while True:
         admin_password = getpass.getpass("Please enter Admin Password:\n")
 
