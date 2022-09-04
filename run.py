@@ -8,7 +8,8 @@ import pyfiglet
 from termcolor import colored
 from datetime import datetime, timedelta
 from time import sleep
-from taco_trailer_command_line import clear_screen, load_animation, validate_password, password_criteria
+from taco_trailer_command_line import (clear_screen, load_animation,
+                                       validate_password, password_criteria)
 from order import Order
 from user import User
 
@@ -100,6 +101,7 @@ def login_screen(error_message=''):
                 colored(f'\nIm sorry but "{user_name}" does not exist.\n', 'yellow'))
             login_screen(message)
             break
+    password_guesses = 3
     while True:
         password = getpass.getpass('Password: \n')
         if user_name == 'Admin' and password == user_password:
@@ -118,8 +120,17 @@ def login_screen(error_message=''):
             break
         else:
             clear_screen()
-            print(colored('Incorrect password, please try again.\n', 'yellow'))
-            print(f'Currently attempting to sign in as: {user_name}\n')
+            password_guesses -= 1
+            if password_guesses > 0:
+                print(colored(
+                    f'Incorrect password. Remaining password'
+                    f' attempts {password_guesses}\n', 'yellow'))
+                print(f'Currently attempting to sign in as: {user_name}\n')
+            elif password_guesses == 0:
+                print(pyfiglet.figlet_format('Access denied!'))
+                sleep(2)
+                clear_screen()
+                welcome()
 
 
 def member_delivery_choice(member_name):
