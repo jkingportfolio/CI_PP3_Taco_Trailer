@@ -3,10 +3,13 @@ Google sheets module
 """
 from tabulate import tabulate
 from termcolor import colored
+from time import sleep
+import pyfiglet
 import gspread
 import getpass
 from google.oauth2.service_account import Credentials
 from taco_trailer_command_line import clear_screen, validate_password
+
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -67,23 +70,27 @@ def validate_new_username(new_username):
 def change_password(member_number):
     current_password = LOGINS[member_number].get('Password')
     print(colored('Change password', 'green'))
-    print(member_number)
     member_cell_number = member_number + 2
-    print(member_cell_number)
-    password_input = input('Please enter your current password\n')
+    password_input = getpass.getpass('Please enter your current password: \n')
     while True:
         if password_input == current_password:
-            new_password = getpass.getpass('Please enter your new password')
+            clear_screen()
+            new_password = getpass.getpass('Please enter your new password: \n')
             if validate_password(new_password):
+                clear_screen()
                 confirm_password = getpass.getpass(
                     'Please confirm your new password')
                 if confirm_password == new_password:
                     password_cell = 'B' + str(member_number)
-                    SHEET.worksheet('Users').update_cell(member_cell_number, 2, new_password)
-                    print(f'New Password is: {new_password}')
+                    SHEET.worksheet('Users').update_cell(
+                        member_cell_number, 2, new_password)
+                    clear_screen()
+                    print(pyfiglet.figlet_format('Password updated'))
+                    sleep(2)
+                    clear_screen()
                     break
                 else:
+                    clear_screen()
                     ('Print your new password didnt meet the criteria.\n')
-        else:
-            print('Those passwords dont match')
-
+            else:
+                print('Those passwords dont match')

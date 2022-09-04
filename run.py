@@ -239,11 +239,14 @@ def members_area(member_name, member_number):
         user_choice = input('User input:\n')
         if user_choice == '1':
             member_delivery_choice(member_name)
+            members_area(member_name, member_number)
             break
         elif user_choice == '2':
             print('Option 2 selected')
+            members_area(member_name, member_number)
         elif user_choice == '3':
             change_password(member_number)
+            members_area(member_name, member_number)
             break
         else:
             print('Please enter a valid input.\n')
