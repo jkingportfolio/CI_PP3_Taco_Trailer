@@ -112,7 +112,7 @@ def login_screen(error_message=''):
         elif password == user_password:
             clear_screen()
             load_animation(
-                colored(f'Credentials valid. Logging in as {user_name}.', 'green'))
+                colored(f'Credentials valid.\n\nLogging in as {user_name}.', 'green'))
             member_address = logins[member_number].get('Address')
             address = member_address
             member_name = logins[member_number].get('Name')
@@ -153,7 +153,8 @@ def member_delivery_choice(member_name):
             if accept_delivery == 'Y':
                 clear_screen()
                 delivery_type = 'Delivery'
-                load_animation('Processing delivery details.')
+                # print(f'You have selected "{delivery_type}" as your order type.\n')
+                load_animation('Loading menu.')
                 display_menu()
                 break
             elif accept_delivery == 'N':
@@ -163,14 +164,16 @@ def member_delivery_choice(member_name):
                 address = address_number + '' + address_street
                 clear_screen()
                 delivery_type = 'Delivery'
-                load_animation('Processing delivery details')
+                # print(f'You have selected "{delivery_type}" as your order type.\n')
+                load_animation('Loading menu.')
                 display_menu()
                 break
         elif delivery_choice == 'C':
             address = 'The Taco Trailer'
             delivery_type = 'Collection'
             clear_screen()
-            load_animation('Processing delivery details')
+            # print(f'You have selected "{delivery_type}" as your order type.\n')
+            load_animation('Loading menu.')
             display_menu()
             break
         elif delivery_choice == 'Q':
