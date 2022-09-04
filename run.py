@@ -64,6 +64,7 @@ def user_login():
         elif user_login_answer == '3':
             clear_screen()
             customer_details()
+            break
         else:
             clear_screen()
             print(colored(
@@ -138,9 +139,9 @@ def member_delivery_choice(member_name):
     global delivery_type
     global address
     while True:
-        print(pyfiglet.figlet_format(f'Hi {member_name}!\n'))
+        print(pyfiglet.figlet_format(f'Hi {member_name}'))
         print(colored(
-            'What delivery type would you like?\n\n', 'green'))
+            'What delivery type would you like?\n', 'green'))
         print(
             '[D] - Delivery\n[C] - Collection\n[Q] - Quit to main menu\n')
         delivery_choice = input('Please select a valid input: \n').capitalize()
@@ -253,35 +254,37 @@ def customer_details():
     global delivery_type
     global address
 
-    print('We would like to take your details.\n')
+    print(colored('We would like to take your details.\n','green'))
     while True:
         first_name = input('Please enter your first name: \n').strip()
         if first_name.isalpha():
             break
         else:
+            clear_screen()
             print(colored(
-                '\nPlease enter a valid name that does not'
+                'Please enter a valid name that does not'
                 ' contain numbers or special characters\n', 'yellow'))
     while True:
         surname = input('Please enter your surname: \n').strip()
         if surname.isalpha():
             break
         else:
+            clear_screen()
             print(colored(
-                '\nPlease enter a valid name that does not'
+                'Please enter a valid surname that does not'
                 ' contain numbers or special characters\n', 'yellow'))
     name = (f'{first_name} {surname}')
     clear_screen()
-    print(pyfiglet.figlet_format(f'Hi {name}!\n'))
+    print(pyfiglet.figlet_format(f'Hi {name}'))
     while True:
-        delivery_type = input('Please enter your delivery'
-                              ' type. Delivery (D) Collection (C): \n').strip()
+        print(colored('Please enter your delivery type.\n','green'))
+        delivery_type = input('Delivery (D) Collection (C): \n').strip()
         delivery_type = delivery_type.capitalize()
         if delivery_type == 'D':
             delivery_type = 'Delivery'
-            print()
-            print(
-                f'You selected {delivery_type.capitalize()} for your order.\n')
+            clear_screen()
+            print(colored(
+                f'\nYou selected {delivery_type.capitalize()} for your order.\n','green'))
             while True:
                 address_number = input(
                     'Please enter your house number: \n').strip()
@@ -289,15 +292,17 @@ def customer_details():
                     address_number = int(address_number)
                     break
                 else:
-                    print(
-                        f'"{address_number}" is not a number. Please enter a number')
+                    clear_screen()
+                    print(colored(
+                        f'Invalid entry "{address_number}" is not a number. Please enter a number.\n','yellow'))
             while True:
                 address_street = input('\nPlease enter your street name: \n')
                 if address_street != '' and all(chr.isalpha() or chr.isspace() for chr in address_street):
                     break
                 else:
-                    print(
-                        f'"{address_street}" contains numbers/special character. Please enter a valid input')
+                    clear_screen()
+                    print(colored(
+                        f'Invalid entry "{address_street}" contains numbers/special character. Please enter a valid input.','yellow'))
             address = (f'{address_number} {address_street}')
             break
         elif delivery_type == 'C':
@@ -308,12 +313,12 @@ def customer_details():
             address = 'The Taco Trailer'
             break
         else:
-            print()
-            print(colored('Please enter a valid input.\n', 'yellow'))
+            clear_screen()
+            print(pyfiglet.figlet_format(f'Hi {name}'))            
+            print(colored(f'Im sorry but "{delivery_type}" is not a valid option. Please enter a valid input.\n', 'yellow'))
 
     clear_screen()
-    print('Thank you for your details!\n')
-    # print('Loading our menu...\n')
+    print(colored('Thank you for your details!','green'))
     sleep(2)
     load_animation('Loading menu.')
     clear_screen()
