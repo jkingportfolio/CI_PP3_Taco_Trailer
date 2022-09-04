@@ -111,8 +111,7 @@ def login_screen(error_message=''):
             break
         elif password == user_password:
             clear_screen()
-            load_animation(
-                colored(f'Credentials valid.\n\nLogging in as {user_name}.', 'green'))
+            load_animation(f'Credentials valid.\n\nLogging in as {user_name}.')
             member_address = logins[member_number].get('Address')
             address = member_address
             member_name = logins[member_number].get('Name')
@@ -152,7 +151,7 @@ def member_delivery_choice(member_name):
             accept_delivery = input('').capitalize()
             if accept_delivery == 'Y':
                 clear_screen()
-                delivery_type = 'Delivery')
+                delivery_type = 'Delivery'
                 load_animation('Loading menu.')
                 display_menu()
                 break
@@ -175,7 +174,7 @@ def member_delivery_choice(member_name):
             break
         elif delivery_choice == 'Q':
             clear_screen()
-            load_animation(colored('Cancelling all user inputs.', 'green'))
+            load_animation('Cancelling all user inputs.')
             welcome()
             break
         else:
