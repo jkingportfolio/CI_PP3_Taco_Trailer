@@ -60,6 +60,7 @@ def user_login():
             create_account()
             break
         elif user_login_answer == '3':
+            clear_screen()
             customer_details()
         else:
             clear_screen()
@@ -112,7 +113,7 @@ def login_screen(error_message=''):
             name = member_name
             print(member_name)
             sleep(2)
-            member_delivery_choice()
+            member_delivery_choice(member_name)
             break
         else:
             clear_screen()
@@ -120,11 +121,12 @@ def login_screen(error_message=''):
             print(f'Currently attempting to sign in as {user_name}.\n')
 
 
-def member_delivery_choice():
+def member_delivery_choice(member_name):
     clear_screen()
     global delivery_type
     global address
     while True:
+        print(pyfiglet.figlet_format(f'Hi {member_name}!\n'))
         print(
             'What delivery type would you like?\n\n[D] - Delivery\n[C] - Collection\n[Q] - Quit to main menu\n')
         delivery_choice = input('Please select a valid input: \n').capitalize()
