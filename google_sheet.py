@@ -4,8 +4,9 @@ Google sheets module
 from tabulate import tabulate
 from termcolor import colored
 import gspread
+import getpass
 from google.oauth2.service_account import Credentials
-from taco_trailer_command_line import clear_screen
+from taco_trailer_command_line import clear_screen, validate_password
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -64,5 +65,25 @@ def validate_new_username(new_username):
 
 
 def change_password(member_number):
-    print(LOGINS[member_number])
-    stoptime = input('stop time')
+    current_password = LOGINS[member_number].get('Password')
+    print(colored('Change password', 'green'))
+    print(member_number)
+    member_cell_number = member_number + 2
+    print(member_cell_number)
+    password_input = input('Please enter your current password\n')
+    while True:
+        if password_input == current_password:
+            new_password = getpass.getpass('Please enter your new password')
+            if validate_password(new_password):
+                confirm_password = getpass.getpass(
+                    'Please confirm your new password')
+                if confirm_password == new_password:
+                    password_cell = 'B' + str(member_number)
+                    SHEET.worksheet('Users').update_cell(member_cell_number, 2, new_password)
+                    print(f'New Password is: {new_password}')
+                    break
+                else:
+                    ('Print your new password didnt meet the criteria.\n')
+        else:
+            print('Those passwords dont match')
+

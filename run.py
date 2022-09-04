@@ -116,7 +116,7 @@ def login_screen(error_message=''):
             address = member_address
             member_name = logins[member_number].get('Name')
             name = member_name
-            members_area(member_name, member_number)
+            members_area(name, member_number)
             break
         else:
             clear_screen()
@@ -244,6 +244,7 @@ def members_area(member_name, member_number):
             print('Option 2 selected')
         elif user_choice == '3':
             change_password(member_number)
+            break
         else:
             print('Please enter a valid input.\n')
 
