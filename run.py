@@ -116,7 +116,7 @@ def login_screen(error_message=''):
             address = member_address
             member_name = logins[member_number].get('Name')
             name = member_name
-            member_delivery_choice(member_name)
+            members_area(member_name)
             break
         else:
             clear_screen()
@@ -138,7 +138,6 @@ def member_delivery_choice(member_name):
     global delivery_type
     global address
     while True:
-        print(pyfiglet.figlet_format(f'Hi {member_name}'))
         print(colored(
             'What delivery type would you like?\n', 'green'))
         print(
@@ -232,7 +231,8 @@ def create_account():
     members_area()
 
 
-def members_area():
+def members_area(member_name):
+    print(pyfiglet.figlet_format(f'Hi {member_name}'))
     print(
         'What would you like to do?\n[1] - Make an order\n[2] - View previous orders\n[3] - Change password')
     while True:
