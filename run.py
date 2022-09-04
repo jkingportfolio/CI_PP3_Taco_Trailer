@@ -19,7 +19,7 @@ delivery_type = None
 address = None
 
 
-def welcome(message='Hello, would you like to place an order?\n'):
+def welcome(message='Hello, would you like to place an order or login?\n'):
     """
     Display welcome message and ask for user
     input to place order or admin access
@@ -30,8 +30,7 @@ def welcome(message='Hello, would you like to place an order?\n'):
     print(message)
     while True:
         place_order = input(
-            'Please enter a valid input\n[Y] - Yes\n[N] - No\n'
-            '[A] - Admin Access\n').strip()
+            'Please enter a valid input\n[Y] - Yes\n[N] - No\n').strip()
         place_order = place_order.capitalize()
 
         if place_order == 'Y':
@@ -41,9 +40,6 @@ def welcome(message='Hello, would you like to place an order?\n'):
         elif place_order == 'N':
             clear_screen()
             thank_you()
-            break
-        elif place_order == 'A':
-            admin_access()
             break
         else:
             welcome(
@@ -488,37 +484,37 @@ def complete_order():
             print('Im sorry that is an invalid input.')
 
 
-def admin_access():
-    """
-    Password to access admin dashboard that has access to records and
-    ability to edit the menu
-    """
-    clear_screen()
-    password_guesses = 3
-    print(
-        colored(f'You have {password_guesses} remaining guesses.\n', 'yellow'))
-    while True:
-        admin_password = getpass.getpass("Please enter Admin Password:\n")
+# def admin_access():
+#     """
+#     Password to access admin dashboard that has access to records and
+#     ability to edit the menu
+#     """
+#     clear_screen()
+#     password_guesses = 3
+#     print(
+#         colored(f'You have {password_guesses} remaining guesses.\n', 'yellow'))
+#     while True:
+#         admin_password = getpass.getpass("Please enter Admin Password:\n")
 
-        if admin_password == PASSWORD:
-            clear_screen()
-            print(pyfiglet.figlet_format('Access granted!'))
-            sleep(2)
-            admin_dashboard()
-            welcome()
-            break
-        else:
-            clear_screen()
-            password_guesses -= 1
-            if password_guesses > 0:
-                print(colored(
-                    f'Incorrect password. Remaining password'
-                    f' attempts {password_guesses}\n', 'yellow'))
-            elif password_guesses == 0:
-                print(pyfiglet.figlet_format('Access denied!'))
-                sleep(2)
-                clear_screen()
-                welcome()
+#         if admin_password == PASSWORD:
+#             clear_screen()
+#             print(pyfiglet.figlet_format('Access granted!'))
+#             sleep(2)
+#             admin_dashboard()
+#             welcome()
+#             break
+#         else:
+#             clear_screen()
+#             password_guesses -= 1
+#             if password_guesses > 0:
+#                 print(colored(
+#                     f'Incorrect password. Remaining password'
+#                     f' attempts {password_guesses}\n', 'yellow'))
+#             elif password_guesses == 0:
+#                 print(pyfiglet.figlet_format('Access denied!'))
+#                 sleep(2)
+#                 clear_screen()
+#                 welcome()
 
 
 def thank_you():
