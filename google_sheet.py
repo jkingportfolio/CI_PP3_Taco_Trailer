@@ -46,6 +46,6 @@ def validate_new_username(new_username):
         return False
     else:
         clear_screen()
-        print(f'Username "{new_username}" is valid and created')
+        print(f'Username "{new_username}" is valid and created\n')
         USER_NAMES.append(new_username)
         return True

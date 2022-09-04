@@ -8,7 +8,7 @@ import pyfiglet
 from termcolor import colored
 from datetime import datetime, timedelta
 from time import sleep
-from taco_trailer_command_line import clear_screen, load_animation, validate_password
+from taco_trailer_command_line import clear_screen, load_animation, validate_password, password_criteria
 from order import Order
 from user import User
 
@@ -166,22 +166,21 @@ def create_account():
             break
 
     while True:
-        print('\nPlease creation criteria.\nPasswords must: \n1. Be longer than 6 characters\n'
-              '2. Be less than 20 characters\n'
-              '3. Include at least one numeral\n'
-              '4. Include at least one uppercase letter\n'
-              '5. Include at least one lowercase letter\n'
-              '6. Include at lease one of the following characters: $ @ #\n')
-        password = getpass.getpass('Please enter a password: \n').strip()
+        print(password_criteria)
+        password = getpass.getpass('Please enter your password: \n')
         if validate_password(password):
             while True:
                 password_validate = getpass.getpass(
                     'Please re enter your password:\n')
                 if password == password_validate:
+                    clear_screen()
                     print('Password is valid and matches re entry.\n')
                     break
                 elif password != password_validate:
-                    print('Im sorry those passwords do not match, please try again.\n')
+                    clear_screen()
+                    print(f'Currently creating password for: {user_name}\n')
+                    print('First password entry meets the password creation criteria.\n')
+                    print('Im sorry those passwords do not match, please try re enter your password again.\n')
             break
         else:
             clear_screen()
