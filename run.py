@@ -187,7 +187,7 @@ def member_delivery_choice(member_name):
 
 def create_account():
     clear_screen()
-    print('\nPlease provide the following details to create an account\n')
+    print(colored('\nPlease provide the following details to create an account\n','green'))
     admin_access = '0'
     while True:
         user_name = input('Please enter a user name: \n')
