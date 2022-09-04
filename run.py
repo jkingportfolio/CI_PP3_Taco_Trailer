@@ -203,15 +203,15 @@ def create_account():
                     'Please re enter your password:\n')
                 if password == password_validate:
                     clear_screen()
-                    print('Password is valid and matches re entry.\n')
+                    print(colored('Password is valid and matches re entry.\n','green'))
                     break
                 elif password != password_validate:
                     clear_screen()
-                    print(f'Currently creating password for: {user_name}\n')
-                    print(
-                        'First password entry meets the password creation criteria.\n')
-                    print(
-                        'Im sorry those passwords do not match, please try re enter your password again.\n')
+                    print(colored(f'Currently creating password for: {user_name}\n','green'))
+                    print(colored(
+                        'First password entry meets the password creation criteria.\n','green'))
+                    print(colored(
+                        'Im sorry those passwords do not match, please try re enter your password again.\n','yellow'))
             break
         else:
             clear_screen()
