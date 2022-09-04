@@ -80,7 +80,7 @@ def login_screen(error_message=''):
                 next((i for i, x in enumerate(logins) if x["User Name"] == user_name), None))
             user_password = logins[member_number].get('Password')
             break
-        if user_name in users:
+        elif user_name in users:
             member_number = (
                 next((i for i, x in enumerate(logins) if x["User Name"] == user_name), None))
             user_password = logins[member_number].get('Password')
