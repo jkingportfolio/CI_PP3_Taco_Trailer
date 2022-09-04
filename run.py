@@ -166,10 +166,17 @@ def create_account():
             break
 
     while True:
+        print('\nPlease creation criteria.\nPasswords must: \n1. Be longer than 6 characters\n'
+              '2. Be less than 20 characters\n'
+              '3. Include at least one numeral\n'
+              '4. Include at least one uppercase letter\n'
+              '5. Include at least one lowercase letter\n'
+              '6. Include at lease one of the following characters: $ @ #\n')
         password = getpass.getpass('Please enter a password: \n').strip()
         if validate_password(password):
             while True:
-                password_validate = getpass.getpass('Please re enter your password:\n')
+                password_validate = getpass.getpass(
+                    'Please re enter your password:\n')
                 if password == password_validate:
                     print('Password is valid and matches re entry.\n')
                     break
@@ -196,7 +203,8 @@ def create_account():
 
 
 def members_area():
-    print('What would you like to do?\n[1] - Make an order\n[2] - View previous orders\n[3] - Change password')
+    print(
+        'What would you like to do?\n[1] - Make an order\n[2] - View previous orders\n[3] - Change password')
     while True:
         user_choice = input('User input:\n')
         if user_choice == '1':
