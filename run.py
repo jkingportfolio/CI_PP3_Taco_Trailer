@@ -2,7 +2,7 @@
 Main python file
 """
 import getpass
-from admin import *
+from admin import admin_dashboard
 from google_sheet import *
 import pyfiglet
 from termcolor import colored
@@ -94,6 +94,7 @@ def login_screen(error_message=''):
         password = getpass.getpass('Password: \n')
         if user_name == 'Admin' and password == user_password:
             admin_dashboard()
+            welcome()
             break
         elif password == user_password:
             clear_screen()
