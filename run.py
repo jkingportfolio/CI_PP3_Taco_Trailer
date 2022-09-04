@@ -168,6 +168,13 @@ def create_account():
     while True:
         password = getpass.getpass('Please enter a password: \n').strip()
         if validate_password(password):
+            while True:
+                password_validate = getpass.getpass('Please re enter your password:\n')
+                if password == password_validate:
+                    print('Password is valid and matches re entry.\n')
+                    break
+                elif password != password_validate:
+                    print('Im sorry those passwords do not match, please try again.\n')
             break
         else:
             clear_screen()
