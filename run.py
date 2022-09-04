@@ -375,8 +375,6 @@ def order_item():
                 print(FORMATTED_MENU)
                 order_item()
                 break
-            else:
-                print(colored('Im sorry i need a valid input: ', 'yellow'))
         elif food_item == "X":
             if len(order_list) == 0:
                 clear_screen()
