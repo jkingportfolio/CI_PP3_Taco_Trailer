@@ -73,19 +73,19 @@ def change_password(member_number):
     member_cell_number = member_number + 2
     while True:
         password_input = getpass.getpass(
-            'Please enter your current password: \n')
+            'Please enter your current password or enter "Q" to quit: \n')
         if password_input == current_password:
             clear_screen()
             print(colored('Current password entered correct.\n', 'green'))
             while True:
                 new_password = getpass.getpass(
-                    'Please enter your new password: \n')
+                    'Please enter your new password, or enter "Q" to quit: \n')
                 clear_screen()
                 if validate_password(new_password):
                     clear_screen()
                     while True:
-                        confirm_password = getpass.getpass(
-                            'Please confirm your new password: \n')
+                        confirm_password = getpass.getpass(colored(
+                            'Please confirm your new password, or enter "Q" to quit: \n','green'))
                         clear_screen()
                         if confirm_password == new_password:
                             password_cell = 'B' + str(member_number)
@@ -96,11 +96,20 @@ def change_password(member_number):
                             sleep(2)
                             clear_screen()
                             break
+                        elif confirm_password.capitalize() == 'Q':
+                            clear_screen()
+                            break
                         else:
                             print(colored('Second password entry did not meet the first.\n','yellow'))
                     break
+                elif new_password.capitalize() == 'Q':
+                    clear_screen()
+                    break
                 else:
                     print(colored('Your new password didnt meet the criteria.\n','yellow'))
+            break
+        elif password_input.capitalize() == 'Q':
+            clear_screen()
             break
         else:
             clear_screen()
