@@ -334,14 +334,6 @@ def display_menu():
     order_item()
 
 
-def generate_order_number(worksheet):
-    """
-    Parse google sheets sales page to find next row, this row is the current order number
-    """
-    row_list = list(filter(None, worksheet.col_values(1)))
-    return str(len(row_list)+1)
-
-
 def order_item():
     """
     Order function to add/remove items to order list, cancel/complete order 
@@ -351,7 +343,6 @@ def order_item():
                     "To cancel order enter 'Q'.\n"
                     "To preview order enter 'P'.\n"
                     "To complete order enter 'X'.\n")
-
     print(instructions)
     food_item = input(
         colored("Please enter a valid input: \n", 'green')).strip()
@@ -413,8 +404,7 @@ def order_item():
                                tablefmt="simple", numalign="center"))
                 print('')
                 print(colored('Im sorry i need a valid input.', 'yellow'))
-                sleep(3)
-
+                sleep(2)
         elif food_item.isdigit() and int(food_item) > 0:
             try:
                 food_item = int(food_item) - 1

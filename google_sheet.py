@@ -28,6 +28,15 @@ PASSWORD = SHEET.worksheet("Password").acell('A1').value
 LOGINS = SHEET.worksheet('Users').get_all_records()
 
 
+
+def generate_order_number(worksheet):
+    """
+    Parse google sheets sales page to find next row, this row is the current order number
+    """
+    row_list = list(filter(None, worksheet.col_values(1)))
+    return str(len(row_list)+1)
+
+
 def user_name_list():
     USER_NAMES = []
     for login in LOGINS:
