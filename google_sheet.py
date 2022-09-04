@@ -79,7 +79,7 @@ def change_password(member_number):
             if validate_password(new_password):
                 clear_screen()
                 confirm_password = getpass.getpass(
-                    'Please confirm your new password')
+                    'Please confirm your new password: \n')
                 if confirm_password == new_password:
                     password_cell = 'B' + str(member_number)
                     SHEET.worksheet('Users').update_cell(
@@ -94,4 +94,4 @@ def change_password(member_number):
                     ('Print your new password didnt meet the criteria.\n')
         else:
             clear_screen()
-            print('Those passwords dont match')
+            print(colored('Invalid current Password entry\n','yellow'))
