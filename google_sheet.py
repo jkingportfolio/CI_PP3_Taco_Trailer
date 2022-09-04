@@ -69,10 +69,10 @@ def validate_new_username(new_username):
 
 def change_password(member_number):
     current_password = LOGINS[member_number].get('Password')
-    print(colored('Change password', 'green'))
-    member_cell_number = member_number + 2
-    password_input = getpass.getpass('Please enter your current password: \n')
+    print(colored('Change password\n', 'green'))
+    member_cell_number = member_number + 2    
     while True:
+        password_input = getpass.getpass('Please enter your current password: \n')
         if password_input == current_password:
             clear_screen()
             new_password = getpass.getpass('Please enter your new password: \n')
@@ -92,5 +92,6 @@ def change_password(member_number):
                 else:
                     clear_screen()
                     ('Print your new password didnt meet the criteria.\n')
-            else:
-                print('Those passwords dont match')
+        else:
+            clear_screen()
+            print('Those passwords dont match')
