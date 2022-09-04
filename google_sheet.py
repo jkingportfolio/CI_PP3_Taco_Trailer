@@ -70,28 +70,38 @@ def validate_new_username(new_username):
 def change_password(member_number):
     current_password = LOGINS[member_number].get('Password')
     print(colored('Change password\n', 'green'))
-    member_cell_number = member_number + 2    
+    member_cell_number = member_number + 2
     while True:
-        password_input = getpass.getpass('Please enter your current password: \n')
+        password_input = getpass.getpass(
+            'Please enter your current password: \n')
         if password_input == current_password:
             clear_screen()
-            new_password = getpass.getpass('Please enter your new password: \n')
-            if validate_password(new_password):
+            print(colored('Current password entered correct.\n', 'green'))
+            while True:
+                new_password = getpass.getpass(
+                    'Please enter your new password: \n')
                 clear_screen()
-                confirm_password = getpass.getpass(
-                    'Please confirm your new password: \n')
-                if confirm_password == new_password:
-                    password_cell = 'B' + str(member_number)
-                    SHEET.worksheet('Users').update_cell(
-                        member_cell_number, 2, new_password)
+                if validate_password(new_password):
                     clear_screen()
-                    print(pyfiglet.figlet_format('Password updated'))
-                    sleep(2)
-                    clear_screen()
+                    while True:
+                        confirm_password = getpass.getpass(
+                            'Please confirm your new password: \n')
+                        clear_screen()
+                        if confirm_password == new_password:
+                            password_cell = 'B' + str(member_number)
+                            SHEET.worksheet('Users').update_cell(
+                                member_cell_number, 2, new_password)
+                            clear_screen()
+                            print(pyfiglet.figlet_format('Password updated'))
+                            sleep(2)
+                            clear_screen()
+                            break
+                        else:
+                            print('Second password entry did not meet the first.\n')
                     break
                 else:
-                    clear_screen()
-                    ('Print your new password didnt meet the criteria.\n')
+                    print('Your new password didnt meet the criteria.\n')
+            break
         else:
             clear_screen()
-            print(colored('Invalid current Password entry\n','yellow'))
+            print(colored('Invalid current Password entry\n', 'yellow'))
