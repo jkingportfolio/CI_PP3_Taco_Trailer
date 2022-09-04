@@ -116,7 +116,7 @@ def login_screen(error_message=''):
             address = member_address
             member_name = logins[member_number].get('Name')
             name = member_name
-            members_area(member_name)
+            members_area(member_name, member_number)
             break
         else:
             clear_screen()
@@ -231,7 +231,7 @@ def create_account():
     members_area()
 
 
-def members_area(member_name):
+def members_area(member_name, member_number):
     print(pyfiglet.figlet_format(f'Hi {member_name}'))
     print(
         'What would you like to do?\n[1] - Make an order\n[2] - View previous orders\n[3] - Change password\n')
@@ -243,7 +243,7 @@ def members_area(member_name):
         elif user_choice == '2':
             print('Option 2 selected')
         elif user_choice == '3':
-            print('Option 3 selected')
+            change_password(member_number)
         else:
             print('Please enter a valid input.\n')
 

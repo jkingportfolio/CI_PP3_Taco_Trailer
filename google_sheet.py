@@ -24,9 +24,8 @@ FORMATTED_MENU = (tabulate(MENU, headers=['Item', 'Name', 'Cost (£)'],
 SALES_WORKSHEET = SHEET.worksheet("Sales")
 ORDER_RECORDS = SALES_WORKSHEET.get_all_records()
 ORDER_RECORD_VALUES = SALES_WORKSHEET.get_all_values()
-PASSWORD = SHEET.worksheet("Password").acell('A1').value
+# PASSWORD = SHEET.worksheet("Password").acell('A1').value
 LOGINS = SHEET.worksheet('Users').get_all_records()
-
 
 
 def generate_order_number(worksheet):
@@ -48,14 +47,22 @@ def validate_new_username(new_username):
     USER_NAMES = user_name_list()
     if new_username in USER_NAMES:
         clear_screen()
-        print(colored(f'Username "{new_username}" is already taken.\n','yellow'))
+        print(
+            colored(f'Username "{new_username}" is already taken.\n', 'yellow'))
         return False
     elif ' ' in new_username:
         clear_screen()
-        print(colored(f'Username "{new_username}" cannot be created as it has whitespaces.\n','yellow'))
+        print(colored(
+            f'Username "{new_username}" cannot be created as it has whitespaces.\n', 'yellow'))
         return False
     else:
         clear_screen()
-        print(colored(f'Username "{new_username}" is valid and created\n','green'))
+        print(
+            colored(f'Username "{new_username}" is valid and created\n', 'green'))
         USER_NAMES.append(new_username)
         return True
+
+
+def change_password(member_number):
+    print(LOGINS[member_number])
+    stoptime = input('stop time')
