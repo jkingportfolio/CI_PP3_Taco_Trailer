@@ -48,10 +48,11 @@ def welcome(message='Hello, would you like to place an order or login?\n'):
 
 
 def user_login():
-    print('\nPlease enter a valid input.\n')
-    user_login_answer = input(
-        '[1] - To login\n[2] - To create as account\n[3] - Continue as guest')
+    print(
+        '\nPlease select one of the below options.\n\n[1] - To login\n'
+        '[2] - To create as account\n[3] - Continue as guest\n')
     while True:
+        user_login_answer = input('User input: \n')
         if user_login_answer == '1':
             login_screen()
             break
@@ -61,7 +62,12 @@ def user_login():
         elif user_login_answer == '3':
             customer_details()
         else:
-            print('Im sorry that is an invalid choice, please enter a valid input.')
+            clear_screen()
+            print(
+                '\nPlease select one of the below options.\n\n[1] - To login\n'
+                '[2] - To create as account\n[3] - Continue as guest\n')
+            print(colored(
+                f'Im sorry but {user_login_answer} is an invalid choice, please enter a valid input.\n', 'yellow'))
 
 
 def login_screen(error_message=''):
@@ -184,8 +190,10 @@ def create_account():
                 elif password != password_validate:
                     clear_screen()
                     print(f'Currently creating password for: {user_name}\n')
-                    print('First password entry meets the password creation criteria.\n')
-                    print('Im sorry those passwords do not match, please try re enter your password again.\n')
+                    print(
+                        'First password entry meets the password creation criteria.\n')
+                    print(
+                        'Im sorry those passwords do not match, please try re enter your password again.\n')
             break
         else:
             clear_screen()
