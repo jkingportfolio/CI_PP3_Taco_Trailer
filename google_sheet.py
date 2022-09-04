@@ -97,10 +97,10 @@ def change_password(member_number):
                             clear_screen()
                             break
                         else:
-                            print('Second password entry did not meet the first.\n')
+                            print(colored('Second password entry did not meet the first.\n','yellow'))
                     break
                 else:
-                    print('Your new password didnt meet the criteria.\n')
+                    print(colored('Your new password didnt meet the criteria.\n','yellow'))
             break
         else:
             clear_screen()
