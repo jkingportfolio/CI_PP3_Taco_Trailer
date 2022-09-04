@@ -105,14 +105,11 @@ def login_screen(error_message=''):
             break
         elif password == user_password:
             clear_screen()
-            print('Passwords match!')
-            sleep(2)
+            load_animation(f'Credentials valid. Logging in as {user_name}.')
             member_address = logins[member_number].get('Address')
             address = member_address
             member_name = logins[member_number].get('Name')
             name = member_name
-            print(member_name)
-            sleep(2)
             member_delivery_choice(member_name)
             break
         else:
