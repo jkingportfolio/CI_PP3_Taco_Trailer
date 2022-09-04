@@ -79,6 +79,11 @@ def login_screen(error_message=''):
     users = user_name_list()
     while True:
         user_name = input('Username: \n')
+        if user_name.capitalize() == 'Admin':
+            member_number = (
+                next((i for i, x in enumerate(logins) if x["User Name"] == user_name), None))
+            user_password = logins[member_number].get('Password')
+            break
         if user_name in users:
             member_number = (
                 next((i for i, x in enumerate(logins) if x["User Name"] == user_name), None))
@@ -91,7 +96,10 @@ def login_screen(error_message=''):
             break
     while True:
         password = getpass.getpass('Password: \n')
-        if password == user_password:
+        if user_name == 'Admin' and password == user_password:
+            admin_dashboard()
+            break
+        elif password == user_password:
             clear_screen()
             print('Passwords match!')
             sleep(2)
