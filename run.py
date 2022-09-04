@@ -234,11 +234,12 @@ def create_account():
 def members_area(member_name):
     print(pyfiglet.figlet_format(f'Hi {member_name}'))
     print(
-        'What would you like to do?\n[1] - Make an order\n[2] - View previous orders\n[3] - Change password')
+        'What would you like to do?\n[1] - Make an order\n[2] - View previous orders\n[3] - Change password\n')
     while True:
         user_choice = input('User input:\n')
         if user_choice == '1':
-            print('Option 1 selected')
+            member_delivery_choice(member_name)
+            break
         elif user_choice == '2':
             print('Option 2 selected')
         elif user_choice == '3':
