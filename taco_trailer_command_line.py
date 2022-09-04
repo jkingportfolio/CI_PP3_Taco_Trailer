@@ -48,31 +48,31 @@ def validate_password(passwd):
     val = True
 
     if len(passwd) < 6:
-        print('Password length should be at least 6.\n')
+        print(colored('Password length should be at least 6.\n','yellow'))
         val = False
 
     if len(passwd) > 20:
-        print('Password length should be not be greater than 8.\n')
+        print(colored('Password length should be not be greater than 8.\n','yellow'))
         val = False
 
     if not any(char.isdigit() for char in passwd):
-        print('Password should have at least one numeral.\n')
+        print(colored('Password should have at least one numeral.\n','yellow'))
         val = False
 
     if not any(char.isupper() for char in passwd):
-        print('Password should have at least one uppercase letter.\n')
+        print(colored('Password should have at least one uppercase letter.\n','yellow'))
         val = False
 
     if not any(char.islower() for char in passwd):
-        print('Password should have at least one lowercase letter.\n')
+        print(colored('Password should have at least one lowercase letter.\n','yellow'))
         val = False
 
     if not any(char in SpecialSym for char in passwd):
-        print('Password should have at least one of the symbols $ @ #\n')
+        print(colored('Password should have at least one of the symbols $ @ #\n','yellow'))
         val = False
 
     if ' ' in passwd:
-        print('Password cannot contain spaces.')
+        print(colored('Password cannot contain spaces.','yellow'))
         val = False
     if val:
         return val
