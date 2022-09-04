@@ -152,8 +152,7 @@ def member_delivery_choice(member_name):
             accept_delivery = input('').capitalize()
             if accept_delivery == 'Y':
                 clear_screen()
-                delivery_type = 'Delivery'
-                # print(f'You have selected "{delivery_type}" as your order type.\n')
+                delivery_type = 'Delivery')
                 load_animation('Loading menu.')
                 display_menu()
                 break
@@ -164,7 +163,6 @@ def member_delivery_choice(member_name):
                 address = address_number + '' + address_street
                 clear_screen()
                 delivery_type = 'Delivery'
-                # print(f'You have selected "{delivery_type}" as your order type.\n')
                 load_animation('Loading menu.')
                 display_menu()
                 break
@@ -172,7 +170,6 @@ def member_delivery_choice(member_name):
             address = 'The Taco Trailer'
             delivery_type = 'Collection'
             clear_screen()
-            # print(f'You have selected "{delivery_type}" as your order type.\n')
             load_animation('Loading menu.')
             display_menu()
             break
