@@ -147,8 +147,9 @@ def member_delivery_choice(member_name):
         clear_screen()
         if delivery_choice == 'D':
             print(
-                f'This order is for delivery.\n\nWe have your address listed as {address}.\n\nIs this correct?\n[Y] - Yes\n[N] - No')
-            accept_delivery = input('').capitalize()
+                f'This order is for delivery.\n')
+            print(colored(f'We have your address listed as {address}.\n','yellow'))
+            accept_delivery = input('Is this correct?\n[Y] - Yes\n[N] - No\n').capitalize()
             if accept_delivery == 'Y':
                 clear_screen()
                 delivery_type = 'Delivery'
@@ -156,6 +157,7 @@ def member_delivery_choice(member_name):
                 display_menu()
                 break
             elif accept_delivery == 'N':
+                clear_screen()
                 print(colored('Please enter delivery details required.\n', 'green'))
                 address_number = input('Please enter house number\n')
                 address_street = input('Please enter street name\n')
@@ -467,8 +469,7 @@ def complete_order():
     order_time = order_time.strftime("%H:%M:%S %Y-%m-%d")
     clear_screen()
     while True:
-        order_complete = input(
-            "Are you ready to complete your order? (Y/N).\n").strip()
+        order_complete = input(colored("Are you ready to complete your order? (Y/N).\n",'green')).strip()
         order_complete = order_complete.capitalize()
         if order_complete == 'Y':
             this_order = Order(name, delivery_type, address,
