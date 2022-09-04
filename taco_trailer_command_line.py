@@ -3,6 +3,7 @@ Library of Command Line functions
 """
 import os
 from time import sleep
+from termcolor import colored
 
 password_criteria = ('Password creation criteria.\n\nPasswords must: \n\n1. Be longer than 6 characters\n'
                      '2. Be less than 20 characters\n'
@@ -29,11 +30,11 @@ def load_animation(message):
     """
     clear_screen()
     i = 0
-    load_message = message
+    load_message = (colored(message,'green'))
     for i in range(5):
         print(load_message)
         sleep(0.75)
-        load_message = load_message + ('.')
+        load_message = load_message + (colored('.','green'))
         clear_screen()
         i = + 1
 
