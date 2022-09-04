@@ -78,7 +78,7 @@ def login_screen(error_message=''):
     global delivery_type
     global address
     clear_screen()
-    print(colored('Please enter your credentials.','green'))
+    print(colored('Please enter your credentials.', 'green'))
     print(error_message)
     logins = LOGINS
     users = user_name_list()
@@ -96,7 +96,8 @@ def login_screen(error_message=''):
             break
         else:
             clear_screen()
-            message = (colored(f'\nIm sorry but "{user_name}" does not exist.\n','yellow'))
+            message = (
+                colored(f'\nIm sorry but "{user_name}" does not exist.\n', 'yellow'))
             login_screen(message)
             break
     while True:
@@ -107,7 +108,8 @@ def login_screen(error_message=''):
             break
         elif password == user_password:
             clear_screen()
-            load_animation(colored(f'Credentials valid. Logging in as {user_name}.','green'))
+            load_animation(
+                colored(f'Credentials valid. Logging in as {user_name}.', 'green'))
             member_address = logins[member_number].get('Address')
             address = member_address
             member_name = logins[member_number].get('Name')
@@ -116,7 +118,7 @@ def login_screen(error_message=''):
             break
         else:
             clear_screen()
-            print(colored('Incorrect password, please try again.\n','yellow'))
+            print(colored('Incorrect password, please try again.\n', 'yellow'))
             print(f'Currently attempting to sign in as: {user_name}\n')
 
 
@@ -127,9 +129,9 @@ def member_delivery_choice(member_name):
     while True:
         print(pyfiglet.figlet_format(f'Hi {member_name}!\n'))
         print(colored(
-            'What delivery type would you like?\n\n','green'))
+            'What delivery type would you like?\n\n', 'green'))
         print(
-        '[D] - Delivery\n[C] - Collection\n[Q] - Quit to main menu\n')
+            '[D] - Delivery\n[C] - Collection\n[Q] - Quit to main menu\n')
         delivery_choice = input('Please select a valid input: \n').capitalize()
         clear_screen()
         if delivery_choice == 'D':
@@ -143,7 +145,7 @@ def member_delivery_choice(member_name):
                 display_menu()
                 break
             elif accept_delivery == 'N':
-                print(colored('Please enter delivery details required.\n','green'))
+                print(colored('Please enter delivery details required.\n', 'green'))
                 address_number = input('Please enter house number\n')
                 address_street = input('Please enter street name\n')
                 address = address_number + '' + address_street
@@ -161,13 +163,13 @@ def member_delivery_choice(member_name):
             break
         elif delivery_choice == 'Q':
             clear_screen()
-            load_animation(colored('Cancelling all user inputs.','green'))
+            load_animation(colored('Cancelling all user inputs.', 'green'))
             welcome()
             break
         else:
             clear_screen()
             print(colored(
-                f'Im sorry but "{delivery_choice}" in not an option/ Please enter a valid input.\n','yellow'))
+                f'Im sorry but "{delivery_choice}" in not an option/ Please enter a valid input.\n', 'yellow'))
 
 
 def create_account():
@@ -334,7 +336,8 @@ def order_item():
                     "To complete order enter 'X'.\n")
 
     print(instructions)
-    food_item = input(colored("Please enter a valid input: \n",'green')).strip()
+    food_item = input(
+        colored("Please enter a valid input: \n", 'green')).strip()
     while True:
         food_item = food_item.capitalize()
         if food_item == "Q":
@@ -408,7 +411,8 @@ def order_item():
                     f'\nYou ordered Item {this_item[0]}, {this_item[1]}'
                     f' priced at {this_item[2]}', 'green'))
                 print(instructions)
-                food_item = input(colored('What other item would you like? \n','green'))
+                food_item = input(
+                    colored('What other item would you like? \n', 'green'))
             except IndexError:
                 clear_screen()
                 print(FORMATTED_MENU)
@@ -486,7 +490,7 @@ def complete_order():
 
     while True:
         finish = input(colored(
-            "Please press 'Q' to quit. \n",'green')).strip()
+            "Please press 'Q' to quit. \n", 'green')).strip()
         finish = finish.capitalize()
         if finish == 'Q':
             clear_screen()
@@ -494,39 +498,6 @@ def complete_order():
             break
         else:
             print('Im sorry that is an invalid input.')
-
-
-# def admin_access():
-#     """
-#     Password to access admin dashboard that has access to records and
-#     ability to edit the menu
-#     """
-#     clear_screen()
-#     password_guesses = 3
-#     print(
-#         colored(f'You have {password_guesses} remaining guesses.\n', 'yellow'))
-#     while True:
-#         admin_password = getpass.getpass("Please enter Admin Password:\n")
-
-#         if admin_password == PASSWORD:
-#             clear_screen()
-#             print(pyfiglet.figlet_format('Access granted!'))
-#             sleep(2)
-#             admin_dashboard()
-#             welcome()
-#             break
-#         else:
-#             clear_screen()
-#             password_guesses -= 1
-#             if password_guesses > 0:
-#                 print(colored(
-#                     f'Incorrect password. Remaining password'
-#                     f' attempts {password_guesses}\n', 'yellow'))
-#             elif password_guesses == 0:
-#                 print(pyfiglet.figlet_format('Access denied!'))
-#                 sleep(2)
-#                 clear_screen()
-#                 welcome()
 
 
 def thank_you():
