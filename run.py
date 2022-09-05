@@ -11,7 +11,7 @@ from time import sleep
 from taco_trailer_command_line import (clear_screen, load_animation,
                                        validate_password, password_criteria)
 from order import Order
-from user import User
+from user import User, validate_name, validate_address
 
 
 _order_list = []
@@ -247,7 +247,7 @@ def create_account():
     new_user = User(user_name, password,
                     _name, _address)
     new_user.append_user()
-    members_area(member_name, member_number, user_name)
+    members_area(_name, member_number, user_name)
 
 
 def members_area(member_name, member_number, user_name):
@@ -528,59 +528,6 @@ def main():
     Function to begin script.
     """
     welcome()
-
-
-def validate_address():
-    """
-    Function to accept and validate user input for address.
-    """
-    while True:
-        address_number = input(
-            'Please enter your house number: \n').strip()
-        if address_number.isdigit():
-            address_number = int(address_number)
-            break
-        else:
-            clear_screen()
-            print(colored(
-                f'Invalid entry "{address_number}" is not a number. Please enter a number.\n', 'yellow'))
-    while True:
-        address_street = input('\nPlease enter your street name: \n')
-        if address_street != '' and all(chr.isalpha() or chr.isspace() for chr in address_street):
-            break
-        else:
-            clear_screen()
-            print(colored(
-                f'Invalid entry "{address_street}" contains numbers/special character. Please enter a valid input.', 'yellow'))
-
-    _address = (f'{address_number} {address_street}')
-    return _address
-
-
-def validate_name():
-    """
-    Function to accept and validate user input for name.
-    """
-    while True:
-        first_name = input('Please enter your first name: \n').strip()
-        if first_name.isalpha():
-            break
-        else:
-            clear_screen()
-            print(colored(
-                'Please enter a valid name that does not'
-                ' contain numbers or special characters\n', 'yellow'))
-    while True:
-        surname = input('Please enter your surname: \n').strip()
-        if surname.isalpha():
-            break
-        else:
-            clear_screen()
-            print(colored(
-                'Please enter a valid surname that does not'
-                ' contain numbers or special characters\n', 'yellow'))
-    _name = (f'{first_name} {surname}')
-    return _name
 
 
 if __name__ == "__main__":
