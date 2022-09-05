@@ -116,7 +116,7 @@ def login_screen(error_message=''):
             address = member_address
             member_name = logins[member_number].get('Name')
             name = member_name
-            members_area(name, member_number)
+            members_area(name, member_number, user_name)
             break
         else:
             clear_screen()
@@ -234,7 +234,7 @@ def create_account():
     members_area()
 
 
-def members_area(member_name, member_number):
+def members_area(member_name, member_number, user_name):
     print(pyfiglet.figlet_format(f'Hi {member_name}'))
     member_area_instructions = (colored('What would you like to do?','green')) + '\n\n[1] - Make an order\n[2] - Change password\n[Q] - Log out\n'
     print(member_area_instructions)
@@ -243,17 +243,18 @@ def members_area(member_name, member_number):
         if user_choice == '1':
             clear_screen()
             member_delivery_choice(member_name)
-            members_area(member_name, member_number)
+            members_area(member_name, member_number, user_name)
             break
         elif user_choice == '2':
             clear_screen()
             change_password(member_number)
-            members_area(member_name, member_number)
+            members_area(member_name, member_number, user_name)
             break
         elif user_choice.capitalize() == 'Q':
             clear_screen()
-            load_animation('Logging out.')
+            load_animation(f'Logging "{user_name}" out.')
             welcome()
+            break
         else:
             clear_screen()
             print(pyfiglet.figlet_format(f'Hi {member_name}'))
