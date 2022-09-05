@@ -16,7 +16,7 @@ password_criteria = ('Password creation criteria.\n\nPasswords must: \n\n1. Be l
 
 def clear_screen():
     """
-    Function to clear screen
+    Function to clear screen.
     """
     if (os.name == 'posix'):
         os.system('clear')
@@ -26,7 +26,8 @@ def clear_screen():
 
 def load_animation(message):
     """
-    Print to screen processing order
+    Function to simulate a loading screen with passed argument.
+    @param message(string): Custom loading message.
     """
     clear_screen()
     i = 0
@@ -42,6 +43,7 @@ def load_animation(message):
 def validate_password(passwd):
     """
     Function to validate user password creation - credits to geeksforgeeks.org
+    @param passwd(string): Password as entered by user input.
     """
 
     SpecialSym = ['$', '@', '#', '%']

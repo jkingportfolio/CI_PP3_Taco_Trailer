@@ -22,8 +22,8 @@ _address = None
 
 def welcome(message=colored('Hello, would you like to place an order or login?\n', 'green')):
     """
-    Display welcome message and ask for user
-    input to place order or admin access
+    Function to display welcome message and accept user
+    input to continue, log in or quit.
     """
     clear_screen()
     title = 'Welcome to the Taco Trailer'
@@ -49,6 +49,10 @@ def welcome(message=colored('Hello, would you like to place an order or login?\n
 
 
 def user_login():
+    """
+    Function to accept user input to login, create account, continue
+    as guest or quit to main menu.
+    """
     print(colored(
         '\nPlease select one of the below options.\n', 'green'))
     print('[1] - To login\n'
@@ -76,6 +80,11 @@ def user_login():
 
 
 def login_screen(error_message=''):
+    """
+    Function to accept user input of user name and
+    password then validate with google sheet data.
+    @param error_message(string): Error message dependant on error that occurs
+    """
     global _name
     global _delivery_type
     global _address
@@ -134,6 +143,10 @@ def login_screen(error_message=''):
 
 
 def member_delivery_choice(member_name):
+    """
+    Function to take user input on current members delivery
+    choice.
+    """
     clear_screen()
     global _delivery_type
     global _address
@@ -194,6 +207,10 @@ def member_delivery_choice(member_name):
 
 
 def create_account():
+    """
+    Function to accept all required user inputs to create an account
+    and append that data to google sheet.
+    """
     clear_screen()
     print(colored('\nPlease provide the following details to create an account\n', 'green'))
     admin_access = '0'
@@ -242,6 +259,16 @@ def create_account():
 
 
 def members_area(member_name, member_number, user_name):
+    """
+    Function to accept user input to make an order, change
+    password, or log out as current member.
+    @param member_name(string): Members full name taken from 
+    google sheets 'Users' worksheet.
+    @param member_number(string): Members id number taken from 
+    google sheets 'Users' worksheet.
+    @param user_name(string): Members user name taken from 
+    google sheets 'Users' worksheet.
+    """
     print(pyfiglet.figlet_format(f'Hi {member_name}'))
     member_area_instructions = (colored('What would you like to do?', 'green')) + \
         '\n\n[1] - Make an order\n[2] - Change password\n[Q] - Log out\n'
@@ -272,7 +299,8 @@ def members_area(member_name, member_number, user_name):
 
 def customer_details():
     """
-    Collect users _name, delivery and address via input
+    Function to accept user input for all required data
+    related to customer details.
     """
     global _name
     global _delivery_type
@@ -352,7 +380,8 @@ def customer_details():
 
 def display_menu():
     """
-    Display the formatted menu
+    Function to display the menu formatted by tabulate
+    and call the order_item function.
     """
     print(FORMATTED_MENU)
     order_item()
@@ -360,7 +389,8 @@ def display_menu():
 
 def order_item():
     """
-    Order function to add/remove items to order list, cancel/complete order 
+    Function to add/remove items to/from order list, cancel/complete order,
+    preview current order and cancel order. 
     """
     instructions = ("\nAdd item by entering item number.\n"
                     "To remove last item enter 'R'.\n"
@@ -462,7 +492,7 @@ def order_item():
 
 def remove_item():
     """
-    Pop last item added to order list
+    Function to pop the last item from the order list.
     """
     clear_screen()
     print(FORMATTED_MENU)
@@ -475,7 +505,8 @@ def remove_item():
 
 def complete_order():
     """
-    Function to complete order and pass arguments to Order class and its functions
+    Function to complete order and pass arguments to 
+    Order class and its functions.
     """
     order_time = datetime.now() + timedelta(hours=1)
     order_time = order_time.strftime("%H:%M:%S %Y-%m-%d")
@@ -539,7 +570,7 @@ def thank_you():
 
 def main():
     """
-    Run all program functions
+    Function to begin script.
     """
     welcome()
 

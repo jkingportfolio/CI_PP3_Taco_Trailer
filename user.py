@@ -2,7 +2,7 @@ from google_sheet import *
 
 class User:
     """
-    Class that will create an order
+    Class to create new user instance.
     """
 
     def __init__(self, user_name, password, admin_access,
@@ -15,7 +15,8 @@ class User:
 
     def append_user(self):
         """
-        Append new user credentials to google sheets users worksheet
+        Function to append new user credentials to 
+        google sheets 'Users' worksheet.
         """
         append_order_data = [self.user_name,
                              self.password,

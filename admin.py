@@ -11,7 +11,8 @@ from termcolor import colored
 
 def admin_dashboard():
     """
-    Display admin dashboard with range of admin options
+    Function to display admin dashboard and accept user input
+    from the range of admin options.
     """
     clear_screen()
     while True:
@@ -34,7 +35,10 @@ def admin_dashboard():
 
 def pending_orders(total_rec_int):
     """
-    Return pending orders that current time is less than delivered time and display in formatted table
+    Function to return pending orders that current time 
+    is less than delivered time and display in formatted table
+    @param total_rec_int(int): Total number of orders as per 
+    google sheet data.
     """
     clear_screen()
     while True:
@@ -67,7 +71,10 @@ def pending_orders(total_rec_int):
 
 def search_records(total_rec_int):
     """
-    Retreive sales records from google sheets and display in the CLI via user input of record number
+    Function to retreive sales records from google sheets 
+    and display them in the CLI via user input of record number.
+    @param total_rec_int(int): Total number of orders as per 
+    google sheet data.
     """
     while True:
         try:
@@ -95,7 +102,9 @@ def search_records(total_rec_int):
 
 def view_records(record_number):
     """
-    Return formatted record based on based arguement of record number
+    Function to return formatted record based on based arguement of record 
+    number.
+    @param record_number(int): Record number to view as enter by user input.
     """
     print(f'You are viewing order number: {record_number}\n')
     record_formatted = ORDER_RECORD_VALUES[record_number - 1]

@@ -8,7 +8,7 @@ from taco_trailer_command_line import *
 
 class Order:
     """
-    Class that will create an order
+    Class that will create an order instance.
     """
 
     def __init__(self, _name, _delivery_type, _address, _order_list, order_number, order_time):
@@ -21,7 +21,7 @@ class Order:
 
     def print_receipt(self):
         """
-        Prints formatted order
+        Function to print a formatted order receipt to the command line.
         """
         print()
         load_animation('Processing order.')
@@ -39,14 +39,14 @@ class Order:
 
     def format_order_list(self):
         """
-        Formats order list to a table
+        Function to formats current order list to a table.
         """
         print(tabulate(self._order_list, headers=[
             'Item', 'Name', 'Cost (£)'], tablefmt="simple", numalign="center"))
 
     def append_sales(self):
         """
-        Append sold items and value to google sheets sales worksheet
+        Function to append sold items and value to google sheets 'sales' worksheet.
         """
         append_order_data = [self._name, self._delivery_type,
                              self._address, str(self._order_list), self.order_cost_output(), str(self.order_time), self.order_number]
@@ -55,7 +55,7 @@ class Order:
         
     def total_order_cost(self):
         """
-        Calculate total order cost as per order list
+        Function to calculate total order cost as per current order list.
         """
         order_cost = 0
         delivery_charge = 10
@@ -76,7 +76,8 @@ class Order:
 
     def order_cost_output(self):
         """
-        Output order cost and add delivery charge value
+        Function to output calculate delivery charge value and return 
+        complete order cost.
         """
         order_cost = 0
         delivery_charge = 10
@@ -92,7 +93,7 @@ class Order:
 
     def delivery_time(self):
         """
-        Calculate current time and delivery time
+        function to calculate current time and delivery time.
         """
         current_time = datetime.now()
         order_ready_time = current_time + timedelta(hours=1, minutes=15)

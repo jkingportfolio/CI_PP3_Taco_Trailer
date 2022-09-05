@@ -34,13 +34,20 @@ LOGINS = SHEET.worksheet('Users').get_all_records()
 
 def generate_order_number(worksheet):
     """
-    Parse google sheets sales page to find next row, this row is the current order number
+    Function to parse google sheets sales worksheet 
+    to find next row, this row is the current 
+    order number.
+    @param worksheet(string): Worksheet in which to parse.
     """
     row_list = list(filter(None, worksheet.col_values(1)))
     return str(len(row_list)+1)
 
 
 def user_name_list():
+    """
+    Function to parse google sheets 'Users' worksheet and generate
+    a list of all current users.
+    """
     USER_NAMES = []
     for login in LOGINS:
         USER_NAMES.append((login.get('User Name')))
@@ -48,6 +55,11 @@ def user_name_list():
 
 
 def validate_new_username(new_username):
+    """
+    Function to validate a new username and check if already exists
+    in the google sheets worksheet. 
+    @param new_username(string): User name as entered by user input.
+    """
     USER_NAMES = user_name_list()
     if new_username in USER_NAMES:
         clear_screen()
@@ -68,6 +80,10 @@ def validate_new_username(new_username):
 
 
 def change_password(member_number):
+    """
+    Function to accept user input to change user password.
+    @param member_number(string): Member number as taken from google sheet worksheets row
+    """
     current_password = LOGINS[member_number].get('Password')
     print(colored('Change password\n', 'green'))
     member_cell_number = member_number + 2
