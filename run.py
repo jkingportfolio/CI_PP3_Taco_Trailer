@@ -247,7 +247,7 @@ def create_account():
     new_user = User(user_name, password,
                     _name, _address)
     new_user.append_user()
-    members_area(_name, member_number, user_name)
+    user_login()
 
 
 def members_area(member_name, member_number, user_name):
