@@ -315,9 +315,10 @@ def customer_details():
             break
         elif _delivery_type == 'C':
             _delivery_type = 'Collection'
-            print()
-            print(
-                f'You selected {_delivery_type.capitalize()} for your order.\n')
+            clear_screen()
+            print(colored(
+                f'You selected {_delivery_type.capitalize()} for your order.\n','green'))
+            sleep(3)
             _address = 'The Taco Trailer'
             break
         else:
