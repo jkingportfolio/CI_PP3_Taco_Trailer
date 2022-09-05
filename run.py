@@ -56,7 +56,9 @@ def user_login():
     print(colored(
         '\nPlease select one of the below options.\n', 'green'))
     print('[1] - To login\n'
-          '[2] - To create as account\n[3] - Continue as guest\n')
+          '[2] - To create as account\n'
+          '[3] - Continue as guest\n'
+          '[Q] - To return to main menu\n')
     while True:
         user_login_answer = input('User input: \n')
         if user_login_answer == '1':
@@ -69,12 +71,18 @@ def user_login():
             clear_screen()
             customer_details()
             break
+        elif user_login_answer.capitalize() == 'Q':
+            clear_screen()
+            welcome()
+            break
         else:
             clear_screen()
             print(colored(
                 '\nPlease select one of the below options.\n', 'green'))
             print('[1] - To login\n'
-                  '[2] - To create as account\n[3] - Continue as guest\n')
+                  '[2] - To create as account\n'
+                  '[3] - Continue as guest\n'
+                  '[Q] - To return to main menu\n')
             print(colored(
                 f'Im sorry but "{user_login_answer}" is an invalid choice, please enter a valid input.\n', 'yellow'))
 
@@ -227,6 +235,7 @@ def create_account():
         print(password_criteria)
         password = getpass.getpass('Please enter your password: \n')
         if validate_password(password):
+            clear_screen()
             while True:
                 password_validate = getpass.getpass(
                     'Please re enter your password:\n')
@@ -237,7 +246,7 @@ def create_account():
                 elif password != password_validate:
                     clear_screen()
                     print(
-                        colored(f'Currently creating password for: {user_name}\n', 'green'))
+                        f'Currently creating password for: {user_name}\n')
                     print(colored(
                         'First password entry meets the password creation criteria.\n', 'green'))
                     print(colored(
@@ -248,6 +257,7 @@ def create_account():
             print(f'Currently entered username: {user_name}\n')
             validate_password(password)
     _name = validate_name()
+    clear_screen()
     _address = validate_address()
     clear_screen()
     load_animation('Thank you for your details. Creating account.')
