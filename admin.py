@@ -15,11 +15,13 @@ def admin_dashboard():
     from the range of admin options.
     """
     clear_screen()
+    record_count = list(filter(None, SALES_WORKSHEET.col_values(1)))
+    total_records = str(len(record_count)+1)
+    total_rec_int = int(total_records)
+    print(colored('Logged in as Administrator\n', 'green'))
     while True:
-        record_count = list(filter(None, SALES_WORKSHEET.col_values(1)))
-        total_records = str(len(record_count)+1)
-        total_rec_int = int(total_records)
-        print(colored('Logged in as Administrator\n\nPlease enter a valid input\n[1] View records\n[2] View pending orders\n[Q] Exit admin dashboard\n','green'))
+        print(
+            'Please enter a valid input\n\n[1] View records\n[2] View pending orders\n[Q] Exit admin dashboard\n')
         admin_option = input('Please select an option: \n').strip()
         clear_screen()
         if admin_option == '1':
@@ -30,7 +32,9 @@ def admin_dashboard():
         elif admin_option.capitalize() == 'Q':
             break
         else:
-            print('Thats not an option')
+            print(colored('Logged in as Administrator\n', 'green'))
+            print(
+                colored(f'Im sorry "{admin_option}" is not a valid option.\n', 'yellow'))
 
 
 def pending_orders(total_rec_int):
@@ -57,14 +61,16 @@ def pending_orders(total_rec_int):
         except KeyError:
             pass
 
-        print('\n')
         pending_order_list = list(
             filter(lambda x: x['Order Time/Date'] > pending_order_time, FORMATTED_SALES))
-        print(tabulate(pending_order_list, headers='keys',
-                       tablefmt="simple", numalign="center"))
+        if len(pending_order_list) > 0:
+            print(tabulate(pending_order_list, headers='keys',
+                           tablefmt="simple", numalign="center"))
+        else:
+            print(colored('There are currently no pending orders!','yellow'))
 
-        test_hold = input('\nPress 0 to go back\n')
-        if test_hold == '0':
+        exit = input('\nPress "Q" to return to Admin dashboard.\n')
+        if exit.capitalize() == 'Q':
             admin_dashboard()
             break
 
@@ -78,10 +84,10 @@ def search_records(total_rec_int):
     """
     while True:
         try:
-            print(
-                f'There are {total_rec_int - 1} records available\nPlease note there is no record for order 1 as this is the database header')
-            record_number = input(
-                'Please enter record number to display or 0 to go back:\n').strip()
+            print(f'There are {total_rec_int - 1} records available\n')
+            print('Please note there is no record for order 1 as this is the database header\n')
+            record_number = input(colored(
+                'Please enter record number to display or "0" to return to the Admin dashboard.\n','green')).strip()
             clear_screen()
             record_number = int(record_number)
             if record_number < total_rec_int and record_number > 1:
@@ -94,7 +100,7 @@ def search_records(total_rec_int):
                 break
             else:
                 print(colored(
-                    f'Record "{record_number}" does not exist, please enter valid record number.\n', 'yellow'))
+                    f'Record "{record_number}" does not exist, please enter valid record number:\n', 'yellow'))
         except ValueError:
             print(
                 colored(f'"{record_number}" is an invalid entry please try again.\n', 'yellow'))
@@ -106,7 +112,7 @@ def view_records(record_number):
     number.
     @param record_number(int): Record number to view as enter by user input.
     """
-    print(f'You are viewing order number: {record_number}\n')
+    print(colored(f'You are viewing order number: {record_number}\n','green'))
     record_formatted = ORDER_RECORD_VALUES[record_number - 1]
     print('*' * 25)
     print(f'Order Number: {record_formatted[6]}')
