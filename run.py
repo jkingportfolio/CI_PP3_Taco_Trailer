@@ -245,7 +245,7 @@ def create_account():
     _address = validate_address()
     clear_screen()
     load_animation('Thank you for your details. Creating account.')
-    new_user = User(user_name, password, admin_access,
+    new_user = User(user_name, password,
                     _name, _address)
     new_user.append_user()
     members_area(member_name, member_number, user_name)
@@ -300,24 +300,6 @@ def customer_details():
     global _address
 
     print(colored('We would like to take your details.\n', 'green'))
-    # while True:
-    #     first_name = input('Please enter your first name: \n').strip()
-    #     if first_name.isalpha():
-    #         break
-    #     else:
-    #         clear_screen()
-    #         print(colored(
-    #             'Please enter a valid name that does not'
-    #             ' contain numbers or special characters\n', 'yellow'))
-    # while True:
-    #     surname = input('Please enter your surname: \n').strip()
-    #     if surname.isalpha():
-    #         break
-    #     else:
-    #         clear_screen()
-    #         print(colored(
-    #             'Please enter a valid surname that does not'
-    #             ' contain numbers or special characters\n', 'yellow'))
     _name = validate_name()
     clear_screen()
     print(pyfiglet.figlet_format(f'Hi {_name}'))
