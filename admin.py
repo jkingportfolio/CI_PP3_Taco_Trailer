@@ -2,6 +2,7 @@
 Admin functions module
 """
 from google_sheet import *
+from taco_trailer_command_line import load_animation
 from tabulate import tabulate
 from taco_trailer_command_line import clear_screen
 from datetime import datetime, timedelta
@@ -30,6 +31,8 @@ def admin_dashboard():
             pending_orders(total_rec_int)
             break
         elif admin_option.capitalize() == 'Q':
+            clear_screen()
+            load_animation('Logging out as Admin.')
             break
         else:
             print(colored('Logged in as Administrator\n', 'green'))
