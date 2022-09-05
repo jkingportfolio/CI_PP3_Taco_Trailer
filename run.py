@@ -174,29 +174,6 @@ def member_delivery_choice(member_name):
                 elif accept_delivery == 'N':
                     clear_screen()
                     print(colored('Please enter delivery details required.\n', 'green'))
-                    # address_number = input('Please enter house number\n')
-                    # address_street = input('Please enter street name\n')
-                    # _address = address_number + '' + address_street
-                    # while True:
-                    #     address_number = input(
-                    #         'Please enter your house number: \n').strip()
-                    #     if address_number.isdigit():
-                    #         address_number = int(address_number)
-                    #         break
-                    #     else:
-                    #         clear_screen()
-                    #         print(colored(
-                    #             f'Invalid entry "{address_number}" is not a number. Please enter a number.\n', 'yellow'))
-                    # while True:
-                    #     address_street = input(
-                    #         '\nPlease enter your street name: \n')
-                    #     if address_street != '' and all(chr.isalpha() or chr.isspace() for chr in address_street):
-                    #         break
-                    #     else:
-                    #         clear_screen()
-                    #         print(colored(
-                    #             f'Invalid entry "{address_street}" contains numbers/special character. Please enter a valid input.', 'yellow'))
-                    # _address = (f'{address_number} {address_street}')
                     _address = validate_address()
                     clear_screen()
                     _delivery_type = 'Delivery'
@@ -263,20 +240,15 @@ def create_account():
         else:
             clear_screen()
             print(f'Currently entered username: {user_name}\n')
-            validate_password(password)
-    first_name = input('Please enter your first name: \n').strip()
-    surname = input('Please enter your surname: \n').strip()
-    _name = first_name + '' + surname
-    address_number = input(
-        'Please enter your house number: \n').strip()
-    address_street = input('\nPlease enter your street name: \n')
-    _address = address_number + '' + address_street
+            validate_password(password)    
+    _name = validate_name()
+    _address = validate_address()
     clear_screen()
     load_animation('Thank you for your details. Creating account.')
     new_user = User(user_name, password, admin_access,
                     _name, _address)
     new_user.append_user()
-    members_area()
+    members_area(member_name, member_number, user_name)
 
 
 def members_area(member_name, member_number, user_name):
@@ -328,25 +300,25 @@ def customer_details():
     global _address
 
     print(colored('We would like to take your details.\n', 'green'))
-    while True:
-        first_name = input('Please enter your first name: \n').strip()
-        if first_name.isalpha():
-            break
-        else:
-            clear_screen()
-            print(colored(
-                'Please enter a valid name that does not'
-                ' contain numbers or special characters\n', 'yellow'))
-    while True:
-        surname = input('Please enter your surname: \n').strip()
-        if surname.isalpha():
-            break
-        else:
-            clear_screen()
-            print(colored(
-                'Please enter a valid surname that does not'
-                ' contain numbers or special characters\n', 'yellow'))
-    _name = (f'{first_name} {surname}')
+    # while True:
+    #     first_name = input('Please enter your first name: \n').strip()
+    #     if first_name.isalpha():
+    #         break
+    #     else:
+    #         clear_screen()
+    #         print(colored(
+    #             'Please enter a valid name that does not'
+    #             ' contain numbers or special characters\n', 'yellow'))
+    # while True:
+    #     surname = input('Please enter your surname: \n').strip()
+    #     if surname.isalpha():
+    #         break
+    #     else:
+    #         clear_screen()
+    #         print(colored(
+    #             'Please enter a valid surname that does not'
+    #             ' contain numbers or special characters\n', 'yellow'))
+    _name = validate_name()
     clear_screen()
     print(pyfiglet.figlet_format(f'Hi {_name}'))
     while True:
@@ -359,27 +331,6 @@ def customer_details():
             print(colored(
                 f'\nYou selected {_delivery_type.capitalize()} for your order.\n', 'green'))
             _address = validate_address()
-            # address_street = validate_address_street()
-            # _address = (f'{address_number} {address_street}')
-            # while True:
-            #     address_number = input(
-            #         'Please enter your house number: \n').strip()
-            #     if address_number.isdigit():
-            #         address_number = int(address_number)
-            #         break
-            #     else:
-            #         clear_screen()
-            #         print(colored(
-            #             f'Invalid entry "{address_number}" is not a number. Please enter a number.\n', 'yellow'))
-            # while True:
-            #     address_street = input('\nPlease enter your street name: \n')
-            #     if address_street != '' and all(chr.isalpha() or chr.isspace() for chr in address_street):
-            #         break
-            #     else:
-            #         clear_screen()
-            #         print(colored(
-            #             f'Invalid entry "{address_street}" contains numbers/special character. Please enter a valid input.', 'yellow'))
-            # _address = (f'{address_number} {address_street}')
             break
         elif _delivery_type == 'C':
             _delivery_type = 'Collection'
@@ -393,7 +344,6 @@ def customer_details():
             print(pyfiglet.figlet_format(f'Hi {_name}'))
             print(colored(
                 f'Im sorry but "{_delivery_type}" is not a valid option. Please enter a valid input.\n', 'yellow'))
-
     clear_screen()
     print(colored('Thank you for your details!', 'green'))
     sleep(2)
@@ -618,10 +568,31 @@ def validate_address():
             clear_screen()
             print(colored(
                 f'Invalid entry "{address_street}" contains numbers/special character. Please enter a valid input.', 'yellow'))
-    
+
     _address = (f'{address_number} {address_street}')
     return _address
 
+def validate_name():
+    while True:
+        first_name = input('Please enter your first name: \n').strip()
+        if first_name.isalpha():
+            break
+        else:
+            clear_screen()
+            print(colored(
+                'Please enter a valid name that does not'
+                ' contain numbers or special characters\n', 'yellow'))
+    while True:
+        surname = input('Please enter your surname: \n').strip()
+        if surname.isalpha():
+            break
+        else:
+            clear_screen()
+            print(colored(
+                'Please enter a valid surname that does not'
+                ' contain numbers or special characters\n', 'yellow'))
+    _name = (f'{first_name} {surname}')
+    return _name
 
 if __name__ == "__main__":
     main()
