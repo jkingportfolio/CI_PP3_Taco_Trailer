@@ -14,10 +14,10 @@ from order import Order
 from user import User
 
 
-order_list = []
-name = None
-delivery_type = None
-address = None
+_order_list = []
+_name = None
+_delivery_type = None
+_address = None
 
 
 def welcome(message=colored('Hello, would you like to place an order or login?\n', 'green')):
@@ -76,9 +76,9 @@ def user_login():
 
 
 def login_screen(error_message=''):
-    global name
-    global delivery_type
-    global address
+    global _name
+    global _delivery_type
+    global _address
     clear_screen()
     print(colored('Please enter your credentials.', 'green'))
     print(error_message)
@@ -113,10 +113,10 @@ def login_screen(error_message=''):
             clear_screen()
             load_animation(f'Credentials valid.\n\nLogging in as {user_name}.')
             member_address = logins[member_number].get('Address')
-            address = member_address
+            _address = member_address
             member_name = logins[member_number].get('Name')
-            name = member_name
-            members_area(name, member_number, user_name)
+            _name = member_name
+            members_area(_name, member_number, user_name)
             break
         else:
             clear_screen()
@@ -135,8 +135,8 @@ def login_screen(error_message=''):
 
 def member_delivery_choice(member_name):
     clear_screen()
-    global delivery_type
-    global address
+    global _delivery_type
+    global _address
     while True:
         print(colored(
             'What delivery type would you like?\n', 'green'))
@@ -148,12 +148,12 @@ def member_delivery_choice(member_name):
             print(
                 f'This order is for delivery.\n')
             print(
-                colored(f'We have your address listed as {address}.\n', 'yellow'))
+                colored(f'We have your address listed as {_address}.\n', 'yellow'))
             accept_delivery = input(
                 'Is this correct?\n[Y] - Yes\n[N] - No\n').capitalize()
             if accept_delivery == 'Y':
                 clear_screen()
-                delivery_type = 'Delivery'
+                _delivery_type = 'Delivery'
                 load_animation('Loading menu.')
                 display_menu()
                 break
@@ -162,15 +162,15 @@ def member_delivery_choice(member_name):
                 print(colored('Please enter delivery details required.\n', 'green'))
                 address_number = input('Please enter house number\n')
                 address_street = input('Please enter street name\n')
-                address = address_number + '' + address_street
+                _address = address_number + '' + address_street
                 clear_screen()
-                delivery_type = 'Delivery'
+                _delivery_type = 'Delivery'
                 load_animation('Loading menu.')
                 display_menu()
                 break
         elif delivery_choice == 'C':
-            address = 'The Taco Trailer'
-            delivery_type = 'Collection'
+            _address = 'The Taco Trailer'
+            _delivery_type = 'Collection'
             clear_screen()
             load_animation('Loading menu.')
             display_menu()
@@ -221,15 +221,15 @@ def create_account():
             validate_password(password)
     first_name = input('Please enter your first name: \n').strip()
     surname = input('Please enter your surname: \n').strip()
-    name = first_name + '' + surname
+    _name = first_name + '' + surname
     address_number = input(
         'Please enter your house number: \n').strip()
     address_street = input('\nPlease enter your street name: \n')
-    address = address_number + '' + address_street
+    _address = address_number + '' + address_street
     clear_screen()
     load_animation('Thank you for your details. Creating account.')
     new_user = User(user_name, password, admin_access,
-                    name, address)
+                    _name, _address)
     new_user.append_user()
     members_area()
 
@@ -265,11 +265,11 @@ def members_area(member_name, member_number, user_name):
 
 def customer_details():
     """
-    Collect users name, delivery and address via input
+    Collect users _name, delivery and address via input
     """
-    global name
-    global delivery_type
-    global address
+    global _name
+    global _delivery_type
+    global _address
 
     print(colored('We would like to take your details.\n', 'green'))
     while True:
@@ -290,18 +290,18 @@ def customer_details():
             print(colored(
                 'Please enter a valid surname that does not'
                 ' contain numbers or special characters\n', 'yellow'))
-    name = (f'{first_name} {surname}')
+    _name = (f'{first_name} {surname}')
     clear_screen()
-    print(pyfiglet.figlet_format(f'Hi {name}'))
+    print(pyfiglet.figlet_format(f'Hi {_name}'))
     while True:
         print(colored('Please enter your delivery type.\n', 'green'))
-        delivery_type = input('Delivery (D) Collection (C): \n').strip()
-        delivery_type = delivery_type.capitalize()
-        if delivery_type == 'D':
-            delivery_type = 'Delivery'
+        _delivery_type = input('Delivery (D) Collection (C): \n').strip()
+        _delivery_type = _delivery_type.capitalize()
+        if _delivery_type == 'D':
+            _delivery_type = 'Delivery'
             clear_screen()
             print(colored(
-                f'\nYou selected {delivery_type.capitalize()} for your order.\n', 'green'))
+                f'\nYou selected {_delivery_type.capitalize()} for your order.\n', 'green'))
             while True:
                 address_number = input(
                     'Please enter your house number: \n').strip()
@@ -320,20 +320,20 @@ def customer_details():
                     clear_screen()
                     print(colored(
                         f'Invalid entry "{address_street}" contains numbers/special character. Please enter a valid input.', 'yellow'))
-            address = (f'{address_number} {address_street}')
+            _address = (f'{address_number} {address_street}')
             break
-        elif delivery_type == 'C':
-            delivery_type = 'Collection'
+        elif _delivery_type == 'C':
+            _delivery_type = 'Collection'
             print()
             print(
-                f'You selected {delivery_type.capitalize()} for your order.\n')
-            address = 'The Taco Trailer'
+                f'You selected {_delivery_type.capitalize()} for your order.\n')
+            _address = 'The Taco Trailer'
             break
         else:
             clear_screen()
-            print(pyfiglet.figlet_format(f'Hi {name}'))
+            print(pyfiglet.figlet_format(f'Hi {_name}'))
             print(colored(
-                f'Im sorry but "{delivery_type}" is not a valid option. Please enter a valid input.\n', 'yellow'))
+                f'Im sorry but "{_delivery_type}" is not a valid option. Please enter a valid input.\n', 'yellow'))
 
     clear_screen()
     print(colored('Thank you for your details!', 'green'))
@@ -371,7 +371,7 @@ def order_item():
                 'Are you sure you want to cancel the order? (Y/N)\n', 'yellow'))
             quit = quit.capitalize()
             if quit == 'Y':
-                order_list.clear()
+                _order_list.clear()
                 clear_screen()
                 thank_you()
                 sleep(2)
@@ -384,7 +384,7 @@ def order_item():
                 order_item()
                 break
         elif food_item == "X":
-            if len(order_list) == 0:
+            if len(_order_list) == 0:
                 clear_screen()
                 print(FORMATTED_MENU)
                 print(colored('\nCannot complete order, basket is empty.', 'yellow'))
@@ -394,7 +394,7 @@ def order_item():
                 complete_order()
                 break
         elif food_item == 'R':
-            if len(order_list) == 0:
+            if len(_order_list) == 0:
                 clear_screen()
                 print(FORMATTED_MENU)
                 print(colored('\nNothing to remove, basket is empty', 'yellow'))
@@ -405,7 +405,7 @@ def order_item():
             break
         elif food_item == "P":
             clear_screen()
-            print(tabulate(order_list, headers=['Item', 'Name', 'Cost (£)'],
+            print(tabulate(_order_list, headers=['Item', 'Name', 'Cost (£)'],
                            tablefmt="simple", numalign="center"))
             close_preview = input(colored(
                 '\nRetun to order screen? (Y)\n', 'green'))
@@ -417,7 +417,7 @@ def order_item():
                 break
             else:
                 clear_screen()
-                print(tabulate(order_list, headers=['Item', 'Name', 'Cost (£)'],
+                print(tabulate(_order_list, headers=['Item', 'Name', 'Cost (£)'],
                                tablefmt="simple", numalign="center"))
                 print('')
                 print(colored('Im sorry i need a valid input.', 'yellow'))
@@ -425,7 +425,7 @@ def order_item():
         elif food_item.isdigit() and int(food_item) > 0:
             try:
                 food_item = int(food_item) - 1
-                order_list.append(MENU[food_item])
+                _order_list.append(MENU[food_item])
                 this_item = (MENU[food_item])
                 clear_screen()
                 print(FORMATTED_MENU)
@@ -459,10 +459,10 @@ def remove_item():
     """
     clear_screen()
     print(FORMATTED_MENU)
-    removed_item = order_list[-1]
+    removed_item = _order_list[-1]
     print(
         colored(f'\nYou have removed {removed_item[1]} from your order.', 'green'))
-    order_list.pop()
+    _order_list.pop()
     order_item()
 
 
@@ -478,8 +478,8 @@ def complete_order():
             colored("Are you ready to complete your order? (Y/N).\n", 'green')).strip()
         order_complete = order_complete.capitalize()
         if order_complete == 'Y':
-            this_order = Order(name, delivery_type, address,
-                               order_list, generate_order_number(SALES_WORKSHEET), order_time)
+            this_order = Order(_name, _delivery_type, _address,
+                               _order_list, generate_order_number(SALES_WORKSHEET), order_time)
             this_order.print_receipt()
             this_order.append_sales()
             break
@@ -493,7 +493,7 @@ def complete_order():
                 'Are you sure you want to cancel the order? (Y/N)\n', 'yellow'))
             quit = quit.capitalize()
             if quit == 'Y':
-                order_list.clear()
+                _order_list.clear()
                 clear_screen()
                 thank_you()
                 sleep(2)

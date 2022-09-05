@@ -6,12 +6,12 @@ class User:
     """
 
     def __init__(self, user_name, password, admin_access,
-                 name, address):
+                 _name, _address):
         self.user_name = user_name
         self.password = password
         self.admin_access = admin_access
-        self.name = name
-        self.address = address
+        self._name = _name
+        self._address = _address
 
     def append_user(self):
         """
@@ -20,7 +20,7 @@ class User:
         append_order_data = [self.user_name,
                              self.password,
                              self.admin_access,
-                             self.name,
-                             self.address]
+                             self._name,
+                             self._address]
         worksheet_to_update = SHEET.worksheet('Users')
         worksheet_to_update.append_row(append_order_data)
