@@ -211,7 +211,6 @@ def create_account():
     """
     clear_screen()
     print(colored('\nPlease provide the following details to create an account\n', 'green'))
-    admin_access = '0'
     while True:
         user_name = input('Please enter a user name: \n')
         if validate_new_username(user_name):
@@ -240,7 +239,7 @@ def create_account():
         else:
             clear_screen()
             print(f'Currently entered username: {user_name}\n')
-            validate_password(password)    
+            validate_password(password)
     _name = validate_name()
     _address = validate_address()
     clear_screen()
@@ -532,6 +531,9 @@ def main():
 
 
 def validate_address():
+    """
+    Function to accept and validate user input for address.
+    """
     while True:
         address_number = input(
             'Please enter your house number: \n').strip()
@@ -554,7 +556,11 @@ def validate_address():
     _address = (f'{address_number} {address_street}')
     return _address
 
+
 def validate_name():
+    """
+    Function to accept and validate user input for name.
+    """
     while True:
         first_name = input('Please enter your first name: \n').strip()
         if first_name.isalpha():
@@ -575,6 +581,7 @@ def validate_name():
                 ' contain numbers or special characters\n', 'yellow'))
     _name = (f'{first_name} {surname}')
     return _name
+
 
 if __name__ == "__main__":
     main()
