@@ -149,7 +149,7 @@ def member_delivery_choice(member_name):
                 print(
                     f'This order is for delivery.\n')
                 print(
-                    colored(f'We have your address listed as "{_address}".\n', 'yellow'))
+                    colored(f'We have your address listed as "{_address}".\n', 'green'))
                 accept_delivery = input(
                     'Is this correct?\n[Y] - Yes\n[N] - No\n').capitalize()
                 if accept_delivery == 'Y':
@@ -170,8 +170,9 @@ def member_delivery_choice(member_name):
                     display_menu()
                     break
                 else:
-                    print(
-                        f'Im sorry but "{accept_delivery}" is not a valid input.')
+                    clear_screen()
+                    print(colored(
+                        f'Im sorry but "{accept_delivery}" is not a valid input.\n','yellow'))
             break
         elif delivery_choice == 'C':
             _address = 'The Taco Trailer'
