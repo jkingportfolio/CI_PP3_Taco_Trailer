@@ -140,6 +140,7 @@ def login_screen(error_message=''):
                 sleep(2)
                 clear_screen()
                 welcome()
+        break
 
 
 def member_delivery_choice(member_name):
