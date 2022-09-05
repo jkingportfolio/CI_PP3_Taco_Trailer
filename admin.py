@@ -70,12 +70,20 @@ def pending_orders(total_rec_int):
             print(tabulate(pending_order_list, headers='keys',
                            tablefmt="simple", numalign="center"))
         else:
-            print(colored('There are currently no pending orders!','yellow'))
-
-        exit = input('\nPress "Q" to return to Admin dashboard.\n')
-        if exit.capitalize() == 'Q':
-            admin_dashboard()
-            break
+            print(colored('There are currently no pending orders!', 'yellow'))
+        while True:
+            exit = input(
+                colored('\nPress "Q" to return to Admin dashboard.\n', 'green'))
+            if exit.capitalize() == 'Q':
+                admin_dashboard()
+                break
+            else:
+                clear_screen()
+                print(f'The current time and date is: {local_time}\n')
+                
+                print(tabulate(pending_order_list, headers='keys',
+                               tablefmt="simple", numalign="center"))
+                print(colored(f'\nIm sorry "{exit}" is not a valid input.','yellow'))
 
 
 def search_records(total_rec_int):
@@ -88,9 +96,10 @@ def search_records(total_rec_int):
     while True:
         try:
             print(f'There are {total_rec_int - 1} records available\n')
-            print('Please note there is no record for order 1 as this is the database header\n')
+            print(
+                'Please note there is no record for order 1 as this is the database header\n')
             record_number = input(colored(
-                'Please enter record number to display or "0" to return to the Admin dashboard.\n','green')).strip()
+                'Please enter record number to display or "0" to return to the Admin dashboard.\n', 'green')).strip()
             clear_screen()
             record_number = int(record_number)
             if record_number < total_rec_int and record_number > 1:
@@ -115,7 +124,7 @@ def view_records(record_number):
     number.
     @param record_number(int): Record number to view as enter by user input.
     """
-    print(colored(f'You are viewing order number: {record_number}\n','green'))
+    print(colored(f'You are viewing order number: {record_number}\n', 'green'))
     record_formatted = ORDER_RECORD_VALUES[record_number - 1]
     print('*' * 25)
     print(f'Order Number: {record_formatted[6]}')
