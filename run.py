@@ -233,10 +233,10 @@ def create_account():
 
 def members_area(member_name, member_number):
     print(pyfiglet.figlet_format(f'Hi {member_name}'))
-    print(
-        'What would you like to do?\n[1] - Make an order\n[2] - View previous orders\n[3] - Change password\n')
+    member_area_instructions = 'What would you like to do?\n\n[1] - Make an order\n[2] - Change password\n[3] - Log out\n'
+    print(member_area_instructions)
     while True:
-        user_choice = input('User input:\n')
+        user_choice = input('Please enter a valid input:\n')
         if user_choice == '1':
             clear_screen()
             member_delivery_choice(member_name)
@@ -244,15 +244,18 @@ def members_area(member_name, member_number):
             break
         elif user_choice == '2':
             clear_screen()
-            print('Option 2 selected')
-            members_area(member_name, member_number)
-        elif user_choice == '3':
-            clear_screen()
             change_password(member_number)
             members_area(member_name, member_number)
             break
+        elif user_choice.capitalize() == 'Q':
+            clear_screen()
+            welcome()
         else:
-            print('Please enter a valid input.\n')
+            clear_screen()
+            print(pyfiglet.figlet_format(f'Hi {member_name}'))
+            print(member_area_instructions)
+            print(colored(f'Im sorry but {user_choice} is not a valid input. Please enter a valid input.\n','yellow'))
+            
 
 
 def customer_details():
