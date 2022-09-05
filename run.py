@@ -88,12 +88,12 @@ def login_screen(error_message=''):
     global _name
     global _delivery_type
     global _address
-    clear_screen()
-    print(colored('Please enter your credentials.', 'green'))
-    print(error_message)
+    clear_screen()    
     logins = LOGINS
     users = user_name_list()
     while True:
+        print(colored('Please enter your username.', 'green'))
+        print(error_message)
         user_name = input('Username: \n')
         if user_name == 'Admin':
             member_number = (
@@ -111,8 +111,11 @@ def login_screen(error_message=''):
                 colored(f'\nIm sorry but "{user_name}" does not exist.\n', 'yellow'))
             login_screen(message)
             break
+    clear_screen()
+    error_message = ''
     password_guesses = 3
     while True:
+        print(colored('Please enter your password.\n', 'green'))
         password = getpass.getpass('Password: \n')
         if user_name == 'Admin' and password == user_password:
             admin_dashboard()
@@ -120,7 +123,7 @@ def login_screen(error_message=''):
             break
         elif password == user_password:
             clear_screen()
-            load_animation(f'Credentials valid.\n\nLogging in as {user_name}.')
+            load_animation(f'Entered credentials are valid.\n\nLogging in as {user_name}.')
             member_address = logins[member_number].get('Address')
             _address = member_address
             member_name = logins[member_number].get('Name')
@@ -188,6 +191,10 @@ def member_delivery_choice(member_name):
         elif delivery_choice == 'C':
             _address = 'The Taco Trailer'
             _delivery_type = 'Collection'
+            clear_screen()
+            print(colored(
+                f'You selected {_delivery_type.capitalize()} for your order.\n','green'))
+            sleep(3)
             clear_screen()
             load_animation('Loading menu.')
             display_menu()
