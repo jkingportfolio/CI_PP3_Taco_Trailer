@@ -140,7 +140,6 @@ def login_screen(error_message=''):
                 sleep(2)
                 clear_screen()
                 welcome()
-        break
 
 
 def member_delivery_choice(member_name):
@@ -202,7 +201,7 @@ def member_delivery_choice(member_name):
             clear_screen()
             print(colored(
                 f'Im sorry but "{delivery_choice}" in not an option/ Please enter a valid input.\n', 'yellow'))
-        break
+        # break
 
 
 def create_account():
