@@ -145,29 +145,34 @@ def member_delivery_choice(member_name):
         delivery_choice = input('Please select a valid input: \n').capitalize()
         clear_screen()
         if delivery_choice == 'D':
-            print(
-                f'This order is for delivery.\n')
-            print(
-                colored(f'We have your address listed as {_address}.\n', 'yellow'))
-            accept_delivery = input(
-                'Is this correct?\n[Y] - Yes\n[N] - No\n').capitalize()
-            if accept_delivery == 'Y':
-                clear_screen()
-                _delivery_type = 'Delivery'
-                load_animation('Loading menu.')
-                display_menu()
-                break
-            elif accept_delivery == 'N':
-                clear_screen()
-                print(colored('Please enter delivery details required.\n', 'green'))
-                address_number = input('Please enter house number\n')
-                address_street = input('Please enter street name\n')
-                _address = address_number + '' + address_street
-                clear_screen()
-                _delivery_type = 'Delivery'
-                load_animation('Loading menu.')
-                display_menu()
-                break
+            while True:
+                print(
+                    f'This order is for delivery.\n')
+                print(
+                    colored(f'We have your address listed as "{_address}".\n', 'yellow'))
+                accept_delivery = input(
+                    'Is this correct?\n[Y] - Yes\n[N] - No\n').capitalize()
+                if accept_delivery == 'Y':
+                    clear_screen()
+                    _delivery_type = 'Delivery'
+                    load_animation('Loading menu.')
+                    display_menu()
+                    break
+                elif accept_delivery == 'N':
+                    clear_screen()
+                    print(colored('Please enter delivery details required.\n', 'green'))
+                    address_number = input('Please enter house number\n')
+                    address_street = input('Please enter street name\n')
+                    _address = address_number + '' + address_street
+                    clear_screen()
+                    _delivery_type = 'Delivery'
+                    load_animation('Loading menu.')
+                    display_menu()
+                    break
+                else:
+                    print(
+                        f'Im sorry but "{accept_delivery}" is not a valid input.')
+            break
         elif delivery_choice == 'C':
             _address = 'The Taco Trailer'
             _delivery_type = 'Collection'
@@ -184,6 +189,7 @@ def member_delivery_choice(member_name):
             clear_screen()
             print(colored(
                 f'Im sorry but "{delivery_choice}" in not an option/ Please enter a valid input.\n', 'yellow'))
+        break
 
 
 def create_account():
@@ -236,14 +242,14 @@ def create_account():
 
 def members_area(member_name, member_number, user_name):
     print(pyfiglet.figlet_format(f'Hi {member_name}'))
-    member_area_instructions = (colored('What would you like to do?','green')) + '\n\n[1] - Make an order\n[2] - Change password\n[Q] - Log out\n'
+    member_area_instructions = (colored('What would you like to do?', 'green')) + \
+        '\n\n[1] - Make an order\n[2] - Change password\n[Q] - Log out\n'
     print(member_area_instructions)
     while True:
         user_choice = input('Please enter a valid input:\n')
         if user_choice == '1':
             clear_screen()
             member_delivery_choice(member_name)
-            members_area(member_name, member_number, user_name)
             break
         elif user_choice == '2':
             clear_screen()
