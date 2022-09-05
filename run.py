@@ -177,26 +177,27 @@ def member_delivery_choice(member_name):
                     # address_number = input('Please enter house number\n')
                     # address_street = input('Please enter street name\n')
                     # _address = address_number + '' + address_street
-                    while True:
-                        address_number = input(
-                            'Please enter your house number: \n').strip()
-                        if address_number.isdigit():
-                            address_number = int(address_number)
-                            break
-                        else:
-                            clear_screen()
-                            print(colored(
-                                f'Invalid entry "{address_number}" is not a number. Please enter a number.\n', 'yellow'))
-                    while True:
-                        address_street = input(
-                            '\nPlease enter your street name: \n')
-                        if address_street != '' and all(chr.isalpha() or chr.isspace() for chr in address_street):
-                            break
-                        else:
-                            clear_screen()
-                            print(colored(
-                                f'Invalid entry "{address_street}" contains numbers/special character. Please enter a valid input.', 'yellow'))
-                    _address = (f'{address_number} {address_street}')
+                    # while True:
+                    #     address_number = input(
+                    #         'Please enter your house number: \n').strip()
+                    #     if address_number.isdigit():
+                    #         address_number = int(address_number)
+                    #         break
+                    #     else:
+                    #         clear_screen()
+                    #         print(colored(
+                    #             f'Invalid entry "{address_number}" is not a number. Please enter a number.\n', 'yellow'))
+                    # while True:
+                    #     address_street = input(
+                    #         '\nPlease enter your street name: \n')
+                    #     if address_street != '' and all(chr.isalpha() or chr.isspace() for chr in address_street):
+                    #         break
+                    #     else:
+                    #         clear_screen()
+                    #         print(colored(
+                    #             f'Invalid entry "{address_street}" contains numbers/special character. Please enter a valid input.', 'yellow'))
+                    # _address = (f'{address_number} {address_street}')
+                    _address = validate_address()
                     clear_screen()
                     _delivery_type = 'Delivery'
                     load_animation('Loading menu.')
@@ -357,25 +358,28 @@ def customer_details():
             clear_screen()
             print(colored(
                 f'\nYou selected {_delivery_type.capitalize()} for your order.\n', 'green'))
-            while True:
-                address_number = input(
-                    'Please enter your house number: \n').strip()
-                if address_number.isdigit():
-                    address_number = int(address_number)
-                    break
-                else:
-                    clear_screen()
-                    print(colored(
-                        f'Invalid entry "{address_number}" is not a number. Please enter a number.\n', 'yellow'))
-            while True:
-                address_street = input('\nPlease enter your street name: \n')
-                if address_street != '' and all(chr.isalpha() or chr.isspace() for chr in address_street):
-                    break
-                else:
-                    clear_screen()
-                    print(colored(
-                        f'Invalid entry "{address_street}" contains numbers/special character. Please enter a valid input.', 'yellow'))
-            _address = (f'{address_number} {address_street}')
+            _address = validate_address()
+            # address_street = validate_address_street()
+            # _address = (f'{address_number} {address_street}')
+            # while True:
+            #     address_number = input(
+            #         'Please enter your house number: \n').strip()
+            #     if address_number.isdigit():
+            #         address_number = int(address_number)
+            #         break
+            #     else:
+            #         clear_screen()
+            #         print(colored(
+            #             f'Invalid entry "{address_number}" is not a number. Please enter a number.\n', 'yellow'))
+            # while True:
+            #     address_street = input('\nPlease enter your street name: \n')
+            #     if address_street != '' and all(chr.isalpha() or chr.isspace() for chr in address_street):
+            #         break
+            #     else:
+            #         clear_screen()
+            #         print(colored(
+            #             f'Invalid entry "{address_street}" contains numbers/special character. Please enter a valid input.', 'yellow'))
+            # _address = (f'{address_number} {address_street}')
             break
         elif _delivery_type == 'C':
             _delivery_type = 'Collection'
@@ -593,6 +597,30 @@ def main():
     Function to begin script.
     """
     welcome()
+
+
+def validate_address():
+    while True:
+        address_number = input(
+            'Please enter your house number: \n').strip()
+        if address_number.isdigit():
+            address_number = int(address_number)
+            break
+        else:
+            clear_screen()
+            print(colored(
+                f'Invalid entry "{address_number}" is not a number. Please enter a number.\n', 'yellow'))
+    while True:
+        address_street = input('\nPlease enter your street name: \n')
+        if address_street != '' and all(chr.isalpha() or chr.isspace() for chr in address_street):
+            break
+        else:
+            clear_screen()
+            print(colored(
+                f'Invalid entry "{address_street}" contains numbers/special character. Please enter a valid input.', 'yellow'))
+    
+    _address = (f'{address_number} {address_street}')
+    return _address
 
 
 if __name__ == "__main__":
