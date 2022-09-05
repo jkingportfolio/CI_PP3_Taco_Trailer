@@ -147,8 +147,10 @@ def member_delivery_choice(member_name):
         if delivery_choice == 'D':
             print(
                 f'This order is for delivery.\n')
-            print(colored(f'We have your address listed as {address}.\n','yellow'))
-            accept_delivery = input('Is this correct?\n[Y] - Yes\n[N] - No\n').capitalize()
+            print(
+                colored(f'We have your address listed as {address}.\n', 'yellow'))
+            accept_delivery = input(
+                'Is this correct?\n[Y] - Yes\n[N] - No\n').capitalize()
             if accept_delivery == 'Y':
                 clear_screen()
                 delivery_type = 'Delivery'
@@ -186,7 +188,7 @@ def member_delivery_choice(member_name):
 
 def create_account():
     clear_screen()
-    print(colored('\nPlease provide the following details to create an account\n','green'))
+    print(colored('\nPlease provide the following details to create an account\n', 'green'))
     admin_access = '0'
     while True:
         user_name = input('Please enter a user name: \n')
@@ -202,15 +204,16 @@ def create_account():
                     'Please re enter your password:\n')
                 if password == password_validate:
                     clear_screen()
-                    print(colored('Password is valid and matches re entry.\n','green'))
+                    print(colored('Password is valid and matches re entry.\n', 'green'))
                     break
                 elif password != password_validate:
                     clear_screen()
-                    print(colored(f'Currently creating password for: {user_name}\n','green'))
+                    print(
+                        colored(f'Currently creating password for: {user_name}\n', 'green'))
                     print(colored(
-                        'First password entry meets the password creation criteria.\n','green'))
+                        'First password entry meets the password creation criteria.\n', 'green'))
                     print(colored(
-                        'Im sorry those passwords do not match, please try re enter your password again.\n','yellow'))
+                        'Im sorry those passwords do not match, please try re enter your password again.\n', 'yellow'))
             break
         else:
             clear_screen()
@@ -233,7 +236,7 @@ def create_account():
 
 def members_area(member_name, member_number):
     print(pyfiglet.figlet_format(f'Hi {member_name}'))
-    member_area_instructions = 'What would you like to do?\n\n[1] - Make an order\n[2] - Change password\n[3] - Log out\n'
+    member_area_instructions = (colored('What would you like to do?','green')) + '\n\n[1] - Make an order\n[2] - Change password\n[Q] - Log out\n'
     print(member_area_instructions)
     while True:
         user_choice = input('Please enter a valid input:\n')
@@ -249,13 +252,14 @@ def members_area(member_name, member_number):
             break
         elif user_choice.capitalize() == 'Q':
             clear_screen()
+            load_animation('Logging out.')
             welcome()
         else:
             clear_screen()
             print(pyfiglet.figlet_format(f'Hi {member_name}'))
             print(member_area_instructions)
-            print(colored(f'Im sorry but {user_choice} is not a valid input. Please enter a valid input.\n','yellow'))
-            
+            print(colored(
+                f'Im sorry but "{user_choice}" is not a valid input. Please enter a valid input.\n', 'yellow'))
 
 
 def customer_details():
@@ -266,7 +270,7 @@ def customer_details():
     global delivery_type
     global address
 
-    print(colored('We would like to take your details.\n','green'))
+    print(colored('We would like to take your details.\n', 'green'))
     while True:
         first_name = input('Please enter your first name: \n').strip()
         if first_name.isalpha():
@@ -289,14 +293,14 @@ def customer_details():
     clear_screen()
     print(pyfiglet.figlet_format(f'Hi {name}'))
     while True:
-        print(colored('Please enter your delivery type.\n','green'))
+        print(colored('Please enter your delivery type.\n', 'green'))
         delivery_type = input('Delivery (D) Collection (C): \n').strip()
         delivery_type = delivery_type.capitalize()
         if delivery_type == 'D':
             delivery_type = 'Delivery'
             clear_screen()
             print(colored(
-                f'\nYou selected {delivery_type.capitalize()} for your order.\n','green'))
+                f'\nYou selected {delivery_type.capitalize()} for your order.\n', 'green'))
             while True:
                 address_number = input(
                     'Please enter your house number: \n').strip()
@@ -306,7 +310,7 @@ def customer_details():
                 else:
                     clear_screen()
                     print(colored(
-                        f'Invalid entry "{address_number}" is not a number. Please enter a number.\n','yellow'))
+                        f'Invalid entry "{address_number}" is not a number. Please enter a number.\n', 'yellow'))
             while True:
                 address_street = input('\nPlease enter your street name: \n')
                 if address_street != '' and all(chr.isalpha() or chr.isspace() for chr in address_street):
@@ -314,7 +318,7 @@ def customer_details():
                 else:
                     clear_screen()
                     print(colored(
-                        f'Invalid entry "{address_street}" contains numbers/special character. Please enter a valid input.','yellow'))
+                        f'Invalid entry "{address_street}" contains numbers/special character. Please enter a valid input.', 'yellow'))
             address = (f'{address_number} {address_street}')
             break
         elif delivery_type == 'C':
@@ -326,11 +330,12 @@ def customer_details():
             break
         else:
             clear_screen()
-            print(pyfiglet.figlet_format(f'Hi {name}'))            
-            print(colored(f'Im sorry but "{delivery_type}" is not a valid option. Please enter a valid input.\n', 'yellow'))
+            print(pyfiglet.figlet_format(f'Hi {name}'))
+            print(colored(
+                f'Im sorry but "{delivery_type}" is not a valid option. Please enter a valid input.\n', 'yellow'))
 
     clear_screen()
-    print(colored('Thank you for your details!','green'))
+    print(colored('Thank you for your details!', 'green'))
     sleep(2)
     load_animation('Loading menu.')
     clear_screen()
@@ -468,7 +473,8 @@ def complete_order():
     order_time = order_time.strftime("%H:%M:%S %Y-%m-%d")
     clear_screen()
     while True:
-        order_complete = input(colored("Are you ready to complete your order? (Y/N).\n",'green')).strip()
+        order_complete = input(
+            colored("Are you ready to complete your order? (Y/N).\n", 'green')).strip()
         order_complete = order_complete.capitalize()
         if order_complete == 'Y':
             this_order = Order(name, delivery_type, address,
