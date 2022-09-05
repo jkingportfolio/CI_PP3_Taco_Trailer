@@ -95,8 +95,7 @@ def login_screen(error_message=''):
     users = user_name_list()
     while True:
         user_name = input('Username: \n')
-        if user_name.capitalize() == 'Admin':
-            user_name = 'Admin'
+        if user_name == 'Admin':
             member_number = (
                 next((i for i, x in enumerate(logins) if x["User Name"] == user_name), None))
             user_password = logins[member_number].get('Password')
