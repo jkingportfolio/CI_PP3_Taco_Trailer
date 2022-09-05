@@ -39,7 +39,8 @@ def validate_address():
         else:
             clear_screen()
             print(colored(
-                f'Invalid entry "{address_number}" is not a number. Please enter a number.\n', 'yellow'))
+                f'Im sorry "{address_number}" is not a number. Please enter a valid number.\n', 'yellow'))
+    clear_screen()
     while True:
         address_street = input('Please enter your street name: \n')
         if address_street != '' and all(chr.isalpha() or chr.isspace() for chr in address_street):
@@ -47,7 +48,7 @@ def validate_address():
         else:
             clear_screen()
             print(colored(
-                f'Invalid entry "{address_street}" contains numbers/special character. Please enter a valid input.', 'yellow'))
+                f'Im sorry "{address_street}" contains numbers or special characters, please enter a valid street name.\n', 'yellow'))
 
     _address = (f'{address_number} {address_street}')
     return _address
@@ -64,8 +65,9 @@ def validate_name():
         else:
             clear_screen()
             print(colored(
-                'Please enter a valid name that does not'
-                ' contain numbers or special characters\n', 'yellow'))
+                f'Im sorry "{first_name}" contains numbers or special characters,'
+                ' please enter a valid name.\n', 'yellow'))
+    clear_screen()
     while True:
         surname = input('Please enter your surname: \n').strip()
         if surname.isalpha():
@@ -73,7 +75,7 @@ def validate_name():
         else:
             clear_screen()
             print(colored(
-                'Please enter a valid surname that does not'
-                ' contain numbers or special characters\n', 'yellow'))
+                f'Im sorry "{surname}" contains numbers or special characters,'
+                ' please enter a valid surname.\n', 'yellow'))
     _name = (f'{first_name} {surname}')
     return _name
