@@ -29,7 +29,7 @@ def welcome(message=''):
     title = 'Welcome to the Taco Trailer'
     print(pyfiglet.figlet_format(title))
     print(colored('Hello, would you like to place an order or'
-    ' login?', 'green'))
+                  ' login?', 'green'))
     print(f'\n{message}')
     while True:
         place_order = input(
@@ -138,7 +138,8 @@ def login_screen(error_message=''):
         elif password == user_password:
             clear_screen()
             load_animation(
-                f'Entered credentials are valid.\n\nLogging in as {user_name}.')
+                f'Entered credentials are valid.\n\n'
+                f'Logging in as {user_name}.')
             member_address = logins[member_number].get('Address')
             _address = member_address
             member_name = logins[member_number].get('Name')
@@ -251,7 +252,8 @@ def create_account():
                     'Please re enter your password:\n')
                 if password == password_validate:
                     clear_screen()
-                    print(colored('Password is valid and matches re entry.\n', 'green'))
+                    print(colored('Password is valid and matches'
+                                  ' re entry.\n', 'green'))
                     break
                 elif password != password_validate:
                     clear_screen()
@@ -297,7 +299,8 @@ def members_area(member_name, member_number, user_name):
     google sheets 'Users' worksheet.
     """
     print(pyfiglet.figlet_format(f'Hi {member_name}'))
-    member_area_instructions = (colored('What would you like to do?', 'green')) + \
+    member_area_instructions = (colored('What would you'
+                                        ' like to do?', 'green')) + \
         '\n\n[1] - Make an order\n[2] - Change password\n[Q] - Log out\n'
     print(member_area_instructions)
     while True:
@@ -448,7 +451,8 @@ def order_item():
             if len(_order_list) == 0:
                 clear_screen()
                 print(FORMATTED_MENU)
-                print(colored('\nNothing to remove, basket is empty', 'yellow'))
+                print(colored('\nNothing to remove, basket'
+                              ' is empty', 'yellow'))
                 order_item()
                 break
             else:
@@ -535,7 +539,8 @@ def complete_order():
         if order_complete == 'Y':
             this_order = Order(_name, _delivery_type, _address,
                                _order_list,
-                               generate_order_number(SALES_WORKSHEET), order_time)
+                               generate_order_number(SALES_WORKSHEET),
+                               order_time)
             this_order.print_receipt()
             this_order.append_sales()
             break
@@ -546,7 +551,8 @@ def complete_order():
             break
         elif order_complete == 'C':
             quit = input(colored(
-                'Are you sure you want to cancel the order? (Y/N)\n', 'yellow'))
+                'Are you sure you want to cancel the order?'
+                ' (Y/N)\n', 'yellow'))
             quit = quit.capitalize()
             if quit == 'Y':
                 _order_list.clear()
@@ -565,7 +571,7 @@ def complete_order():
             clear_screen()
             print(
                 colored(f'Im sorry "{order_complete}" is an'
-                        ' invalid input\n','yellow'))
+                        ' invalid input\n', 'yellow'))
 
     while True:
         finish = input(colored(
@@ -590,7 +596,8 @@ def thank_you():
 # def choice_confirmation(user_choice):
 #         clear_screen()
 #         while True:
-#             print(colored('Are you sure you would like to log out?\n', 'yellow'))
+#             print(colored('Are you sure you would like'
+#                   ' to log out?\n', 'yellow'))
 #             print('[Y] - Yes\n[N] - No\n')
 #             confirm_quit = input('Please enter a valid input:\n')
 #             if confirm_quit.capitalize() == 'Y':
@@ -605,7 +612,8 @@ def thank_you():
 #             else:
 #                 clear_screen()
 #                 print(colored(
-#                     f'Im sorry but "{confirm_quit}" is not a valid input. Please enter a valid input.\n', 'yellow'))
+#                     f'Im sorry but "{confirm_quit}" is not a'
+#               ' valid input. Please enter a valid input.\n', 'yellow'))
 #         break
 
 def main():

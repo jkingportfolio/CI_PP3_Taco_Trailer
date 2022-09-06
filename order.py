@@ -73,7 +73,8 @@ class Order:
             print(
                 f'There is a delivery charge of £{float(delivery_charge):.2f}')
             print(
-                f'Total cost calculated with delivery £{float(order_cost):.2f}\n')
+                f'Total cost calculated with delivery'
+                f' £{float(order_cost):.2f}\n')
         else:
             print(f'The total cost of your order is £{float(order_cost):.2f}')
             print('There is no delivery charge\n')

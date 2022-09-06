@@ -64,7 +64,8 @@ def validate_new_username(new_username):
     if new_username in USER_NAMES:
         clear_screen()
         print(
-            colored(f'Username "{new_username}" is already taken.\n', 'yellow'))
+            colored(f'Username "{new_username}" is already'
+            ' taken.\n', 'yellow'))
         return False
     elif ' ' in new_username:
         clear_screen()
@@ -132,7 +133,8 @@ def change_password(member_number):
                     break
                 else:
                     print(
-                        colored('Your new password didnt meet the criteria.\n', 'yellow'))
+                        colored('Your new password didnt meet the'
+                        ' criteria.\n', 'yellow'))
             break
         elif password_input.capitalize() == 'Q':
             clear_screen()

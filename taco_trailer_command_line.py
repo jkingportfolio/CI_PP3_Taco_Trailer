@@ -61,7 +61,8 @@ def validate_password(passwd):
         val = False
 
     if not any(char.isdigit() for char in passwd):
-        print(colored('Password should have at least one numeral.\n', 'yellow'))
+        print(colored('Password should have at least one'
+                      ' numeral.\n', 'yellow'))
         val = False
 
     if not any(char.isupper() for char in passwd):
