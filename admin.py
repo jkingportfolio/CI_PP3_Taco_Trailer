@@ -6,7 +6,6 @@ from taco_trailer_command_line import load_animation
 from tabulate import tabulate
 from taco_trailer_command_line import clear_screen
 from datetime import datetime, timedelta
-from time import sleep
 from termcolor import colored
 
 
@@ -76,7 +75,8 @@ def pending_orders(total_rec_int):
             print(colored('There are currently no pending orders!', 'yellow'))
         while True:
             exit = input(
-                colored('\nPress "Q" to return to Admin dashboard.\n', 'green'))
+                colored('\nPress "Q" to return to Admin'
+                        ' dashboard.\n', 'green'))
             if exit.capitalize() == 'Q':
                 admin_dashboard()
                 break

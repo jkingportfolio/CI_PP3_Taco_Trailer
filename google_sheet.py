@@ -109,7 +109,6 @@ def change_password(member_number):
                             ' enter "Q" to quit: \n', 'green'))
                         clear_screen()
                         if confirm_password == new_password:
-                            password_cell = 'B' + str(member_number)
                             SHEET.worksheet('Users').update_cell(
                                 member_cell_number, 2, new_password)
                             clear_screen()
