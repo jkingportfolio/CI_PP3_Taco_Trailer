@@ -129,8 +129,8 @@ def login_screen(error_message=''):
     clear_screen()
     error_message = ''
     password_guesses = 3
+    print(colored('Please enter your password.\n', 'green'))
     while True:
-        print(colored('Please enter your password.\n', 'green'))
         password = getpass.getpass('Password: \n')
         if user_name == 'Admin' and password == user_password:
             admin_dashboard()
@@ -151,10 +151,10 @@ def login_screen(error_message=''):
             clear_screen()
             password_guesses -= 1
             if password_guesses > 0:
+                print(colored('Please enter your password.\n', 'green'))
                 print(colored(
                     f'Incorrect password. Remaining password'
                     f' attempts {password_guesses}\n', 'yellow'))
-                print(f'Currently attempting to sign in as: {user_name}\n')
             elif password_guesses == 0:
                 print(pyfiglet.figlet_format('Access denied!'))
                 sleep(2)
