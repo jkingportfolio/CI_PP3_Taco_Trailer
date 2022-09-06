@@ -44,7 +44,8 @@ def welcome(message=''):
             break
         else:
             welcome(
-                colored(f'Im sorry but "{place_order}" is not a valid input, please enter a valid input.\n', 'yellow'))
+                colored(f'Im sorry but "{place_order}" is not a valid input,'
+                        'please enter a valid input.\n', 'yellow'))
             break
 
 
@@ -84,7 +85,8 @@ def user_login():
                   '[3] - Continue as guest\n'
                   '[Q] - To return to main menu\n')
             print(colored(
-                f'Im sorry but "{user_login_answer}" is not avalid choice, please enter a valid input.\n', 'yellow'))
+                f'Im sorry but "{user_login_answer}" is not avalid choice,'
+                ' please enter a valid input.\n', 'yellow'))
 
 
 def login_screen(error_message=''):
@@ -105,18 +107,21 @@ def login_screen(error_message=''):
         user_name = input('Username: \n')
         if user_name == 'Admin':
             member_number = (
-                next((i for i, x in enumerate(logins) if x["User Name"] == user_name), None))
+                next((i for i, x in enumerate(logins)
+                      if x["User Name"] == user_name), None))
             user_password = logins[member_number].get('Password')
             break
         elif user_name in users:
             member_number = (
-                next((i for i, x in enumerate(logins) if x["User Name"] == user_name), None))
+                next((i for i, x in enumerate(logins)
+                      if x["User Name"] == user_name), None))
             user_password = logins[member_number].get('Password')
             break
         else:
             clear_screen()
             message = (
-                colored(f'\nIm sorry but "{user_name}" does not exist.\n', 'yellow'))
+                colored(f'\nIm sorry but "{user_name}"'
+                        ' does not exist.\n', 'yellow'))
             login_screen(message)
             break
     clear_screen()
@@ -174,7 +179,8 @@ def member_delivery_choice(member_name):
                 print(
                     f'This order is for delivery.\n')
                 print(
-                    colored(f'We have your address listed as "{_address}".\n', 'green'))
+                    colored(f'We have your address listed as'
+                            ' "{_address}".\n', 'green'))
                 accept_delivery = input(
                     'Is this correct?\n[Y] - Yes\n[N] - No\n').capitalize()
                 if accept_delivery == 'Y':
@@ -185,7 +191,8 @@ def member_delivery_choice(member_name):
                     break
                 elif accept_delivery == 'N':
                     clear_screen()
-                    print(colored('Please enter delivery details required.\n', 'green'))
+                    print(colored('Please enter delivery details'
+                                  ' required.\n', 'green'))
                     _address = validate_address()
                     clear_screen()
                     _delivery_type = 'Delivery'
@@ -195,14 +202,16 @@ def member_delivery_choice(member_name):
                 else:
                     clear_screen()
                     print(colored(
-                        f'Im sorry but "{accept_delivery}" is not a valid input.\n', 'yellow'))
+                        f'Im sorry but "{accept_delivery}" is not a'
+                        ' valid input.\n', 'yellow'))
             break
         elif delivery_choice == 'C':
             _address = 'The Taco Trailer'
             _delivery_type = 'Collection'
             clear_screen()
             print(colored(
-                f'You selected {_delivery_type.capitalize()} for your order.\n', 'green'))
+                f'You selected {_delivery_type.capitalize()} for your'
+                ' order.\n', 'green'))
             load_animation('Loading menu.')
             display_menu()
             break
@@ -214,8 +223,8 @@ def member_delivery_choice(member_name):
         else:
             clear_screen()
             print(colored(
-                f'Im sorry but "{delivery_choice}" in not an option/ Please enter a valid input.\n', 'yellow'))
-        # break
+                f'Im sorry but "{delivery_choice}" in not an option.'
+                ' Please enter a valid input.\n', 'yellow'))
 
 
 def create_account():
@@ -224,7 +233,8 @@ def create_account():
     and append that data to google sheet.
     """
     clear_screen()
-    print(colored('\nPlease provide the following details to create an account\n', 'green'))
+    print(colored('\nPlease provide the following details to'
+                  ' create an account\n', 'green'))
     while True:
         user_name = input('Please enter a user name: \n')
         if validate_new_username(user_name):
@@ -247,9 +257,11 @@ def create_account():
                     print(
                         f'Currently creating password for: {user_name}\n')
                     print(colored(
-                        'First password entry meets the password creation criteria.\n', 'green'))
+                        'First password entry meets the password'
+                        ' creation criteria.\n', 'green'))
                     print(colored(
-                        'Im sorry those passwords do not match, please try re enter your password again.\n', 'yellow'))
+                        'Im sorry those passwords do not match, please try'
+                        ' re enter your password again.\n', 'yellow'))
             break
         else:
             clear_screen()
@@ -260,8 +272,12 @@ def create_account():
     _address = validate_address()
     clear_screen()
     load_animation('Thank you for your details. Creating account.')
-    print(colored(f'New user account for "{user_name}" has been created.','green'))
-    print(colored('\nPlease note account log in will only be valid upon program restart.','yellow'))
+    print(
+        colored(f'New user account for "{user_name}" has'
+                ' been created.', 'green'))
+    print(colored(
+        '\nPlease note account log in will only be valid upon'
+        ' program restart.', 'yellow'))
     new_user = User(user_name, password,
                     _name, _address)
     new_user.append_user()
@@ -296,8 +312,9 @@ def members_area(member_name, member_number, user_name):
             break
         elif user_choice.capitalize() == 'Q':
             clear_screen()
-            while True:                
-                print(colored('Are you sure you would like to log out?\n', 'yellow'))
+            while True:
+                print(colored('Are you sure you would like to'
+                              ' log out?\n', 'yellow'))
                 print('[Y] - Yes\n[N] - No\n')
                 confirm_quit = input('Please enter a valid input:\n')
                 if confirm_quit.capitalize() == 'Y':
@@ -312,14 +329,16 @@ def members_area(member_name, member_number, user_name):
                 else:
                     clear_screen()
                     print(colored(
-                        f'Im sorry but "{confirm_quit}" is not a valid input. Please enter a valid input.\n', 'yellow'))
+                        f'Im sorry but "{confirm_quit}" is not a valid input.'
+                        ' Please enter a valid input.\n', 'yellow'))
             break
         else:
             clear_screen()
             print(pyfiglet.figlet_format(f'Hi {member_name}'))
             print(member_area_instructions)
             print(colored(
-                f'Im sorry but "{user_choice}" is not a valid input. Please enter a valid input.\n', 'yellow'))
+                f'Im sorry but "{user_choice}" is not a valid input.'
+                ' Please enter a valid input.\n', 'yellow'))
 
 
 def customer_details():
@@ -343,14 +362,16 @@ def customer_details():
             _delivery_type = 'Delivery'
             clear_screen()
             print(colored(
-                f'\nYou selected {_delivery_type.capitalize()} for your order.\n', 'green'))
+                f'\nYou selected {_delivery_type.capitalize()}'
+                ' for your order.\n', 'green'))
             _address = validate_address()
             break
         elif _delivery_type == 'C':
             _delivery_type = 'Collection'
             clear_screen()
             print(colored(
-                f'You selected {_delivery_type.capitalize()} for your order.\n', 'green'))
+                f'You selected {_delivery_type.capitalize()}'
+                ' for your order.\n', 'green'))
             sleep(3)
             _address = 'The Taco Trailer'
             break
@@ -358,7 +379,8 @@ def customer_details():
             clear_screen()
             print(pyfiglet.figlet_format(f'Hi {_name}'))
             print(colored(
-                f'Im sorry but "{_delivery_type}" is not a valid option. Please enter a valid input.\n', 'yellow'))
+                f'Im sorry but "{_delivery_type}" is not a valid option.'
+                ' Please enter a valid input.\n', 'yellow'))
     clear_screen()
     print(colored('Thank you for your details!', 'green'))
     sleep(2)
@@ -394,7 +416,8 @@ def order_item():
         if food_item == "Q":
             clear_screen()
             quit = input(colored(
-                'Are you sure you want to cancel the order? (Y/N)\n', 'yellow'))
+                'Are you sure you want to cancel the order?'
+                ' (Y/N)\n', 'yellow'))
             quit = quit.capitalize()
             if quit == 'Y':
                 _order_list.clear()
@@ -413,7 +436,8 @@ def order_item():
             if len(_order_list) == 0:
                 clear_screen()
                 print(FORMATTED_MENU)
-                print(colored('\nCannot complete order, basket is empty.', 'yellow'))
+                print(colored('\nCannot complete order,'
+                              ' basket is empty.', 'yellow'))
                 order_item()
                 break
             else:
@@ -443,7 +467,8 @@ def order_item():
                 break
             else:
                 clear_screen()
-                print(tabulate(_order_list, headers=['Item', 'Name', 'Cost (£)'],
+                print(tabulate(_order_list,
+                               headers=['Item', 'Name', 'Cost (£)'],
                                tablefmt="simple", numalign="center"))
                 print('')
                 print(colored('Im sorry i need a valid input.', 'yellow'))
@@ -487,7 +512,8 @@ def remove_item():
     print(FORMATTED_MENU)
     removed_item = _order_list[-1]
     print(
-        colored(f'\nYou have removed {removed_item[1]} from your order.', 'green'))
+        colored(f'\nYou have removed {removed_item[1]}'
+                ' from your order.', 'green'))
     _order_list.pop()
     order_item()
 
@@ -502,11 +528,13 @@ def complete_order():
     clear_screen()
     while True:
         order_complete = input(
-            colored("Are you ready to complete your order? (Y/N).\n", 'green')).strip()
+            colored('Are you ready to complete your order?'
+                    ' (Y/N).\n', 'green')).strip()
         order_complete = order_complete.capitalize()
         if order_complete == 'Y':
             this_order = Order(_name, _delivery_type, _address,
-                               _order_list, generate_order_number(SALES_WORKSHEET), order_time)
+                               _order_list,
+                               generate_order_number(SALES_WORKSHEET), order_time)
             this_order.print_receipt()
             this_order.append_sales()
             break
@@ -535,7 +563,8 @@ def complete_order():
         else:
             clear_screen()
             print(
-                colored(f'Im sorry "{order_complete}" is an invalid input\n', 'yellow'))
+                colored(f'Im sorry "{order_complete}" is an'
+                        ' invalid input\n','yellow'))
 
     while True:
         finish = input(colored(
@@ -559,7 +588,7 @@ def thank_you():
 
 # def choice_confirmation(user_choice):
 #         clear_screen()
-#         while True:                
+#         while True:
 #             print(colored('Are you sure you would like to log out?\n', 'yellow'))
 #             print('[Y] - Yes\n[N] - No\n')
 #             confirm_quit = input('Please enter a valid input:\n')
