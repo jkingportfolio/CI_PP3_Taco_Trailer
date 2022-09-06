@@ -20,7 +20,7 @@ _delivery_type = None
 _address = None
 
 
-def welcome(message=colored('Hello, would you like to place an order or login?\n', 'green')):
+def welcome(message=''):
     """
     Function to display welcome message and accept user
     input to continue, log in or quit.
@@ -28,12 +28,12 @@ def welcome(message=colored('Hello, would you like to place an order or login?\n
     clear_screen()
     title = 'Welcome to the Taco Trailer'
     print(pyfiglet.figlet_format(title))
-    print(message)
+    print(colored('Hello, would you like to place an order or login?', 'green'))
+    print(f'\n{message}')
     while True:
         place_order = input(
-            'Please enter a valid input\n[Y] - Yes\n[N] - No\n').strip()
+            'Please enter a valid input:\n\n[Y] - Yes\n[N] - No\n').strip()
         place_order = place_order.capitalize()
-
         if place_order == 'Y':
             clear_screen()
             user_login()
@@ -44,7 +44,7 @@ def welcome(message=colored('Hello, would you like to place an order or login?\n
             break
         else:
             welcome(
-                colored(f'{place_order} is not a valid input, please try again!\n', 'yellow'))
+                colored(f'Im sorry but "{place_order}" is not a valid input, please enter a valid input.\n', 'yellow'))
             break
 
 
