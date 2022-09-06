@@ -28,7 +28,8 @@ def welcome(message=''):
     clear_screen()
     title = 'Welcome to the Taco Trailer'
     print(pyfiglet.figlet_format(title))
-    print(colored('Hello, would you like to place an order or login?', 'green'))
+    print(colored('Hello, would you like to place an order or'
+    ' login?', 'green'))
     print(f'\n{message}')
     while True:
         place_order = input(
@@ -288,11 +289,11 @@ def members_area(member_name, member_number, user_name):
     """
     Function to accept user input to make an order, change
     password, or log out as current member.
-    @param member_name(string): Members full name taken from 
+    @param member_name(string): Members full name taken from
     google sheets 'Users' worksheet.
-    @param member_number(string): Members id number taken from 
+    @param member_number(string): Members id number taken from
     google sheets 'Users' worksheet.
-    @param user_name(string): Members user name taken from 
+    @param user_name(string): Members user name taken from
     google sheets 'Users' worksheet.
     """
     print(pyfiglet.figlet_format(f'Hi {member_name}'))
@@ -401,7 +402,7 @@ def display_menu():
 def order_item():
     """
     Function to add/remove items to/from order list, cancel/complete order,
-    preview current order and cancel order. 
+    preview current order and cancel order.
     """
     instructions = ("\nAdd item by entering item number.\n"
                     "To remove last item enter 'R'.\n"
@@ -520,7 +521,7 @@ def remove_item():
 
 def complete_order():
     """
-    Function to complete order and pass arguments to 
+    Function to complete order and pass arguments to
     Order class and its functions.
     """
     order_time = datetime.now() + timedelta(hours=1)

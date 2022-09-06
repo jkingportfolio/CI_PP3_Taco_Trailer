@@ -47,7 +47,7 @@ class Order:
 
     def append_sales(self):
         """
-        Function to append sold items and value to 
+        Function to append sold items and value to
         google sheets 'sales' worksheet.
         """
         append_order_data = [self._name, self._delivery_type,
@@ -80,7 +80,7 @@ class Order:
 
     def order_cost_output(self):
         """
-        Function to output calculate delivery charge value and return 
+        Function to output calculate delivery charge value and return
         complete order cost.
         """
         order_cost = 0

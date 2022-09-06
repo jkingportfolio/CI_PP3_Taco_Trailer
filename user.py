@@ -15,7 +15,7 @@ class User:
 
     def append_user(self):
         """
-        Function to append new user credentials to 
+        Function to append new user credentials to
         google sheets 'Users' worksheet.
         """
         append_order_data = [self.user_name,

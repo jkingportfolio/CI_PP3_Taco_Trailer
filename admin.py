@@ -44,9 +44,9 @@ def admin_dashboard():
 
 def pending_orders(total_rec_int):
     """
-    Function to return pending orders that current time 
+    Function to return pending orders that current time
     is less than delivered time and display in formatted table
-    @param total_rec_int(int): Total number of orders as per 
+    @param total_rec_int(int): Total number of orders as per
     google sheet data.
     """
     clear_screen()
@@ -93,9 +93,9 @@ def pending_orders(total_rec_int):
 
 def search_records(total_rec_int):
     """
-    Function to retreive sales records from google sheets 
+    Function to retreive sales records from google sheets
     and display them in the CLI via user input of record number.
-    @param total_rec_int(int): Total number of orders as per 
+    @param total_rec_int(int): Total number of orders as per
     google sheet data.
     """
     while True:
@@ -130,7 +130,7 @@ def search_records(total_rec_int):
 
 def view_records(record_number):
     """
-    Function to return formatted record based on based arguement of record 
+    Function to return formatted record based on based arguement of record
     number.
     @param record_number(int): Record number to view as enter by user input.
     """
