@@ -171,7 +171,7 @@ def member_delivery_choice(member_name):
     global _delivery_type
     global _address
     print(colored(
-        'What delivery type would you like?\n', 'green'))
+        'Please enter your delivery type.\n', 'green'))
     print(
         '[D] - Delivery\n[C] - Collection\n[Q] - Quit to main menu\n')
     while True:
