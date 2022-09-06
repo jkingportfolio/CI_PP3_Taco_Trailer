@@ -60,7 +60,7 @@ def user_login():
           '[3] - Continue as guest\n'
           '[Q] - To return to main menu\n')
     while True:
-        user_login_answer = input('User input: \n')
+        user_login_answer = input('Please enter a valid input: \n')
         if user_login_answer == '1':
             login_screen()
             break
@@ -84,7 +84,7 @@ def user_login():
                   '[3] - Continue as guest\n'
                   '[Q] - To return to main menu\n')
             print(colored(
-                f'Im sorry but "{user_login_answer}" is an invalid choice, please enter a valid input.\n', 'yellow'))
+                f'Im sorry but "{user_login_answer}" is not avalid choice, please enter a valid input.\n', 'yellow'))
 
 
 def login_screen(error_message=''):
