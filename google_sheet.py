@@ -65,7 +65,7 @@ def validate_new_username(new_username):
         clear_screen()
         print(
             colored(f'Username "{new_username}" is already'
-            ' taken.\n', 'yellow'))
+                    ' taken.\n', 'yellow'))
         return False
     elif ' ' in new_username:
         clear_screen()
@@ -91,6 +91,7 @@ def change_password(member_number):
     current_password = LOGINS[member_number].get('Password')
     print(colored('Change password\n', 'green'))
     member_cell_number = member_number + 2
+    password_guesses = 3
     while True:
         password_input = getpass.getpass(
             'Please enter your current password or enter "Q" to quit: \n')
@@ -113,9 +114,9 @@ def change_password(member_number):
                                 member_cell_number, 2, new_password)
                             clear_screen()
                             print(pyfiglet.figlet_format('Password updated.'))
-                            print(
+                            print(colored(
                                 '\nPlease note changes will only take place'
-                                ' upon program restart')
+                                ' upon program restart', 'green'))
                             sleep(5)
                             clear_screen()
                             break
@@ -133,11 +134,22 @@ def change_password(member_number):
                 else:
                     print(
                         colored('Your new password didnt meet the'
-                        ' criteria.\n', 'yellow'))
+                                ' criteria.\n', 'yellow'))
             break
         elif password_input.capitalize() == 'Q':
             clear_screen()
             break
         else:
-            clear_screen()
-            print(colored('Invalid current Password entry\n', 'yellow'))
+            password_guesses -= 1
+            if password_guesses > 0:
+                clear_screen()
+                print(colored(
+                    f'Incorrect password. Remaining password'
+                    f' attempts {password_guesses}\n', 'yellow'))
+            elif password_guesses == 0:
+                clear_screen()
+                print(colored('For security reasons we are cancelling'
+                              ' this password change request!', 'yellow'))
+                sleep(5)
+                clear_screen()
+                break
