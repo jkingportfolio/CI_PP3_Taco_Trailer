@@ -170,19 +170,19 @@ def member_delivery_choice(member_name):
     clear_screen()
     global _delivery_type
     global _address
+    print(colored(
+        'What delivery type would you like?\n', 'green'))
+    print(
+        '[D] - Delivery\n[C] - Collection\n[Q] - Quit to main menu\n')
     while True:
-        print(colored(
-            'What delivery type would you like?\n', 'green'))
-        print(
-            '[D] - Delivery\n[C] - Collection\n[Q] - Quit to main menu\n')
         delivery_choice = input('Please select a valid input: \n').capitalize()
         clear_screen()
         if delivery_choice == 'D':
+            print('This order is for delivery.\n')
+            print(
+                colored(f'We have your address listed as'
+                        f' "{_address}".\n', 'green'))
             while True:
-                print('This order is for delivery.\n')
-                print(
-                    colored(f'We have your address listed as'
-                            f' "{_address}".\n', 'green'))
                 accept_delivery = input(
                     'Is this correct?\n[Y] - Yes\n[N] - No\n').capitalize()
                 if accept_delivery == 'Y':
@@ -203,6 +203,9 @@ def member_delivery_choice(member_name):
                     break
                 else:
                     clear_screen()
+                    print('This order is for delivery.\n')
+                    print(colored(f'We have your address listed as'
+                                  f' "{_address}".\n', 'green'))
                     print(colored(
                         f'Im sorry but "{accept_delivery}" is not a'
                         ' valid input.\n', 'yellow'))
@@ -224,6 +227,8 @@ def member_delivery_choice(member_name):
             break
         else:
             clear_screen()
+            print(colored('What delivery type would you like?\n', 'green'))
+            print('[D] - Delivery\n[C] - Collection\n[Q] - Quit to main menu\n')
             print(colored(
                 f'Im sorry but "{delivery_choice}" in not an option.'
                 ' Please enter a valid input.\n', 'yellow'))
@@ -316,10 +321,10 @@ def members_area(member_name, member_number, user_name):
             break
         elif user_choice.capitalize() == 'Q':
             clear_screen()
+            print(colored('Are you sure you would like to'
+                          ' log out?\n', 'yellow'))
+            print('[Y] - Yes\n[N] - No\n')
             while True:
-                print(colored('Are you sure you would like to'
-                              ' log out?\n', 'yellow'))
-                print('[Y] - Yes\n[N] - No\n')
                 confirm_quit = input('Please enter a valid input:\n')
                 if confirm_quit.capitalize() == 'Y':
                     clear_screen()
@@ -332,6 +337,9 @@ def members_area(member_name, member_number, user_name):
                     break
                 else:
                     clear_screen()
+                    print(colored('Are you sure you would like to'
+                                  ' log out?\n', 'yellow'))
+                    print('[Y] - Yes\n[N] - No\n')
                     print(colored(
                         f'Im sorry but "{confirm_quit}" is not a valid input.'
                         ' Please enter a valid input.\n', 'yellow'))
