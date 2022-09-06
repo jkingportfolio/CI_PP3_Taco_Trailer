@@ -11,7 +11,8 @@ class Order:
     Class that will create an order instance.
     """
 
-    def __init__(self, _name, _delivery_type, _address, _order_list, order_number, order_time):
+    def __init__(self, _name, _delivery_type, _address,
+                 _order_list, order_number, order_time):
         self._name = _name
         self._delivery_type = _delivery_type
         self._address = _address
@@ -46,13 +47,16 @@ class Order:
 
     def append_sales(self):
         """
-        Function to append sold items and value to google sheets 'sales' worksheet.
+        Function to append sold items and value to 
+        google sheets 'sales' worksheet.
         """
         append_order_data = [self._name, self._delivery_type,
-                             self._address, str(self._order_list), self.order_cost_output(), str(self.order_time), self.order_number]
+                             self._address, str(self._order_list),
+                             self.order_cost_output(),
+                             str(self.order_time), self.order_number]
         worksheet_to_update = SHEET.worksheet('Sales')
         worksheet_to_update.append_row(append_order_data)
-        
+
     def total_order_cost(self):
         """
         Function to calculate total order cost as per current order list.
@@ -103,4 +107,5 @@ class Order:
             print(f'Your order will be delivered at {order_ready_time}\n')
         elif self._delivery_type == "Collection":
             print(
-                f'Your order will be ready for collection at {order_ready_time}\n')
+                f'Your order will be ready for collection'
+                ' at {order_ready_time}\n')
