@@ -100,20 +100,21 @@ def login_screen(error_message=''):
     global _name
     global _delivery_type
     global _address
-    clear_screen()
     logins = LOGINS
     users = user_name_list()
+    password_guesses = 3
+    clear_screen()
     while True:
         print(colored('Please enter your username.', 'green'))
         print(error_message)
         user_name = input('Username: \n')
-        if user_name == 'Admin':
-            member_number = (
-                next((i for i, x in enumerate(logins)
-                      if x["User Name"] == user_name), None))
-            user_password = logins[member_number].get('Password')
-            break
-        elif user_name in users:
+        # if user_name == 'Admin':
+        #     member_number = (
+        #         next((i for i, x in enumerate(logins)
+        #               if x["User Name"] == user_name), None))
+        #     user_password = logins[member_number].get('Password')
+        #     break
+        if user_name in users:
             member_number = (
                 next((i for i, x in enumerate(logins)
                       if x["User Name"] == user_name), None))
@@ -126,9 +127,7 @@ def login_screen(error_message=''):
                         ' does not exist.\n', 'yellow'))
             login_screen(message)
             break
-    clear_screen()
-    error_message = ''
-    password_guesses = 3
+    clear_screen()  
     print(colored('Please enter your password.\n', 'green'))
     while True:
         password = getpass.getpass('Password: \n')
