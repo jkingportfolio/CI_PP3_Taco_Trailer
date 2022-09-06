@@ -87,7 +87,7 @@ def user_login():
                   '[3] - Continue as guest\n'
                   '[Q] - To return to main menu\n')
             print(colored(
-                f'Im sorry but "{user_login_answer}" is not avalid choice,'
+                f'Im sorry but "{user_login_answer}" is not a valid choice,'
                 ' please enter a valid input.\n', 'yellow'))
 
 
