@@ -459,6 +459,7 @@ def order_item():
             break
         elif food_item == "P":
             clear_screen()
+            print(colored('Order Preview\n','green'))
             print(tabulate(_order_list, headers=['Item', 'Name', 'Cost (£)'],
                            tablefmt="simple", numalign="center"))
             close_preview = input(colored(
