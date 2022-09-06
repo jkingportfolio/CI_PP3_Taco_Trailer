@@ -358,9 +358,10 @@ def customer_details():
     _name = validate_name()
     clear_screen()
     print(pyfiglet.figlet_format(f'Hi {_name}'))
+    print(colored('Please enter your delivery type.\n', 'green'))
+    print('Delivery (D) Collection (C): \n')
     while True:
-        print(colored('Please enter your delivery type.\n', 'green'))
-        _delivery_type = input('Delivery (D) Collection (C): \n').strip()
+        _delivery_type = input('Please enter a valid input: \n').strip()
         _delivery_type = _delivery_type.capitalize()
         if _delivery_type == 'D':
             _delivery_type = 'Delivery'
@@ -382,6 +383,8 @@ def customer_details():
         else:
             clear_screen()
             print(pyfiglet.figlet_format(f'Hi {_name}'))
+            print(colored('Please enter your delivery type.\n', 'green'))
+            print('Delivery (D) Collection (C): \n')
             print(colored(
                 f'Im sorry but "{_delivery_type}" is not a valid option.'
                 ' Please enter a valid input.\n', 'yellow'))
