@@ -109,4 +109,4 @@ class Order:
         elif self._delivery_type == "Collection":
             print(
                 f'Your order will be ready for collection'
-                ' at {order_ready_time}\n')
+                f' at {order_ready_time}\n')

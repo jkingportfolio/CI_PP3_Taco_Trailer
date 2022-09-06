@@ -178,11 +178,10 @@ def member_delivery_choice(member_name):
         clear_screen()
         if delivery_choice == 'D':
             while True:
-                print(
-                    f'This order is for delivery.\n')
+                print('This order is for delivery.\n')
                 print(
                     colored(f'We have your address listed as'
-                            ' "{_address}".\n', 'green'))
+                            f' "{_address}".\n', 'green'))
                 accept_delivery = input(
                     'Is this correct?\n[Y] - Yes\n[N] - No\n').capitalize()
                 if accept_delivery == 'Y':
