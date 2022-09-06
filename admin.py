@@ -23,7 +23,7 @@ def admin_dashboard():
         print(
             'Please enter a valid input\n\n[1] View records\n[2]'
             ' View pending orders\n[Q] Exit admin dashboard\n')
-        admin_option = input('Please select an option: \n').strip()
+        admin_option = input('Please enter a valid input: \n').strip()
         clear_screen()
         if admin_option == '1':
             search_records(total_rec_int)

@@ -29,7 +29,7 @@ def welcome(message=''):
     title = 'Welcome to the Taco Trailer'
     print(pyfiglet.figlet_format(title))
     print(colored('Hello, would you like to place an order or'
-                  ' login?\n', 'green'))    
+                  ' login?\n', 'green'))
     while True:
         print('[Y] - Yes\n[N] - No')
         print(f'\n{message}')
@@ -463,7 +463,7 @@ def order_item():
             break
         elif food_item == "P":
             clear_screen()
-            print(colored('Order Preview\n','green'))
+            print(colored('Order Preview\n', 'green'))
             print(tabulate(_order_list, headers=['Item', 'Name', 'Cost (£)'],
                            tablefmt="simple", numalign="center"))
             close_preview = input(colored(
@@ -586,7 +586,7 @@ def complete_order():
             thank_you()
             break
         else:
-            print('Im sorry that is an invalid input.')
+            print(f'Im sorry but {finish} is an invalid input.')
 
 
 def thank_you():
@@ -596,29 +596,6 @@ def thank_you():
     title = 'Thanks for visiting!'
     print(pyfiglet.figlet_format(title))
 
-
-# def choice_confirmation(user_choice):
-#         clear_screen()
-#         while True:
-#             print(colored('Are you sure you would like'
-#                   ' to log out?\n', 'yellow'))
-#             print('[Y] - Yes\n[N] - No\n')
-#             confirm_quit = input('Please enter a valid input:\n')
-#             if confirm_quit.capitalize() == 'Y':
-#                 clear_screen()
-#                 load_animation(f'Logging "{user_name}" out.')
-#                 welcome()
-#                 break
-#             elif confirm_quit.capitalize() == 'N':
-#                 clear_screen()
-#                 members_area(member_name, member_number, user_name)
-#                 break
-#             else:
-#                 clear_screen()
-#                 print(colored(
-#                     f'Im sorry but "{confirm_quit}" is not a'
-#               ' valid input. Please enter a valid input.\n', 'yellow'))
-#         break
 
 def main():
     """
