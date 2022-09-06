@@ -202,8 +202,6 @@ def member_delivery_choice(member_name):
             clear_screen()
             print(colored(
                 f'You selected {_delivery_type.capitalize()} for your order.\n','green'))
-            sleep(3)
-            clear_screen()
             load_animation('Loading menu.')
             display_menu()
             break

@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 import os
 from time import sleep
 from tabulate import tabulate
-from taco_trailer_command_line import *
+from taco_trailer_command_line import load_animation
 
 
 class Order:
