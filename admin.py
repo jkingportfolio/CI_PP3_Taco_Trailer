@@ -74,10 +74,10 @@ def pending_orders(total_rec_int):
         else:
             print(colored('There are currently no pending orders!', 'yellow'))
         while True:
-            exit = input(
+            user_choice = input(
                 colored('\nPress "Q" to return to Admin'
                         ' dashboard.\n', 'green'))
-            if exit.capitalize() == 'Q':
+            if user_choice.capitalize() == 'Q':
                 admin_dashboard()
                 break
             else:
@@ -87,7 +87,7 @@ def pending_orders(total_rec_int):
                 print(tabulate(pending_order_list, headers='keys',
                                tablefmt="simple", numalign="center"))
                 print(
-                    colored(f'\nIm sorry "{exit}" is not'
+                    colored(f'\nIm sorry "{user_choice}" is not'
                             ' a valid input.', 'yellow'))
 
 
