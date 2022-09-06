@@ -69,12 +69,14 @@ def validate_new_username(new_username):
     elif ' ' in new_username:
         clear_screen()
         print(colored(
-            f'Username "{new_username}" cannot be created as it has whitespaces.\n', 'yellow'))
+            f'Username "{new_username}" cannot be created as'
+            ' it has whitespaces.\n', 'yellow'))
         return False
     else:
         clear_screen()
         print(
-            colored(f'Username "{new_username}" is valid and created\n', 'green'))
+            colored(f'Username "{new_username}" is valid and'
+                    ' created\n', 'green'))
         USER_NAMES.append(new_username)
         return True
 
@@ -82,7 +84,8 @@ def validate_new_username(new_username):
 def change_password(member_number):
     """
     Function to accept user input to change user password.
-    @param member_number(string): Member number as taken from google sheet worksheets row
+    @param member_number(string): Member number as taken 
+    from google sheet worksheets row
     """
     current_password = LOGINS[member_number].get('Password')
     print(colored('Change password\n', 'green'))
@@ -101,7 +104,8 @@ def change_password(member_number):
                     clear_screen()
                     while True:
                         confirm_password = getpass.getpass(colored(
-                            'Please confirm your new password, or enter "Q" to quit: \n','green'))
+                            'Please confirm your new password, or'
+                            ' enter "Q" to quit: \n', 'green'))
                         clear_screen()
                         if confirm_password == new_password:
                             password_cell = 'B' + str(member_number)
@@ -109,7 +113,9 @@ def change_password(member_number):
                                 member_cell_number, 2, new_password)
                             clear_screen()
                             print(pyfiglet.figlet_format('Password updated.'))
-                            print('\nPlease note changes will only take place upon program restart')
+                            print(
+                                '\nPlease note changes will only take place'
+                                ' upon program restart')
                             sleep(5)
                             clear_screen()
                             break
@@ -117,13 +123,16 @@ def change_password(member_number):
                             clear_screen()
                             break
                         else:
-                            print(colored('Second password entry did not meet the first.\n','yellow'))
+                            print(
+                                colored('Second password entry did not meet'
+                                        ' the first.\n', 'yellow'))
                     break
                 elif new_password.capitalize() == 'Q':
                     clear_screen()
                     break
                 else:
-                    print(colored('Your new password didnt meet the criteria.\n','yellow'))
+                    print(
+                        colored('Your new password didnt meet the criteria.\n', 'yellow'))
             break
         elif password_input.capitalize() == 'Q':
             clear_screen()
