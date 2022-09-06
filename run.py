@@ -96,7 +96,7 @@ def login_screen(error_message=''):
     global _name
     global _delivery_type
     global _address
-    clear_screen()    
+    clear_screen()
     logins = LOGINS
     users = user_name_list()
     while True:
@@ -131,7 +131,8 @@ def login_screen(error_message=''):
             break
         elif password == user_password:
             clear_screen()
-            load_animation(f'Entered credentials are valid.\n\nLogging in as {user_name}.')
+            load_animation(
+                f'Entered credentials are valid.\n\nLogging in as {user_name}.')
             member_address = logins[member_number].get('Address')
             _address = member_address
             member_name = logins[member_number].get('Name')
@@ -201,7 +202,7 @@ def member_delivery_choice(member_name):
             _delivery_type = 'Collection'
             clear_screen()
             print(colored(
-                f'You selected {_delivery_type.capitalize()} for your order.\n','green'))
+                f'You selected {_delivery_type.capitalize()} for your order.\n', 'green'))
             load_animation('Loading menu.')
             display_menu()
             break
@@ -293,8 +294,23 @@ def members_area(member_name, member_number, user_name):
             break
         elif user_choice.capitalize() == 'Q':
             clear_screen()
-            load_animation(f'Logging "{user_name}" out.')
-            welcome()
+            while True:                
+                print(colored('Are you sure you would like to log out?\n', 'yellow'))
+                print('[Y] - Yes\n[N] - No\n')
+                confirm_quit = input('Please enter a valid input:\n')
+                if confirm_quit.capitalize() == 'Y':
+                    clear_screen()
+                    load_animation(f'Logging "{user_name}" out.')
+                    welcome()
+                    break
+                elif confirm_quit.capitalize() == 'N':
+                    clear_screen()
+                    members_area(member_name, member_number, user_name)
+                    break
+                else:
+                    clear_screen()
+                    print(colored(
+                        f'Im sorry but "{confirm_quit}" is not a valid input. Please enter a valid input.\n', 'yellow'))
             break
         else:
             clear_screen()
@@ -332,7 +348,7 @@ def customer_details():
             _delivery_type = 'Collection'
             clear_screen()
             print(colored(
-                f'You selected {_delivery_type.capitalize()} for your order.\n','green'))
+                f'You selected {_delivery_type.capitalize()} for your order.\n', 'green'))
             sleep(3)
             _address = 'The Taco Trailer'
             break
