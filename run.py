@@ -260,6 +260,8 @@ def create_account():
     _address = validate_address()
     clear_screen()
     load_animation('Thank you for your details. Creating account.')
+    print(colored(f'New user account for "{user_name}" has been created.','green'))
+    print(colored('\nPlease note account log in will only be valid upon program restart.','yellow'))
     new_user = User(user_name, password,
                     _name, _address)
     new_user.append_user()
@@ -554,6 +556,27 @@ def thank_you():
     title = 'Thanks for visiting!'
     print(pyfiglet.figlet_format(title))
 
+
+# def choice_confirmation(user_choice):
+#         clear_screen()
+#         while True:                
+#             print(colored('Are you sure you would like to log out?\n', 'yellow'))
+#             print('[Y] - Yes\n[N] - No\n')
+#             confirm_quit = input('Please enter a valid input:\n')
+#             if confirm_quit.capitalize() == 'Y':
+#                 clear_screen()
+#                 load_animation(f'Logging "{user_name}" out.')
+#                 welcome()
+#                 break
+#             elif confirm_quit.capitalize() == 'N':
+#                 clear_screen()
+#                 members_area(member_name, member_number, user_name)
+#                 break
+#             else:
+#                 clear_screen()
+#                 print(colored(
+#                     f'Im sorry but "{confirm_quit}" is not a valid input. Please enter a valid input.\n', 'yellow'))
+#         break
 
 def main():
     """
