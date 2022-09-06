@@ -108,8 +108,9 @@ def change_password(member_number):
                             SHEET.worksheet('Users').update_cell(
                                 member_cell_number, 2, new_password)
                             clear_screen()
-                            print(pyfiglet.figlet_format('Password updated'))
-                            sleep(2)
+                            print(pyfiglet.figlet_format('Password updated.'))
+                            print('\nPlease note changes will only take place upon program restart')
+                            sleep(5)
                             clear_screen()
                             break
                         elif confirm_password.capitalize() == 'Q':
