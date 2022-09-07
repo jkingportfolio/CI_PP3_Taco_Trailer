@@ -322,7 +322,7 @@ def members_area(member_name, member_number, user_name):
             members_area(member_name, member_number, user_name)
             break
         elif user_choice.capitalize() == 'Q':
-            quit_to_main()
+            quit_to_main('log out and quit')
             break
         else:
             clear_screen()
@@ -391,12 +391,6 @@ def customer_details():
             print(colored(
                 f'Im sorry but "{_delivery_type}" is not a valid option.'
                 ' Please enter a valid input.\n', 'yellow'))
-    # clear_screen()
-    # print(colored('Thank you for your details!', 'green'))
-    # sleep(2)
-    # load_animation('Loading menu.')
-    # clear_screen()
-    # display_menu()
 
 
 def display_menu():
@@ -607,12 +601,12 @@ def main():
     welcome()
 
 
-def quit_to_main():
+def quit_to_main(message='quit'):
     """
     Function to quit to main menu
     """
     clear_screen()
-    print(colored('Are you sure you want to quit to the main screen?', 'green'))
+    print(colored(f'Are you sure you want to {message} to the main screen?', 'green'))
     print('\n[Y] - Yes\n[N] - No\n')
     while True:
         confirm_quit = input('Please enter a valid input: \n').strip()
