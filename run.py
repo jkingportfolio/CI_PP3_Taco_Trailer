@@ -418,7 +418,7 @@ def order_item():
     """
     instructions = ("\nAdd item by entering item number.\n"
                     "To remove last item enter 'R'.\n"
-                    "To cancel order enter 'Q'.\n"
+                    "To cancel order and quit enter 'Q'.\n"
                     "To preview order enter 'P'.\n"
                     "To complete order enter 'X'.\n")
     print(instructions)
@@ -429,7 +429,7 @@ def order_item():
         if food_item == "Q":
             clear_screen()
             quit = input(colored(
-                'Are you sure you want to cancel the order?'
+                'Are you sure you want to cancel the order and quit?'
                 ' (Y/N)\n', 'yellow'))
             quit = quit.capitalize()
             if quit == 'Y':
