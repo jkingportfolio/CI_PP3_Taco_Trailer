@@ -26,7 +26,7 @@ class User:
         worksheet_to_update.append_row(append_order_data)
 
 
-def validate_address():
+def validate_address() -> str:
     """
     Function to accept and validate user input for address.
     """
@@ -59,7 +59,7 @@ def validate_address():
     return _address
 
 
-def validate_name():
+def validate_name() -> str:
     """
     Function to accept and validate user input for name.
     """

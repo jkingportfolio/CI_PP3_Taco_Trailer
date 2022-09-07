@@ -77,7 +77,7 @@ class Order:
             print(f'The total cost of your order is £{float(order_cost):.2f}')
             print('There is no delivery charge\n')
 
-    def order_cost_output(self):
+    def order_cost_output(self) -> int:
         """
         Function to output calculate delivery charge value and return
         complete order cost.

@@ -42,7 +42,7 @@ def generate_order_number(worksheet):
     return str(len(row_list)+1)
 
 
-def user_name_list():
+def user_name_list() -> list[str]:
     """
     Function to parse google sheets 'Users' worksheet and generate
     a list of all current users.
@@ -53,7 +53,7 @@ def user_name_list():
     return USER_NAMES
 
 
-def validate_new_username(new_username):
+def validate_new_username(new_username) -> bool:
     """
     Function to validate a new username and check if already exists
     in the google sheets worksheet.

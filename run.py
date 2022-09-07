@@ -603,13 +603,6 @@ def thank_you():
     print(pyfiglet.figlet_format(title))
 
 
-def main():
-    """
-    Function to begin script.
-    """
-    welcome()
-
-
 def quit_to_main(message='quit'):
     """
     Function to quit to main menu
@@ -634,6 +627,13 @@ def quit_to_main(message='quit'):
             print('\n[Y] - Yes\n[N] - No')
             print(colored(f'\nIm sorry but "{confirm_quit} is not a valid option. Please'
                           ' enter a valid input.\n', 'yellow'))
+
+
+def main():
+    """
+    Function to begin script.
+    """
+    welcome()
 
 
 if __name__ == "__main__":
