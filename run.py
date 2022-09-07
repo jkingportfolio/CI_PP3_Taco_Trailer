@@ -200,6 +200,9 @@ def member_delivery_choice(member_name: str):
                     load_animation('Loading menu.')
                     display_menu()
                     break
+                elif accept_delivery == 'Q':
+                    quit_to_main()
+                    break
                 else:
                     clear_screen()
                     print('This order is for delivery.\n')
@@ -628,6 +631,31 @@ def quit_to_main(message='quit'):
             print('\n[Y] - Yes\n[N] - No')
             print(colored(f'\nIm sorry but "{confirm_quit} is not a valid option. Please'
                           ' enter a valid input.\n', 'yellow'))
+
+# def quit_to_member_area():
+#     """
+#     Function to quit to member area
+#     """
+#     clear_screen()
+#     print(
+#         colored(f'Are you sure you want to {message} to the main screen?', 'green'))
+#     print('\n[Y] - Yes\n[N] - No\n')
+#     while True:
+#         confirm_quit = input('Please enter a valid input: \n').strip()
+#         if confirm_quit.capitalize() == 'Y':
+#             clear_screen()
+#             welcome()
+#             break
+#         elif confirm_quit.capitalize() == 'N':
+#             clear_screen()
+#             members_area(member_name, member_number, user_name)
+#             break
+#         else:
+#             clear_screen()
+#             print(colored('Are you sure you want to quit to the main screen?', 'green'))
+#             print('\n[Y] - Yes\n[N] - No')
+#             print(colored(f'\nIm sorry but "{confirm_quit} is not a valid option. Please'
+#                           ' enter a valid input.\n', 'yellow'))
 
 
 def main():
