@@ -477,7 +477,7 @@ def order_item():
                                headers=['Item', 'Name', 'Cost (£)'],
                                tablefmt="simple", numalign="center"))
                 print('')
-                print(colored('Im sorry i need a valid input.', 'yellow'))
+                print(colored('Please enter "Y" to return to order screen.', 'yellow'))
                 sleep(2)
         elif food_item.isdigit() and int(food_item) > 0:
             try:
