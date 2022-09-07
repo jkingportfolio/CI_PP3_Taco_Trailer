@@ -58,6 +58,9 @@ def pending_orders(total_rec_int):
         pending_order_time = pending_order_time.strftime("%H:%M:%S %Y-%m-%d")
         FORMATTED_SALES = ORDER_RECORDS
 
+        for item in FORMATTED_SALES:
+            item['newkey'] = datetime.strptime(['Order Time/Date'],"%H:%M:%S %Y-%m-%d")
+
         try:
             for item in FORMATTED_SALES:
                 for key in ('Items', 'Address', 'Name'):
@@ -66,7 +69,7 @@ def pending_orders(total_rec_int):
             pass
 
         pending_order_list = list(
-            filter(lambda x: x['Order Time/Date'] >
+            filter(lambda x: x['newkey'] >
                    pending_order_time, FORMATTED_SALES))
         if len(pending_order_list) > 0:
             print(tabulate(pending_order_list, headers='keys',
