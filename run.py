@@ -322,29 +322,7 @@ def members_area(member_name, member_number, user_name):
             members_area(member_name, member_number, user_name)
             break
         elif user_choice.capitalize() == 'Q':
-            clear_screen()
-            print(colored('Are you sure you would like to'
-                          ' log out?\n', 'yellow'))
-            print('[Y] - Yes\n[N] - No\n')
-            while True:
-                confirm_quit = input('Please enter a valid input:\n')
-                if confirm_quit.capitalize() == 'Y':
-                    clear_screen()
-                    load_animation(f'Logging "{user_name}" out.')
-                    welcome()
-                    break
-                elif confirm_quit.capitalize() == 'N':
-                    clear_screen()
-                    members_area(member_name, member_number, user_name)
-                    break
-                else:
-                    clear_screen()
-                    print(colored('Are you sure you would like to'
-                                  ' log out?\n', 'yellow'))
-                    print('[Y] - Yes\n[N] - No\n')
-                    print(colored(
-                        f'Im sorry but "{confirm_quit}" is not a valid input.'
-                        ' Please enter a valid input.\n', 'yellow'))
+            quit_to_main()
             break
         else:
             clear_screen()
