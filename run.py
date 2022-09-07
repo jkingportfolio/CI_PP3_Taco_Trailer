@@ -59,9 +59,9 @@ def user_login():
     prompt = (colored(
         '\nPlease select one of the below options.\n', 'green'))
     options = ('[1] - To login\n'
-          '[2] - To create as account\n'
-          '[3] - Continue as guest\n'
-          '[Q] - To return to main menu\n')
+               '[2] - To create as account\n'
+               '[3] - Continue as guest\n'
+               '[Q] - To return to main menu\n')
     print(prompt)
     print(options)
     while True:
@@ -168,7 +168,8 @@ def member_delivery_choice(member_name):
     print(prompt)
     print(options)
     while True:
-        delivery_choice = input('Please select a valid input: \n').capitalize()
+        delivery_choice = input('Please select a valid input: \n').strip()
+        delivery_choice = delivery_choice.capitalize()
         clear_screen()
         if delivery_choice == 'D':
             print('This order is for delivery.\n')
@@ -219,7 +220,7 @@ def member_delivery_choice(member_name):
             display_menu()
             break
         elif delivery_choice == 'Q':
-            clear_screen()
+            quit_to_main()
             load_animation('Cancelling all user inputs.')
             welcome()
             break
@@ -353,16 +354,16 @@ def customer_details():
     clear_screen()
     print(pyfiglet.figlet_format(f'Hi {_name}'))
     prompt = (colored('Please enter your delivery type.\n', 'green'))
-    options = ('[D] - Delivery\n[C] - Collection\n[Q] - Quit\n')
+    options = ('[D] - Delivery\n[C] - Collection\n[Q] - Quit to main menu\n')
     print(prompt)
     print(options)
     while True:
-        _delivery_type = input('Please enter a valid input: \n').strip()
-        _delivery_type = _delivery_type.capitalize()
-        if _delivery_type == 'Q':
+        delivery_choice = input('Please enter a valid input: \n').strip()
+        delivery_choice = delivery_choice.capitalize()
+        if delivery_choice == 'Q':
             quit_to_main()
             break
-        elif _delivery_type == 'D':
+        elif delivery_choice == 'D':
             _delivery_type = 'Delivery'
             clear_screen()
             print(colored(
@@ -371,12 +372,12 @@ def customer_details():
             _address = validate_address()
             clear_screen()
             print(colored('Thank you for your details!', 'green'))
-            sleep(2)
+            sleep(3)
             load_animation('Loading menu.')
             clear_screen()
             display_menu()
             break
-        elif _delivery_type == 'C':
+        elif delivery_choice == 'C':
             _delivery_type = 'Collection'
             clear_screen()
             print(colored(
@@ -386,7 +387,7 @@ def customer_details():
             _address = 'The Taco Trailer'
             clear_screen()
             print(colored('Thank you for your details!', 'green'))
-            sleep(2)
+            sleep(3)
             load_animation('Loading menu.')
             clear_screen()
             display_menu()
@@ -614,7 +615,8 @@ def quit_to_main(message='quit'):
     Function to quit to main menu
     """
     clear_screen()
-    print(colored(f'Are you sure you want to {message} to the main screen?', 'green'))
+    print(
+        colored(f'Are you sure you want to {message} to the main screen?', 'green'))
     print('\n[Y] - Yes\n[N] - No\n')
     while True:
         confirm_quit = input('Please enter a valid input: \n').strip()
