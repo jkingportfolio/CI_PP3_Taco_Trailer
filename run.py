@@ -160,10 +160,12 @@ def member_delivery_choice(member_name):
     clear_screen()
     global _delivery_type
     global _address
-    print(colored(
+    prompt = (colored(
         'Please enter your delivery type.\n', 'green'))
-    print(
+    options = (
         '[D] - Delivery\n[C] - Collection\n[Q] - Quit to main menu\n')
+    print(prompt)
+    print(options)
     while True:
         delivery_choice = input('Please select a valid input: \n').capitalize()
         clear_screen()
@@ -217,8 +219,8 @@ def member_delivery_choice(member_name):
             break
         else:
             clear_screen()
-            print(colored('What delivery type would you like?\n', 'green'))
-            print('[D] - Delivery\n[C] - Collection\n[Q] - Quit to main menu\n')
+            print(prompt)
+            print(options)
             print(colored(
                 f'Im sorry but "{delivery_choice}" in not an option.'
                 ' Please enter a valid input.\n', 'yellow'))
