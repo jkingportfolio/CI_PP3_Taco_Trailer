@@ -56,12 +56,14 @@ def user_login():
     Function to accept user input to login, create account, continue
     as guest or quit to main menu.
     """
-    print(colored(
+    prompt = (colored(
         '\nPlease select one of the below options.\n', 'green'))
-    print('[1] - To login\n'
+    options = ('[1] - To login\n'
           '[2] - To create as account\n'
           '[3] - Continue as guest\n'
           '[Q] - To return to main menu\n')
+    print(prompt)
+    print(options)
     while True:
         user_login_answer = input('Please enter a valid input: \n')
         if user_login_answer == '1':
@@ -79,12 +81,8 @@ def user_login():
             break
         else:
             clear_screen()
-            print(colored(
-                '\nPlease select one of the below options.\n', 'green'))
-            print('[1] - To login\n'
-                  '[2] - To create as account\n'
-                  '[3] - Continue as guest\n'
-                  '[Q] - To return to main menu\n')
+            print(prompt)
+            print(options)
             print(colored(
                 f'Im sorry but "{user_login_answer}" is not a valid choice,'
                 ' please enter a valid input.\n', 'yellow'))
