@@ -121,7 +121,7 @@ def login_screen(error_message=''):
                         ' does not exist.\n', 'yellow'))
             login_screen(message)
             break
-    clear_screen()  
+    clear_screen()
     print(colored('Please enter your password.\n', 'green'))
     while True:
         password = getpass.getpass('Password: \n')
@@ -604,9 +604,25 @@ def main():
     """
     welcome()
 
-# def quit_to_main():
-    #code to ask user if they want to quit to main menu
-    #welcome()
-    #break
+
+def quit_to_main():
+    """
+    Function to quit to main menu
+    """
+    while True:
+        print(colored('Are you sure you want to quit to the main screen?', 'green'))
+        print('\n[Y] - Yes\n[N] - No')
+        confirm_quit = input('Please enter a valid input: \n').strip()
+        if confirm_quit.capitalize() == 'Y':
+            clear_screen()
+            welcome()
+            break
+        elif confirm_quit.capitalize() == 'N':
+            break
+        else:
+            print(colored(f'Im sorry but {confirm_quit} is not a valid option. Please'
+                          ' enter a valid input.', 'yellow'))
+
+
 if __name__ == "__main__":
     main()
