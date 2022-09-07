@@ -153,7 +153,7 @@ def login_screen(error_message=''):
                 welcome()
 
 
-def member_delivery_choice(member_name):
+def member_delivery_choice(member_name: str):
     """
     Function to take user input on current members delivery
     choice.

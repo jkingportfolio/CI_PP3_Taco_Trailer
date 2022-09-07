@@ -42,7 +42,7 @@ def generate_order_number(worksheet):
     return str(len(row_list)+1)
 
 
-def user_name_list() -> list[str]:
+def user_name_list() -> list:
     """
     Function to parse google sheets 'Users' worksheet and generate
     a list of all current users.
@@ -53,7 +53,7 @@ def user_name_list() -> list[str]:
     return USER_NAMES
 
 
-def validate_new_username(new_username) -> bool:
+def validate_new_username(new_username: str) -> bool:
     """
     Function to validate a new username and check if already exists
     in the google sheets worksheet.
@@ -81,7 +81,7 @@ def validate_new_username(new_username) -> bool:
         return True
 
 
-def change_password(member_number):
+def change_password(member_number: str):
     """
     Function to accept user input to change user password.
     @param member_number(string): Member number as taken

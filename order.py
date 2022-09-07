@@ -9,8 +9,8 @@ class Order:
     Class that will create an order instance.
     """
 
-    def __init__(self, _name, _delivery_type, _address,
-                 _order_list, order_number, order_time):
+    def __init__(self, _name: str, _delivery_type: str, _address: str,
+                 _order_list: list, order_number: str, order_time: str):
         self._name = _name
         self._delivery_type = _delivery_type
         self._address = _address

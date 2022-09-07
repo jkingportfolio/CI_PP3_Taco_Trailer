@@ -41,7 +41,7 @@ def admin_dashboard():
                         ' a valid option.\n', 'yellow'))
 
 
-def pending_orders(total_rec_int):
+def pending_orders(total_rec_int: int):
     """
     Function to return pending orders that current time
     is less than delivered time and display in formatted table
@@ -94,7 +94,7 @@ def pending_orders(total_rec_int):
         break
 
 
-def search_records(total_rec_int):
+def search_records(total_rec_int: int):
     """
     Function to retreive sales records from google sheets
     and display them in the CLI via user input of record number.
@@ -131,7 +131,7 @@ def search_records(total_rec_int):
                         ' try again.\n', 'yellow'))
 
 
-def view_records(record_number):
+def view_records(record_number: str):
     """
     Function to return formatted record based on based arguement of record
     number.

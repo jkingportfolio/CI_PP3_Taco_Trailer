@@ -26,7 +26,7 @@ def clear_screen():
         os.system('cls')
 
 
-def load_animation(message):
+def load_animation(message: str):
     """
     Function to simulate a loading screen with passed argument.
     @param message(string): Custom loading message.
@@ -42,7 +42,7 @@ def load_animation(message):
         i = + 1
 
 
-def validate_password(passwd):
+def validate_password(passwd: str):
     """
     Function to validate user password creation - credits to geeksforgeeks.org
     @param passwd(string): Password as entered by user input.
