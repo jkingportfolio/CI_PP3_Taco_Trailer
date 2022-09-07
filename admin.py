@@ -89,6 +89,7 @@ def pending_orders(total_rec_int):
                 print(
                     colored(f'\nIm sorry "{user_choice}" is not'
                             ' a valid input.', 'yellow'))
+        break
 
 
 def search_records(total_rec_int):
