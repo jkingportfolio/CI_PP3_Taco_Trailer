@@ -75,8 +75,7 @@ def user_login():
             customer_details()
             break
         elif user_login_answer.capitalize() == 'Q':
-            clear_screen()
-            welcome()
+            quit_to_main()
             break
         else:
             clear_screen()
@@ -609,19 +608,25 @@ def quit_to_main():
     """
     Function to quit to main menu
     """
-    while True:
-        print(colored('Are you sure you want to quit to the main screen?', 'green'))
-        print('\n[Y] - Yes\n[N] - No')
+    clear_screen()
+    print(colored('Are you sure you want to quit to the main screen?', 'green'))
+    print('\n[Y] - Yes\n[N] - No\n')
+    while True:        
         confirm_quit = input('Please enter a valid input: \n').strip()
         if confirm_quit.capitalize() == 'Y':
             clear_screen()
             welcome()
             break
         elif confirm_quit.capitalize() == 'N':
+            clear_screen()
+            user_login()
             break
         else:
-            print(colored(f'Im sorry but {confirm_quit} is not a valid option. Please'
-                          ' enter a valid input.', 'yellow'))
+            clear_screen()
+            print(colored('Are you sure you want to quit to the main screen?', 'green'))
+            print('\n[Y] - Yes\n[N] - No')
+            print(colored(f'\nIm sorry but "{confirm_quit} is not a valid option. Please'
+                          ' enter a valid input.\n', 'yellow'))
 
 
 if __name__ == "__main__":
