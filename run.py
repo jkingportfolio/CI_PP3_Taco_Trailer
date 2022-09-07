@@ -100,6 +100,7 @@ def login_screen(error_message=''):
     logins = LOGINS
     users = user_name_list()
     password_guesses = 3
+    pass_prompt = (colored('Please enter your password.\n', 'green'))
     clear_screen()
     while True:
         print(colored('Please enter your username.', 'green'))
@@ -119,7 +120,7 @@ def login_screen(error_message=''):
             login_screen(message)
             break
     clear_screen()
-    print(colored('Please enter your password.\n', 'green'))
+    print(pass_prompt)
     while True:
         password = getpass.getpass('Password: \n')
         if user_name == 'Admin' and password == user_password:
@@ -141,7 +142,7 @@ def login_screen(error_message=''):
             clear_screen()
             password_guesses -= 1
             if password_guesses > 0:
-                print(colored('Please enter your password.\n', 'green'))
+                print(pass_prompt)
                 print(colored(
                     f'Incorrect password. Remaining password'
                     f' attempts {password_guesses}\n', 'yellow'))
@@ -180,6 +181,10 @@ def member_delivery_choice(member_name):
                 if accept_delivery == 'Y':
                     clear_screen()
                     _delivery_type = 'Delivery'
+                    print(colored(
+                        f'You selected {_delivery_type.capitalize()} for your'
+                        ' order.\n', 'green'))
+                    sleep(3)
                     load_animation('Loading menu.')
                     display_menu()
                     break
@@ -209,6 +214,7 @@ def member_delivery_choice(member_name):
             print(colored(
                 f'You selected {_delivery_type.capitalize()} for your'
                 ' order.\n', 'green'))
+            sleep(3)
             load_animation('Loading menu.')
             display_menu()
             break
