@@ -347,17 +347,26 @@ def customer_details():
     clear_screen()
     print(pyfiglet.figlet_format(f'Hi {_name}'))
     print(colored('Please enter your delivery type.\n', 'green'))
-    print('Delivery (D) Collection (C): \n')
+    print('[D] - Delivery\n[C] - Collection\n[Q] - Quit\n')
     while True:
         _delivery_type = input('Please enter a valid input: \n').strip()
         _delivery_type = _delivery_type.capitalize()
-        if _delivery_type == 'D':
+        if _delivery_type == 'Q':
+            quit_to_main()
+            break
+        elif _delivery_type == 'D':
             _delivery_type = 'Delivery'
             clear_screen()
             print(colored(
                 f'\nYou selected {_delivery_type.capitalize()}'
                 ' for your order.\n', 'green'))
             _address = validate_address()
+            clear_screen()
+            print(colored('Thank you for your details!', 'green'))
+            sleep(2)
+            load_animation('Loading menu.')
+            clear_screen()
+            display_menu()
             break
         elif _delivery_type == 'C':
             _delivery_type = 'Collection'
@@ -367,21 +376,27 @@ def customer_details():
                 ' for your order.\n', 'green'))
             sleep(3)
             _address = 'The Taco Trailer'
+            clear_screen()
+            print(colored('Thank you for your details!', 'green'))
+            sleep(2)
+            load_animation('Loading menu.')
+            clear_screen()
+            display_menu()
             break
         else:
             clear_screen()
             print(pyfiglet.figlet_format(f'Hi {_name}'))
             print(colored('Please enter your delivery type.\n', 'green'))
-            print('Delivery (D) Collection (C): \n')
+            print('[D] - Delivery\n[C] - Collection\n[Q] - Quit\n')
             print(colored(
                 f'Im sorry but "{_delivery_type}" is not a valid option.'
                 ' Please enter a valid input.\n', 'yellow'))
-    clear_screen()
-    print(colored('Thank you for your details!', 'green'))
-    sleep(2)
-    load_animation('Loading menu.')
-    clear_screen()
-    display_menu()
+    # clear_screen()
+    # print(colored('Thank you for your details!', 'green'))
+    # sleep(2)
+    # load_animation('Loading menu.')
+    # clear_screen()
+    # display_menu()
 
 
 def display_menu():
