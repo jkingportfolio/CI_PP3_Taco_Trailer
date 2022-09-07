@@ -52,24 +52,23 @@ def pending_orders(total_rec_int):
     while True:
         current_time = datetime.now()
         local_time = current_time + timedelta(hours=1)
-        local_time = local_time.strftime("%H:%M:%S %Y-%m-%d")
-        print(f'The current time and date is: {local_time}\n')
+        local_time_displayed = local_time.strftime("%H:%M:%S %Y-%m-%d")
+        print(f'The current time and date is: {local_time_displayed}\n')
         pending_order_time = current_time + timedelta(minutes=45)
-        pending_order_time = pending_order_time.strftime("%H:%M:%S %Y-%m-%d")
+        # pending_order_time = pending_order_time.strftime("%H:%M:%S %Y-%m-%d")
         FORMATTED_SALES = ORDER_RECORDS
-
-        for item in FORMATTED_SALES:
-            item['newkey'] = datetime.strptime(['Order Time/Date'],"%H:%M:%S %Y-%m-%d")
 
         try:
             for item in FORMATTED_SALES:
+                item['Order Time/Date'] = datetime.strptime(
+                    (item['Order Time/Date']), "%H:%M:%S %Y-%m-%d")
                 for key in ('Items', 'Address', 'Name'):
                     del item[key]
         except KeyError:
             pass
 
         pending_order_list = list(
-            filter(lambda x: x['newkey'] >
+            filter(lambda x: x['Order Time/Date'] >
                    pending_order_time, FORMATTED_SALES))
         if len(pending_order_list) > 0:
             print(tabulate(pending_order_list, headers='keys',
