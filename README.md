@@ -113,9 +113,7 @@ The Taco Trailer website has been developed to provide users the chance to order
 
 ### Structure
 
-The website's structure consits of a simple white page with command line interface and button located on the right hand side. As this project is only intended for use on large screen devices there was no need to incorporate responsivness to the page. On arrival to the apps hosting page the user will be presented with a welcome message and instructions on user input choices. 
-
-This app was designed using Code Institutes Python Essentials Template. The template creates a command line interface within a blank page with a run button located above the command line interface. As this app is command line based, there is a simple design intent of a black background, white text and a yellow error message text. <>. 
+This app was designed using Code Institutes Python Essentials Template. The template creates a command line interface within a blank page with a run button located above the command line interface. As this project is only intended for use on large screen devices there was no need to incorporate responsivness to the page. On arrival to the page, the user will be presented with a welcome message and instructions on user input choices. 
 
 ### Flowchart
 
