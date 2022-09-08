@@ -187,11 +187,8 @@ The <> is featured on the main page and will <>
 
 In the future as my skills grow I would like to implement the following features:
 
-- <>
-    - <>
-    - <>
-- <>
-    - <>
+- Ability to append the placed order to the users account row within google sheets and have a function to display all historical orders place by that logged in account
+- Email address to be one of the required pieces of information when creating a user account so that the order receipt can be emailed to the user on completion via an Email API.
 
 ## Testing
 
