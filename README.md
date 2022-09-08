@@ -434,15 +434,16 @@ This project was deployed to Heroku in the project's early stages to allow conti
 
 The website was deployed using Heroku by "following these steps:
 
-1. Use the "pip freeze -> requiremnts.txt" command in the terminal to save any libraries that need to be instaled in the file
-2. Login or create a Heroku account
-3. Click the "new" button in the upper right corner and select "create new app"
-4. Choose an app name and your region and click "Create app"
-5. Go to the "settings" tab, add the python build pack and then the node.js build pack
-6. Go to the "deploy" tab and pick GitHub as a deployment method
-7. Search for a repository to connect to
-8. Click enable automatic deploys and then deploy branch
-9. Wait for the app to build and then click on the "View" link
+1. Use the "pip freeze -> requiremnts.txt" command in the terminal to save any libraries that need to be installed in the file.
+2. Navigate to https://www.heroku.com/ and login or create an account. 
+3. Click the "new" button in the upper right corner and select "create new app".
+4. Choose an app name and your region and click "Create app".
+5. Under Config Vars store any sensitive data you saved in .json file. Name 'Key' field, copy the .json file and paste it to 'Value' field. Also add a key 'PORT' and value '8000'.
+6. Go to the "settings" tab, add the Python build pack and then the node.js build pack (please note they need to be in the correct order of Python above node.js).
+7. Go to the "deploy" tab and pick GitHub as a deployment method.
+8. Search for a repository to connect to and select the branch you would like to build the app from.
+9. If preferred enable automatic deploys and then deploy branch.
+10. Wait for the app to build and then click on the "View" link which will redirect you to the deployed link.
 
 ### Forking the GitHub Repository
 
