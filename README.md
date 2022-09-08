@@ -28,7 +28,7 @@ The Taco Trailer website has been developed to provide users the chance to order
     3. [Libraries](#libraries)
 5. [Features](#features)
     1. [Existing Features](#existing-features)
-    2. [Future Implementations](#future_implementations)
+    2. [Future Implementations](#future-implementations)
 6. [Testing](#testing)
     1. [Python Valiadation](#python-validation)
     2. [Device Testing](#device-testing)
@@ -370,6 +370,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-14.png">
 </details>
 
+### Automated Testing
 
 ## Bugs
 
