@@ -48,21 +48,22 @@ The Taco Trailer website has been developed to provide users the chance to order
 
 ### User Goals
 
-- A user would want to be able to easily interact with the app to order food.
-- A user would want to state if order is for pick up or delivery.
-- A user would want to be able to navigate the app seamlessly.
-- A user would want to be given clear instructions on their current input options.
-- A user would want to be provided negative and postive feedback based on their inputs.
-- A user would want to be able to remove items from an order or cancel the order prior to submission.
+- Be able to easily interact with the app to order food for pick up or delivery.
+- Navigate the app seamlessly.
+- Receive clear instructions on their current input options.
+- Be provided with negative and postive feedback based on their inputs.
+- Be able to remove items from an order or cancel the order prior to submission.
+- The ability to create an account.
+- The ability to change account password.
 
 ### Site Owner Goals
 
-- As the site owner i wanted to be able to give potential customers an easy to use app to order food from The Taco Trailer.
-- As the site owner i wanted to have an admin area in which i could access information intended for staff only. 
+- Provide potential customers an easy to use app to order food from The Taco Trailer.
+- Include an admin area in which information intended for staff only can be accessed. 
 - As the site owner i wanted to secure the admin area of the app with a password.
-- As the site owner i wanted to have the ability to view previous orders that had been placed.
-- As the site owner i wanted to have the ability to view current orders that have yet to be picked up or delivered.
-- As the site owner i wanted to have all user inputs validated as to not provide issues with orders.
+- Have the ability to view previous orders that had been placed.
+- Have the ability to view current pending orders that have yet to be picked up or delivered.
+- Ensure all user inputs are validated as to not provide issues with orders and a negative user experience.
 
 ## User Experience
 
@@ -90,6 +91,15 @@ The Taco Trailer website has been developed to provide users the chance to order
 8. As a user, I want to be shown a receipt.
 9. As a user, I want to be able to exit the app.
 
+- A user would want to be able to easily interact with the app to order food.
+- A user would want to state if order is for pick up or delivery.
+- A user would want to be able to navigate the app seamlessly.
+- A user would want to be given clear instructions on their current input options.
+- A user would want to be provided negative and postive feedback based on their inputs.
+- A user would want to be able to remove items from an order or cancel the order prior to submission.
+- A user would want to be able to create an account.
+- A user would want to be able to change account password.
+
 ### Site Owner Stories
 
 10. As the site owner, I would want users to be greeted with a welcome message to give a friendly feel to the app.
@@ -97,6 +107,13 @@ The Taco Trailer website has been developed to provide users the chance to order
 12. As the site owner, I would want to be able to access all previous order records.
 13. As the site owner, I would want to be able to access a list of pending orders.
 14. As the site owner, I would not want the user to have to restart the app due to bugs in the code. 
+
+- As the site owner i wanted to be able to give potential customers an easy to use app to order food from The Taco Trailer.
+- As the site owner i wanted to have an admin area in which i could access information intended for staff only. 
+- As the site owner i wanted to secure the admin area of the app with a password.
+- As the site owner i wanted to have the ability to view previous orders that had been placed.
+- As the site owner i wanted to have the ability to view current pending orders that have yet to be picked up or delivered.
+- As the site owner i wanted to have all user inputs validated as to not provide issues with orders.
 
 ### User Manual
 
