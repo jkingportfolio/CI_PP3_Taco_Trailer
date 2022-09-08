@@ -405,18 +405,17 @@ The website was tested on the following web browsers:
 
 ## Bugs
 
-### Code Bugs
-
 During the project i encountered a number of bugs some of which were solved some of which were not as stated below:
 
 | Bug           | Fix           |
 | ------------- | ------------- |
-|   |  |
-|   | | 
-|   |  |
-|   |  |
-|  |  |
-|   |  |
+| Pending orders ignoring the date and only checking for difference in time ie if a previous days order time was within 15 minutes of the current time it would display  | Discussions with CI Tutor Support led to looping through the list generated from google sheets, adding a new key with the values to be the string time converted to datetime. This then took the date into account and fixed the issue. |
+| Input order number when ordered was incorrect due to indexing | Food order variable which stores the input from the user had 1 added to display the correct item | 
+| Item number input would allow item 0 to be ordered and would select the last item. This was due to -1 from user input to fix the indexing issue would the allow a value of -1 whch then translates to the last item in the list  | A second condition in the if statement to check if the user input is greater than 0. |
+| IndexError when removing item when order list is empty   | try and except  block added to handle the error in an elegant fashion |
+| When viewing in deployed heroku app, print receipt will not clear from screen  | This issue only occurs within the Heroku deployed app. As this is a Heroku issue outwith my own control i have resulted in documenting this as a known bug which cannot be fixed. |
+| Application must be restarted in order to use newly created user account  | As the module needs to reload i have yet to find a fix for this without restarting the application, this has been documented as a known bug. |
+| Application must be restarted in order to use changed password | As the module needs to reload i have yet to find a fix for this without restarting the application, this has been documented as a known bug.|
 
 
 <details>
