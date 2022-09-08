@@ -473,16 +473,18 @@ You can make a local clone of a repository via the following steps:
 
 ### Tutorials
 
-- <>
-- <>
-- <> - [<>](https://www.w3schools.com/howto/howto_css_modals.asp)
+- A tutorial on the use of Pythons next function was used for learning a new way of iterating the user names stored in the Google Sheets worksheet - [Pythons next() function](https://www.w3schools.com/python/ref_func_next.asp)
+- The gspread documentation was used to aide reading and writing data to the Google Sheet - [Gspread documentation](https://docs.gspread.org/en/latest/)
+- A tutorial on the use of the tabulate module for displaying table data from pyeng.io was used - [Tabulate](https://pyneng.readthedocs.io/en/latest/book/12_useful_modules/tabulate.html)
+- A tutorial on the use of getpass() was used to allow password input to be hidden. This article was from geeksforgeeks.org - [getpass()](https://www.geeksforgeeks.org/getpass-and-getuser-in-python-password-without-echo/#:~:text=The%20getpass()%20function%20is,the%20caller%20as%20a%20string.)
 
 ### Code
 
  Code from external sources were used as a basis and built on top of in this project, they are credited below:
 
- - <> [<>](https://github.com/kubowania/connect-four)
- - <> [<>](https://animista.net/)
+ - Code to Validate a password was taken from an article on geeksforgeeks.org - [Password Validation](https://www.geeksforgeeks.org/password-validation-in-python/)
+ - Code Institute student support was used to help tackle the issue in my code when comparing time and date strings
+ - Code from codegrepper.com was used to help understand how to remove milliseconds from datetime timestamps - [Remove milliseconds](https://www.codegrepper.com/code-examples/python/remove+milliseconds+from+datetime+python)
 
 ### Literature
 
