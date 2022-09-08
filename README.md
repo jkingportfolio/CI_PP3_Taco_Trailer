@@ -27,6 +27,8 @@ The Taco Trailer website has been developed to provide users the chance to order
     2. [Frameworks and Tools](#frameworks-and-tools)
     3. [Libraries](#libraries)
 5. [Features](#features)
+    1. [Existing Features](#existing-features)
+    2. [Future Implementations](#future_implementations)
 6. [Testing](#testing)
     1. [Python Valiadation](#python-validation)
     2. [Device Testing](#device-testing)
@@ -36,6 +38,10 @@ The Taco Trailer website has been developed to provide users the chance to order
 7. [Bugs](#bugs)
 8. [Deployment](#deployment)
 9. [Credits](#credits)
+    1. [Tutorial](#tutorials)
+    2. [Code](#code)
+    3. [Literature](#literature)
+    4. [Misc](#misc)
 10. [Acknowledgements](#acknowledgements)
 
 ## Project Goals
@@ -92,31 +98,15 @@ The Taco Trailer website has been developed to provide users the chance to order
 13. As the site owner, I would want to be able to access a list of pending orders.
 14. As the site owner, I would not want the user to have to restart the app due to bugs in the code. 
 
-## Design
+### User Manual
 
-### Design Choices
-
-This app was designed using Code Institutes Python Essentials Template. The template creates a command line interface within a blank page with a run button located above the command line interface. As this app is command line based, there is a simple design intent of a black background, white text and a yellow error message text. <>. 
-
-### Colours
-
-The colour palette for the website is made up of 3 main colours:
-
-- #FFFFFF (White - Text)
-- #000000 (Black - Command Line Background)
-- #C39D00 (Yellow - Input warning messages)
-
-All colours contrast was tested using [EightShapes contrast grid](http://eightshapes.com/)
-
-<details>
-<summary>Colour Contrast Results</summary>
-<img src="docs/validation-colour-contrast.png">
-</details>
-
+## Technical Design
 
 ### Structure
 
-The website's structure consits of a simple white page with command line interface and button located on the right hand side. As this project is only intended for use on large screen devices there was no need to incorporate responsivness to the page. On arrival to the apps hosting page the user will be presented with a welcome message and instructions on user input choices.
+The website's structure consits of a simple white page with command line interface and button located on the right hand side. As this project is only intended for use on large screen devices there was no need to incorporate responsivness to the page. On arrival to the apps hosting page the user will be presented with a welcome message and instructions on user input choices. 
+
+This app was designed using Code Institutes Python Essentials Template. The template creates a command line interface within a blank page with a run button located above the command line interface. As this app is command line based, there is a simple design intent of a black background, white text and a yellow error message text. <>. 
 
 ### Flowchart
 
@@ -126,6 +116,8 @@ A flowchart was created during the design process to help identify functions tha
 <summary>Flow Chart</summary>
 <img src="docs/js-logic-flow-annotated.jpg">
 </details>
+
+### Data Models
 
 ## Technologies Used
 
@@ -140,6 +132,8 @@ A flowchart was created during the design process to help identify functions tha
 - LibreOffice Draw - Used to create the game logic flowchart.
 - Eightshapes - Used to check colours for contrast and accessibility.
 
+### Libraries
+
 ## Features
 
 In its entirety the website consists of one main page, with a mock terminal within that page to run The Taco Trailer app. <>
@@ -150,19 +144,13 @@ In its entirety the website consists of one main page, with a mock terminal with
 
 The <> is featured on the main page and will <>
 
-- Covered in user story: <>
-
-##### Desktop 
-
-![Nav Bar Desktop](docs/features/feature-nav-bar-tablet-desktop.png)
-
-#### <>
-
-The main <>.
+<details>
+<summary>Flow Chart</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
 
 - Covered in user story: <>
 
-![Main game area](docs/features/feature-main-game-area.png)
 
 ### Future implementations
 
@@ -198,6 +186,10 @@ In the future as my skills grow I would like to implement the following features
 </details>
 <details>
 <summary>Python file - taco_trailer_command_line.py</summary>
+<img src="docs/validation-js/validation-jshint-contact.png">
+</details>
+<details>
+<summary>Python file - user.py</summary>
 <img src="docs/validation-js/validation-jshint-contact.png">
 </details>
 
@@ -320,6 +312,8 @@ The website was tested on the following web browsers:
 <summary>Screenshots</summary>
 <img src="docs/testing-user-stories/testing-user-stories-9.png">
 </details>
+
+#### Site Owner
 
 10. As the site owner, I would want users to be greeted with a welcome message to give a friendly feel to the app.
 
@@ -450,10 +444,6 @@ You can make a local clone of a repository via the following steps:
 - <>
 - <>
 - <> - [<>](https://www.w3schools.com/howto/howto_css_modals.asp)
-
-### Terminal Font Images
-
-Font images produced in this app were produced using the Pyfiglet library.
 
 ### Code
 
