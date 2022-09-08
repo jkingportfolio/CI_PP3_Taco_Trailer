@@ -82,38 +82,28 @@ The Taco Trailer website has been developed to provide users the chance to order
 ### User stories
 
 1. As a user, I want to be provided with clear instructions throughout the app.
-2. As a user, I want to be able to view the menu.
-3. As a user, I want to be able to add items to my order.
-4. As a user, I want to be able to remove items from my order.
-5. As a user, I want to be able to preview an order.
-6. As a user, I want to be able to cancel an unplaced order.
-7. As a user, I want to be able to place an order.
-8. As a user, I want to be shown a receipt.
-9. As a user, I want to be able to exit the app.
+2. As a user, I want to be able to create an account.
+3. As a user, I want to be able to log into my account.
+4. As a user, I want to be able to change my account password.
+5. As a user, I want to be able to chose between order pick up or delivery.
+6. As a user, I want to be able to change current order address if the stored one is incorrect.
+7. As a user, I want to be able to view the menu.
+8. As a user, I want to be able to add items to my order.
+9. As a user, I want to be able to remove items from my order.
+10. As a user, I want to be able to preview an order.
+11. As a user, I want to be able to cancel an unplaced order.
+12. As a user, I want to be able to place an order.
+13. As a user, I want to be shown a receipt.
+14. As a user, I want to be able to exit the app.
 
-- A user would want to be able to easily interact with the app to order food.
-- A user would want to state if order is for pick up or delivery.
-- A user would want to be able to navigate the app seamlessly.
-- A user would want to be given clear instructions on their current input options.
-- A user would want to be provided negative and postive feedback based on their inputs.
-- A user would want to be able to remove items from an order or cancel the order prior to submission.
-- A user would want to be able to create an account.
-- A user would want to be able to change account password.
 
 ### Site Owner Stories
 
-10. As the site owner, I would want users to be greeted with a welcome message to give a friendly feel to the app.
-11. As the site owner, I would want to be able to access a password locked admin area.
-12. As the site owner, I would want to be able to access all previous order records.
-13. As the site owner, I would want to be able to access a list of pending orders.
-14. As the site owner, I would not want the user to have to restart the app due to bugs in the code. 
-
-- As the site owner i wanted to be able to give potential customers an easy to use app to order food from The Taco Trailer.
-- As the site owner i wanted to have an admin area in which i could access information intended for staff only. 
-- As the site owner i wanted to secure the admin area of the app with a password.
-- As the site owner i wanted to have the ability to view previous orders that had been placed.
-- As the site owner i wanted to have the ability to view current pending orders that have yet to be picked up or delivered.
-- As the site owner i wanted to have all user inputs validated as to not provide issues with orders.
+15. As the site owner, I would want users to be greeted with a welcome message to give a friendly feel to the app.
+16. As the site owner, I would want to be able to access a password locked admin area.
+17. As the site owner, I would want to be able to access all previous order records.
+18. As the site owner, I would want to be able to access a list of pending orders.
+19. As the site owner, I would not want the user to have to restart the app due to bugs in the code. 
 
 ### User Manual
 
