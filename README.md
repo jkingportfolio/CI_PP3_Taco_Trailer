@@ -103,7 +103,9 @@ The Taco Trailer website has been developed to provide users the chance to order
 16. As the site owner, I would want to be able to access a password locked admin area.
 17. As the site owner, I would want to be able to access all previous order records.
 18. As the site owner, I would want to be able to access a list of pending orders.
-19. As the site owner, I would not want the user to have to restart the app due to bugs in the code. 
+19. As the site owner, I would want the registered users information to be saved to a google sheets file.
+20. As the site owner, I would want orders to be saved to a google sheets file. 
+21. As the site owner, I would want the user to get feedback in the case of invalid input.
 
 ### User Manual
 
