@@ -138,12 +138,14 @@ This project uses Object Orientated Programming to interact and manipulate the f
 - Python 3 - Used to create the command line based app.
 
 ### Frameworks and Tools
-- Balsamiq - Used to create wireframes.
 - Git - Used for version control.
 - GitHub - Used to deploy the projects code.
 - Gitpod - Used to develop and test code.
-- LibreOffice Draw - Used to create the game logic flowchart.
-- Eightshapes - Used to check colours for contrast and accessibility.
+- LibreOffice Draw - Used to create the flowchart.
+- Google Sheets - Used to store data outside of the program with the User data, food menu and sales records stored on seperate worksheets.
+- Google Cloud Platform - Used to manage access permissions to google services such as google autho and google sheets.
+- Heroku Platform - Used to deploy the live project.
+- PEP8 - Used to validate code against Python conventions.
 
 ### Libraries
 
