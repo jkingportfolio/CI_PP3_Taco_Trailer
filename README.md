@@ -135,7 +135,7 @@ This project uses Object Orientated Programming to interact and manipulate the f
 ## Technologies Used
 
 ### Coding Languages
-- Python - Used to create the command line based app.
+- Python 3 - Used to create the command line based app.
 
 ### Frameworks and Tools
 - Balsamiq - Used to create wireframes.
