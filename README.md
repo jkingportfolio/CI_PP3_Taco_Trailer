@@ -171,12 +171,243 @@ In its entirety the website consists of one main page, with a mock terminal with
 
 ### Existing features
 
-#### <> 
+#### Welcome message 
 
-The <> is featured on the main page and will <>
+The welcome message is featured on the main page and will <>
 
 <details>
-<summary>Flow Chart</summary>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### Main menu 
+
+The main menu is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### Log in 
+
+The log in is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### Create account 
+
+The create account is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### Guest order 
+
+The welcome messafe is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### Quit 
+
+The quit is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### User name validation 
+
+The user name validation is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### Password validation 
+
+The password validation is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### Delivery Type option 
+
+The delivery type option is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### Member delivery location update 
+
+The Member delivery location update is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### Yellow warning messages 
+
+The yellow warning messages is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### Input validation 
+
+The input validation is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### Add item to order 
+
+The Add item to order is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### Remove item from order 
+
+The remove item from orde3r is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### Preview order 
+
+The Preview order is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### Display order receipt 
+
+The display order receipt is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### Cancel order 
+
+The cancel order is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### Admin Dashboard 
+
+The Admin Dashboard is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### View order records 
+
+The view order records is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### View pending orders 
+
+The view pending orders is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### Members area 
+
+The members area orders is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
+<img src="docs/js-logic-flow-annotated.jpg">
+</details>
+
+- Covered in user story: <>
+
+#### Change password 
+
+The change password is featured on the main page and will <>
+
+<details>
+<summary>Image</summary>
 <img src="docs/js-logic-flow-annotated.jpg">
 </details>
 
