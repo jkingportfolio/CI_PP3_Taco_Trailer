@@ -344,10 +344,11 @@ def members_area(member_name, member_number, user_name):
     @param user_name(string): Members user name taken from
     google sheets 'Users' worksheet.
     """
+    end_func = True
     member_area_instructions = (colored('What would you'
                                         ' like to do?', 'green')) + \
         '\n\n[1] - Make an order\n[2] - Change password\n[Q] - Log out\n'
-    while True:
+    while end_func:
         print(pyfiglet.figlet_format(f'Hi {member_name}'))
         print(member_area_instructions)
         user_choice = input('Please enter a valid input:\n')
@@ -361,8 +362,11 @@ def members_area(member_name, member_number, user_name):
             members_area(member_name, member_number, user_name)
             break
         elif user_choice.capitalize() == 'Q':
-            quit_option('log out and quit', member_name,
+            clear_screen()
+            end_func = quit_option('log out and quit', member_name,
                         member_number, user_name, exit_to='Main log out')
+            if not end_func:
+                return
         else:
             clear_screen()
             print(pyfiglet.figlet_format(f'Hi {member_name}'))
