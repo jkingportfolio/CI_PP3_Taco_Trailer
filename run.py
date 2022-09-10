@@ -263,61 +263,63 @@ def create_account():
         if user_name.capitalize() == 'Q':
             quit_to_main()
             break
-        else:
-            if validate_new_username(user_name):
-                while True:
-                    print(password_criteria)
-                    password = getpass.getpass(
-                        'Please enter your password. Otherwise enter [Q] to quit. \n')
-                    if password.capitalize() == 'Q':
-                        quit_to_main()
+        elif validate_new_username(user_name):
+            while True:
+                print(password_criteria)
+                password = getpass.getpass(
+                    'Please enter your password. Otherwise enter [Q] to quit. \n')
+                if password.capitalize() == 'Q':
+                    clear_screen()
+                    quit_to_main()
+                    break
+                else:
+                    clear_screen()
+                    if validate_password(password):
+                        while True:
+                            password_validate = getpass.getpass(colored(
+                                'Please re enter your password. Otherwise enter [Q] to quit:\n', 'green'))
+                            if password_validate.capitalize() == 'Q':
+                                clear_screen()
+                                quit_to_main()
+                                break
+                            elif password == password_validate:
+                                clear_screen()
+                                print(colored('Password is valid and matches'
+                                              ' re entry.\n', 'green'))
+                                validate_password(password)
+                                _name = validate_name()
+                                clear_screen()
+                                _address = validate_address()
+                                clear_screen()
+                                load_animation(
+                                    'Thank you for your details. Creating account.')
+                                print(
+                                    colored(f'New user account for "{user_name}" has'
+                                            ' been created.', 'green'))
+                                print(colored(
+                                    '\nPlease note account log in will only be valid upon'
+                                    ' program restart.', 'yellow'))
+                                new_user = User(user_name, password,
+                                                _name, _address)
+                                new_user.append_user()
+                                user_login()
+                                break
+                            elif password != password_validate:
+                                clear_screen()
+                                print(
+                                    f'Currently creating password for: {user_name}\n')
+                                print(colored(
+                                    'First password entry meets the password'
+                                    ' creation criteria.\n', 'green'))
+                                print(colored(
+                                    'Im sorry those passwords do not match, please try'
+                                    ' re enter your password again.\n', 'yellow'))
+                            else:
+                                clear_screen()
+                                print(
+                                    f'Currently entered username: {user_name}\n')
                         break
-                    else:
-                        if validate_password(password):
-                            clear_screen()
-                            while True:
-                                password_validate = getpass.getpass(
-                                    'Please re enter your password. Otherwise enter [Q] to quit:\n')
-                                if password_validate.capitalize() == 'Q':
-                                    quit_to_main()
-                                    break 
-                                if password == password_validate:
-                                    clear_screen()
-                                    print(colored('Password is valid and matches'
-                                                  ' re entry.\n', 'green'))
-                                    break
-                                elif password != password_validate:
-                                    clear_screen()
-                                    print(
-                                        f'Currently creating password for: {user_name}\n')
-                                    print(colored(
-                                        'First password entry meets the password'
-                                        ' creation criteria.\n', 'green'))
-                                    print(colored(
-                                        'Im sorry those passwords do not match, please try'
-                                        ' re enter your password again.\n', 'yellow'))
-                            break
-                        else:
-                            clear_screen()
-                            print(f'Currently entered username: {user_name}\n')
-                            validate_password(password)
-                    _name = validate_name()
-                    clear_screen()
-                    _address = validate_address()
-                    clear_screen()
-                    load_animation(
-                        'Thank you for your details. Creating account.')
-                    print(
-                        colored(f'New user account for "{user_name}" has'
-                                ' been created.', 'green'))
-                    print(colored(
-                        '\nPlease note account log in will only be valid upon'
-                        ' program restart.', 'yellow'))
-                    new_user = User(user_name, password,
-                                    _name, _address)
-                    new_user.append_user()
-                    user_login()
-        break
+            break
 
 
 def members_area(member_name, member_number, user_name):
