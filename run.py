@@ -277,7 +277,10 @@ def create_account():
                             clear_screen()
                             while True:
                                 password_validate = getpass.getpass(
-                                    'Please re enter your password:\n')
+                                    'Please re enter your password. Otherwise enter [Q] to quit:\n')
+                                if password_validate.capitalize() == 'Q':
+                                    quit_to_main()
+                                    break 
                                 if password == password_validate:
                                     clear_screen()
                                     print(colored('Password is valid and matches'
