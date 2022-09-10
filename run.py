@@ -259,7 +259,7 @@ def create_account():
                   ' create an account\n', 'green'))
     while True:
         user_name = input(
-            'Please enter a user name. Otherwise enter [Q] to quit.\n')
+            'Please enter a user name. Otherwise enter [Q] to cancel user creation and quit.\n')
         if user_name.capitalize() == 'Q':
             quit_to_main(exit_to='Welcome')
             break
@@ -267,7 +267,7 @@ def create_account():
             while True:
                 print(password_criteria)
                 password = getpass.getpass(
-                    'Please enter your password. Otherwise enter [Q] to quit. \n')
+                    'Please enter your password. Otherwise enter [Q] to cancel account creation and quit.\n')
                 if password.capitalize() == 'Q':
                     clear_screen()
                     quit_to_main(exit_to='Welcome')
@@ -277,7 +277,7 @@ def create_account():
                     if validate_password(password):
                         while True:
                             password_validate = getpass.getpass(colored(
-                                'Please re enter your password. Otherwise enter [Q] to quit:\n', 'green'))
+                                'Please re enter your password. Otherwise enter [Q] to cancel account creation and quit.\n', 'green'))
                             if password_validate.capitalize() == 'Q':
                                 clear_screen()
                                 quit_to_main(exit_to='Welcome')
