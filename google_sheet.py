@@ -93,13 +93,13 @@ def change_password(member_number: str):
     password_guesses = 3
     while True:
         password_input = getpass.getpass(
-            'Please enter your current password or enter "Q" to quit: \n')
+            'Please enter your current password or enter "Q" to cancel password change: \n')
         if password_input == current_password:
             clear_screen()
             print(colored('Current password entered correct.\n', 'green'))
             while True:
                 new_password = getpass.getpass(
-                    'Please enter your new password, or enter "Q" to quit: \n')
+                    'Please enter your new password, or enter "Q" to cancel password change: \n')
                 clear_screen()
                 if validate_password(new_password):
                     clear_screen()
