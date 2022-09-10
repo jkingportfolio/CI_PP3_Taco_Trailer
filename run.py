@@ -139,8 +139,9 @@ def password_check(user_name, member_number, user_password):
     password_guesses = 3
     pass_prompt = (
         colored('Please enter your password. Or enter "Q" to quit.\n', 'green'))
+    end_func = True
     clear_screen()
-    while True:
+    while end_func:
         print(pass_prompt)
         password = getpass.getpass('Password: \n')
         if user_name == 'Admin' and password == user_password:
@@ -158,7 +159,10 @@ def password_check(user_name, member_number, user_password):
             members_area(_name, member_number, user_name)
             break
         elif password.capitalize() == 'Q':
-            quit_option(exit_to='Welcome')
+            clear_screen()
+            end_func = quit_option(exit_to='Welcome')
+            if not end_func:
+                return
         else:
             clear_screen()
             password_guesses -= 1
