@@ -247,9 +247,9 @@ def member_delivery_choice(member_name: str, member_number, user_name):
                         return
                 else:
                     clear_screen()
-                    print('This order is for delivery.\n')
-                    print(colored(f'We have your address listed as'
-                                  f' "{_address}".\n', 'green'))
+                    # print('This order is for delivery.\n')
+                    # print(colored(f'We have your address listed as'
+                    #               f' "{_address}".\n', 'green'))
                     print(colored(
                         f'Im sorry but "{accept_delivery}" is not a'
                         ' valid input.\n', 'yellow'))
@@ -273,8 +273,8 @@ def member_delivery_choice(member_name: str, member_number, user_name):
                 return
         else:
             clear_screen()
-            print(prompt)
-            print(options)
+            # print(prompt)
+            # print(options)
             print(colored(
                 f'Im sorry but "{delivery_choice}" in not an option.'
                 ' Please enter a valid input.\n', 'yellow'))
