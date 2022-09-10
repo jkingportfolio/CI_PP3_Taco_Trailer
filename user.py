@@ -1,5 +1,6 @@
 from google_sheet import *
 from taco_trailer_command_line import clear_screen
+from termcolor import colored
 
 
 class User:
@@ -41,11 +42,15 @@ def validate_address() -> str:
             break
         elif address_number.capitalize() == 'Q':
             clear_screen()
-            confirm_exit = input('Are you sure you want to cancel and return to delivery options?')
+            print(
+                colored(f'Are you sure you want to cancel and return to delivery options?', 'green'))
+            confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
             if confirm_exit.capitalize() == 'Y':
-                return True
+                address_input = 'exit_to_delivery'
+                return address_input
             elif confirm_exit.capitalize() == 'N':
-                return False         
+                address_input = 'cancel'
+                return address_input
         else:
             clear_screen()
             print(colored(
@@ -53,10 +58,22 @@ def validate_address() -> str:
                 ' Please enter a valid number.\n', 'yellow'))
     clear_screen()
     while end_street_func:
-        address_street = input('Please enter your street name: \n')
-        if address_street != '' and all(chr.isalpha()
-                                        or chr.isspace()
-                                        for chr in address_street):
+        address_street = input(
+            colored('Please enter your street name. Or enter [Q] to quit.\n', 'green'))
+        if address_street.capitalize() == 'Q':
+            clear_screen()
+            print(
+                colored(f'Are you sure you want to cancel and return to delivery options?', 'green'))
+            confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
+            if confirm_exit.capitalize() == 'Y':
+                address_input = 'exit_to_delivery'
+                return address_input
+            elif confirm_exit.capitalize() == 'N':
+                address_input = 'cancel'
+                return address_input
+        elif address_street != '' and all(chr.isalpha()
+                                          or chr.isspace()
+                                          for chr in address_street):
             break
         else:
             clear_screen()
@@ -64,7 +81,6 @@ def validate_address() -> str:
                 f'Im sorry "{address_street}" contains numbers or'
                 ' special characters, please enter a'
                 ' valid street name.\n', 'yellow'))
-
     _address = (f'{address_number} {address_street}')
     return _address
 

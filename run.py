@@ -225,14 +225,15 @@ def member_delivery_choice(member_name: str, member_number, user_name):
                         print(colored('Please enter delivery details'
                                     ' required.\n', 'green'))
                         address_input = validate_address()
-                        if not address_input:
+                        if address_input == 'exit_to_delivery':
                             member_delivery_choice(member_name, member_number, user_name)    
-                            break
+                            return
+                        elif address_input == 'cancel':
+                            clear_screen()
+                            continue
                         else:
                             _address = address_input
                             print(_address)
-                            print('You got there')
-                            sleep(5)
                             clear_screen()
                             _delivery_type = 'Delivery'
                             load_animation('Loading menu.')
