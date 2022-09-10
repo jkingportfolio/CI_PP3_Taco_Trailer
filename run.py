@@ -345,7 +345,7 @@ def members_area(member_name, member_number, user_name):
             members_area(member_name, member_number, user_name)
             break
         elif user_choice.capitalize() == 'Q':
-            quit_to_main('log out and quit')
+            quit_to_main('log out and quit', user_name)
             break
         else:
             clear_screen()
@@ -619,7 +619,7 @@ def thank_you():
     print(pyfiglet.figlet_format(title))
 
 
-def quit_to_main(message='quit'):
+def quit_to_main(message='quit', user_name=''):
     """
     Function to quit to main menu
     """
@@ -630,6 +630,7 @@ def quit_to_main(message='quit'):
     while True:
         confirm_quit = input('Please enter a valid input: \n').strip()
         if confirm_quit.capitalize() == 'Y':
+            load_animation(f'Logging {user_name} out.')
             clear_screen()
             welcome()
             break
