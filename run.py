@@ -166,7 +166,7 @@ def password_check(user_name, member_number, user_password):
                 break
 
 
-def member_delivery_choice(member_name: str, user_name):
+def member_delivery_choice(member_name: str, member_number, user_name):
     """
     Function to take user input on current members delivery
     choice.
@@ -213,7 +213,8 @@ def member_delivery_choice(member_name: str, user_name):
                     display_menu()
                     break
                 elif accept_delivery == 'Q':
-                    quit_to_main('log out and quit', user_name)
+                    quit_to_main('log out and quit', member_name,
+                                 member_number, user_name)
                     break
                 else:
                     clear_screen()
@@ -236,7 +237,8 @@ def member_delivery_choice(member_name: str, user_name):
             display_menu()
             break
         elif delivery_choice == 'Q':
-            quit_to_main('log out and quit', user_name)
+            quit_to_main('log out and quit', member_name,
+                         member_number, user_name)
             break
         else:
             clear_screen()
@@ -335,7 +337,7 @@ def members_area(member_name, member_number, user_name):
         user_choice = input('Please enter a valid input:\n')
         if user_choice == '1':
             clear_screen()
-            member_delivery_choice(member_name, user_name)
+            member_delivery_choice(member_name, member_number, user_name)
             break
         elif user_choice == '2':
             clear_screen()
@@ -343,7 +345,8 @@ def members_area(member_name, member_number, user_name):
             members_area(member_name, member_number, user_name)
             break
         elif user_choice.capitalize() == 'Q':
-            quit_to_main('log out and quit', user_name)
+            quit_to_main('log out and quit', member_name,
+                         member_number, user_name)
             break
         else:
             clear_screen()
@@ -617,7 +620,7 @@ def thank_you():
     print(pyfiglet.figlet_format(title))
 
 
-def quit_to_main(message='quit', user_name=''):
+def quit_to_main(message='quit', member_name='', member_number=None, user_name=''):
     """
     Function to quit to main menu
     """
@@ -642,7 +645,7 @@ def quit_to_main(message='quit', user_name=''):
             break
         elif confirm_quit.capitalize() == 'N':
             clear_screen()
-            login_screen()
+            members_area(member_name, member_number, user_name)
             break
         else:
             clear_screen()
