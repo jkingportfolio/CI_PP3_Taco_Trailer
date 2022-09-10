@@ -629,7 +629,11 @@ def quit_to_main(message='quit', user_name=''):
     print('\n[Y] - Yes\n[N] - No\n')
     while True:
         confirm_quit = input('Please enter a valid input: \n').strip()
-        if confirm_quit.capitalize() == 'Y':
+        if confirm_quit.capitalize() == 'Y' and user_name == '':
+            clear_screen()
+            welcome()
+            break
+        elif confirm_quit.capitalize() == 'Y': 
             load_animation(f'Logging {user_name} out.')
             clear_screen()
             welcome()
