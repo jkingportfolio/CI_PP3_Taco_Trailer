@@ -119,9 +119,9 @@ def login_screen(error_message=''):
                         ' does not exist.\n', 'yellow'))
             login_screen(message)
             break
-    clear_screen()
-    print(pass_prompt)
+    clear_screen()    
     while True:
+        print(pass_prompt)
         password = getpass.getpass('Password: \n')
         if user_name == 'Admin' and password == user_password:
             admin_dashboard()
@@ -142,7 +142,6 @@ def login_screen(error_message=''):
             clear_screen()
             password_guesses -= 1
             if password_guesses > 0:
-                print(pass_prompt)
                 print(colored(
                     f'Incorrect password. Remaining password'
                     f' attempts {password_guesses}\n', 'yellow'))
