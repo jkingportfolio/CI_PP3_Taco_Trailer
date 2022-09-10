@@ -187,6 +187,7 @@ def member_delivery_choice(member_name: str, member_number, user_name):
     global _delivery_type
     global _address
     end_func = True
+    inner_func = True
     prompt = (colored(
         'Please enter your delivery type.\n', 'green'))
     options = (
@@ -198,7 +199,7 @@ def member_delivery_choice(member_name: str, member_number, user_name):
         delivery_choice = delivery_choice.capitalize()
         clear_screen()
         if delivery_choice == 'D':
-            while True:
+            while inner_func:
                 print('This order is for delivery.\n')
                 print(
                     colored(f'We have your address listed as'
@@ -226,8 +227,11 @@ def member_delivery_choice(member_name: str, member_number, user_name):
                     display_menu()
                     break
                 elif accept_delivery == 'Q':
-                    quit_option('return to the members area', member_name,
+                    clear_screen()
+                    inner_func = quit_option('return to the members area', member_name,
                                 member_number, user_name, exit_to='Member area')
+                    if not inner_func:
+                        return
                 else:
                     clear_screen()
                     print('This order is for delivery.\n')
