@@ -166,7 +166,7 @@ def password_check(user_name, member_number, user_password):
                 break
 
 
-def member_delivery_choice(member_name: str):
+def member_delivery_choice(member_name: str, user_name):
     """
     Function to take user input on current members delivery
     choice.
@@ -191,7 +191,7 @@ def member_delivery_choice(member_name: str):
                         f' "{_address}".\n', 'green'))
             while True:
                 accept_delivery = input(
-                    'Is this correct?\n[Y] - Yes\n[N] - No\n').capitalize()
+                    'Is this correct?\n[Y] - Yes\n[N] - No\n[Q] - Quit to main menu\n').capitalize()
                 if accept_delivery == 'Y':
                     clear_screen()
                     _delivery_type = 'Delivery'
@@ -213,7 +213,7 @@ def member_delivery_choice(member_name: str):
                     display_menu()
                     break
                 elif accept_delivery == 'Q':
-                    quit_to_main()
+                    quit_to_main('log out and quit', user_name)
                     break
                 else:
                     clear_screen()
@@ -236,9 +236,7 @@ def member_delivery_choice(member_name: str):
             display_menu()
             break
         elif delivery_choice == 'Q':
-            quit_to_main()
-            load_animation('Cancelling all user inputs.')
-            welcome()
+            quit_to_main('log out and quit', user_name)
             break
         else:
             clear_screen()
@@ -337,7 +335,7 @@ def members_area(member_name, member_number, user_name):
         user_choice = input('Please enter a valid input:\n')
         if user_choice == '1':
             clear_screen()
-            member_delivery_choice(member_name)
+            member_delivery_choice(member_name, user_name)
             break
         elif user_choice == '2':
             clear_screen()
@@ -633,14 +631,18 @@ def quit_to_main(message='quit', user_name=''):
             clear_screen()
             welcome()
             break
-        elif confirm_quit.capitalize() == 'Y': 
+        elif confirm_quit.capitalize() == 'Y':
             load_animation(f'Logging {user_name} out.')
+            clear_screen()
+            welcome()
+            break
+        elif confirm_quit.capitalize() == 'N' and user_name == '':
             clear_screen()
             welcome()
             break
         elif confirm_quit.capitalize() == 'N':
             clear_screen()
-            user_login()
+            login_screen()
             break
         else:
             clear_screen()
@@ -648,31 +650,6 @@ def quit_to_main(message='quit', user_name=''):
             print('\n[Y] - Yes\n[N] - No')
             print(colored(f'\nIm sorry but "{confirm_quit} is not a valid option. Please'
                           ' enter a valid input.\n', 'yellow'))
-
-# def quit_to_member_area():
-#     """
-#     Function to quit to member area
-#     """
-#     clear_screen()
-#     print(
-#         colored(f'Are you sure you want to {message} to the main screen?', 'green'))
-#     print('\n[Y] - Yes\n[N] - No\n')
-#     while True:
-#         confirm_quit = input('Please enter a valid input: \n').strip()
-#         if confirm_quit.capitalize() == 'Y':
-#             clear_screen()
-#             welcome()
-#             break
-#         elif confirm_quit.capitalize() == 'N':
-#             clear_screen()
-#             members_area(member_name, member_number, user_name)
-#             break
-#         else:
-#             clear_screen()
-#             print(colored('Are you sure you want to quit to the main screen?', 'green'))
-#             print('\n[Y] - Yes\n[N] - No')
-#             print(colored(f'\nIm sorry but "{confirm_quit} is not a valid option. Please'
-#                           ' enter a valid input.\n', 'yellow'))
 
 
 def main():
