@@ -298,22 +298,22 @@ def create_account():
                             clear_screen()
                             print(f'Currently entered username: {user_name}\n')
                             validate_password(password)
-            _name = validate_name()
-            clear_screen()
-            _address = validate_address()
-            clear_screen()
-            load_animation(
-                'Thank you for your details. Creating account.')
-            print(
-                colored(f'New user account for "{user_name}" has'
-                        ' been created.', 'green'))
-            print(colored(
-                '\nPlease note account log in will only be valid upon'
-                ' program restart.', 'yellow'))
-            new_user = User(user_name, password,
-                            _name, _address)
-            new_user.append_user()
-            user_login()
+                    _name = validate_name()
+                    clear_screen()
+                    _address = validate_address()
+                    clear_screen()
+                    load_animation(
+                        'Thank you for your details. Creating account.')
+                    print(
+                        colored(f'New user account for "{user_name}" has'
+                                ' been created.', 'green'))
+                    print(colored(
+                        '\nPlease note account log in will only be valid upon'
+                        ' program restart.', 'yellow'))
+                    new_user = User(user_name, password,
+                                    _name, _address)
+                    new_user.append_user()
+                    user_login()
         break
 
 
