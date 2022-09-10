@@ -18,6 +18,7 @@ _order_list = []
 _name = None
 _delivery_type = None
 _address = None
+logins = LOGINS
 
 
 def welcome(message=''):
@@ -96,14 +97,10 @@ def login_screen(error_message=''):
     """
     global _name
     global _delivery_type
-    global _address
-    logins = LOGINS
     users = user_name_list()
-    password_guesses = 3
-    pass_prompt = (colored('Please enter your password.\n', 'green'))
     clear_screen()
     while True:
-        print(colored('Please enter your username.', 'green'))
+        print(colored('Please enter your username. Or enter "Q" to quit.', 'green'))
         print(error_message)
         user_name = input('Username: \n')
         if user_name in users:
@@ -111,6 +108,10 @@ def login_screen(error_message=''):
                 next((i for i, x in enumerate(logins)
                       if x["User Name"] == user_name), None))
             user_password = logins[member_number].get('Password')
+            password_check(user_name, member_number, user_password)
+            break
+        elif user_name.capitalize() == 'Q':
+            quit_to_main()
             break
         else:
             clear_screen()
@@ -119,7 +120,17 @@ def login_screen(error_message=''):
                         ' does not exist.\n', 'yellow'))
             login_screen(message)
             break
-    clear_screen()    
+
+
+def password_check(user_name, member_number, user_password):
+    """
+    Function to Validate usernames password is correct
+    """
+    global _address
+    password_guesses = 3
+    pass_prompt = (
+        colored('Please enter your password. Or enter "Q" to quit.\n', 'green'))
+    clear_screen()
     while True:
         print(pass_prompt)
         password = getpass.getpass('Password: \n')
@@ -128,7 +139,6 @@ def login_screen(error_message=''):
             welcome()
             break
         elif password == user_password:
-            clear_screen()
             load_animation(
                 f'Entered credentials are valid.\n\n'
                 f'Logging in as {user_name}.')
@@ -137,6 +147,9 @@ def login_screen(error_message=''):
             member_name = logins[member_number].get('Name')
             _name = member_name
             members_area(_name, member_number, user_name)
+            break
+        elif password.capitalize() == 'Q':
+            quit_to_main()
             break
         else:
             clear_screen()
