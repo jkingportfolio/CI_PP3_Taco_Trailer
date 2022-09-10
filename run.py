@@ -78,7 +78,7 @@ def user_login():
             customer_details()
             break
         elif user_login_answer.capitalize() == 'Q':
-            quit_to_main()
+            quit_to_main(exit_to='Welcome')
             break
         else:
             clear_screen()
@@ -111,7 +111,7 @@ def login_screen(error_message=''):
             password_check(user_name, member_number, user_password)
             break
         elif user_name.capitalize() == 'Q':
-            quit_to_main()
+            quit_to_main(exit_to='Welcome')
             break
         else:
             clear_screen()
@@ -149,7 +149,7 @@ def password_check(user_name, member_number, user_password):
             members_area(_name, member_number, user_name)
             break
         elif password.capitalize() == 'Q':
-            quit_to_main()
+            quit_to_main(exit_to='Welcome')
             break
         else:
             clear_screen()
@@ -213,8 +213,8 @@ def member_delivery_choice(member_name: str, member_number, user_name):
                     display_menu()
                     break
                 elif accept_delivery == 'Q':
-                    quit_to_main('log out and quit', member_name,
-                                 member_number, user_name)
+                    quit_to_main('return to the members area', member_name,
+                                 member_number, user_name, exit_to='Member area')
                     break
                 else:
                     clear_screen()
@@ -237,8 +237,8 @@ def member_delivery_choice(member_name: str, member_number, user_name):
             display_menu()
             break
         elif delivery_choice == 'Q':
-            quit_to_main('log out and quit', member_name,
-                         member_number, user_name)
+            quit_to_main('return to the members area', member_name,
+                         member_number, user_name, exit_to='Member area')
             break
         else:
             clear_screen()
@@ -261,7 +261,7 @@ def create_account():
         user_name = input(
             'Please enter a user name. Otherwise enter [Q] to quit.\n')
         if user_name.capitalize() == 'Q':
-            quit_to_main()
+            quit_to_main(exit_to='Welcome')
             break
         elif validate_new_username(user_name):
             while True:
@@ -270,7 +270,7 @@ def create_account():
                     'Please enter your password. Otherwise enter [Q] to quit. \n')
                 if password.capitalize() == 'Q':
                     clear_screen()
-                    quit_to_main()
+                    quit_to_main(exit_to='Welcome')
                     break
                 else:
                     clear_screen()
@@ -280,7 +280,7 @@ def create_account():
                                 'Please re enter your password. Otherwise enter [Q] to quit:\n', 'green'))
                             if password_validate.capitalize() == 'Q':
                                 clear_screen()
-                                quit_to_main()
+                                quit_to_main(exit_to='Welcome')
                                 break
                             elif password == password_validate:
                                 clear_screen()
@@ -351,7 +351,7 @@ def members_area(member_name, member_number, user_name):
             break
         elif user_choice.capitalize() == 'Q':
             quit_to_main('log out and quit', member_name,
-                         member_number, user_name)
+                         member_number, user_name, exit_to='Main log out')
             break
         else:
             clear_screen()
@@ -625,26 +625,30 @@ def thank_you():
     print(pyfiglet.figlet_format(title))
 
 
-def quit_to_main(message='quit', member_name='', member_number=None, user_name=''):
+def quit_to_main(message='quit to the main menu', member_name=None, member_number=None, user_name=None, exit_to=''):
     """
     Function to quit to main menu
     """
     clear_screen()
     print(
-        colored(f'Are you sure you want to {message} to the main screen?', 'green'))
+        colored(f'Are you sure you want to {message}?', 'green'))
     print('\n[Y] - Yes\n[N] - No\n')
     while True:
         confirm_quit = input('Please enter a valid input: \n').strip()
-        if confirm_quit.capitalize() == 'Y' and user_name == '':
+        if confirm_quit.capitalize() == 'Y' and exit_to == 'Welcome':
             clear_screen()
             welcome()
             break
-        elif confirm_quit.capitalize() == 'Y':
+        elif confirm_quit.capitalize() == 'Y' and exit_to == 'Main log out':
             load_animation(f'Logging {user_name} out.')
             clear_screen()
             welcome()
             break
-        elif confirm_quit.capitalize() == 'N' and user_name == '':
+        elif confirm_quit.capitalize() == 'Y' and exit_to == 'Member area':
+            clear_screen()
+            members_area(member_name, member_number, user_name)
+            break
+        elif confirm_quit.capitalize() == 'N' and exit_to == 'Welcome':
             clear_screen()
             welcome()
             break
