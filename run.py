@@ -186,18 +186,18 @@ def member_delivery_choice(member_name: str, member_number, user_name):
     clear_screen()
     global _delivery_type
     global _address
+    end_func = True
     prompt = (colored(
         'Please enter your delivery type.\n', 'green'))
     options = (
         '[D] - Delivery\n[C] - Collection\n[Q] - Quit to main menu\n')
-    while True:
+    while end_func:
         print(prompt)
         print(options)
         delivery_choice = input('Please select a valid input: \n').strip()
         delivery_choice = delivery_choice.capitalize()
         clear_screen()
         if delivery_choice == 'D':
-
             while True:
                 print('This order is for delivery.\n')
                 print(
@@ -249,8 +249,11 @@ def member_delivery_choice(member_name: str, member_number, user_name):
             display_menu()
             break
         elif delivery_choice == 'Q':
-            quit_option('return to the members area', member_name,
+            clear_screen()
+            end_func = quit_option('return to the members area', member_name,
                         member_number, user_name, exit_to='Member area')
+            if not end_func:
+                return
         else:
             clear_screen()
             print(prompt)
@@ -348,9 +351,9 @@ def members_area(member_name, member_number, user_name):
     member_area_instructions = (colored('What would you'
                                         ' like to do?', 'green')) + \
         '\n\n[1] - Make an order\n[2] - Change password\n[Q] - Log out\n'
+    print(pyfiglet.figlet_format(f'Hi {member_name}'))
+    print(member_area_instructions)
     while end_func:
-        print(pyfiglet.figlet_format(f'Hi {member_name}'))
-        print(member_area_instructions)
         user_choice = input('Please enter a valid input:\n')
         if user_choice == '1':
             clear_screen()
@@ -367,6 +370,8 @@ def members_area(member_name, member_number, user_name):
                         member_number, user_name, exit_to='Main log out')
             if not end_func:
                 return
+            print(pyfiglet.figlet_format(f'Hi {member_name}'))
+            print(member_area_instructions)
         else:
             clear_screen()
             print(pyfiglet.figlet_format(f'Hi {member_name}'))
