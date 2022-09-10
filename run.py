@@ -111,8 +111,7 @@ def login_screen(error_message=''):
             password_check(user_name, member_number, user_password)
             break
         elif user_name.capitalize() == 'Q':
-            quit_option(exit_to='Welcome')
-            break
+            quit_option()
         else:
             clear_screen()
             message = (
@@ -150,7 +149,6 @@ def password_check(user_name, member_number, user_password):
             break
         elif password.capitalize() == 'Q':
             quit_option(exit_to='Welcome')
-            break
         else:
             clear_screen()
             password_guesses -= 1
@@ -352,7 +350,6 @@ def members_area(member_name, member_number, user_name):
         elif user_choice.capitalize() == 'Q':
             quit_option('log out and quit', member_name,
                          member_number, user_name, exit_to='Main log out')
-            break
         else:
             clear_screen()
             print(pyfiglet.figlet_format(f'Hi {member_name}'))
@@ -638,25 +635,25 @@ def quit_option(message='quit to the main menu', member_name=None, member_number
         if confirm_quit.capitalize() == 'Y' and exit_to == 'Welcome':
             clear_screen()
             welcome()
-            break
+            return False
         elif confirm_quit.capitalize() == 'Y' and exit_to == 'Main log out':
             load_animation(f'Logging {user_name} out.')
             clear_screen()
             welcome()
-            break
+            return False
         elif confirm_quit.capitalize() == 'Y' and exit_to == 'Member area':
             clear_screen()
             members_area(member_name, member_number, user_name)
-            break
+            return False
         elif confirm_quit.capitalize() == 'N' and exit_to == 'Welcome':
             clear_screen()
-            welcome()
-            break
-        elif confirm_quit.capitalize() == 'N':
+            return True
+        elif confirm_quit.capitalize() == 'N' and exit_to == 'Main log out':
             clear_screen()
-            members_area(member_name, member_number, user_name)
-            welcome()
-            break
+            return True
+        elif confirm_quit.capitalize() == 'N' and exit_to == 'Member area':
+            clear_screen()
+            return True
         else:
             clear_screen()
             print(colored('Are you sure you want to quit to the main screen?', 'green'))
