@@ -104,9 +104,10 @@ def login_screen(error_message=''):
     global _delivery_type
     users = user_name_list()
     end_func = True
-    print(colored('Please enter your username. Or enter "Q" to quit.', 'green'))
     clear_screen()
-    while end_func:        
+    prompt = (colored('Please enter your username. Or enter "Q" to quit.', 'green'))
+    while end_func:
+        print(prompt)        
         print(error_message)
         user_name = input('Username: \n')
         if user_name in users:
