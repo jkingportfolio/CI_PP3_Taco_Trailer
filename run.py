@@ -58,15 +58,16 @@ def user_login():
     as guest or quit to main menu.
     """
     prompt = (colored(
-        '\nPlease select one of the below options.\n', 'green'))
+        'Please select one of the below options.\n', 'green'))
     options = ('[1] - To login\n'
                '[2] - To create as account\n'
                '[3] - Continue as guest\n'
                '[Q] - To return to main menu\n')
+    end_func = True
     print(prompt)
-    print(options)
-    while True:
-        user_login_answer = input('Please enter a valid input: \n')
+    print(options)   
+    while exit:        
+        user_login_answer = input('Please enter a valid input: \n')        
         if user_login_answer == '1':
             login_screen()
             break
@@ -78,8 +79,12 @@ def user_login():
             customer_details()
             break
         elif user_login_answer.capitalize() == 'Q':
-            quit_option(exit_to='Welcome')
-            break
+            clear_screen()
+            end_func = quit_option(exit_to='Welcome')
+            print(prompt)
+            print(options)
+            if not end_func:
+                return
         else:
             clear_screen()
             print(prompt)
@@ -98,9 +103,10 @@ def login_screen(error_message=''):
     global _name
     global _delivery_type
     users = user_name_list()
+    end_func = True
+    print(colored('Please enter your username. Or enter "Q" to quit.', 'green'))
     clear_screen()
-    while True:
-        print(colored('Please enter your username. Or enter "Q" to quit.', 'green'))
+    while end_func:        
         print(error_message)
         user_name = input('Username: \n')
         if user_name in users:
@@ -111,7 +117,10 @@ def login_screen(error_message=''):
             password_check(user_name, member_number, user_password)
             break
         elif user_name.capitalize() == 'Q':
-            quit_option()
+            clear_screen()
+            end_func = quit_option(exit_to='Welcome')
+            if not end_func:
+                return
         else:
             clear_screen()
             message = (
@@ -176,18 +185,19 @@ def member_delivery_choice(member_name: str, member_number, user_name):
         'Please enter your delivery type.\n', 'green'))
     options = (
         '[D] - Delivery\n[C] - Collection\n[Q] - Quit to main menu\n')
-    print(prompt)
-    print(options)
     while True:
+        print(prompt)
+        print(options)
         delivery_choice = input('Please select a valid input: \n').strip()
         delivery_choice = delivery_choice.capitalize()
         clear_screen()
         if delivery_choice == 'D':
-            print('This order is for delivery.\n')
-            print(
-                colored(f'We have your address listed as'
-                        f' "{_address}".\n', 'green'))
+
             while True:
+                print('This order is for delivery.\n')
+                print(
+                    colored(f'We have your address listed as'
+                            f' "{_address}".\n', 'green'))
                 accept_delivery = input(
                     'Is this correct?\n[Y] - Yes\n[N] - No\n[Q] - Quit to main menu\n').capitalize()
                 if accept_delivery == 'Y':
@@ -212,8 +222,7 @@ def member_delivery_choice(member_name: str, member_number, user_name):
                     break
                 elif accept_delivery == 'Q':
                     quit_option('return to the members area', member_name,
-                                 member_number, user_name, exit_to='Member area')
-                    break
+                                member_number, user_name, exit_to='Member area')
                 else:
                     clear_screen()
                     print('This order is for delivery.\n')
@@ -236,8 +245,7 @@ def member_delivery_choice(member_name: str, member_number, user_name):
             break
         elif delivery_choice == 'Q':
             quit_option('return to the members area', member_name,
-                         member_number, user_name, exit_to='Member area')
-            break
+                        member_number, user_name, exit_to='Member area')
         else:
             clear_screen()
             print(prompt)
@@ -331,12 +339,12 @@ def members_area(member_name, member_number, user_name):
     @param user_name(string): Members user name taken from
     google sheets 'Users' worksheet.
     """
-    print(pyfiglet.figlet_format(f'Hi {member_name}'))
     member_area_instructions = (colored('What would you'
                                         ' like to do?', 'green')) + \
         '\n\n[1] - Make an order\n[2] - Change password\n[Q] - Log out\n'
-    print(member_area_instructions)
     while True:
+        print(pyfiglet.figlet_format(f'Hi {member_name}'))
+        print(member_area_instructions)
         user_choice = input('Please enter a valid input:\n')
         if user_choice == '1':
             clear_screen()
@@ -349,7 +357,7 @@ def members_area(member_name, member_number, user_name):
             break
         elif user_choice.capitalize() == 'Q':
             quit_option('log out and quit', member_name,
-                         member_number, user_name, exit_to='Main log out')
+                        member_number, user_name, exit_to='Main log out')
         else:
             clear_screen()
             print(pyfiglet.figlet_format(f'Hi {member_name}'))
@@ -380,8 +388,7 @@ def customer_details():
         delivery_choice = input('Please enter a valid input: \n').strip()
         delivery_choice = delivery_choice.capitalize()
         if delivery_choice == 'Q':
-            quit_option()
-            break
+            quit_option(exit_to='Welcome')
         elif delivery_choice == 'D':
             _delivery_type = 'Delivery'
             clear_screen()
@@ -633,7 +640,6 @@ def quit_option(message='quit to the main menu', member_name=None, member_number
     while True:
         confirm_quit = input('Please enter a valid input: \n').strip()
         if confirm_quit.capitalize() == 'Y' and exit_to == 'Welcome':
-            clear_screen()
             welcome()
             return False
         elif confirm_quit.capitalize() == 'Y' and exit_to == 'Main log out':
