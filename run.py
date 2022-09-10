@@ -268,15 +268,19 @@ def create_account():
     Function to accept all required user inputs to create an account
     and append that data to google sheet.
     """
-    clear_screen()
-    print(colored('\nPlease provide the following details to'
+    end_func = True
+    prompt = (colored('Please provide the following details to'
                   ' create an account\n', 'green'))
-    while True:
+    clear_screen()
+    while end_func:
+        print(prompt)
         user_name = input(
             'Please enter a user name. Otherwise enter [Q] to cancel user creation and quit.\n')
         if user_name.capitalize() == 'Q':
-            quit_option(exit_to='Welcome')
-            break
+            clear_screen()
+            end_func = quit_option(exit_to='Welcome')
+            if not end_func:
+                return
         elif validate_new_username(user_name):
             while True:
                 print(password_criteria)
@@ -284,8 +288,9 @@ def create_account():
                     'Please enter your password. Otherwise enter [Q] to cancel account creation and quit.\n')
                 if password.capitalize() == 'Q':
                     clear_screen()
-                    quit_option(exit_to='Welcome')
-                    break
+                    end_func = quit_option(exit_to='Welcome')
+                    if not end_func:
+                        return
                 else:
                     clear_screen()
                     if validate_password(password):
@@ -294,8 +299,9 @@ def create_account():
                                 'Please re enter your password. Otherwise enter [Q] to cancel account creation and quit.\n', 'green'))
                             if password_validate.capitalize() == 'Q':
                                 clear_screen()
-                                quit_option(exit_to='Welcome')
-                                break
+                                end_func = quit_option(exit_to='Welcome')
+                                if not end_func:
+                                    return
                             elif password == password_validate:
                                 clear_screen()
                                 print(colored('Password is valid and matches'
