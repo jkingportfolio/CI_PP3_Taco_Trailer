@@ -646,6 +646,7 @@ def quit_to_main(message='quit', member_name='', member_number=None, user_name='
         elif confirm_quit.capitalize() == 'N':
             clear_screen()
             members_area(member_name, member_number, user_name)
+            welcome()
             break
         else:
             clear_screen()
