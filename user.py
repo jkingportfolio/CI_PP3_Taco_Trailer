@@ -1,4 +1,5 @@
 from google_sheet import *
+from taco_trailer_command_line import clear_screen
 
 
 class User:
@@ -30,19 +31,28 @@ def validate_address() -> str:
     """
     Function to accept and validate user input for address.
     """
-    while True:
+    end_number_func = True
+    end_street_func = True
+    while end_number_func:
         address_number = input(
-            'Please enter your house number: \n').strip()
+            'Please enter your house number. Or enter [Q] to quit.\n').strip()
         if address_number.isdigit():
             address_number = int(address_number)
             break
+        elif address_number.capitalize() == 'Q':
+            clear_screen()
+            confirm_exit = input('Are you sure you want to cancel and return to delivery options?')
+            if confirm_exit.capitalize() == 'Y':
+                return True
+            elif confirm_exit.capitalize() == 'N':
+                return False         
         else:
             clear_screen()
             print(colored(
                 f'Im sorry "{address_number}" is not a number.'
                 ' Please enter a valid number.\n', 'yellow'))
     clear_screen()
-    while True:
+    while end_street_func:
         address_street = input('Please enter your street name: \n')
         if address_street != '' and all(chr.isalpha()
                                         or chr.isspace()

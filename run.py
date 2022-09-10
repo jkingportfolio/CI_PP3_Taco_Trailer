@@ -115,6 +115,7 @@ def login_screen(error_message=''):
                 next((i for i, x in enumerate(logins)
                       if x["User Name"] == user_name), None))
             user_password = logins[member_number].get('Password')
+            _name = logins[member_number].get('Name')
             password_check(user_name, member_number, user_password)
             break
         elif user_name.capitalize() == 'Q':
@@ -186,8 +187,10 @@ def member_delivery_choice(member_name: str, member_number, user_name):
     clear_screen()
     global _delivery_type
     global _address
+    global _name
     end_func = True
     inner_func = True
+    central_func = True
     prompt = (colored(
         'Please enter your delivery type.\n', 'green'))
     options = (
@@ -218,14 +221,23 @@ def member_delivery_choice(member_name: str, member_number, user_name):
                     break
                 elif accept_delivery == 'N':
                     clear_screen()
-                    print(colored('Please enter delivery details'
-                                  ' required.\n', 'green'))
-                    _address = validate_address()
-                    clear_screen()
-                    _delivery_type = 'Delivery'
-                    load_animation('Loading menu.')
-                    display_menu()
-                    break
+                    while central_func:
+                        print(colored('Please enter delivery details'
+                                    ' required.\n', 'green'))
+                        address_input = validate_address()
+                        if not address_input:
+                            member_delivery_choice(member_name, member_number, user_name)    
+                            break
+                        else:
+                            _address = address_input
+                            print(_address)
+                            print('You got there')
+                            sleep(5)
+                            clear_screen()
+                            _delivery_type = 'Delivery'
+                            load_animation('Loading menu.')
+                            display_menu()
+                            return
                 elif accept_delivery == 'Q':
                     clear_screen()
                     inner_func = quit_option('return to the members area', member_name,
