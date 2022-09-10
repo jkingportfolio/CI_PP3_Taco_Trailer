@@ -8,7 +8,7 @@ import pyfiglet
 import gspread
 import getpass
 from google.oauth2.service_account import Credentials
-from taco_trailer_command_line import clear_screen, validate_password
+from taco_trailer_command_line import clear_screen, validate_password, clear_screen
 
 
 SCOPE = [
@@ -120,24 +120,33 @@ def change_password(member_number: str):
                             clear_screen()
                             break
                         elif confirm_password.capitalize() == 'Q':
-                            clear_screen()
-                            break
+                            change_password_exit()
                         else:
                             print(
                                 colored('Second password entry did not meet'
                                         ' the first.\n', 'yellow'))
                     break
                 elif new_password.capitalize() == 'Q':
-                    clear_screen()
-                    break
-                else:
-                    print(
-                        colored('Your new password didnt meet the'
-                                ' criteria.\n', 'yellow'))
+                    change_password_exit()
+                    # while True:
+                    #     clear_screen()
+                    #     print(
+                    #         colored(f'Are you sure you want to cancel password change and return to members area?', 'green'))
+                    #     confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
+                    #     if confirm_exit.capitalize() == 'Y':
+                    #         return
+                    #     elif confirm_exit.capitalize() == 'N':
+                    #         break
+                    #     else:
+                    #         print(
+                    #             f'Im sorry but "{confirm_exit}" is not a valid option. Please enter a valid option')
+                    # else:
+                    #     print(
+                    #         colored('Your new password didnt meet the'
+                    #                 ' criteria.\n', 'yellow'))
             break
         elif password_input.capitalize() == 'Q':
-            clear_screen()
-            break
+            change_password_exit()
         else:
             password_guesses -= 1
             if password_guesses > 0:
@@ -152,3 +161,18 @@ def change_password(member_number: str):
                 sleep(5)
                 clear_screen()
                 break
+
+
+def change_password_exit():
+    while True:
+        clear_screen()
+        print(
+            colored(f'Are you sure you want to cancel password change and return to members area?', 'green'))
+        confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
+        if confirm_exit.capitalize() == 'Y':
+            return
+        elif confirm_exit.capitalize() == 'N':
+            break
+        else:
+            print(
+                f'Im sorry but "{confirm_exit}" is not a valid option. Please enter a valid option')
