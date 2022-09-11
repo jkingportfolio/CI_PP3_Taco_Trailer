@@ -94,8 +94,13 @@ def validate_name() -> str:
     Function to accept and validate user input for name.
     """
     while True:
-        first_name = input('Please enter your first name: \n').strip()
-        if first_name.isalpha():
+        first_name = input(
+            colored('Please enter your first name.'
+                    ' Or enter [Q] to quit.\n', 'green')).strip()
+        if first_name.capitalize() == 'Q':
+            clear_screen()
+            return False
+        elif first_name.isalpha() and first_name.capitalize() != 'Q':
             break
         else:
             clear_screen()
@@ -106,8 +111,12 @@ def validate_name() -> str:
     clear_screen()
     while True:
         surname = input(
-            colored('Please enter your surname: \n', 'green')).strip()
-        if surname.isalpha():
+            colored('Please enter your surname.'
+                    ' Or enter [Q] to quit.\n', 'green')).strip()
+        if surname.capitalize() == 'Q':
+            clear_screen()
+            return False
+        elif surname.isalpha() and surname.capitalize() != 'Q':
             break
         else:
             clear_screen()

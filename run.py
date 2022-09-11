@@ -307,9 +307,9 @@ def create_account():
         elif validate_new_username(user_name):
             while True:
                 print(PASSWORD_CRITERIA)
-                password = getpass.getpass(
+                password = getpass.getpass(colored(
                     'Please enter your password. Otherwise enter'
-                    ' [Q] to cancel\naccount creation and quit.\n')
+                    ' [Q] to cancel\naccount creation and quit.\n', 'green'))
                 if password.capitalize() == 'Q':
                     clear_screen()
                     end_func = quit_option(exit_to='Welcome')
@@ -319,10 +319,10 @@ def create_account():
                     clear_screen()
                     if validate_password(password):
                         while True:
-                            password_validate = getpass.getpass(
+                            password_validate = getpass.getpass(colored(
                                 'Please re enter your password. Otherwise'
-                                ' enter [Q] to cancel\n account'
-                                ' creation and quit.\n')
+                                ' enter [Q] to cancel\naccount'
+                                ' creation and quit.\n', 'green'))
                             if password_validate.capitalize() == 'Q':
                                 clear_screen()
                                 end_func = quit_option(exit_to='Welcome')
@@ -332,10 +332,19 @@ def create_account():
                                 clear_screen()
                                 print(colored('Password is valid and matches'
                                               ' re entry.\n', 'green'))
-                                validate_password(password)
-                                _name = validate_name()
+                                while True:
+                                    _name = validate_name()
+                                    if not _name:
+                                        clear_screen()
+                                        welcome()
+                                        return
                                 clear_screen()
-                                _address = validate_address()
+                                while True:
+                                    _address = validate_address()
+                                    if not _adress:
+                                        clear_screen()
+                                        welcome()
+                                        return
                                 clear_screen()
                                 load_animation(
                                     'Thank you for your details.'
@@ -388,8 +397,8 @@ def members_area(member_name, member_number, user_name):
     """
     end_func = True
     member_area_instructions = (colored('What would you'
-                                        ' like to do?', 'green')) + \
-        '\n\n[1] - Make an order\n[2] - Change password\n[Q] - Log out\n'
+                                        ' like to do?', 'green'))
+    '\n\n[1] - Make an order\n[2] - Change password\n[Q] - Log out\n'
     print(pyfiglet.figlet_format(f'Hi {member_name}'))
     print(member_area_instructions)
     while end_func:
@@ -433,7 +442,11 @@ def customer_details():
     global _address
 
     print(colored('We would like to take your details.\n', 'green'))
-    _name = validate_name()
+    while True:
+        _name = validate_name()
+        if not _name:
+            welcome()
+            break
     clear_screen()
     print(pyfiglet.figlet_format(f'Hi {_name}'))
     prompt = (colored('Please enter your delivery type.\n', 'green'))
