@@ -101,7 +101,7 @@ def validate_name() -> str:
                 ' please enter a valid name.\n', 'yellow'))
     clear_screen()
     while True:
-        surname = input('Please enter your surname: \n').strip()
+        surname = input(colored('Please enter your surname: \n','green')).strip()
         if surname.isalpha():
             break
         else:
