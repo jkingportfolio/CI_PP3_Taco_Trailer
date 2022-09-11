@@ -44,7 +44,7 @@ def admin_dashboard():
                         ' a valid option.\n', 'yellow'))
 
 
-def pending_orders():
+def pending_orders(total_rec_int):
     """
     Function to return pending orders that current time
     is less than delivered time and display in formatted table

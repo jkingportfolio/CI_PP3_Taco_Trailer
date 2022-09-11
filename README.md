@@ -259,7 +259,7 @@ A flowchart was created during the design process to help identify functions tha
 
 <details>
 <summary>Flow Chart</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
+<img src="docs/images/flowchart.png">
 </details>
 
 ### Data Models
@@ -348,11 +348,16 @@ The main page is featured on the main page and displays 4 options for the user t
 
 #### Login 
 
-The login is featured on the main page and will prompt users for a valid user name to be entered.
+The login is featured on the main page and will prompt users for a valid user name to be entered followe by the password.
 
 <details>
-<summary>Login image</summary>
+<summary>Login username image</summary>
 <img src="docs/images/features/login-user-name.png">
+</details>
+
+<details>
+<summary>Login password image</summary>
+<img src="docs/images/features/login-password-entry.png">
 </details>
 
 - Covered in user stories: 1 & 3
@@ -362,8 +367,13 @@ The login is featured on the main page and will prompt users for a valid user na
 The login is featured on the main page and will prompt users for a valid user name to be entered.
 
 <details>
-<summary>Login image</summary>
+<summary>Login prompt image</summary>
 <img src="docs/images/features/login-user-name.png">
+</details>
+
+<details>
+<summary>Invalid user name image</summary>
+<img src="docs/images/features/invalid-user-entry.png">
 </details>
 
 - Covered in user stories: 1, 3 & 21
@@ -374,7 +384,12 @@ The login is featured on the main page and will prompt users for a valid user na
 
 <details>
 <summary>Login image</summary>
-<img src="docs/images/features/login-user-name.png">
+<img src="docs/images/features/login-password-entry.png">
+</details>
+
+<details>
+<summary>Login password invalid image</summary>
+<img src="docs/images/features/login-invalid-password.png">
 </details>
 
 - Covered in user stories: 1, 3 & 21
@@ -392,11 +407,16 @@ The Members area is a feature which will display a range of options for the user
 
 #### Create order 
 
-The create order feature will begin the process of creating an order.
+The create order feature will begin the process of creating an order. When logged in as a member this will prompt the user to enter their delivery type as name and address data has been taken from the Google Sheets file. For a guest the process to create an order will begin at providing a First name.
 
 <details>
-<summary>Create order image</summary>
-<img src="docs/images/features/members-area.png">
+<summary>Create order (member) image</summary>
+<img src="docs/images/features/create-order-member.png">
+</details>
+
+<details>
+<summary>Create order (guest) image</summary>
+<img src="docs/images/features/create-order-guest.png">
 </details>
 
 - Covered in user stories: 1 & 8
@@ -406,8 +426,8 @@ The create order feature will begin the process of creating an order.
 The member delivery options feature will allow logged in users to chose between Delivery or Collection. If Collection is selected then the Address on the order receipt will state 'The Taco Trailer'. If the user selects delivery they will be presented with the address data that they had entered when creating an account, this can be selected as correct and if not users will be prompted to enter a new delivery address for this order only, it will not update the database.
 
 <details>
-<summary>Create order image</summary>
-<img src="docs/images/features/members-area.png">
+<summary>Member delivery order image</summary>
+<img src="docs/images/features/member-order-delivery.png">
 </details>
 
 - Covered in user stories: 1, 5 & 6
@@ -418,7 +438,7 @@ The member change password feature will allow logged in users to change their pa
 
 <details>
 <summary>Change password image</summary>
-<img src="docs/images/features/members-area.png">
+<img src="docs/images/features/member-change-password.png">
 </details>
 
 - Covered in user stories: 1 & 4
@@ -429,7 +449,7 @@ The member password update warning feature will warn users that password changes
 
 <details>
 <summary>Password update warning image</summary>
-<img src="docs/images/features/members-area.png">
+<img src="docs/images/features/member-password-update.png">
 </details>
 
 - Covered in user stories: 1, 4 & 21
@@ -442,7 +462,7 @@ The Admin Dashboard feature is a landing page which is only available for the Ad
 
 <details>
 <summary>Admin Dashboard image</summary>
-<img src="docs/images/features/members-area.png">
+<img src="docs/images/features/admin-dashboard.png">
 </details>
 
 - Covered in user story: 16
