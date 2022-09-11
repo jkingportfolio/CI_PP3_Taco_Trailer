@@ -8,7 +8,7 @@ import pyfiglet
 import gspread
 import getpass
 from google.oauth2.service_account import Credentials
-from taco_trailer_command_line import clear_screen, validate_password, clear_screen
+from taco_trailer_command_line import clear_screen, validate_password
 
 
 SCOPE = [
@@ -90,17 +90,20 @@ def change_password(member_number: str):
     current_password = LOGINS[member_number].get('Password')
     print(colored('Change password\n', 'green'))
     member_cell_number = member_number + 2
-    cancel_prompt = 'Are you sure you want to cancel password change and return to members area?'
+    cancel_prompt = 'Are you sure you want to cancel'
+    ' password change and return to members area?'
     password_guesses = 3
     while True:
         password_input = getpass.getpass(
-            'Please enter your current password or enter "Q" to cancel password change: \n')
+            'Please enter your current password or enter "Q"'
+            ' to cancel password change: \n')
         if password_input == current_password:
             clear_screen()
             print(colored('Current password entered correct.\n', 'green'))
             while True:
                 new_password = getpass.getpass(
-                    'Please enter your new password, or enter "Q" to cancel password change: \n')
+                    'Please enter your new password, or enter "Q"'
+                    ' to cancel password change: \n')
                 clear_screen()
                 if validate_password(new_password):
                     clear_screen()
@@ -172,4 +175,5 @@ def cancel_current_option(prompt):
             return True
         else:
             print(
-                f'Im sorry but "{confirm_exit}" is not a valid option. Please enter a valid option')
+                f'Im sorry but "{confirm_exit}" is not a valid'
+                ' option. Please enter a valid option')
