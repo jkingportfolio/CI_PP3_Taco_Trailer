@@ -180,7 +180,7 @@ The welcome message is featured on the main page and will greet users with a fri
 <img src="docs/images/features/landing-page.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1 & 15
 
 #### Welcome message invalid input feedback 
 
@@ -191,7 +191,7 @@ The welcome message invalid input feedback is featured welcome page and will ale
 <img src="docs/images/features/landing-page-error.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1 & 21
 
 #### Main page 
 
@@ -206,7 +206,7 @@ The main page is featured on the main page and displays 4 options for the user t
 <img src="docs/images/features/main-page.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user story: 1
 
 #### Login 
 
@@ -217,7 +217,7 @@ The login is featured on the main page and will prompt users for a valid user na
 <img src="docs/images/features/login-user-name.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1 & 3
 
 #### Login - User name validation 
 
@@ -228,7 +228,7 @@ The login is featured on the main page and will prompt users for a valid user na
 <img src="docs/images/features/login-user-name.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1, 3 & 21
 
 #### Login - Password validation 
 
@@ -239,7 +239,7 @@ The login is featured on the main page and will prompt users for a valid user na
 <img src="docs/images/features/login-user-name.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1, 3 & 21
 
 #### Members Area 
 
@@ -250,7 +250,7 @@ The Members area is a feature which will display a range of options for the user
 <img src="docs/images/features/members-area.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user story: 1
 
 #### Create order 
 
@@ -261,7 +261,7 @@ The create order feature will begin the process of creating an order.
 <img src="docs/images/features/members-area.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1 & 8
 
 #### Member delivery options 
 
@@ -272,7 +272,7 @@ The member delivery options feature will allow logged in users to chose between 
 <img src="docs/images/features/members-area.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1, 5 & 6
 
 #### Member change password 
 
@@ -283,7 +283,7 @@ The member change password feature will allow logged in users to change their pa
 <img src="docs/images/features/members-area.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1 & 4
 
 #### Member password update warning
 
@@ -294,7 +294,7 @@ The member password update warning feature will warn users that password changes
 <img src="docs/images/features/members-area.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1, 4 & 21
 
 #### Admin Dashboard
 
@@ -307,7 +307,7 @@ The Admin Dashboard feature is a landing page which is only available for the Ad
 <img src="docs/images/features/members-area.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user story: 16
 
 #### Admin - View order records
 
@@ -318,7 +318,7 @@ The Admin view order records feature allows Admin users to view all orders that 
 <img src="docs/images/features/members-area.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user story: 17
 
 #### Admin - View pending orders
 
@@ -329,7 +329,7 @@ The Admin view pending orders feature allows Admin users to view all currently p
 <img src="docs/images/features/members-area.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user story: 18
 
 #### Log out - Public user & Admin
 
@@ -340,7 +340,7 @@ The log out feature allows both public user or Admins to log out of their accoun
 <img src="docs/images/features/members-area.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1 & 3
 
 #### Create account 
 
@@ -351,7 +351,7 @@ The create account is featured on the main page and will allow users to create a
 <img src="docs/images/features/create-account-user-name.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1, 2 & 19
 
 #### User name validation 
 
@@ -362,7 +362,7 @@ The user name validation is featured on the create account page and will parse t
 <img src="docs/images/features/create-account-user-name.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1, 2 & 21
 
 #### Password creation validation 
 
@@ -373,7 +373,7 @@ The password validation is featured on the create account page and will ensure a
 <img src="docs/images/features/create-account-password-error.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1, 2 & 21
 
 #### First and surname validation 
 
@@ -384,7 +384,7 @@ The name validation feature is used to valid that both the first and surnames en
 <img src="docs/images/features/create-account-password-error.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1. 2 & 21
 
 #### House number and Street name validation 
 
@@ -395,7 +395,7 @@ The house number and street name validation feature is used to valid that both t
 <img src="docs/images/features/create-account-password-error.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1, 2 & 21
 
 #### Account creation update warning
 
@@ -406,7 +406,7 @@ The account creation update warning feature will warn users that the account wil
 <img src="docs/images/features/members-area.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user story: 1
 
 #### Guest
 
@@ -417,7 +417,7 @@ The Continue as Guest is featured on the main page and will allow users to order
 <img src="docs/images/features/guest-name.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user story: 1
 
 #### Delivery Type option 
 
@@ -428,7 +428,7 @@ The delivery type option is featured on the main page and will <>
 <img src="docs/images/features/.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1, 5 & 21
 
 #### Collection option address 
 
@@ -439,7 +439,7 @@ The collection option featured will auto populate the delivery address for these
 <img src="docs/images/features/.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1 & 5
 
 #### Menu 
 
@@ -450,7 +450,7 @@ The Menu featured will auto populate the delivery address for these orders as 'T
 <img src="docs/images/features/.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1 & 7
 
 #### Add item to order 
 
@@ -461,7 +461,7 @@ The Add item to order feature on the Menu page allows users to add an item to th
 <img src="docs/images/features/.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1 & 8
 
 #### Invalid item from order 
 
@@ -472,7 +472,7 @@ The Invalid item feature on the Menu page warns users that their previously ente
 <img src="docs/images/features/.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1 & 21
 
 #### Remove item from order 
 
@@ -483,7 +483,7 @@ The remove item from order feature on the Menu page allows users to remove their
 <img src="docs/images/features/.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1 & 9
 
 #### Empty basket warning 
 
@@ -494,7 +494,7 @@ The empty basket warning feature on the Menu page will warn users that their bas
 <img src="docs/images/features/.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1 & 21
 
 #### Preview order 
 
@@ -505,7 +505,7 @@ The preview order feature on the Menu page allows users to preview the items cur
 <img src="docs/images/features/.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1 & 10
 
 #### Cancel order 
 
@@ -516,7 +516,7 @@ The cancel order feature on the Menu page allows users to cancel their order and
 <img src="docs/images/features/.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1 & 11
 
 #### Delivery charge 
 
@@ -527,7 +527,7 @@ The delivery charge feature add a delivery cost if the order is for delivery and
 <img src="docs/images/features/.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user story: 1
 
 #### Complete order receipt 
 
@@ -538,7 +538,7 @@ The display order receipt is featured on the main page and will <>
 <img src="docs/images/features/.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1, 12 & 20
 
 #### Display order receipt 
 
@@ -549,7 +549,7 @@ The display order receipt featured will be displayed upon order completion. It i
 <img src="docs/images/features/.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1 & 13
 
 #### Quit 
 
@@ -560,7 +560,7 @@ The quit is a feature used throughout the app to allow the user to validate they
 <img src="docs/images/features/quit-confirmation-page.png">
 </details>
 
-- Covered in user story: <>
+- Covered in user stories: 1 & 14
 
 
 ### Future implementations
