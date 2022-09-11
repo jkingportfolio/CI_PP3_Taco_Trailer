@@ -43,7 +43,8 @@ def validate_address(message) -> str:
         elif address_number.capitalize() == 'Q':
             clear_screen()
             print(
-                colored(f'Are you sure you want to cancel and return to {message}?', 'green'))
+                colored(f'Are you sure you want to'
+                        f' cancel and return to {message}?', 'green'))
             confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
             if confirm_exit.capitalize() == 'Y':
                 address_input = 'exit_to_delivery'
@@ -59,11 +60,13 @@ def validate_address(message) -> str:
     clear_screen()
     while end_street_func:
         address_street = input(
-            colored('Please enter your street name. Or enter [Q] to quit.\n', 'green'))
+            colored('Please enter your street name. Or enter'
+                    ' [Q] to quit.\n', 'green'))
         if address_street.capitalize() == 'Q':
             clear_screen()
             print(
-                colored(f'Are you sure you want to cancel and return to delivery options?', 'green'))
+                colored('Are you sure you want to cancel'
+                        ' and return to delivery options?', 'green'))
             confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
             if confirm_exit.capitalize() == 'Y':
                 address_input = 'exit_to_delivery'
@@ -71,8 +74,7 @@ def validate_address(message) -> str:
             elif confirm_exit.capitalize() == 'N':
                 address_input = 'cancel'
                 return address_input
-        elif address_street != '' and all(chr.isalpha()
-                                          or chr.isspace()
+        elif address_street != '' and all(chr.isalpha() or chr.isspace()
                                           for chr in address_street):
             break
         else:

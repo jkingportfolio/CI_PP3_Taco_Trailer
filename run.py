@@ -342,7 +342,8 @@ def create_account():
                                         break
                                 clear_screen()
                                 while True:
-                                    _address = validate_address()
+                                    _address = validate_address(
+                                        'the welcome page?')
                                     if not _address:
                                         clear_screen()
                                         welcome()
@@ -468,7 +469,7 @@ def customer_details():
             print(colored(
                 f'\nYou selected {_delivery_type.capitalize()}'
                 ' for your order.\n', 'green'))
-            _address = validate_address()
+            _address = validate_address('the main menu?')
             clear_screen()
             print(colored('Thank you for your details!', 'green'))
             sleep(3)
