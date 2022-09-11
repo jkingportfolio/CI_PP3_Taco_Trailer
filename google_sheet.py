@@ -90,8 +90,8 @@ def change_password(member_number: str):
     current_password = LOGINS[member_number].get('Password')
     print(colored('Change password\n', 'green'))
     member_cell_number = member_number + 2
-    cancel_prompt = 'Are you sure you want to cancel'
-    ' password change and return to members area?'
+    cancel_prompt = ('Are you sure you want to cancel'
+    ' password change and return to members area?')
     password_guesses = 3
     while True:
         password_input = getpass.getpass(
