@@ -109,6 +109,134 @@ The Taco Trailer website has been developed to provide users the chance to order
 
 ### User Manual
 
+<details><summary>Click Here for app use instructions</summary>
+
+#### Overview
+
+The Taco Trailer app is for users who wish to place orders for delivery / collection and also for provding admin users with data from previous orders and pending orders.
+
+#### Welcome Page
+
+Purpose: To greet users.
+
+Description: On the Welcome page users are asked if they would like to login / make an order. Users will be provdided with 2 options.
+
+- Yes 
+- No
+
+Operation: User keyboard input. Selecting Yes will take the user to the Main Screen whilst selecting No will exit the app.
+
+#### Main Page
+
+Purpose: To provide users with a range of options.
+
+Description: On the Main page users are be provdided with 4 options.
+
+- Login 
+- Create an account
+- Continue as guest
+- Return to main menu
+
+Operation: User keyboard input.
+
+### Login
+Selecting the login option will direct users to the login page. Here they will be asked to enter their user name and password. Validation is used to validate that the user name entered is in The Taco Trailer Google Sheets database and that the entered password is correct. When successful the user will now be logged in and at the members area page, if an incorrect password is entered the user will be warned of an incorrect password input. Users have 3 guesses until the access denied message will show and the user is redirected back to the Welcome page. 
+
+### Create an account
+Selecting the create an account option will guide users through the neccesary inputs required for creating an account. 
+
+Those pieces of data are:
+
+- Username
+- Password
+- First name
+- Surname
+- House number
+- Street
+
+All forms of data use validation in which if data entered does not meet the requirements will display a warning message to the user. Once all data has been succcessfully entered the user will be made aware that new accounts can only be accessed upon restart of the app.
+
+### Continue as guest
+Selecting the continue as guest will guide users through the neccesary inputs required for creating an order as a guest. 
+
+Those pieces of data are:
+
+- First name
+- Surname
+- Delivery option (Delivery or Collection)
+- House number (If order is for delivery)
+- Street (If order is for delivery)
+
+All forms of data use validation in which if data entered does not meet the requirements will display a warning message to the user. Once all data has been succcessfully entered the user will then be directed to the menu in which they can then make selections via keyboard input as per below:
+
+- Item number will add the item of the input number to the order, users will be provided with feedback of which item has been added and also a warning message if an invalid input has been entered.
+- R - Remove the last added item to the order. If there is no items currently in the order the user will be presented with an empty basket error message
+- Q - To cancel order, view thank you message and return to the Welcome page. 
+- P - To preview the current order.
+- X - To complete order. This action can be cancelled at the next prompt stating if you are sure you want to complete the order, in which you will be directed back to the menu to continue adding / removing items.
+
+### Return to main menu
+Selecting the return to main menu option will give users the opportunity to be redirect users back to the Welcome page. 
+
+
+
+#### Login
+
+Purpose: To allow users to login and access the 'Members Area' of the app.
+
+Description: On the Welcome page users are asked if they would like to login / make an order. Users will be provdided with 2 options.
+
+- Yes 
+- No
+
+Operation: User keyboard input.
+
+#### Create Account
+
+Purpose: To allow users to create an account with The Taco Trailer for future logins.
+
+Description: On the Welcome page users are asked if they would like to login / make an order. Users will be provdided with 2 options.
+
+- Yes 
+- No
+
+Operation: User keyboard input.
+
+#### Guest Order
+
+Purpose: To allow users who are not already members and do not wish to be the ability to still make an order.
+
+Description: On the Welcome page users are asked if they would like to login / make an order. Users will be provdided with 2 options.
+
+- Yes 
+- No
+
+Operation: User keyboard input.
+
+#### Admin Dashboard
+
+Purpose: To allow Admins to access order records and view pending orders.
+
+Description: On the Welcome page users are asked if they would like to login / make an order. Users will be provdided with 2 options.
+
+- Yes 
+- No
+
+Operation: User keyboard input.
+
+#### Menu
+
+Purpose: To provde users with the range of items available for order and the ability to add/remove items, provide a preview of order and also complete/quit order.
+
+Description: On the Welcome page users are asked if they would like to login / make an order. Users will be provdided with 2 options.
+
+- Yes 
+- No
+
+Operation: User keyboard input.
+
+</details>
+
 ## Technical Design
 
 ### Structure
