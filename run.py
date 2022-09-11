@@ -81,10 +81,11 @@ def user_login():
         elif user_login_answer.capitalize() == 'Q':
             clear_screen()
             end_func = quit_option(exit_to='Welcome')
-            print(prompt)
-            print(options)
             if not end_func:
                 return
+            else:
+                print(prompt)
+                print(options)
         else:
             clear_screen()
             print(prompt)
@@ -123,6 +124,7 @@ def login_screen(error_message=''):
             clear_screen()
             end_func = quit_option(exit_to='Welcome')
             if not end_func:
+                clear_screen()
                 return
         else:
             clear_screen()
@@ -700,6 +702,7 @@ def quit_option(message='quit to the main menu',
     while True:
         confirm_quit = input('Please enter a valid input: \n').strip()
         if confirm_quit.capitalize() == 'Y' and exit_to == 'Welcome':
+            clear_screen()
             welcome()
             return False
         elif confirm_quit.capitalize() == 'Y' and exit_to == 'Main log out':
