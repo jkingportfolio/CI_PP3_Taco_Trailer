@@ -2,12 +2,12 @@
 Main python file
 """
 import getpass
-from admin import admin_dashboard
-from google_sheet import *
-import pyfiglet
-from termcolor import colored
 from datetime import datetime, timedelta
 from time import sleep
+from termcolor import colored
+import pyfiglet
+from admin import admin_dashboard
+from google_sheet import *
 from taco_trailer_command_line import (clear_screen, load_animation,
                                        validate_password, PASSWORD_CRITERIA)
 from order import Order
