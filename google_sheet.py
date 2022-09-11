@@ -90,6 +90,7 @@ def change_password(member_number: str):
     current_password = LOGINS[member_number].get('Password')
     print(colored('Change password\n', 'green'))
     member_cell_number = member_number + 2
+    password_prompt = 'Are you sure you want to cancel password change and return to members area?'
     password_guesses = 3
     while True:
         password_input = getpass.getpass(
@@ -120,7 +121,7 @@ def change_password(member_number: str):
                             clear_screen()
                             break
                         elif confirm_password.capitalize() == 'Q':
-                            confirm_exit = change_password_exit()
+                            confirm_exit = cancel_current_option(password_prompt)
                             if not confirm_exit:
                                 return
                         else:
@@ -129,12 +130,12 @@ def change_password(member_number: str):
                                         ' the first.\n', 'yellow'))
                     break
                 elif new_password.capitalize() == 'Q':
-                    confirm_exit = change_password_exit()
+                    confirm_exit = cancel_current_option(password_prompt)
                     if not confirm_exit:
                         return
             break
         elif password_input.capitalize() == 'Q':
-            confirm_exit = change_password_exit()
+            confirm_exit = cancel_current_option(password_prompt)
             if not confirm_exit:
                 return
 
@@ -154,14 +155,14 @@ def change_password(member_number: str):
                 break
 
 
-def change_password_exit():
+def cancel_current_option(prompt):
     """
-    Function to control Quit option when changing password
+    Function to control Quit option in current program position
     """
     while True:
         clear_screen()
         print(
-            colored(f'Are you sure you want to cancel password change and return to members area?', 'green'))
+            colored(f'{prompt}', 'green'))
         confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
         if confirm_exit.capitalize() == 'Y':
             clear_screen()
