@@ -811,7 +811,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|   |   |     |  |
+|  All listed features in the Features  |   |     |  |
 
 <details>
 <summary>Screenshots</summary>
@@ -822,7 +822,11 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|   |   |    |  |
+| Create Account  | Select the create account option from the main page  | Create account process will begin with prompting for details   | Works as expected |
+| Username Validation  | Enter desired user name when prompted  | Feedback to be displayed validating user name    | Works as expected |
+| Password Validation  | Enter desired password when prompted  |  Feedback to be displayed validating password  | Works as expected |
+| First / Surname Validation  | Enter desired First & Surname when prompted  | Feedback to be displayed validating First name and Surname   | Works as expected |
+| House number / Street name Validation  | Enter desired House number & Street name when prompted  | Feedback to be displayed validating House number & Street Name   | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
@@ -833,7 +837,10 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|  |  |  |  |
+| Login | Navigate to the log in section and select log in | Log in screen to ask for credentials | Works as expected |
+| Login User name validation | To enter user name when prompted | Feedback to be displayed validating user name | Works as expected |
+| Login Password validation | To enter password when prompted | Feedback to be displayed validating password and account to log in |Works as expected  |
+| Log out | To select the log out option from the members or admin page | Prompt to user to confirm log out and then log out and return to Welcome page | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
@@ -844,8 +851,8 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|   |   |  |
-|  |  |  |  |
+| Member change password  |  Navigate to the member change password | To be prompted to enter current password, once validated be prompted to enter new password and re enter to confirm | Works as expected  |
+| Member password update warning | Update password | Feedback to display warning message that password change will only occur on restarting the app |Works as expected  |
 
 <details>
 <summary>Screenshots</summary>
@@ -856,7 +863,9 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|   |  |     |  |
+| Member delivery option  | Log in and create an order and selecte delivery type | To be prompted to enter delivery option    | Works as expected |
+| Delivery type option  | As a guest begin an order and after entering First name and surname choose delivery type  | Display delivery types and be able to pick from Delivery or Collection  |Works as expected  |
+| Collection option address  | Select collection as delivery option | App to auto populate the address as The Taco Trailer in the receipt    |Works as expected  |
 
 <details>
 <summary>Screenshots</summary>
@@ -867,7 +876,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|   |   |  |  |
+| Member delivery option  | When choosing delivery type, select delivery but when prompted if current address is correct select no  | User to be prompted with entering house number and street name | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
@@ -878,8 +887,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|   |  |  |
-|   |   |  |  |
+| Menu  | Enter all user credentials to gain access to the menu  | Menu and options to be displayed to the user  | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
@@ -891,7 +899,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|   |  |   | |
+| Add item to order  | From the menu page enter a valid number to add that item to the basket | Item to be added to the basket and feedback to be provided  |Works as expected |
 
 <details>
 <summary>Screenshots</summary>
@@ -902,7 +910,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|   |   |  |  |
+| Remove item  | From the menu page enter R  | Last added item to be removed from order and feedback provided to confirm this | Works as expected  |
 
 <details>
 <summary>Screenshots</summary>
@@ -913,7 +921,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|  |  |    |  |
+| Preview order | From the menu page enter P | Order preview to display all added items to the basket   | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
@@ -924,7 +932,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|   |   |   |  |
+| Cancel order  | From the menu page press Q  | Be prompted to confirm user would like to quit to Welcome page and cancel order  |Works as expected  |
 
 <details>
 <summary>Screenshots</summary>
@@ -935,7 +943,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|   |   |    |  |
+| Complete order  | From the menu page press X  | Be prompted to confirm if the user would like to complete the order or return to the menu   | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
@@ -946,7 +954,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|   |   |    |  |
+| Display receipt  | Complete an order  | Upon order completion a formatted page of order summary will be shown   | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
@@ -957,7 +965,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|      |    |      |  |
+|   Quit   |  Press Q at the receipt page  | App to exit upon user entering Q     |Works as expected  |
 
 <details>
 <summary>Screenshots</summary>
@@ -970,7 +978,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|      |    |      |  |
+|  Welcome message    | Run the app   |  Welcome message to be displayed    |Works as expected  |
 
 <details>
 <summary>Screenshots</summary>
@@ -981,7 +989,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|      |    |      |  |
+|   Admin Dashboard   |  Login as Admin  | After successful Admin login, Admin will be displayed the Admin Dashboard     |Works as expected  |
 
 <details>
 <summary>Screenshots</summary>
@@ -992,7 +1000,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|      |    |      |  |
+|  View order records   |  From the Admin Dashboard select the option to view order records  | Admin to be displayed with page stating how many records are available  |Works as expected  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1003,7 +1011,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|      |    |      |  |
+|   View pending orders   |    |      |Works as expected  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1014,7 +1022,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|      |    |      |  |
+|  Create account    |  From the Admin Dashboard select the option to view pending order  |   Admin to be displayed with page indicating all pending orders if there are any   |Works as expected  |
 
 <details>
 <summary>Screenshots</summary>
@@ -1025,7 +1033,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|      |    |      |  |
+| Complete order receipt     |  Users input and complete orders  |  For each order submitted by a user, all information entered during this process will be appended to a google sheets worksheet    | Works as expected |
 
 <details>
 <summary>Screenshots</summary>
@@ -1036,7 +1044,18 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|      |    |      |  |
+| Welcome message invalid feedback     |  User enters incorrect input  |      |Works as expected  |
+| Login username validation     |  User enters user name  |      |Works as expected  |
+| Login Password validation     | User enters password   |      | Works as expected |
+| Member password update warning     |  Member to update password  | Upon successful password change, user will be displayed warning that password change will only take effect upon restart of the app     | Works as expected |
+| Username validation    | Memeber to attempt to sign in with user name   | User to be prompted      |Works as expected  |
+| Password creation validation     |  User to enter a desired password when creating an account  | User to be provided with feedback based on password validation | Works as expected |
+| First / surname validation     | User to enter a desired First name and Surname when creating an account   |  User to be provided with feedback based on name validation    | Works as expected |
+| House number / Street name validation     |  User to enter a desired House number and Street when creating an account  |  User to be provided with feedback based on House number and Street name validation    | Works as expected |
+| Delivery Type option     | User to chose a delivery type   | User to be provided with feedback stating chosen delivery type | Works as expected |
+| Invalid item     | User to enter a wrong item number on the menu page   | User to be provided with feedback stating there was an error in their recent entry     |Works as expected  |
+| Empty basket     | User to try and remove an item from an empty basket   |  User to be provided with feedback stating there was an error due to their basket being empty    |Works as expected |
+
 
 <details>
 <summary>Screenshots</summary>
