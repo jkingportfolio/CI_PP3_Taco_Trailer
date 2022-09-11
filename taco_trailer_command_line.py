@@ -32,14 +32,12 @@ def load_animation(message: str):
     @param message(string): Custom loading message.
     """
     clear_screen()
-    i = 0
     load_message = (colored(message, 'green'))
     for i in range(5):
         print(load_message)
         sleep(0.75)
         load_message = load_message + (colored('.', 'green'))
         clear_screen()
-        i = + 1
 
 
 def validate_password(passwd: str):
