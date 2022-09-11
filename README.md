@@ -473,7 +473,7 @@ The Admin view order records feature allows Admin users to view all orders that 
 
 <details>
 <summary>View order records image</summary>
-<img src="docs/images/features/members-area.png">
+<img src="docs/images/features/admin-order-records.png">
 </details>
 
 - Covered in user story: 17
@@ -484,7 +484,7 @@ The Admin view pending orders feature allows Admin users to view all currently p
 
 <details>
 <summary>View pending orders image</summary>
-<img src="docs/images/features/members-area.png">
+<img src="docs/images/features/admin-pending-orders.png">
 </details>
 
 - Covered in user story: 18
@@ -495,7 +495,7 @@ The log out feature allows both public user or Admins to log out of their accoun
 
 <details>
 <summary>Log out image</summary>
-<img src="docs/images/features/members-area.png">
+<img src="docs/images/features/members-logging-out.png">
 </details>
 
 - Covered in user stories: 1 & 3
@@ -516,18 +516,28 @@ The create account is featured on the main page and will allow users to create a
 The user name validation is featured on the create account page and will parse the Google Sheets worksheet data to ensure user name is not already in use.
 
 <details>
-<summary>Image</summary>
+<summary>Create account enter user name image</summary>
 <img src="docs/images/features/create-account-user-name.png">
+</details>
+
+<details>
+<summary>User name taken error image</summary>
+<img src="docs/images/features/create-account-user-name-taken.png">
 </details>
 
 - Covered in user stories: 1, 2 & 21
 
 #### Password creation validation 
 
-The password validation is featured on the create account page and will ensure a password created
+The password validation is featured on the create account page and will ensure a password created.
 
 <details>
-<summary>Image</summary>
+<summary>Password creation image</summary>
+<img src="docs/images/features/create-account-password.png">
+</details>
+
+<details>
+<summary>Password creation error image</summary>
 <img src="docs/images/features/create-account-password-error.png">
 </details>
 
@@ -538,8 +548,13 @@ The password validation is featured on the create account page and will ensure a
 The name validation feature is used to valid that both the first and surnames entered when creating an account do not contain special characters, nummbers or whitespace and if do prompts the user to re enter the data.
 
 <details>
-<summary>First and surname validation image</summary>
-<img src="docs/images/features/create-account-password-error.png">
+<summary>First name validation image</summary>
+<img src="docs/images/features/create-account-first-name-error.png">
+</details>
+
+<details>
+<summary>Surname validation image</summary>
+<img src="docs/images/features/create-account-surname-error.png">
 </details>
 
 - Covered in user stories: 1. 2 & 21
@@ -549,8 +564,13 @@ The name validation feature is used to valid that both the first and surnames en
 The house number and street name validation feature is used to valid that both the house number and address entered when creating an account. The house number is checked to make sure it does not contain special characters, characters or whitespace and if do prompts the user to re enter the data. The street name is checked to make sure it doesnt include numbers or special character.
 
 <details>
-<summary>House number and street name validation image</summary>
-<img src="docs/images/features/create-account-password-error.png">
+<summary>House numbervalidation image</summary>
+<img src="docs/images/features/create-account-house-number-error.png">
+</details>
+
+<details>
+<summary>Street name validation image</summary>
+<img src="docs/images/features/create-account-street-name-error.png">
 </details>
 
 - Covered in user stories: 1, 2 & 21
@@ -561,7 +581,7 @@ The account creation update warning feature will warn users that the account wil
 
 <details>
 <summary>Account creationg update warning image</summary>
-<img src="docs/images/features/members-area.png">
+<img src="docs/images/features/create-account-new-user-warning.png">
 </details>
 
 - Covered in user story: 1
@@ -579,11 +599,21 @@ The Continue as Guest is featured on the main page and will allow users to order
 
 #### Delivery Type option 
 
-The delivery type option is featured on the main page and will <>
+The delivery type option is featured when a member or guest creates an order. There are two choices, one being delivery and another of collection. Collection will auto populate the address as The Taco Trailer where as delivery will ask a guest for their address and for a member they will be prompted to confirm the details saved in their profile is where they would like this order to be delivered. If not, they will be prompted to enter the new delivery address.
 
 <details>
-<summary>Image</summary>
-<img src="docs/images/features/.png">
+<summary>Delivery type (member) image</summary>
+<img src="docs/images/features/member-order-delivery-choice.png">
+</details>
+
+<details>
+<summary>Delivery type (member) "delivery" image</summary>
+<img src="docs/images/features/member-order-delivery.png">
+</details>
+
+<details>
+<summary>Delivery type (guest) image</summary>
+<img src="docs/images/features/guest-order-delivery.png">
 </details>
 
 - Covered in user stories: 1, 5 & 21
@@ -594,7 +624,7 @@ The collection option featured will auto populate the delivery address for these
 
 <details>
 <summary>Collection option address image</summary>
-<img src="docs/images/features/.png">
+<img src="docs/images/features/member-order-choice-collection.png">
 </details>
 
 - Covered in user stories: 1 & 5
@@ -605,7 +635,7 @@ The Menu featured will auto populate the delivery address for these orders as 'T
 
 <details>
 <summary>Collection option address image</summary>
-<img src="docs/images/features/.png">
+<img src="docs/images/features/menu.png">
 </details>
 
 - Covered in user stories: 1 & 7
@@ -615,8 +645,8 @@ The Menu featured will auto populate the delivery address for these orders as 'T
 The Add item to order feature on the Menu page allows users to add an item to their order by typing the relevant number as display on the menu.
 
 <details>
-<summary>Image</summary>
-<img src="docs/images/features/.png">
+<summary>Add item to order image</summary>
+<img src="docs/images/features/menu-add-item.png">
 </details>
 
 - Covered in user stories: 1 & 8
@@ -626,8 +656,8 @@ The Add item to order feature on the Menu page allows users to add an item to th
 The Invalid item feature on the Menu page warns users that their previously entered input is not valid.
 
 <details>
-<summary>Image</summary>
-<img src="docs/images/features/.png">
+<summary>Invalid item image</summary>
+<img src="docs/images/features/menu-invalid-entry.png">
 </details>
 
 - Covered in user stories: 1 & 21
@@ -637,8 +667,8 @@ The Invalid item feature on the Menu page warns users that their previously ente
 The remove item from order feature on the Menu page allows users to remove their last added item from their order. If their basket is empty, the user will be presented with a warning stating that the basket is currently empty.
 
 <details>
-<summary>Image</summary>
-<img src="docs/images/features/.png">
+<summary>Remove item image</summary>
+<img src="docs/images/features/menu-remove-item.png">
 </details>
 
 - Covered in user stories: 1 & 9
@@ -648,8 +678,8 @@ The remove item from order feature on the Menu page allows users to remove their
 The empty basket warning feature on the Menu page will warn users that their basket is empty, therefore no items can be removed.
 
 <details>
-<summary>Image</summary>
-<img src="docs/images/features/.png">
+<summary>Empty basket error image</summary>
+<img src="docs/images/features/menu-remove-item-error.png">
 </details>
 
 - Covered in user stories: 1 & 21
@@ -659,8 +689,8 @@ The empty basket warning feature on the Menu page will warn users that their bas
 The preview order feature on the Menu page allows users to preview the items currently added to their order.
 
 <details>
-<summary>Image</summary>
-<img src="docs/images/features/.png">
+<summary>Preview order image</summary>
+<img src="docs/images/features/menu-preview-order.png">
 </details>
 
 - Covered in user stories: 1 & 10
@@ -670,8 +700,8 @@ The preview order feature on the Menu page allows users to preview the items cur
 The cancel order feature on the Menu page allows users to cancel their order and return to the Welcome page.
 
 <details>
-<summary>Image</summary>
-<img src="docs/images/features/.png">
+<summary>Cancel order image</summary>
+<img src="docs/images/features/menu-cancel-order.png">
 </details>
 
 - Covered in user stories: 1 & 11
@@ -681,19 +711,19 @@ The cancel order feature on the Menu page allows users to cancel their order and
 The delivery charge feature add a delivery cost if the order is for delivery and add nothing if it is for collection.
 
 <details>
-<summary>Image</summary>
-<img src="docs/images/features/.png">
+<summary>Delivery charge image</summary>
+<img src="docs/images/features/order-receipt.png">
 </details>
 
 - Covered in user story: 1
 
-#### Complete order receipt 
+#### Complete order 
 
-The display order receipt is featured on the main page and will <>
+The complete order is a feature that will allow users to complete and process the order or cancel and return to the menu and all of its options.
 
 <details>
-<summary>Image</summary>
-<img src="docs/images/features/.png">
+<summary>Complete order image</summary>
+<img src="docs/images/features/menu-processing-order.png">
 </details>
 
 - Covered in user stories: 1, 12 & 20
@@ -703,8 +733,8 @@ The display order receipt is featured on the main page and will <>
 The display order receipt featured will be displayed upon order completion. It includes all information which had been gathered throughout the process such as user name, name, address, delivery type and items order.
 
 <details>
-<summary>Image</summary>
-<img src="docs/images/features/.png">
+<summary>Display order receipt image</summary>
+<img src="docs/images/features/order-receipt.png">
 </details>
 
 - Covered in user stories: 1 & 13
