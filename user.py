@@ -28,7 +28,7 @@ class User:
         worksheet_to_update.append_row(append_order_data)
 
 
-def validate_address() -> str:
+def validate_address(message) -> str:
     """
     Function to accept and validate user input for address.
     """
@@ -43,7 +43,7 @@ def validate_address() -> str:
         elif address_number.capitalize() == 'Q':
             clear_screen()
             print(
-                colored(f'Are you sure you want to cancel and return to delivery options?', 'green'))
+                colored(f'Are you sure you want to cancel and return to {message}?', 'green'))
             confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
             if confirm_exit.capitalize() == 'Y':
                 address_input = 'exit_to_delivery'

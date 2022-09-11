@@ -228,7 +228,7 @@ def member_delivery_choice(member_name: str, member_number, user_name):
                     while central_func:
                         print(colored('Please enter delivery details'
                                       ' required.\n', 'green'))
-                        address_input = validate_address()
+                        address_input = validate_address('delivery options?')
                         if address_input == 'exit_to_delivery':
                             member_delivery_choice(
                                 member_name, member_number, user_name)
