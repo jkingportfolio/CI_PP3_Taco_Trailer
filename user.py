@@ -1,6 +1,6 @@
+from termcolor import colored
 from google_sheet import *
 from taco_trailer_command_line import clear_screen
-from termcolor import colored
 
 
 class User:
