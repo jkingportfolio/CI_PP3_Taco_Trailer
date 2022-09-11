@@ -124,7 +124,6 @@ def login_screen(error_message=''):
             clear_screen()
             end_func = quit_option(exit_to='Welcome')
             if not end_func:
-                clear_screen()
                 return
         else:
             clear_screen()
