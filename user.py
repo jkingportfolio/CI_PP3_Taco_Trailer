@@ -48,11 +48,9 @@ def validate_address() -> str:
                         ' return to delivery options?', 'green'))
             confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
             if confirm_exit.capitalize() == 'Y':
-                address_input = 'exit_to_delivery'
-                return address_input
+                return False
             elif confirm_exit.capitalize() == 'N':
-                address_input = 'cancel'
-                return address_input
+                break
         else:
             clear_screen()
             print(colored(

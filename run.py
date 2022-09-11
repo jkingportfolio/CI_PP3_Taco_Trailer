@@ -338,13 +338,17 @@ def create_account():
                                         clear_screen()
                                         welcome()
                                         return
+                                    else:
+                                        break
                                 clear_screen()
                                 while True:
                                     _address = validate_address()
-                                    if not _adress:
+                                    if not _address:
                                         clear_screen()
                                         welcome()
                                         return
+                                    else:
+                                        break
                                 clear_screen()
                                 load_animation(
                                     'Thank you for your details.'
@@ -397,8 +401,8 @@ def members_area(member_name, member_number, user_name):
     """
     end_func = True
     member_area_instructions = (colored('What would you'
-                                        ' like to do?', 'green'))
-    '\n\n[1] - Make an order\n[2] - Change password\n[Q] - Log out\n'
+                                        ' like to do?', 'green'
+    '\n\n[1] - Make an order\n[2] - Change password\n[Q] - Log out\n'))
     print(pyfiglet.figlet_format(f'Hi {member_name}'))
     print(member_area_instructions)
     while end_func:
