@@ -1,12 +1,12 @@
 """
 Admin functions module
 """
+from datetime import datetime, timedelta
+from tabulate import tabulate
+from termcolor import colored
 from google_sheet import *
 from taco_trailer_command_line import load_animation
-from tabulate import tabulate
 from taco_trailer_command_line import clear_screen
-from datetime import datetime, timedelta
-from termcolor import colored
 
 
 def admin_dashboard():
