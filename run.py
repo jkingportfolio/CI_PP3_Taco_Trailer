@@ -331,7 +331,7 @@ def create_account():
                                             ' been created.', 'green'))
                                 print(colored(
                                     '\nPlease note account log in will only be valid upon'
-                                    ' program restart.', 'yellow'))
+                                    ' program restart.\n', 'yellow'))
                                 new_user = User(user_name, password,
                                                 _name, _address)
                                 new_user.append_user()
