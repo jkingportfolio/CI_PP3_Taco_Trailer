@@ -5,7 +5,7 @@ import os
 from time import sleep
 from termcolor import colored
 
-password_criteria = ('Password creation criteria.\n\nPasswords must:'
+PASSWORD_CRITERIA = ('Password creation criteria.\n\nPasswords must:'
                      ' \n\n1. Be longer than 6 characters\n'
                      '2. Be less than 20 characters\n'
                      '3. Include at least one numeral\n'

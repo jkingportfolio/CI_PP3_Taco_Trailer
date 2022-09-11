@@ -9,7 +9,7 @@ from termcolor import colored
 from datetime import datetime, timedelta
 from time import sleep
 from taco_trailer_command_line import (clear_screen, load_animation,
-                                       validate_password, password_criteria)
+                                       validate_password, PASSWORD_CRITERIA)
 from order import Order
 from user import User, validate_name, validate_address
 
@@ -305,7 +305,7 @@ def create_account():
                 return
         elif validate_new_username(user_name):
             while True:
-                print(password_criteria)
+                print(PASSWORD_CRITERIA)
                 password = getpass.getpass(
                     'Please enter your password. Otherwise enter'
                     ' [Q] to cancel\naccount creation and quit.\n')
