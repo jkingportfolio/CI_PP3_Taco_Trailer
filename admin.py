@@ -82,6 +82,7 @@ def pending_orders(total_rec_int: int):
                 colored('\nPress "Q" to return to Admin'
                         ' dashboard.\n', 'green'))
             if user_choice.capitalize() == 'Q':
+                load_animation('Returning to admin dashboard.')
                 admin_dashboard()
                 break
             else:
