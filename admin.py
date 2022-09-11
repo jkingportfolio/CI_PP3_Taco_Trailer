@@ -18,8 +18,9 @@ def admin_dashboard():
     record_count = list(filter(None, SALES_WORKSHEET.col_values(1)))
     total_records = str(len(record_count)+1)
     total_rec_int = int(total_records)
-    print(colored('Logged in as Administrator\n', 'green'))
+    cancel_prompt = 'Are you sure you want to log out and return to the main menu?'
     while True:
+        print(colored('Logged in as Administrator\n', 'green'))
         print(
             'Please enter a valid input\n\n[1] View records\n[2]'
             ' View pending orders\n[Q] Exit admin dashboard\n')
@@ -31,9 +32,10 @@ def admin_dashboard():
             pending_orders(total_rec_int)
             break
         elif admin_option.capitalize() == 'Q':
-            clear_screen()
-            load_animation('Logging out as Admin.')
-            break
+            confirm_exit = cancel_current_option(cancel_prompt)
+            if not confirm_exit:
+                load_animation('Logging out as Admin.')
+                return            
         else:
             print(colored('Logged in as Administrator\n', 'green'))
             print(
