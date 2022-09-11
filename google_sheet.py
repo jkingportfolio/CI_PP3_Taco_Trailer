@@ -120,33 +120,24 @@ def change_password(member_number: str):
                             clear_screen()
                             break
                         elif confirm_password.capitalize() == 'Q':
-                            change_password_exit()
+                            confirm_exit = change_password_exit()
+                            if not confirm_exit:
+                                return
                         else:
                             print(
                                 colored('Second password entry did not meet'
                                         ' the first.\n', 'yellow'))
                     break
                 elif new_password.capitalize() == 'Q':
-                    change_password_exit()
-                    # while True:
-                    #     clear_screen()
-                    #     print(
-                    #         colored(f'Are you sure you want to cancel password change and return to members area?', 'green'))
-                    #     confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
-                    #     if confirm_exit.capitalize() == 'Y':
-                    #         return
-                    #     elif confirm_exit.capitalize() == 'N':
-                    #         break
-                    #     else:
-                    #         print(
-                    #             f'Im sorry but "{confirm_exit}" is not a valid option. Please enter a valid option')
-                    # else:
-                    #     print(
-                    #         colored('Your new password didnt meet the'
-                    #                 ' criteria.\n', 'yellow'))
+                    confirm_exit = change_password_exit()
+                    if not confirm_exit:
+                        return
             break
         elif password_input.capitalize() == 'Q':
-            change_password_exit()
+            confirm_exit = change_password_exit()
+            if not confirm_exit:
+                return
+
         else:
             password_guesses -= 1
             if password_guesses > 0:
@@ -164,15 +155,20 @@ def change_password(member_number: str):
 
 
 def change_password_exit():
+    """
+    Function to control Quit option when changing password
+    """
     while True:
         clear_screen()
         print(
             colored(f'Are you sure you want to cancel password change and return to members area?', 'green'))
         confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
         if confirm_exit.capitalize() == 'Y':
-            return
+            clear_screen()
+            return False
         elif confirm_exit.capitalize() == 'N':
-            break
+            clear_screen()
+            return True
         else:
             print(
                 f'Im sorry but "{confirm_exit}" is not a valid option. Please enter a valid option')
