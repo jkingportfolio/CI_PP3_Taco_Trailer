@@ -35,8 +35,8 @@ def validate_address() -> str:
     end_number_func = True
     end_street_func = True
     while end_number_func:
-        address_number = input(
-            'Please enter your house number. Or enter [Q] to quit.\n').strip()
+        address_number = input(colored(
+            'Please enter your house number. Or enter [Q] to quit.\n','green')).strip()
         if address_number.isdigit():
             address_number = int(address_number)
             break
