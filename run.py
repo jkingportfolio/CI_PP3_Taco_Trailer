@@ -105,7 +105,8 @@ def login_screen(error_message=''):
     users = user_name_list()
     end_func = True
     clear_screen()
-    prompt = (colored('Please enter your username. Or enter "Q" to quit.', 'green'))
+    prompt = (colored('Please enter your username.'
+                      ' Or enter "Q" to quit.', 'green'))
     while end_func:
         print(prompt)
         print(error_message)
@@ -139,7 +140,8 @@ def password_check(user_name, member_number, user_password):
     global _address
     password_guesses = 3
     pass_prompt = (
-        colored('Please enter your password. Or enter "Q" to quit.\n', 'green'))
+        colored('Please enter your password.'
+                ' Or enter "Q" to quit.\n', 'green'))
     end_func = True
     clear_screen()
     while end_func:
@@ -208,7 +210,8 @@ def member_delivery_choice(member_name: str, member_number, user_name):
                     colored(f'We have your address listed as'
                             f' "{_address}".\n', 'green'))
                 accept_delivery = input(
-                    'Is this correct?\n[Y] - Yes\n[N] - No\n[Q] - Quit to main menu\n').capitalize()
+                    'Is this correct?\n[Y] - Yes\n[N] - No\n[Q]'
+                    ' - Quit to main menu\n').capitalize()
                 if accept_delivery == 'Y':
                     clear_screen()
                     _delivery_type = 'Delivery'
@@ -242,8 +245,10 @@ def member_delivery_choice(member_name: str, member_number, user_name):
                             return
                 elif accept_delivery == 'Q':
                     clear_screen()
-                    inner_func = quit_option('return to the members area', member_name,
-                                             member_number, user_name, exit_to='Member area')
+                    inner_func = quit_option('return to'
+                                             ' the members area', member_name,
+                                             member_number, user_name,
+                                             exit_to='Member area')
                     if not inner_func:
                         return
                 else:
@@ -265,8 +270,11 @@ def member_delivery_choice(member_name: str, member_number, user_name):
             break
         elif delivery_choice == 'Q':
             clear_screen()
-            end_func = quit_option('return to the members area', member_name,
-                                   member_number, user_name, exit_to='Member area')
+            end_func = quit_option('return to the members area',
+                                   member_name,
+                                   member_number,
+                                   user_name,
+                                   exit_to='Member area')
             if not end_func:
                 return
         else:
@@ -288,7 +296,8 @@ def create_account():
     while end_func:
         print(prompt)
         user_name = input(
-            'Please enter a user name. Otherwise enter [Q] to cancel\nuser creation and quit.\n')
+            'Please enter a user name. Otherwise enter [Q]'
+            ' to cancel\nuser creation and quit.\n')
         if user_name.capitalize() == 'Q':
             clear_screen()
             end_func = quit_option(exit_to='Welcome')
@@ -298,7 +307,8 @@ def create_account():
             while True:
                 print(password_criteria)
                 password = getpass.getpass(
-                    'Please enter your password. Otherwise enter [Q] to cancel\naccount creation and quit.\n')
+                    'Please enter your password. Otherwise enter'
+                    ' [Q] to cancel\naccount creation and quit.\n')
                 if password.capitalize() == 'Q':
                     clear_screen()
                     end_func = quit_option(exit_to='Welcome')
@@ -309,7 +319,9 @@ def create_account():
                     if validate_password(password):
                         while True:
                             password_validate = getpass.getpass(
-                                'Please re enter your password. Otherwise enter [Q] to cancel\n account creation and quit.\n')
+                                'Please re enter your password. Otherwise'
+                                ' enter [Q] to cancel\n account'
+                                ' creation and quit.\n')
                             if password_validate.capitalize() == 'Q':
                                 clear_screen()
                                 end_func = quit_option(exit_to='Welcome')
@@ -325,12 +337,15 @@ def create_account():
                                 _address = validate_address()
                                 clear_screen()
                                 load_animation(
-                                    'Thank you for your details. Creating account.')
+                                    'Thank you for your details.'
+                                    ' Creating account.')
                                 print(
-                                    colored(f'New user account for "{user_name}" has'
+                                    colored(f'New user account'
+                                            f' for "{user_name}" has'
                                             ' been created.', 'green'))
                                 print(colored(
-                                    '\nPlease note account log in will only be valid upon'
+                                    '\nPlease note account log in will'
+                                    ' only be valid upon'
                                     ' program restart.\n', 'yellow'))
                                 new_user = User(user_name, password,
                                                 _name, _address)
@@ -340,17 +355,21 @@ def create_account():
                             elif password != password_validate:
                                 clear_screen()
                                 print(
-                                    f'Currently creating password for: {user_name}\n')
+                                    f'Currently creating password'
+                                    f' for: {user_name}\n')
                                 print(colored(
                                     'First password entry meets the password'
                                     ' creation criteria.\n', 'green'))
                                 print(colored(
-                                    'Im sorry those passwords do not match, please try'
-                                    ' re enter your password again.\n', 'yellow'))
+                                    'Im sorry those passwords'
+                                    ' do not match, please try'
+                                    ' re enter your password'
+                                    ' again.\n', 'yellow'))
                             else:
                                 clear_screen()
                                 print(
-                                    f'Currently entered username: {user_name}\n')
+                                    f'Currently entered'
+                                    f' username: {user_name}\n')
                         break
             break
 
@@ -385,8 +404,11 @@ def members_area(member_name, member_number, user_name):
             break
         elif user_choice.capitalize() == 'Q':
             clear_screen()
-            end_func = quit_option('log out and quit', member_name,
-                                   member_number, user_name, exit_to='Main log out')
+            end_func = quit_option('log out and quit',
+                                   member_name,
+                                   member_number,
+                                   user_name,
+                                   exit_to='Main log out')
             if not end_func:
                 return
             print(pyfiglet.figlet_format(f'Hi {member_name}'))
@@ -545,7 +567,8 @@ def order_item():
                                headers=['Item', 'Name', 'Cost (£)'],
                                tablefmt="simple", numalign="center"))
                 print('')
-                print(colored('Please enter "Y" to return to order screen.', 'yellow'))
+                print(colored('Please enter "Y"'
+                              ' to return to order screen.', 'yellow'))
                 sleep(2)
         elif food_item.isdigit() and int(food_item) > 0:
             try:
@@ -662,7 +685,11 @@ def thank_you():
     print(pyfiglet.figlet_format(title))
 
 
-def quit_option(message='quit to the main menu', member_name=None, member_number=None, user_name=None, exit_to=''):
+def quit_option(message='quit to the main menu',
+                member_name=None,
+                member_number=None,
+                user_name=None,
+                exit_to=''):
     """
     Function to quit to main menu
     """
@@ -695,9 +722,11 @@ def quit_option(message='quit to the main menu', member_name=None, member_number
             return True
         else:
             clear_screen()
-            print(colored('Are you sure you want to quit to the main screen?', 'green'))
+            print(colored('Are you sure you want to quit'
+                          ' to the main screen?', 'green'))
             print('\n[Y] - Yes\n[N] - No')
-            print(colored(f'\nIm sorry but "{confirm_quit} is not a valid option. Please'
+            print(colored(f'\nIm sorry but "{confirm_quit}'
+                          ' is not a valid option. Please'
                           ' enter a valid input.\n', 'yellow'))
 
 
