@@ -630,7 +630,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-1.png">
 </details>
 
-2. As a user, I want to be able to view the menu.
+2. As a user, I want to be able to create an account.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -641,7 +641,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-2.png">
 </details>
 
-3. As a user, I want to be able to add items to my order.
+3. As a user, I want to be able to log into my account.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -652,7 +652,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-3.png">
 </details>
 
-4. As a user, I want to be able to remove items from my order.
+4. As a user, I want to be able to change my account password.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -664,7 +664,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-4.png">
 </details>
 
-5. As a user, I want to be able to preview an order.
+5. As a user, I want to be able to chose between order pick up or delivery.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -675,7 +675,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-5.png">
 </details>
 
-6. As a user, I want to be able to cancel an unplaced order.
+6. As a user, I want to be able to change current order address if the stored one is incorrect.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -686,7 +686,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-6.png">
 </details>
 
-7. As a user, I want to be able to place an order.
+7. As a user, I want to be able to view the menu.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -699,7 +699,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-7.1.png">
 </details>
 
-8. As a user, I want to be shown a receipt.
+8. As a user, I want to be able to add items to my order.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -710,7 +710,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-8.png">
 </details>
 
-9. As a user, I want to be able to exit the app.
+9. As a user, I want to be able to remove items from my order.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -721,9 +721,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-9.png">
 </details>
 
-#### Site Owner
-
-10. As the site owner, I would want users to be greeted with a welcome message to give a friendly feel to the app.
+10. As a user, I want to be able to preview an order.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -734,7 +732,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-10.png">
 </details>
 
-11. As the site owner, I would want to be able to access a password locked admin area.
+11. As a user, I want to be able to cancel an unplaced order.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -745,7 +743,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-11.png">
 </details>
 
-12. As the site owner, I would want to be able to access all previous order records.
+12. As a user, I want to be able to place an order.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -756,7 +754,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-12.png">
 </details>
 
-13. As the site owner, I would want to be able to access a list of pending orders.
+13. As a user, I want to be shown a receipt.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
@@ -767,7 +765,86 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-13.png">
 </details>
 
-14. As the site owner, I would not want the user to have to restart the app due to bugs in the code.
+14. As a user, I want to be able to exit the app.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|      |    |      |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-user-stories/testing-user-stories-14.png">
+</details>
+
+#### Site Owner
+
+15. As the site owner, I would want users to be greeted with a welcome message to give a friendly feel to the app.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|      |    |      |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-user-stories/testing-user-stories-14.png">
+</details>
+
+16. As the site owner, I would want to be able to access a password locked admin area.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|      |    |      |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-user-stories/testing-user-stories-14.png">
+</details>
+
+17. As the site owner, I would want to be able to access all previous order records.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|      |    |      |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-user-stories/testing-user-stories-14.png">
+</details>
+
+18. As the site owner, I would want to be able to access a list of pending orders.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|      |    |      |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-user-stories/testing-user-stories-14.png">
+</details>
+
+19. As the site owner, I would want the registered users information to be saved to a google sheets file.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|      |    |      |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-user-stories/testing-user-stories-14.png">
+</details>
+
+20. As the site owner, I would want orders to be saved to a google sheets file.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+|      |    |      |  |
+
+<details>
+<summary>Screenshots</summary>
+<img src="docs/testing-user-stories/testing-user-stories-14.png">
+</details>
+
+21. As the site owner, I would want the user to get feedback in the case of invalid input.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
