@@ -451,9 +451,7 @@ def customer_details():
         _name = validate_name()
         if not _name:
             welcome()
-            break
-        else:
-            break
+            return
     clear_screen()
     print(pyfiglet.figlet_format(f'Hi {_name}'))
     prompt = (colored('Please enter your delivery type.\n', 'green'))

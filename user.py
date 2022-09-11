@@ -99,7 +99,7 @@ def validate_name() -> str:
             clear_screen()
             return False
         elif first_name.isalpha() and first_name.capitalize() != 'Q':
-            break
+            return
         else:
             clear_screen()
             print(colored(
