@@ -123,6 +123,7 @@ def search_records(total_rec_int: int):
                         f'Record "{record_number}" does not exist, please'
                         ' enter valid record number', 'yellow'))
             elif record_number == 0:
+                load_animation('Returning to admin dashboard.')
                 break
             else:
                 print(colored(
