@@ -83,7 +83,7 @@ The Taco Trailer website has been developed to provide users the chance to order
 
 1. As a user, I want to be provided with clear instructions throughout the app.
 2. As a user, I want to be able to create an account.
-3. As a user, I want to be able to log into my account.
+3. As a user, I want to be able to login/out of my account.
 4. As a user, I want to be able to change my account password.
 5. As a user, I want to be able to chose between order pick up or delivery.
 6. As a user, I want to be able to change current order address if the stored one is incorrect.
@@ -641,7 +641,7 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-2.png">
 </details>
 
-3. As a user, I want to be able to log into my account.
+3. As a user, I want to be able to login/out of my account.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
