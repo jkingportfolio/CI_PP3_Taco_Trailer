@@ -36,14 +36,16 @@ def validate_address() -> str:
     end_street_func = True
     while end_number_func:
         address_number = input(colored(
-            'Please enter your house number. Or enter [Q] to quit.\n','green')).strip()
+            'Please enter your house number. Or enter'
+            ' [Q] to quit.\n', 'green')).strip()
         if address_number.isdigit():
             address_number = int(address_number)
             break
         elif address_number.capitalize() == 'Q':
             clear_screen()
             print(
-                colored(f'Are you sure you want to cancel and return to delivery options?', 'green'))
+                colored('Are you sure you want to cancel and'
+                        ' return to delivery options?', 'green'))
             confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
             if confirm_exit.capitalize() == 'Y':
                 address_input = 'exit_to_delivery'
@@ -59,11 +61,13 @@ def validate_address() -> str:
     clear_screen()
     while end_street_func:
         address_street = input(
-            colored('Please enter your street name. Or enter [Q] to quit.\n', 'green'))
+            colored('Please enter your street name.'
+                    ' Or enter [Q] to quit.\n', 'green'))
         if address_street.capitalize() == 'Q':
             clear_screen()
             print(
-                colored(f'Are you sure you want to cancel and return to delivery options?', 'green'))
+                colored('Are you sure you want to cancel and'
+                        ' return to delivery options?', 'green'))
             confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
             if confirm_exit.capitalize() == 'Y':
                 address_input = 'exit_to_delivery'
@@ -71,9 +75,9 @@ def validate_address() -> str:
             elif confirm_exit.capitalize() == 'N':
                 address_input = 'cancel'
                 return address_input
-        elif address_street != '' and all(chr.isalpha()
-                                          or chr.isspace()
-                                          for chr in address_street):
+        elif address_street != '' and all(chr.isalpha() or
+                                          chr.isspace() for
+                                          chr in address_street):
             break
         else:
             clear_screen()
@@ -101,7 +105,8 @@ def validate_name() -> str:
                 ' please enter a valid name.\n', 'yellow'))
     clear_screen()
     while True:
-        surname = input(colored('Please enter your surname: \n','green')).strip()
+        surname = input(
+            colored('Please enter your surname: \n', 'green')).strip()
         if surname.isalpha():
             break
         else:
