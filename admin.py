@@ -18,7 +18,8 @@ def admin_dashboard():
     record_count = list(filter(None, SALES_WORKSHEET.col_values(1)))
     total_records = str(len(record_count)+1)
     total_rec_int = int(total_records)
-    cancel_prompt = 'Are you sure you want to log out and return to the main menu?'
+    cancel_prompt = ('Are you sure you want to log out and'
+                     ' return to the main menu?')
     while True:
         print(colored('Logged in as Administrator\n', 'green'))
         print(
@@ -35,7 +36,7 @@ def admin_dashboard():
             confirm_exit = cancel_current_option(cancel_prompt)
             if not confirm_exit:
                 load_animation('Logging out as Admin.')
-                return            
+                return
         else:
             print(colored('Logged in as Administrator\n', 'green'))
             print(
@@ -43,7 +44,7 @@ def admin_dashboard():
                         ' a valid option.\n', 'yellow'))
 
 
-def pending_orders(total_rec_int: int):
+def pending_orders():
     """
     Function to return pending orders that current time
     is less than delivered time and display in formatted table
@@ -57,7 +58,6 @@ def pending_orders(total_rec_int: int):
         local_time_displayed = local_time.strftime("%H:%M:%S %Y-%m-%d")
         print(f'The current time and date is: {local_time_displayed}\n')
         pending_order_time = current_time + timedelta(minutes=45)
-        # pending_order_time = pending_order_time.strftime("%H:%M:%S %Y-%m-%d")
         FORMATTED_SALES = ORDER_RECORDS
 
         try:
