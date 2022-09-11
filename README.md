@@ -173,88 +173,248 @@ In its entirety the website consists of one main page, with a mock terminal with
 
 #### Welcome message 
 
-The welcome message is featured on the main page and will <>
+The welcome message is featured on the main page and will greet users with a friendly message.
 
 <details>
-<summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
+<summary>Welcome message image</summary>
+<img src="docs/images/features/landing-page.png">
 </details>
 
 - Covered in user story: <>
 
-#### Main menu 
+#### Welcome message invalid input feedback 
 
-The main menu is featured on the main page and will <>
+The welcome message invalid input feedback is featured welcome page and will alert users of an invalid option entry.
 
 <details>
-<summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
+<summary>Welcome message invalid input image</summary>
+<img src="docs/images/features/landing-page-error.png">
 </details>
 
 - Covered in user story: <>
 
-#### Log in 
+#### Main page 
 
-The log in is featured on the main page and will <>
+The main page is featured on the main page and displays 4 options for the user to pick from:
+    - Login
+    - Create and account
+    - Continue as guest
+    - Return to main menu
 
 <details>
-<summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
+<summary>Main page image</summary>
+<img src="docs/images/features/main-page.png">
+</details>
+
+- Covered in user story: <>
+
+#### Login 
+
+The login is featured on the main page and will prompt users for a valid user name to be entered.
+
+<details>
+<summary>Login image</summary>
+<img src="docs/images/features/login-user-name.png">
+</details>
+
+- Covered in user story: <>
+
+#### Login - User name validation 
+
+The login is featured on the main page and will prompt users for a valid user name to be entered.
+
+<details>
+<summary>Login image</summary>
+<img src="docs/images/features/login-user-name.png">
+</details>
+
+- Covered in user story: <>
+
+#### Login - Password validation 
+
+The login is featured on the main page and will prompt users for a valid user name to be entered.
+
+<details>
+<summary>Login image</summary>
+<img src="docs/images/features/login-user-name.png">
+</details>
+
+- Covered in user story: <>
+
+#### Members Area 
+
+The Members area is a feature which will display a range of options for the user that is now logged in. It also includes a personalised Welcome message.
+
+<details>
+<summary>Members area image</summary>
+<img src="docs/images/features/members-area.png">
+</details>
+
+- Covered in user story: <>
+
+#### Create order 
+
+The create order feature will begin the process of creating an order.
+
+<details>
+<summary>Create order image</summary>
+<img src="docs/images/features/members-area.png">
+</details>
+
+- Covered in user story: <>
+
+#### Member delivery options 
+
+The member delivery options feature will allow logged in users to chose between Delivery or Collection. If Collection is selected then the Address on the order receipt will state 'The Taco Trailer'. If the user selects delivery they will be presented with the address data that they had entered when creating an account, this can be selected as correct and if not users will be prompted to enter a new delivery address for this order only, it will not update the database.
+
+<details>
+<summary>Create order image</summary>
+<img src="docs/images/features/members-area.png">
+</details>
+
+- Covered in user story: <>
+
+#### Member change password 
+
+The member change password feature will allow logged in users to change their password. Users must first confirm their current password and then enter a password which meets the criteria and then re enter to validate. Users will then made aware that password changes will only happen upon restart of the app.
+
+<details>
+<summary>Change password image</summary>
+<img src="docs/images/features/members-area.png">
+</details>
+
+- Covered in user story: <>
+
+#### Member password update warning
+
+The member password update warning feature will warn users that password changes will only happen upon restart of the app.
+
+<details>
+<summary>Password update warning image</summary>
+<img src="docs/images/features/members-area.png">
+</details>
+
+- Covered in user story: <>
+
+#### Admin Dashboard
+
+The Admin Dashboard feature is a landing page which is only available for the Admin user. It features 2 option:
+    - View order records
+    - View pending order
+
+<details>
+<summary>Admin Dashboard image</summary>
+<img src="docs/images/features/members-area.png">
+</details>
+
+- Covered in user story: <>
+
+#### Admin - View order records
+
+The Admin view order records feature allows Admin users to view all orders that have been created and stored in the Google Sheets 'Sales' worksheet.
+
+<details>
+<summary>View order records image</summary>
+<img src="docs/images/features/members-area.png">
+</details>
+
+- Covered in user story: <>
+
+#### Admin - View pending orders
+
+The Admin view pending orders feature allows Admin users to view all currently pending orders that are stored in the Google Sheets 'Sales' worksheet.
+
+<details>
+<summary>View pending orders image</summary>
+<img src="docs/images/features/members-area.png">
+</details>
+
+- Covered in user story: <>
+
+#### Log out - Public user & Admin
+
+The log out feature allows both public user or Admins to log out of their account and return to the Welcome page.
+
+<details>
+<summary>Log out image</summary>
+<img src="docs/images/features/members-area.png">
 </details>
 
 - Covered in user story: <>
 
 #### Create account 
 
-The create account is featured on the main page and will <>
+The create account is featured on the main page and will allow users to create an account with The Taco Trailer.
 
 <details>
-<summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
-</details>
-
-- Covered in user story: <>
-
-#### Guest order 
-
-The welcome messafe is featured on the main page and will <>
-
-<details>
-<summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
-</details>
-
-- Covered in user story: <>
-
-#### Quit 
-
-The quit is featured on the main page and will <>
-
-<details>
-<summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
+<summary>Create account image</summary>
+<img src="docs/images/features/create-account-user-name.png">
 </details>
 
 - Covered in user story: <>
 
 #### User name validation 
 
-The user name validation is featured on the main page and will <>
+The user name validation is featured on the create account page and will parse the Google Sheets worksheet data to ensure user name is not already in use.
 
 <details>
 <summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
+<img src="docs/images/features/create-account-user-name.png">
 </details>
 
 - Covered in user story: <>
 
-#### Password validation 
+#### Password creation validation 
 
-The password validation is featured on the main page and will <>
+The password validation is featured on the create account page and will ensure a password created
 
 <details>
 <summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
+<img src="docs/images/features/create-account-password-error.png">
+</details>
+
+- Covered in user story: <>
+
+#### First and surname validation 
+
+The name validation feature is used to valid that both the first and surnames entered when creating an account do not contain special characters, nummbers or whitespace and if do prompts the user to re enter the data.
+
+<details>
+<summary>First and surname validation image</summary>
+<img src="docs/images/features/create-account-password-error.png">
+</details>
+
+- Covered in user story: <>
+
+#### House number and Street name validation 
+
+The house number and street name validation feature is used to valid that both the house number and address entered when creating an account. The house number is checked to make sure it does not contain special characters, characters or whitespace and if do prompts the user to re enter the data. The street name is checked to make sure it doesnt include numbers or special character.
+
+<details>
+<summary>House number and street name validation image</summary>
+<img src="docs/images/features/create-account-password-error.png">
+</details>
+
+- Covered in user story: <>
+
+#### Account creation update warning
+
+The account creation update warning feature will warn users that the account will only be accessible upon restart of the app.
+
+<details>
+<summary>Account creationg update warning image</summary>
+<img src="docs/images/features/members-area.png">
+</details>
+
+- Covered in user story: <>
+
+#### Guest
+
+The Continue as Guest is featured on the main page and will allow users to order without the need for logging into an account.
+
+<details>
+<summary>Guest login image</summary>
+<img src="docs/images/features/guest-name.png">
 </details>
 
 - Covered in user story: <>
@@ -265,150 +425,139 @@ The delivery type option is featured on the main page and will <>
 
 <details>
 <summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
+<img src="docs/images/features/.png">
 </details>
 
 - Covered in user story: <>
 
-#### Member delivery location update 
+#### Collection option address 
 
-The Member delivery location update is featured on the main page and will <>
+The collection option featured will auto populate the delivery address for these orders as 'The Taco Trailer' and will be displayed on the order receipt.
 
 <details>
-<summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
+<summary>Collection option address image</summary>
+<img src="docs/images/features/.png">
 </details>
 
 - Covered in user story: <>
 
-#### Yellow warning messages 
+#### Menu 
 
-The yellow warning messages is featured on the main page and will <>
-
-<details>
-<summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
-</details>
-
-- Covered in user story: <>
-
-#### Input validation 
-
-The input validation is featured on the main page and will <>
+The Menu featured will auto populate the delivery address for these orders as 'The Taco Trailer' and will be displayed on the order receipt.
 
 <details>
-<summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
+<summary>Collection option address image</summary>
+<img src="docs/images/features/.png">
 </details>
 
 - Covered in user story: <>
 
 #### Add item to order 
 
-The Add item to order is featured on the main page and will <>
+The Add item to order feature on the Menu page allows users to add an item to their order by typing the relevant number as display on the menu.
 
 <details>
 <summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
+<img src="docs/images/features/.png">
+</details>
+
+- Covered in user story: <>
+
+#### Invalid item from order 
+
+The Invalid item feature on the Menu page warns users that their previously entered input is not valid.
+
+<details>
+<summary>Image</summary>
+<img src="docs/images/features/.png">
 </details>
 
 - Covered in user story: <>
 
 #### Remove item from order 
 
-The remove item from orde3r is featured on the main page and will <>
+The remove item from order feature on the Menu page allows users to remove their last added item from their order. If their basket is empty, the user will be presented with a warning stating that the basket is currently empty.
 
 <details>
 <summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
+<img src="docs/images/features/.png">
+</details>
+
+- Covered in user story: <>
+
+#### Empty basket warning 
+
+The empty basket warning feature on the Menu page will warn users that their basket is empty, therefore no items can be removed.
+
+<details>
+<summary>Image</summary>
+<img src="docs/images/features/.png">
 </details>
 
 - Covered in user story: <>
 
 #### Preview order 
 
-The Preview order is featured on the main page and will <>
+The preview order feature on the Menu page allows users to preview the items currently added to their order.
 
 <details>
 <summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
-</details>
-
-- Covered in user story: <>
-
-#### Display order receipt 
-
-The display order receipt is featured on the main page and will <>
-
-<details>
-<summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
+<img src="docs/images/features/.png">
 </details>
 
 - Covered in user story: <>
 
 #### Cancel order 
 
-The cancel order is featured on the main page and will <>
+The cancel order feature on the Menu page allows users to cancel their order and return to the Welcome page.
 
 <details>
 <summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
+<img src="docs/images/features/.png">
 </details>
 
 - Covered in user story: <>
 
-#### Admin Dashboard 
+#### Delivery charge 
 
-The Admin Dashboard is featured on the main page and will <>
+The delivery charge feature add a delivery cost if the order is for delivery and add nothing if it is for collection.
 
 <details>
 <summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
+<img src="docs/images/features/.png">
 </details>
 
 - Covered in user story: <>
 
-#### View order records 
+#### Complete order receipt 
 
-The view order records is featured on the main page and will <>
+The display order receipt is featured on the main page and will <>
 
 <details>
 <summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
+<img src="docs/images/features/.png">
 </details>
 
 - Covered in user story: <>
 
-#### View pending orders 
+#### Display order receipt 
 
-The view pending orders is featured on the main page and will <>
+The display order receipt featured will be displayed upon order completion. It includes all information which had been gathered throughout the process such as user name, name, address, delivery type and items order.
 
 <details>
 <summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
+<img src="docs/images/features/.png">
 </details>
 
 - Covered in user story: <>
 
-#### Members area 
+#### Quit 
 
-The members area orders is featured on the main page and will <>
-
-<details>
-<summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
-</details>
-
-- Covered in user story: <>
-
-#### Change password 
-
-The change password is featured on the main page and will <>
+The quit is a feature used throughout the app to allow the user to validate they do intend to quit and if not return to the current position in the app.
 
 <details>
-<summary>Image</summary>
-<img src="docs/js-logic-flow-annotated.jpg">
+<summary>Quit image</summary>
+<img src="docs/images/features/quit-confirmation-page.png">
 </details>
 
 - Covered in user story: <>
