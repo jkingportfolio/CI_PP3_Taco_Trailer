@@ -238,7 +238,6 @@ def member_delivery_choice(member_name: str, member_number, user_name):
                             continue
                         else:
                             _address = address_input
-                            print(_address)
                             clear_screen()
                             _delivery_type = 'Delivery'
                             load_animation('Loading menu.')
@@ -445,7 +444,7 @@ def customer_details():
     global _name
     global _delivery_type
     global _address
-    end_func = True
+    end_func = True    
     print(colored('We would like to take your details.\n', 'green'))
     while True:
         _name = validate_name()
@@ -463,6 +462,7 @@ def customer_details():
     print(prompt)
     print(options)
     while end_func:
+        inner_func = True
         delivery_choice = input('Please enter a valid input: \n').strip()
         delivery_choice = delivery_choice.capitalize()
         if delivery_choice == 'Q':
@@ -478,17 +478,37 @@ def customer_details():
         elif delivery_choice == 'D':
             _delivery_type = 'Delivery'
             clear_screen()
-            print(colored(
-                f'\nYou selected {_delivery_type.capitalize()}'
-                ' for your order.\n', 'green'))
-            _address = validate_address('the main menu?')
-            clear_screen()
-            print(colored('Thank you for your details!', 'green'))
-            sleep(3)
-            load_animation('Loading menu.')
-            clear_screen()
-            display_menu()
-            break
+            while inner_func:
+                print(colored('Please enter delivery details'
+                                ' required.\n', 'green'))
+                address_input = validate_address('delivery options?')
+                if address_input == 'exit_to_delivery':
+                    clear_screen()
+                    print(hello_message)
+                    print(prompt)
+                    print(options)
+                    inner_func = False
+                    
+                elif address_input == 'cancel':
+                    clear_screen()
+                    continue
+                else:
+                    _address = address_input
+                    clear_screen()
+                    _delivery_type = 'Delivery'
+                    load_animation('Loading menu.')
+                    display_menu()
+                    return
+            # print(colored(
+            #     f'\nYou selected {_delivery_type.capitalize()}'
+            #     ' for your order.\n', 'green'))
+            # clear_screen()
+            # print(colored('Thank you for your details!', 'green'))
+            # sleep(3)
+            # load_animation('Loading menu.')
+            # clear_screen()
+            # display_menu()
+            # break
         elif delivery_choice == 'C':
             _delivery_type = 'Collection'
             clear_screen()
