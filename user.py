@@ -32,9 +32,7 @@ def validate_address(message) -> str:
     """
     Function to accept and validate user input for address.
     """
-    end_number_func = True
-    end_street_func = True
-    while end_number_func:
+    while True:
         address_number = input(
             'Please enter your house number. Or enter [Q] to quit.\n').strip()
         if address_number.isdigit():
@@ -45,20 +43,29 @@ def validate_address(message) -> str:
             print(
                 colored(f'Are you sure you want to'
                         f' cancel and return to {message}?', 'green'))
-            confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
-            if confirm_exit.capitalize() == 'Y':
-                address_input = 'exit_to_delivery'
-                return address_input
-            elif confirm_exit.capitalize() == 'N':
-                address_input = 'cancel'
-                return address_input
+            while True:
+                confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
+                if confirm_exit.capitalize() == 'Y':
+                    address_input = 'exit_to_delivery'
+                    return address_input
+                elif confirm_exit.capitalize() == 'N':
+                    clear_screen()
+                    break
+                else:
+                    clear_screen()
+                    print(colored('Are you sure you want to quit'
+                          ' to the main screen?', 'green'))
+                    print('\n[Y] - Yes\n[N] - No')
+                    print(colored(f'\nIm sorry but "{confirm_quit}'
+                          ' is not a valid option. Please'
+                                  ' enter a valid input.\n', 'yellow'))
         else:
             clear_screen()
             print(colored(
                 f'Im sorry "{address_number}" is not a number.'
                 ' Please enter a valid number.\n', 'yellow'))
     clear_screen()
-    while end_street_func:
+    while True:
         address_street = input(
             colored('Please enter your street name. Or enter'
                     ' [Q] to quit.\n', 'green'))
@@ -67,13 +74,14 @@ def validate_address(message) -> str:
             print(
                 colored('Are you sure you want to cancel'
                         ' and return to delivery options?', 'green'))
-            confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
-            if confirm_exit.capitalize() == 'Y':
-                address_input = 'exit_to_delivery'
-                return address_input
-            elif confirm_exit.capitalize() == 'N':
-                address_input = 'cancel'
-                return address_input
+            while True:
+                confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
+                if confirm_exit.capitalize() == 'Y':
+                    address_input = 'exit_to_delivery'
+                    return address_input
+                elif confirm_exit.capitalize() == 'N':
+                    clear_screen()
+                    break
         elif address_street != '' and all(chr.isalpha() or chr.isspace()
                                           for chr in address_street):
             break

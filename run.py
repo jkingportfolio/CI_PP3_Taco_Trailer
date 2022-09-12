@@ -347,7 +347,8 @@ def create_account():
                                     address_input = validate_address(
                                         'the welcome page?')
                                     if address_input == 'exit_to_delivery':
-                                        clear_screen()                                        
+                                        clear_screen()
+                                        welcome()                                        
                                         inner_func = False
                                     elif address_input == 'cancel':
                                         clear_screen()
