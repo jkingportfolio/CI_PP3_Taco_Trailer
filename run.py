@@ -106,8 +106,8 @@ def login_screen(error_message=''):
     users = user_name_list()
     end_func = True
     clear_screen()
-    prompt = (('Please enter your username.'
-                      ' Or enter "Q" to quit.', 'green'))
+    prompt = (colored('Please enter your username.'
+               ' Or enter "Q" to quit.', 'green'))
     while end_func:
         print(prompt)
         print(error_message)
@@ -348,7 +348,7 @@ def create_account():
                                         'the welcome page?')
                                     if address_input == 'exit_function':
                                         clear_screen()
-                                        welcome()                                        
+                                        welcome()
                                         inner_func = False
                                     elif address_input == 'cancel':
                                         clear_screen()
@@ -555,7 +555,8 @@ def order_item():
         food_item = food_item.capitalize()
         if food_item == "Q":
             clear_screen()
-            print(colored('Are you sure you want to cancel the order and quit to the welcome page?', 'yellow'))
+            print(colored(
+                'Are you sure you want to cancel the order and quit to the welcome page?', 'yellow'))
             quit = input('\n[Y] - Yes\n[N] - No\n')
             quit = quit.capitalize()
             if quit == 'Y':
@@ -717,7 +718,8 @@ def complete_order():
             thank_you()
             break
         else:
-            print(colored(f'Im sorry but {finish} is an invalid input.', 'yellow'))
+            print(
+                colored(f'Im sorry but {finish} is an invalid input.', 'yellow'))
 
 
 def thank_you():
