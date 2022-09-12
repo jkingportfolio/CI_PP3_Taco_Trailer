@@ -744,7 +744,7 @@ def quit_option(message='quit to the main menu',
                 user_name=None,
                 exit_to=''):
     """
-    Function to quit to main menu
+    Function to quit to various pages dependant on exit_to arguement passed
     """
     clear_screen()
     print(
