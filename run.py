@@ -318,6 +318,7 @@ def create_account():
                     clear_screen()
                     if validate_password(password):
                         while True:
+                            inner_func = True
                             password_validate = getpass.getpass(colored(
                                 'Please re enter your password. Otherwise'
                                 ' enter [Q] to cancel\naccount'
@@ -337,34 +338,39 @@ def create_account():
                                         clear_screen()
                                         welcome()
                                         return
-                                    # else:
-                                    #     break
-                                clear_screen()
-                                while True:
-                                    _address = validate_address(
-                                        'the welcome page?')
-                                    if not _address:
-                                        clear_screen()
-                                        welcome()
-                                        return
                                     else:
                                         break
                                 clear_screen()
-                                load_animation(
-                                    'Thank you for your details.'
-                                    ' Creating account.')
-                                print(
-                                    colored(f'New user account'
-                                            f' for "{user_name}" has'
-                                            ' been created.', 'green'))
-                                print(colored(
-                                    '\nPlease note account log in will'
-                                    ' only be valid upon'
-                                    ' program restart.\n', 'yellow'))
-                                new_user = User(user_name, password,
-                                                _name, _address)
-                                new_user.append_user()
-                                user_login()
+                                while inner_func:
+                                    print(colored('Please enter delivery details'
+                                                  ' required.\n', 'green'))
+                                    address_input = validate_address(
+                                        'the welcome page?')
+                                    if address_input == 'exit_to_delivery':
+                                        clear_screen()                                        
+                                        inner_func = False
+                                    elif address_input == 'cancel':
+                                        clear_screen()
+                                        continue
+                                    else:
+                                        _address = address_input
+                                        clear_screen()
+                                        load_animation(
+                                            'Thank you for your details.'
+                                            ' Creating account.')
+                                        print(
+                                            colored(f'New user account'
+                                                    f' for "{user_name}" has'
+                                                    ' been created.', 'green'))
+                                        print(colored(
+                                            '\nPlease note account log in will'
+                                            ' only be valid upon'
+                                            ' program restart.\n', 'yellow'))
+                                        new_user = User(user_name, password,
+                                                        _name, _address)
+                                        new_user.append_user()
+                                        user_login()
+                                        return
                                 break
                             elif password != password_validate:
                                 clear_screen()
@@ -444,7 +450,7 @@ def customer_details():
     global _name
     global _delivery_type
     global _address
-    end_func = True    
+    end_func = True
     print(colored('We would like to take your details.\n', 'green'))
     while True:
         _name = validate_name()
@@ -480,7 +486,7 @@ def customer_details():
             clear_screen()
             while inner_func:
                 print(colored('Please enter delivery details'
-                                ' required.\n', 'green'))
+                              ' required.\n', 'green'))
                 address_input = validate_address('delivery options?')
                 if address_input == 'exit_to_delivery':
                     clear_screen()
@@ -488,7 +494,6 @@ def customer_details():
                     print(prompt)
                     print(options)
                     inner_func = False
-                    
                 elif address_input == 'cancel':
                     clear_screen()
                     continue
