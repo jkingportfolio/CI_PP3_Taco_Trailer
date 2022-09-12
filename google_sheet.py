@@ -108,9 +108,10 @@ def change_password(member_number: str):
                 if validate_password(new_password):
                     clear_screen()
                     while True:
-                        confirm_password = getpass.getpass(colored(
+                        print(colored('New password entered has passed validation.\n', 'green'))
+                        confirm_password = getpass.getpass(
                             'Please confirm your new password, or'
-                            ' enter "Q" to quit: \n', 'green'))
+                            ' enter "Q" to quit: \n')
                         clear_screen()
                         if confirm_password == new_password:
                             SHEET.worksheet('Users').update_cell(
