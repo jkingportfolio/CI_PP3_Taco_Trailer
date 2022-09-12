@@ -54,7 +54,7 @@ def validate_address(message) -> str:
                 else:
                     clear_screen()
                     print(colored('Are you sure you want to quit'
-                          ' to the main screen?', 'yellow'))
+                          ' to the main page?', 'yellow'))
                     print('\n[Y] - Yes\n[N] - No')
                     print(colored(f'\nIm sorry but "{confirm_quit}'
                           ' is not a valid option. Please'
@@ -72,7 +72,7 @@ def validate_address(message) -> str:
             clear_screen()
             print(
                 colored('Are you sure you want to cancel'
-                        ' and return to delivery options?', 'yellow'))
+                        ' and return to the main page?', 'yellow'))
             while True:
                 confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
                 if confirm_exit.capitalize() == 'Y':
@@ -104,7 +104,7 @@ def validate_name() -> str:
         if first_name.capitalize() == 'Q':
             clear_screen()
             print(colored('Are you sure you want to'
-                          ' quit to the welcome page?', 'yellow'))
+                          ' quit to the main page?', 'yellow'))
             print('\n[Y] - Yes\n[N] - No\n')
             while True:
                 confirm_quit = input('Please enter a valid input: \n').strip()
@@ -117,7 +117,7 @@ def validate_name() -> str:
                 else:
                     clear_screen()
                     print(colored('Are you sure you want to quit'
-                          ' to the main screen?', 'yellow'))
+                          ' to the main page?', 'yellow'))
                     print('\n[Y] - Yes\n[N] - No')
                     print(colored(f'\nIm sorry but "{confirm_quit}'
                           ' is not a valid option. Please'
@@ -137,7 +137,7 @@ def validate_name() -> str:
         if surname.capitalize() == 'Q':
             clear_screen()
             print(colored('Are you sure you want to'
-                          ' quit to the welcome page?', 'yellow'))
+                          ' quit to the main page?', 'yellow'))
             print('\n[Y] - Yes\n[N] - No\n')
             while True:
                 confirm_quit = input('Please enter a valid input: \n').strip()
@@ -150,7 +150,7 @@ def validate_name() -> str:
                 else:
                     clear_screen()
                     print(colored('Are you sure you want to quit'
-                          ' to the main screen?', 'yellow'))
+                          ' to the main page?', 'yellow'))
                     print('\n[Y] - Yes\n[N] - No')
                     print(colored(f'\nIm sorry but "{confirm_quit}'
                           ' is not a valid option. Please'

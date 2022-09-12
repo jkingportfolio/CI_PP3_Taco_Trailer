@@ -166,7 +166,7 @@ def cancel_current_option(prompt):
     while True:
         clear_screen()
         print(
-            colored(f'{prompt}', 'green'))
+            colored(f'{prompt}', 'yellow'))
         confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
         if confirm_exit.capitalize() == 'Y':
             clear_screen()
