@@ -756,6 +756,7 @@ def quit_option(message='quit to the main menu',
             return False
         elif confirm_quit.capitalize() == 'Y' and exit_to == 'Member area':
             clear_screen()
+            load_animation('Returning to welcome page.')
             members_area(member_name, member_number, user_name)
             return False
         elif confirm_quit.capitalize() == 'N' and exit_to == 'Welcome':
