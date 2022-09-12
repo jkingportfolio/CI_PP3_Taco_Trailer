@@ -154,7 +154,7 @@ def password_check(user_name, member_number, user_password):
             break
         elif password == user_password:
             load_animation(
-                f'Entered credentials are valid.\n\n'
+                'Credentials are valid.\n\n'
                 f'Logging in as {user_name}.')
             member_address = logins[member_number].get('Address')
             _address = member_address
