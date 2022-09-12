@@ -116,7 +116,6 @@ def validate_name() -> str:
                     print(colored(f'\nIm sorry but "{confirm_quit}'
                           ' is not a valid option. Please'
                                   ' enter a valid input.\n', 'yellow'))
-            break
         elif first_name.isalpha() and first_name.capitalize() != 'Q':
             break
         else:

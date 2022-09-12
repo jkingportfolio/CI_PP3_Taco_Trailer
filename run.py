@@ -337,8 +337,8 @@ def create_account():
                                         clear_screen()
                                         welcome()
                                         return
-                                    else:
-                                        break
+                                    # else:
+                                    #     break
                                 clear_screen()
                                 while True:
                                     _address = validate_address(
@@ -499,16 +499,6 @@ def customer_details():
                     load_animation('Loading menu.')
                     display_menu()
                     return
-            # print(colored(
-            #     f'\nYou selected {_delivery_type.capitalize()}'
-            #     ' for your order.\n', 'green'))
-            # clear_screen()
-            # print(colored('Thank you for your details!', 'green'))
-            # sleep(3)
-            # load_animation('Loading menu.')
-            # clear_screen()
-            # display_menu()
-            # break
         elif delivery_choice == 'C':
             _delivery_type = 'Collection'
             clear_screen()
