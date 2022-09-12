@@ -46,7 +46,7 @@ def validate_address(message) -> str:
             while True:
                 confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
                 if confirm_exit.capitalize() == 'Y':
-                    address_input = 'exit_to_delivery'
+                    address_input = 'exit_function'
                     return address_input
                 elif confirm_exit.capitalize() == 'N':
                     clear_screen()
@@ -77,7 +77,7 @@ def validate_address(message) -> str:
             while True:
                 confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
                 if confirm_exit.capitalize() == 'Y':
-                    address_input = 'exit_to_delivery'
+                    address_input = 'exit_function'
                     return address_input
                 elif confirm_exit.capitalize() == 'N':
                     clear_screen()
