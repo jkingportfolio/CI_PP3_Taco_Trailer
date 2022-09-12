@@ -445,7 +445,7 @@ def customer_details():
     global _name
     global _delivery_type
     global _address
-
+    end_func = True
     print(colored('We would like to take your details.\n', 'green'))
     while True:
         _name = validate_name()
@@ -456,16 +456,25 @@ def customer_details():
         else:
             break
     clear_screen()
-    print(pyfiglet.figlet_format(f'Hi {_name}'))
+    hello_message = (pyfiglet.figlet_format(f'Hi {_name}'))
     prompt = (colored('Please enter your delivery type.\n', 'green'))
     options = ('[D] - Delivery\n[C] - Collection\n[Q] - Quit to main menu\n')
+    print(hello_message)
     print(prompt)
     print(options)
-    while True:
+    while end_func:
         delivery_choice = input('Please enter a valid input: \n').strip()
         delivery_choice = delivery_choice.capitalize()
         if delivery_choice == 'Q':
-            quit_option(exit_to='Welcome')
+            clear_screen()
+            end_func = quit_option(exit_to='Welcome')
+            if not end_func:
+                return
+            else:
+                clear_screen()
+                print(hello_message)
+                print(prompt)
+                print(options)
         elif delivery_choice == 'D':
             _delivery_type = 'Delivery'
             clear_screen()
