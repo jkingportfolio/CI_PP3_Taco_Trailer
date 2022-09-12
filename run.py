@@ -732,11 +732,12 @@ def quit_option(message='quit to the main menu',
         confirm_quit = input('Please enter a valid input: \n').strip()
         if confirm_quit.capitalize() == 'Y' and exit_to == 'Welcome':
             clear_screen()
+            load_animation('Returning to welcome page.')
             welcome()
             return False
         elif confirm_quit.capitalize() == 'Y' and exit_to == 'Main log out':
-            load_animation(f'Logging {user_name} out.')
             clear_screen()
+            load_animation(f'Logging {user_name} out.')
             welcome()
             return False
         elif confirm_quit.capitalize() == 'Y' and exit_to == 'Member area':
