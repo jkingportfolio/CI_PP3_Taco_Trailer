@@ -97,9 +97,28 @@ def validate_name() -> str:
                     ' Or enter [Q] to quit.\n', 'green')).strip()
         if first_name.capitalize() == 'Q':
             clear_screen()
-            return False
+            print(colored('Are you sure you want to'
+                          ' quit to the welcome page?', 'green'))
+            print('\n[Y] - Yes\n[N] - No\n')
+            while True:
+                confirm_quit = input('Please enter a valid input: \n').strip()
+                if confirm_quit.capitalize() == 'Y':
+                    clear_screen()
+                    return False
+                elif confirm_quit.capitalize() == 'N':
+                    clear_screen()
+                    break
+                else:
+                    clear_screen()
+                    print(colored('Are you sure you want to quit'
+                          ' to the main screen?', 'green'))
+                    print('\n[Y] - Yes\n[N] - No')
+                    print(colored(f'\nIm sorry but "{confirm_quit}'
+                          ' is not a valid option. Please'
+                                  ' enter a valid input.\n', 'yellow'))
+            break
         elif first_name.isalpha() and first_name.capitalize() != 'Q':
-            return
+            break
         else:
             clear_screen()
             print(colored(
@@ -113,7 +132,25 @@ def validate_name() -> str:
                     ' Or enter [Q] to quit.\n', 'green')).strip()
         if surname.capitalize() == 'Q':
             clear_screen()
-            return False
+            print(colored('Are you sure you want to'
+                          ' quit to the welcome page?', 'green'))
+            print('\n[Y] - Yes\n[N] - No\n')
+            while True:
+                confirm_quit = input('Please enter a valid input: \n').strip()
+                if confirm_quit.capitalize() == 'Y':
+                    clear_screen()
+                    return False
+                elif confirm_quit.capitalize() == 'N':
+                    clear_screen()
+                    break
+                else:
+                    clear_screen()
+                    print(colored('Are you sure you want to quit'
+                          ' to the main screen?', 'green'))
+                    print('\n[Y] - Yes\n[N] - No')
+                    print(colored(f'\nIm sorry but "{confirm_quit}'
+                          ' is not a valid option. Please'
+                                  ' enter a valid input.\n', 'yellow'))
         elif surname.isalpha() and surname.capitalize() != 'Q':
             break
         else:
@@ -121,5 +158,6 @@ def validate_name() -> str:
             print(colored(
                 f'Im sorry "{surname}" contains numbers or special characters,'
                 ' please enter a valid surname.\n', 'yellow'))
+    clear_screen()
     _name = (f'{first_name} {surname}')
     return _name

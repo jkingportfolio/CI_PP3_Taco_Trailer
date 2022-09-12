@@ -450,8 +450,11 @@ def customer_details():
     while True:
         _name = validate_name()
         if not _name:
+            load_animation('Returning to Welcome page.')
             welcome()
             return
+        else:
+            break
     clear_screen()
     print(pyfiglet.figlet_format(f'Hi {_name}'))
     prompt = (colored('Please enter your delivery type.\n', 'green'))

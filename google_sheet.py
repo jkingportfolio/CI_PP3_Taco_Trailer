@@ -87,13 +87,13 @@ def change_password(member_number: str):
     @param member_number(string): Member number as taken
     from google sheet worksheets row
     """
-    current_password = LOGINS[member_number].get('Password')
-    print(colored('Change password\n', 'green'))
+    current_password = LOGINS[member_number].get('Password')    
     member_cell_number = member_number + 2
     cancel_prompt = ('Are you sure you want to cancel'
                      ' password change and return to members area?')
     password_guesses = 3
     while True:
+        print(colored('Change password\n', 'green'))
         password_input = getpass.getpass(
             'Please enter your current password or enter "Q"'
             ' to cancel password change: \n')
