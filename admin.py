@@ -56,7 +56,8 @@ def pending_orders(total_rec_int):
         current_time = datetime.now()
         local_time = current_time + timedelta(hours=1)
         local_time_displayed = local_time.strftime("%H:%M:%S %Y-%m-%d")
-        print(f'The current time and date is: {local_time_displayed}\n')
+        print(
+            colored(f'The current time and date is: {local_time_displayed}\n', 'green'))
         pending_order_time = current_time + timedelta(minutes=45)
         FORMATTED_SALES = ORDER_RECORDS
 
@@ -78,9 +79,8 @@ def pending_orders(total_rec_int):
         else:
             print(colored('There are currently no pending orders!', 'yellow'))
         while True:
-            user_choice = input(
-                colored('\nPress "Q" to return to Admin'
-                        ' dashboard.\n', 'green'))
+            user_choice = input('\nPress "Q" to return to Admin'
+                        ' dashboard.\n')
             if user_choice.capitalize() == 'Q':
                 load_animation('Returning to admin dashboard.')
                 admin_dashboard()
@@ -106,13 +106,14 @@ def search_records(total_rec_int: int):
     """
     while True:
         try:
-            print(f'There are {total_rec_int - 1} records available\n')
             print(
+                colored(f'There are {total_rec_int - 1} records available\n', 'green'))
+            print(colored(
                 'Please note there is no record for order 1 as this'
-                ' is the database header\n')
-            record_number = input(colored(
+                ' is the database header\n', 'yellow'))
+            record_number = input(
                 'Please enter record number to display or "0" to return'
-                ' to the Admin dashboard.\n', 'green')).strip()
+                ' to the Admin dashboard.\n').strip()
             clear_screen()
             record_number = int(record_number)
             if record_number < total_rec_int and record_number > 1:

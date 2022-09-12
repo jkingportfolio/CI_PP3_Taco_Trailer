@@ -342,8 +342,8 @@ def create_account():
                                         break
                                 clear_screen()
                                 while inner_func:
-                                    print('Please enter delivery details'
-                                                  ' required.\n')
+                                    print(colored('Please enter delivery details'
+                                                  ' required.\n', 'green'))
                                     address_input = validate_address(
                                         'the welcome page?')
                                     if address_input == 'exit_function':

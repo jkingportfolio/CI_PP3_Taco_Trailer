@@ -66,9 +66,8 @@ def validate_address(message) -> str:
                 ' Please enter a valid number.\n', 'yellow'))
     clear_screen()
     while True:
-        address_street = input(
-            colored('Please enter your street name. Or enter'
-                    ' [Q] to quit.\n', 'green'))
+        address_street = input('Please enter your street name. Or enter'
+                               ' [Q] to quit.\n')
         if address_street.capitalize() == 'Q':
             clear_screen()
             print(
@@ -101,7 +100,7 @@ def validate_name() -> str:
     """
     while True:
         first_name = input('Please enter your first name.'
-                    ' Or enter [Q] to quit.\n').strip()
+                           ' Or enter [Q] to quit.\n').strip()
         if first_name.capitalize() == 'Q':
             clear_screen()
             print(colored('Are you sure you want to'
@@ -134,7 +133,7 @@ def validate_name() -> str:
     clear_screen()
     while True:
         surname = input('Please enter your surname.'
-                    ' Or enter [Q] to quit.\n').strip()
+                        ' Or enter [Q] to quit.\n').strip()
         if surname.capitalize() == 'Q':
             clear_screen()
             print(colored('Are you sure you want to'
