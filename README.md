@@ -766,27 +766,27 @@ In the future as my skills grow I would like to implement the following features
 
 <details>
 <summary>Python file - run.py</summary>
-<img src="docs/validation-js/validation-jshint-connect-4.png">
+<img src="docs/images/validation/pep8-validation-run.png">
 </details>
 <details>
 <summary>Python file - order.py</summary>
-<img src="docs/validation-js/validation-jshint-welcome.png">
+<img src="docs/images/validation/pep8-validation-order.png">
 </details>
 <details>
 <summary>Python file - google_sheet.py</summary>
-<img src="docs/validation-js/validation-jshint-modals.png">
+<img src="docs/images/validation/pep8-validation-google-sheet.png">
 </details>
 <details>
 <summary>Python file - admin.py</summary>
-<img src="docs/validation-js/validation-jshint-contact.png">
+<img src="docs/images/validation/pep8-validation-admin.png">
 </details>
 <details>
 <summary>Python file - taco_trailer_command_line.py</summary>
-<img src="docs/validation-js/validation-jshint-contact.png">
+<img src="docs/images/validation/pep8-validation-taco-trailer-command-line.png">
 </details>
 <details>
 <summary>Python file - user.py</summary>
-<img src="docs/validation-js/validation-jshint-contact.png">
+<img src="docs/images/validation/pep8-validation-user.png">
 </details>
 
 ### Device Testing
