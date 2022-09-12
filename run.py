@@ -106,7 +106,7 @@ def login_screen(error_message=''):
     users = user_name_list()
     end_func = True
     clear_screen()
-    prompt = (colored('Please enter your username.'
+    prompt = (('Please enter your username.'
                       ' Or enter "Q" to quit.', 'green'))
     while end_func:
         print(prompt)
@@ -550,15 +550,13 @@ def order_item():
                     "To preview order enter 'P'.\n"
                     "To complete order enter 'X'.\n")
     print(instructions)
-    food_item = input(
-        colored("Please enter a valid input: \n", 'green')).strip()
+    food_item = input('Please enter a valid input: \n').strip()
     while True:
         food_item = food_item.capitalize()
         if food_item == "Q":
             clear_screen()
-            quit = input(colored(
-                'Are you sure you want to cancel the order and quit?'
-                ' (Y/N)\n', 'yellow'))
+            print(colored('Are you sure you want to cancel the order and quit to the welcome page?', 'yellow'))
+            quit = input('\n[Y] - Yes\n[N] - No\n')
             quit = quit.capitalize()
             if quit == 'Y':
                 _order_list.clear()
@@ -601,7 +599,7 @@ def order_item():
             print(tabulate(_order_list, headers=['Item', 'Name', 'Cost (£)'],
                            tablefmt="simple", numalign="center"))
             close_preview = input(colored(
-                '\nRetun to order screen? (Y)\n', 'green'))
+                '\nPlease press [Y] to return to the order page.\n', 'green'))
             close_preview = close_preview.capitalize()
             if close_preview == 'Y':
                 clear_screen()
@@ -613,8 +611,7 @@ def order_item():
                 print(tabulate(_order_list,
                                headers=['Item', 'Name', 'Cost (£)'],
                                tablefmt="simple", numalign="center"))
-                print('')
-                print(colored('Please enter "Y"'
+                print(colored('\nPlease enter "Y"'
                               ' to return to order screen.', 'yellow'))
                 sleep(2)
         elif food_item.isdigit() and int(food_item) > 0:
@@ -628,8 +625,7 @@ def order_item():
                     f'\nYou ordered Item {this_item[0]}, {this_item[1]}'
                     f' priced at {this_item[2]}', 'green'))
                 print(instructions)
-                food_item = input(
-                    colored('What other item would you like? \n', 'green'))
+                food_item = input('What other item would you like? \n')
             except IndexError:
                 clear_screen()
                 print(FORMATTED_MENU)
@@ -657,7 +653,7 @@ def remove_item():
     removed_item = _order_list[-1]
     print(
         colored(f'\nYou have removed {removed_item[1]}'
-                ' from your order.', 'green'))
+                ' from your order.', 'yellow'))
     _order_list.pop()
     order_item()
 
@@ -672,8 +668,8 @@ def complete_order():
     clear_screen()
     while True:
         order_complete = input(
-            colored('Are you ready to complete your order?'
-                    ' (Y/N).\n', 'green')).strip()
+            colored('Are you ready to complete your order?\n\n'
+                    '[Y] - Yes\n[N] - No.\n', 'green')).strip()
         order_complete = order_complete.capitalize()
         if order_complete == 'Y':
             this_order = Order(_name, _delivery_type, _address,
@@ -690,8 +686,8 @@ def complete_order():
             break
         elif order_complete == 'C':
             quit = input(colored(
-                'Are you sure you want to cancel the order?'
-                ' (Y/N)\n', 'yellow'))
+                'Are you sure you want to cancel the order?\n\n'
+                '[Y] - Yes\n[N] - No\n', 'yellow'))
             quit = quit.capitalize()
             if quit == 'Y':
                 _order_list.clear()
@@ -721,7 +717,7 @@ def complete_order():
             thank_you()
             break
         else:
-            print(f'Im sorry but {finish} is an invalid input.')
+            print(colored(f'Im sorry but {finish} is an invalid input.', 'yellow'))
 
 
 def thank_you():
@@ -742,7 +738,7 @@ def quit_option(message='quit to the main menu',
     """
     clear_screen()
     print(
-        colored(f'Are you sure you want to {message}?', 'green'))
+        colored(f'Are you sure you want to {message}?', 'yellow'))
     print('\n[Y] - Yes\n[N] - No\n')
     while True:
         confirm_quit = input('Please enter a valid input: \n').strip()
@@ -772,7 +768,7 @@ def quit_option(message='quit to the main menu',
         else:
             clear_screen()
             print(colored('Are you sure you want to quit'
-                          ' to the main screen?', 'green'))
+                          ' to the main screen?', 'yellow'))
             print('\n[Y] - Yes\n[N] - No')
             print(colored(f'\nIm sorry but "{confirm_quit}'
                           ' is not a valid option. Please'

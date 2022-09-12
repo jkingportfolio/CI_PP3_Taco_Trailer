@@ -42,7 +42,7 @@ def validate_address(message) -> str:
             clear_screen()
             print(
                 colored(f'Are you sure you want to'
-                        f' cancel and return to {message}?', 'green'))
+                        f' cancel and return to {message}?', 'yellow'))
             while True:
                 confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
                 if confirm_exit.capitalize() == 'Y':
@@ -54,7 +54,7 @@ def validate_address(message) -> str:
                 else:
                     clear_screen()
                     print(colored('Are you sure you want to quit'
-                          ' to the main screen?', 'green'))
+                          ' to the main screen?', 'yellow'))
                     print('\n[Y] - Yes\n[N] - No')
                     print(colored(f'\nIm sorry but "{confirm_quit}'
                           ' is not a valid option. Please'
@@ -72,7 +72,7 @@ def validate_address(message) -> str:
             clear_screen()
             print(
                 colored('Are you sure you want to cancel'
-                        ' and return to delivery options?', 'green'))
+                        ' and return to delivery options?', 'yellow'))
             while True:
                 confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
                 if confirm_exit.capitalize() == 'Y':
@@ -150,7 +150,7 @@ def validate_name() -> str:
                 else:
                     clear_screen()
                     print(colored('Are you sure you want to quit'
-                          ' to the main screen?', 'green'))
+                          ' to the main screen?', 'yellow'))
                     print('\n[Y] - Yes\n[N] - No')
                     print(colored(f'\nIm sorry but "{confirm_quit}'
                           ' is not a valid option. Please'
