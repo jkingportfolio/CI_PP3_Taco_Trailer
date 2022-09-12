@@ -100,13 +100,12 @@ def validate_name() -> str:
     Function to accept and validate user input for name.
     """
     while True:
-        first_name = input(
-            colored('Please enter your first name.'
-                    ' Or enter [Q] to quit.\n', 'green')).strip()
+        first_name = input('Please enter your first name.'
+                    ' Or enter [Q] to quit.\n').strip()
         if first_name.capitalize() == 'Q':
             clear_screen()
             print(colored('Are you sure you want to'
-                          ' quit to the welcome page?', 'green'))
+                          ' quit to the welcome page?', 'yellow'))
             print('\n[Y] - Yes\n[N] - No\n')
             while True:
                 confirm_quit = input('Please enter a valid input: \n').strip()
@@ -119,7 +118,7 @@ def validate_name() -> str:
                 else:
                     clear_screen()
                     print(colored('Are you sure you want to quit'
-                          ' to the main screen?', 'green'))
+                          ' to the main screen?', 'yellow'))
                     print('\n[Y] - Yes\n[N] - No')
                     print(colored(f'\nIm sorry but "{confirm_quit}'
                           ' is not a valid option. Please'
@@ -134,13 +133,12 @@ def validate_name() -> str:
                 ' please enter a valid name.\n', 'yellow'))
     clear_screen()
     while True:
-        surname = input(
-            colored('Please enter your surname.'
-                    ' Or enter [Q] to quit.\n', 'green')).strip()
+        surname = input('Please enter your surname.'
+                    ' Or enter [Q] to quit.\n').strip()
         if surname.capitalize() == 'Q':
             clear_screen()
             print(colored('Are you sure you want to'
-                          ' quit to the welcome page?', 'green'))
+                          ' quit to the welcome page?', 'yellow'))
             print('\n[Y] - Yes\n[N] - No\n')
             while True:
                 confirm_quit = input('Please enter a valid input: \n').strip()

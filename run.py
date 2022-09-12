@@ -319,10 +319,10 @@ def create_account():
                     if validate_password(password):
                         while True:
                             inner_func = True
-                            password_validate = getpass.getpass(colored(
+                            password_validate = getpass.getpass(
                                 'Please re enter your password. Otherwise'
                                 ' enter [Q] to cancel\naccount'
-                                ' creation and quit.\n', 'green'))
+                                ' creation and quit.\n')
                             if password_validate.capitalize() == 'Q':
                                 clear_screen()
                                 end_func = quit_option(exit_to='Welcome')
@@ -342,8 +342,8 @@ def create_account():
                                         break
                                 clear_screen()
                                 while inner_func:
-                                    print(colored('Please enter delivery details'
-                                                  ' required.\n', 'green'))
+                                    print('Please enter delivery details'
+                                                  ' required.\n')
                                     address_input = validate_address(
                                         'the welcome page?')
                                     if address_input == 'exit_function':
