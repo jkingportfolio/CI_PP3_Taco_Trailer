@@ -87,7 +87,7 @@ def change_password(member_number: str):
     @param member_number(string): Member number as taken
     from google sheet worksheets row
     """
-    current_password = LOGINS[member_number].get('Password')    
+    current_password = LOGINS[member_number].get('Password')
     member_cell_number = member_number + 2
     cancel_prompt = ('Are you sure you want to cancel'
                      ' password change and return to members area?')
@@ -108,7 +108,8 @@ def change_password(member_number: str):
                 if validate_password(new_password):
                     clear_screen()
                     while True:
-                        print(colored('New password entered has passed validation.\n', 'green'))
+                        print(colored('New password entered has'
+                                      ' passed validation.\n', 'green'))
                         confirm_password = getpass.getpass(
                             'Please confirm your new password, or'
                             ' enter "Q" to quit: \n')

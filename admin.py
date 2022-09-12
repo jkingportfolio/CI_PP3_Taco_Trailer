@@ -57,7 +57,8 @@ def pending_orders(total_rec_int):
         local_time = current_time + timedelta(hours=1)
         local_time_displayed = local_time.strftime("%H:%M:%S %Y-%m-%d")
         print(
-            colored(f'The current time and date is: {local_time_displayed}\n', 'green'))
+            colored('The current time'
+                    f' and date is: {local_time_displayed}\n', 'green'))
         pending_order_time = current_time + timedelta(minutes=45)
         FORMATTED_SALES = ORDER_RECORDS
 
@@ -80,7 +81,7 @@ def pending_orders(total_rec_int):
             print(colored('There are currently no pending orders!', 'yellow'))
         while True:
             user_choice = input('\nPress "Q" to return to Admin'
-                        ' dashboard.\n')
+                                ' dashboard.\n')
             if user_choice.capitalize() == 'Q':
                 load_animation('Returning to admin dashboard.')
                 admin_dashboard()
@@ -107,7 +108,8 @@ def search_records(total_rec_int: int):
     while True:
         try:
             print(
-                colored(f'There are {total_rec_int - 1} records available\n', 'green'))
+                colored(f'There are {total_rec_int - 1}'
+                        ' records available\n', 'green'))
             print(colored(
                 'Please note there is no record for order 1 as this'
                 ' is the database header\n', 'yellow'))

@@ -80,7 +80,8 @@ def user_login():
             break
         elif user_login_answer.capitalize() == 'Q':
             clear_screen()
-            end_func = quit_option(message='quit to the welcome page', exit_to='Welcome')
+            end_func = quit_option(
+                message='quit to the welcome page', exit_to='Welcome')
             if not end_func:
                 return
             else:
@@ -122,7 +123,8 @@ def login_screen(error_message=''):
             break
         elif user_name.capitalize() == 'Q':
             clear_screen()
-            end_func = quit_option(message='return to the main page', exit_to='Main')
+            end_func = quit_option(
+                message='return to the main page', exit_to='Main')
             if not end_func:
                 return
         else:
@@ -164,7 +166,8 @@ def password_check(user_name, member_number, user_password):
             break
         elif password.capitalize() == 'Q':
             clear_screen()
-            end_func = quit_option(message='return to the main page', exit_to='Main')
+            end_func = quit_option(
+                message='return to the main page', exit_to='Main')
             if not end_func:
                 return
         else:
@@ -311,7 +314,8 @@ def create_account():
                     ' [Q] to cancel\naccount creation and quit.\n', 'green'))
                 if password.capitalize() == 'Q':
                     clear_screen()
-                    end_func = quit_option(message='return to the main page', exit_to='Main')
+                    end_func = quit_option(
+                        message='return to the main page', exit_to='Main')
                     if not end_func:
                         return
                 else:
@@ -325,7 +329,9 @@ def create_account():
                                 ' creation and quit.\n')
                             if password_validate.capitalize() == 'Q':
                                 clear_screen()
-                                end_func = quit_option(message='return to the main page', exit_to='Main')
+                                end_func = quit_option(
+                                    message='return to the main page',
+                                    exit_to='Main')
                                 if not end_func:
                                     return
                             elif password == password_validate:
@@ -342,7 +348,8 @@ def create_account():
                                         break
                                 clear_screen()
                                 while inner_func:
-                                    print(colored('Please enter delivery details'
+                                    print(colored('Please enter delivery'
+                                                  ' details'
                                                   ' required.\n', 'green'))
                                     address_input = validate_address(
                                         'the main page')
@@ -555,7 +562,8 @@ def order_item():
         if food_item == "Q":
             clear_screen()
             print(colored(
-                'Are you sure you want to cancel the order and quit to the welcome page?', 'yellow'))
+                'Are you sure you want to cancel the order'
+                ' and quit to the welcome page?', 'yellow'))
             quit = input('\n[Y] - Yes\n[N] - No\n')
             quit = quit.capitalize()
             if quit == 'Y':
@@ -718,7 +726,8 @@ def complete_order():
             break
         else:
             print(
-                colored(f'Im sorry but {finish} is an invalid input.', 'yellow'))
+                colored(f'Im sorry but {finish} is'
+                        ' an invalid input.', 'yellow'))
 
 
 def thank_you():
