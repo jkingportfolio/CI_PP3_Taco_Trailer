@@ -305,7 +305,7 @@ This project uses Object Orientated Programming to interact and manipulate the f
 
 ## Features
 
-In its entirety the website consists of one main page, with a mock terminal within that page to run The Taco Trailer app. <>
+In its entirety the website consists of one main page, with a mock terminal within that page to run The Taco Trailer app.
 
 ### Existing features
 
