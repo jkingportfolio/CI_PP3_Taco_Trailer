@@ -640,7 +640,7 @@ The Menu featured will auto populate the delivery address for these orders as 'T
 
 <details>
 <summary>Collection option address image</summary>
-<img src="docs/images/features/menu.png">
+<img src="docs/images/features/order-type-collection.png">
 </details>
 
 - Covered in user stories: 1 & 7
