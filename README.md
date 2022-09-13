@@ -259,7 +259,7 @@ A flowchart was created during the design process to help identify functions tha
 
 <details>
 <summary>Flow Chart</summary>
-<img src="docs/images/flowchart.png">
+<img src="docs/flowcharts/flow-chart.png">
 </details>
 
 ### Data Models
