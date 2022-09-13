@@ -1083,10 +1083,15 @@ A new test file was created and imported the unittest library and also the taco_
 
 One test function to test for valid user input and one test function to test for invalid user input was created. 
 
-The test ran and was successful
+The test ran and was successful.
 
 <details>
-<summary>Unit testing screenshot</summary>
+<summary>Unit testing Code</summary>
+<img src="docs/images/testing/unit-testing-code.png">
+</details>
+
+<details>
+<summary>Unit testing Result</summary>
 <img src="docs/images/testing/unit-testing.png">
 </details>
 
