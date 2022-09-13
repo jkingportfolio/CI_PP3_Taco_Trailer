@@ -615,12 +615,12 @@ def order_item():
                 break
             else:
                 clear_screen()
+                print(colored('Order Preview\n', 'green'))
                 print(tabulate(_order_list,
                                headers=['Item', 'Name', 'Cost (£)'],
                                tablefmt="simple", numalign="center"))
                 print(colored('\nPlease enter "Y"'
                               ' to return to order screen.', 'yellow'))
-                sleep(2)
         elif food_item.isdigit() and int(food_item) > 0:
             try:
                 food_item = int(food_item) - 1
