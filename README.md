@@ -63,7 +63,7 @@ The Taco Trailer website has been developed to provide users the chance to order
 - As the site owner i wanted to secure the admin area of the app with a password.
 - Have the ability to view previous orders that had been placed.
 - Have the ability to view current pending orders that have yet to be picked up or delivered.
-- Ensure all user inputs are validated as to not provide issues with orders and a negative user experience.
+- Ensure all user inputs are validated and errors handled as to not provide issues with orders and a negative user experience.
 
 ## User Experience
 

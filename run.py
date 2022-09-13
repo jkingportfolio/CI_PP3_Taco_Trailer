@@ -136,7 +136,9 @@ def login_screen(error_message=''):
             break
 
 
-def password_check(user_name: str, member_number: str, user_password: str):
+def password_check(user_name: str,
+                   member_number: str,
+                   user_password: str):
     """
     Function to Validate usernames password is correct.
     @param user_name(string): Members user name taken from
@@ -191,7 +193,9 @@ def password_check(user_name: str, member_number: str, user_password: str):
                 break
 
 
-def member_delivery_choice(member_name: str, member_number: str, user_name: str):
+def member_delivery_choice(member_name: str,
+                           member_number: str,
+                           user_name: str):
     """
     Function to take user input on current members delivery
     choice.
