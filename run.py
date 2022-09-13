@@ -607,7 +607,7 @@ def order_item():
             print(tabulate(_order_list, headers=['Item', 'Name', 'Cost (£)'],
                            tablefmt="simple", numalign="center"))
             close_preview = input(colored(
-                '\nPlease press [Y] to return to the order page.\n', 'green'))
+                '\nPlease press [Y] to return to the order page.\n', 'yellow'))
             close_preview = close_preview.capitalize()
             if close_preview == 'Y':
                 clear_screen()
