@@ -56,14 +56,14 @@ def validate_address(message) -> str:
                     print(colored('Are you sure you want to quit'
                           ' to the main page?', 'yellow'))
                     print('\n[Y] - Yes\n[N] - No')
-                    print(colored(f'\nIm sorry but "{confirm_quit}'
-                          ' is not a valid option. Please'
+                    print(colored(f'\nIm sorry but "{confirm_exit}'
+                          ' is not a valid option.\nPlease'
                                   ' enter a valid input.\n', 'yellow'))
         else:
             clear_screen()
             print(colored(
-                f'Im sorry "{address_number}" is not a number.'
-                ' Please enter a valid number.\n', 'yellow'))
+                f'Im sorry but "{address_number}" is not a number.\n'
+                'Please enter a valid number.\n', 'yellow'))
     clear_screen()
     while True:
         address_street = input('Please enter your street name. Or enter'
@@ -87,8 +87,8 @@ def validate_address(message) -> str:
         else:
             clear_screen()
             print(colored(
-                f'Im sorry "{address_street}" contains numbers or'
-                ' special characters, please enter a'
+                f'Im sorry but "{address_street}" contains numbers or'
+                ' special characters.\nPlease enter a'
                 ' valid street name.\n', 'yellow'))
     _address = (f'{address_number} {address_street}')
     return _address
@@ -120,16 +120,16 @@ def validate_name() -> str:
                           ' to the main page?', 'yellow'))
                     print('\n[Y] - Yes\n[N] - No')
                     print(colored(f'\nIm sorry but "{confirm_quit}'
-                          ' is not a valid option. Please'
+                          ' is not a valid option.\nPlease'
                                   ' enter a valid input.\n', 'yellow'))
         elif first_name.isalpha() and first_name.capitalize() != 'Q':
             break
         else:
             clear_screen()
             print(colored(
-                f'Im sorry "{first_name}" contains numbers or'
-                ' special characters,'
-                ' please enter a valid name.\n', 'yellow'))
+                f'Im sorry but "{first_name}" contains numbers or'
+                ' special characters.\n'
+                'Please enter a valid name.\n', 'yellow'))
     clear_screen()
     while True:
         surname = input('Please enter your surname.'
@@ -153,15 +153,15 @@ def validate_name() -> str:
                           ' to the main page?', 'yellow'))
                     print('\n[Y] - Yes\n[N] - No')
                     print(colored(f'\nIm sorry but "{confirm_quit}'
-                          ' is not a valid option. Please'
+                          ' is not a valid option.\nPlease'
                                   ' enter a valid input.\n', 'yellow'))
         elif surname.isalpha() and surname.capitalize() != 'Q':
             break
         else:
             clear_screen()
             print(colored(
-                f'Im sorry "{surname}" contains numbers or special characters,'
-                ' please enter a valid surname.\n', 'yellow'))
+                f'Im sorry "{surname}" contains numbers or special characters.\n'
+                'Please enter a valid surname.\n', 'yellow'))
     clear_screen()
     _name = (f'{first_name} {surname}')
     return _name
