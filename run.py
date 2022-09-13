@@ -569,8 +569,7 @@ def order_item():
             if quit == 'Y':
                 _order_list.clear()
                 clear_screen()
-                thank_you()
-                sleep(2)
+                load_animation('Returning to welcome page.')
                 clear_screen()
                 welcome()
                 break
