@@ -500,7 +500,7 @@ The log out feature allows both public user or Admins to log out of their accoun
 
 <details>
 <summary>Log out image</summary>
-<img src="docs/images/features/members-logging-out.png">
+<img src="docs/images/features/member-logging-out.png">
 </details>
 
 - Covered in user stories: 1 & 3
