@@ -38,7 +38,8 @@ class Order:
 
     def format_order_list(self):
         """
-        Function to formats current order list to a table.
+        Function to print formatted list of current order
+        to the command line.
         """
         print(tabulate(self._order_list, headers=[
             'Item', 'Name', 'Cost (£)'], tablefmt="simple", numalign="center"))
@@ -96,7 +97,7 @@ class Order:
 
     def delivery_time(self):
         """
-        function to calculate current time and delivery time.
+        Function to calculate current time and delivery time.
         """
         current_time = datetime.now()
         order_ready_time = current_time + timedelta(hours=1, minutes=15)

@@ -136,9 +136,15 @@ def login_screen(error_message=''):
             break
 
 
-def password_check(user_name, member_number, user_password):
+def password_check(user_name: str, member_number: str, user_password: str):
     """
-    Function to Validate usernames password is correct
+    Function to Validate usernames password is correct.
+    @param user_name(string): Members user name taken from
+    google sheets 'Users' worksheet.
+    @param member_number(string): Members id number taken from
+    google sheets 'Users' worksheet.
+    @param user_password(string): User password taken from.
+    google sheets 'Users' worksheet.
     """
     global _address
     password_guesses = 3
@@ -185,10 +191,16 @@ def password_check(user_name, member_number, user_password):
                 break
 
 
-def member_delivery_choice(member_name: str, member_number, user_name):
+def member_delivery_choice(member_name: str, member_number: str, user_name: str):
     """
     Function to take user input on current members delivery
     choice.
+    @param member_name(string): Members full name taken from
+    google sheets 'Users' worksheet.
+    @param member_number(string): Members id number taken from
+    google sheets 'Users' worksheet.
+    @param user_name(string): Members user name taken from
+    google sheets 'Users' worksheet.
     """
     clear_screen()
     global _delivery_type
@@ -402,7 +414,7 @@ def create_account():
             break
 
 
-def members_area(member_name, member_number, user_name):
+def members_area(member_name: str, member_number: str, user_name: str):
     """
     Function to accept user input to make an order, change
     password, or log out as current member.

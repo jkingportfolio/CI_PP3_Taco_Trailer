@@ -162,7 +162,9 @@ def change_password(member_number: str):
 
 def cancel_current_option(prompt: str):
     """
-    Function to control Quit option in current program position
+    Function to control Quit option in current program position.
+    @param prompt(string): Custom prompt string to populate
+    function text.
     """
     while True:
         clear_screen()

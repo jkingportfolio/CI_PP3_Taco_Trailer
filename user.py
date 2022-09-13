@@ -31,6 +31,7 @@ class User:
 def validate_address(message: str) -> str:
     """
     Function to accept and validate user input for address.
+    @param message(string): Custom quit message.
     """
     while True:
         address_number = input(

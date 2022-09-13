@@ -47,7 +47,7 @@ def admin_dashboard():
 def pending_orders(total_rec_int: int):
     """
     Function to return pending orders that current time
-    is less than delivered time and display in formatted table
+    is less than delivered time and display in formatted table.
     @param total_rec_int(int): Total number of orders as per
     google sheet data.
     """
