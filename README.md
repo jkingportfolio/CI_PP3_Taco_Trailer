@@ -820,8 +820,21 @@ The website was tested on the following web browsers:
 |  All listed features in the Features  |   |     |  |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-1.png">
+<summary>Screenshots User Story 1</summary>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
+
 </details>
 
 2. As a user, I want to be able to create an account.
