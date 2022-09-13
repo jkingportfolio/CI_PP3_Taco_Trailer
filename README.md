@@ -869,7 +869,7 @@ The website was tested on the following web browsers:
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Member delivery option  | Log in and create an order and selecte delivery type | To be prompted to enter delivery option    | Works as expected |
+| Member delivery option  | Log in and create an order and select delivery type | To be prompted to enter delivery option    | Works as expected |
 | Delivery type option  | As a guest begin an order and after entering First name and surname choose delivery type  | Display delivery types and be able to pick from Delivery or Collection  |Works as expected  |
 | Collection option address  | Select collection as delivery option | App to auto populate the address as The Taco Trailer in the receipt    |Works as expected  |
 
