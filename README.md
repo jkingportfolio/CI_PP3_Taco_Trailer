@@ -800,8 +800,6 @@ As this app is only intended to be used on desktops the website was tested on th
 - Windows 10 PC with a 24" MSI Curved gaming monitor
 - Raspberry Pi 4 with a 24" MSI Curved gaming monitor
 
-In addition to testing on physical devices, <>
-
 ### Browser Compatibility
 
 The website was tested on the following web browsers:
