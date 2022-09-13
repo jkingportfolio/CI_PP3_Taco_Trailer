@@ -585,7 +585,7 @@ The house number and street name validation feature is used to valid that both t
 The account creation update warning feature will warn users that the account will only be accessible upon restart of the app.
 
 <details>
-<summary>Account creationg update warning image</summary>
+<summary>Account creation update warning image</summary>
 <img src="docs/images/features/create-account-new-user-warning.png">
 </details>
 
