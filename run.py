@@ -677,7 +677,7 @@ def complete_order():
     while True:
         order_complete = input(
             colored('Are you ready to complete your order?\n\n'
-                    '[Y] - Yes\n[N] - No.\n', 'green')).strip()
+                    '[Y] - Yes\n[N] - No.\n', 'yellow')).strip()
         order_complete = order_complete.capitalize()
         if order_complete == 'Y':
             this_order = Order(_name, _delivery_type, _address,
