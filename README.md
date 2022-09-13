@@ -1146,6 +1146,7 @@ The website was deployed using Heroku by "following these steps:
 <summary>Screenshot</summary>
 <img src="docs/images/deployment/add-buildpack.png">
 </details>
+<details>
 <summary>Screenshot</summary>
 <img src="docs/images/deployment/build-pack-order.png">
 </details>
