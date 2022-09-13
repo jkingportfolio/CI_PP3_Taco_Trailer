@@ -569,7 +569,7 @@ The name validation feature is used to valid that both the first and surnames en
 The house number and street name validation feature is used to valid that both the house number and address entered when creating an account. The house number is checked to make sure it does not contain special characters, characters or whitespace and if do prompts the user to re enter the data. The street name is checked to make sure it doesnt include numbers or special character.
 
 <details>
-<summary>House numbervalidation image</summary>
+<summary>House number validation image</summary>
 <img src="docs/images/features/create-account-house-number-error.png">
 </details>
 
