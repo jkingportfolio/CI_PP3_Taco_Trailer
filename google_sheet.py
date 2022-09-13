@@ -160,7 +160,7 @@ def change_password(member_number: str):
                 break
 
 
-def cancel_current_option(prompt):
+def cancel_current_option(prompt: str):
     """
     Function to control Quit option in current program position
     """
