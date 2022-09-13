@@ -1111,14 +1111,6 @@ During the project i encountered a number of bugs some of which were solved some
 | Application must be restarted in order to use newly created user account  | As the module needs to reload i have yet to find a fix for this without restarting the application, this has been documented as a known bug. |
 | Application must be restarted in order to use changed password | As the module needs to reload i have yet to find a fix for this without restarting the application, this has been documented as a known bug.|
 
-
-<details>
-<summary>Screenshots</summary>
-<img src="docs/console-bugs/interest-cohort-error.png">
-<img src="docs/console-bugs/navigator-user-agent-error.png">
-</details>
-
-
 ## Deployment
 
 ### Heroku

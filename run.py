@@ -673,10 +673,10 @@ def complete_order():
     order_time = datetime.now() + timedelta(hours=1)
     order_time = order_time.strftime("%H:%M:%S %Y-%m-%d")
     clear_screen()
-    while True:
-        order_complete = input(
-            colored('Are you ready to complete your order?\n\n'
-                    '[Y] - Yes\n[N] - No.\n', 'yellow')).strip()
+    order_complete = True
+    while complete_order:
+        print(colored('Are you ready to complete your order?\n', 'yellow'))
+        order_complete = input('[Y] - Yes\n[N] - No\n').strip()
         order_complete = order_complete.capitalize()
         if order_complete == 'Y':
             this_order = Order(_name, _delivery_type, _address,
@@ -690,25 +690,8 @@ def complete_order():
             clear_screen()
             print(FORMATTED_MENU)
             order_item()
-            break
-        elif order_complete == 'C':
-            quit = input(colored(
-                'Are you sure you want to cancel the order?\n\n'
-                '[Y] - Yes\n[N] - No\n', 'yellow'))
-            quit = quit.capitalize()
-            if quit == 'Y':
-                _order_list.clear()
-                clear_screen()
-                thank_you()
-                sleep(2)
-                clear_screen()
-                welcome()
-                break
-            elif quit == 'N':
-                clear_screen()
-                print(FORMATTED_MENU)
-                order_item()
-                break
+            order_complete = False
+            return
         else:
             clear_screen()
             print(
@@ -727,6 +710,7 @@ def complete_order():
             print(
                 colored(f'Im sorry but {finish} is'
                         ' an invalid input.', 'yellow'))
+        break
 
 
 def thank_you():
