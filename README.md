@@ -821,19 +821,19 @@ The website was tested on the following web browsers:
 
 <details>
 <summary>Screenshots User Story 1</summary>
-<details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
-</details>
-<details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
-</details>
-<details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
-</details>
 
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
 
 </details>
 
@@ -848,8 +848,29 @@ The website was tested on the following web browsers:
 | House number / Street name Validation  | Enter desired House number & Street name when prompted  | Feedback to be displayed validating House number & Street Name   | Works as expected |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-2.png">
+<summary>Screenshots User Story 2</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 3. As a user, I want to be able to login/out of my account.
@@ -862,8 +883,25 @@ The website was tested on the following web browsers:
 | Log out | To select the log out option from the members or admin page | Prompt to user to confirm log out and then log out and return to Welcome page | Works as expected |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-3.png">
+<summary>Screenshots User Story 3</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 4. As a user, I want to be able to change my account password.
@@ -874,8 +912,25 @@ The website was tested on the following web browsers:
 | Member password update warning | Update password | Feedback to display warning message that password change will only occur on restarting the app |Works as expected  |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-4.png">
+<summary>Screenshots User Story 4</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 5. As a user, I want to be able to chose between order pick up or delivery.
@@ -887,8 +942,21 @@ The website was tested on the following web browsers:
 | Collection option address  | Select collection as delivery option | App to auto populate the address as The Taco Trailer in the receipt    |Works as expected  |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-5.png">
+<summary>Screenshots User Story 5</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 6. As a user, I want to be able to change current order address if the stored one is incorrect.
@@ -898,8 +966,13 @@ The website was tested on the following web browsers:
 | Member delivery option  | When choosing delivery type, select delivery but when prompted if current address is correct select no  | User to be prompted with entering house number and street name | Works as expected |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-6.png">
+<summary>Screenshots User Story 6</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 7. As a user, I want to be able to view the menu.
@@ -909,9 +982,13 @@ The website was tested on the following web browsers:
 | Menu  | Enter all user credentials to gain access to the menu  | Menu and options to be displayed to the user  | Works as expected |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-7.png">
-<img src="docs/testing-user-stories/testing-user-stories-7.1.png">
+<summary>Screenshots User Story 7</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 8. As a user, I want to be able to add items to my order.
@@ -921,8 +998,13 @@ The website was tested on the following web browsers:
 | Add item to order  | From the menu page enter a valid number to add that item to the basket | Item to be added to the basket and feedback to be provided  |Works as expected |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-8.png">
+<summary>Screenshots User Story 8</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 9. As a user, I want to be able to remove items from my order.
@@ -932,8 +1014,13 @@ The website was tested on the following web browsers:
 | Remove item  | From the menu page enter R  | Last added item to be removed from order and feedback provided to confirm this | Works as expected  |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-9.png">
+<summary>Screenshots User Story 9</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 10. As a user, I want to be able to preview an order.
@@ -943,8 +1030,13 @@ The website was tested on the following web browsers:
 | Preview order | From the menu page enter P | Order preview to display all added items to the basket   | Works as expected |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-10.png">
+<summary>Screenshots User Story 10</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 11. As a user, I want to be able to cancel an unplaced order.
@@ -954,8 +1046,13 @@ The website was tested on the following web browsers:
 | Cancel order  | From the menu page press Q  | Be prompted to confirm user would like to quit to Welcome page and cancel order  |Works as expected  |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-11.png">
+<summary>Screenshots User Story 11</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 12. As a user, I want to be able to place an order.
@@ -965,8 +1062,13 @@ The website was tested on the following web browsers:
 | Complete order  | From the menu page press X  | Be prompted to confirm if the user would like to complete the order or return to the menu   | Works as expected |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-12.png">
+<summary>Screenshots User Story 12</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 13. As a user, I want to be shown a receipt.
@@ -976,8 +1078,13 @@ The website was tested on the following web browsers:
 | Display receipt  | Complete an order  | Upon order completion a formatted page of order summary will be shown   | Works as expected |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-13.png">
+<summary>Screenshots User Story 13</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 14. As a user, I want to be able to exit the app.
@@ -987,8 +1094,13 @@ The website was tested on the following web browsers:
 |   Quit   |  Press Q at the receipt page  | App to exit upon user entering Q     |Works as expected  |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-14.png">
+<summary>Screenshots User Story 14</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 #### Site Owner
@@ -1000,8 +1112,13 @@ The website was tested on the following web browsers:
 |  Welcome message    | Run the app   |  Welcome message to be displayed    |Works as expected  |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-14.png">
+<summary>Screenshots User Story 15</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 16. As the site owner, I would want to be able to access a password locked admin area.
@@ -1011,8 +1128,13 @@ The website was tested on the following web browsers:
 |   Admin Dashboard   |  Login as Admin  | After successful Admin login, Admin will be displayed the Admin Dashboard     |Works as expected  |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-14.png">
+<summary>Screenshots User Story 16</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 17. As the site owner, I would want to be able to access all previous order records.
@@ -1022,8 +1144,13 @@ The website was tested on the following web browsers:
 |  View order records   |  From the Admin Dashboard select the option to view order records  | Admin to be displayed with page stating how many records are available  |Works as expected  |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-14.png">
+<summary>Screenshots User Story 17</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 18. As the site owner, I would want to be able to access a list of pending orders.
@@ -1033,8 +1160,13 @@ The website was tested on the following web browsers:
 |   View pending orders   |    |      |Works as expected  |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-14.png">
+<summary>Screenshots User Story 18</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 19. As the site owner, I would want the registered users information to be saved to a google sheets file.
@@ -1044,8 +1176,13 @@ The website was tested on the following web browsers:
 |  Create account    |  From the Admin Dashboard select the option to view pending order  |   Admin to be displayed with page indicating all pending orders if there are any   |Works as expected  |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-14.png">
+<summary>Screenshots User Story 19</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 20. As the site owner, I would want orders to be saved to a google sheets file.
@@ -1055,8 +1192,13 @@ The website was tested on the following web browsers:
 | Complete order receipt     |  Users input and complete orders  |  For each order submitted by a user, all information entered during this process will be appended to a google sheets worksheet    | Works as expected |
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-14.png">
+<summary>Screenshots User Story 20</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 21. As the site owner, I would want the user to get feedback in the case of invalid input.
@@ -1077,8 +1219,53 @@ The website was tested on the following web browsers:
 
 
 <details>
-<summary>Screenshots</summary>
-<img src="docs/testing-user-stories/testing-user-stories-14.png">
+<summary>Screenshots User Story 21</summary>
+
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+<details>
+<summary>Feature - </summary>
+<img src="docs/testing-user-stories/.png">
+</details>
+
 </details>
 
 </details>
