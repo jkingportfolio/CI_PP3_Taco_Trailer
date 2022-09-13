@@ -763,8 +763,6 @@ In the future as my skills grow I would like to implement the following features
 - Ability to append the placed order to the users account row within google sheets and have a function to display all historical orders place by that logged in account
 - Email address to be one of the required pieces of information when creating a user account so that the order receipt can be emailed to the user on completion via an Email API.
 
-## Testing
-
 ### Python Validation
 
 [PEP-8 Validation](http://pep8online.com/) was used to validate the Python code used in the app. <>
@@ -794,6 +792,8 @@ In the future as my skills grow I would like to implement the following features
 <img src="docs/images/validation/pep8-validation-user.png">
 </details>
 
+## Testing
+
 ### Device Testing
 
 As this app is only intended to be used on desktops the website was tested on the following devices:
@@ -808,9 +808,12 @@ The website was tested on the following web browsers:
 - Google Chrome (Version 104.0.5112.102)
 - DuckDuckGo
 
-### Testing User Stories
+### Manual Testing
 
-#### Users
+<details>
+<summary>See Testing User Stories</summary>
+
+#### Testing User Stories Users
 
 1. As a user, I want to be provided with clear instructions throughout the app.
 
@@ -1067,7 +1070,14 @@ The website was tested on the following web browsers:
 <img src="docs/testing-user-stories/testing-user-stories-14.png">
 </details>
 
+</details>
+
 ### Automated Testing
+
+<details>
+<summary>Screenshots</summary>
+
+</details>
 
 ## Bugs
 
