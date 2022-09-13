@@ -360,6 +360,11 @@ The login is featured on the main page and will prompt users for a valid user na
 <img src="docs/images/features/login-password-entry.png">
 </details>
 
+<details>
+<summary>Login success image</summary>
+<img src="docs/images/features/valid-credentials.png">
+</details>
+
 - Covered in user stories: 1 & 3
 
 #### Login - User name validation 
