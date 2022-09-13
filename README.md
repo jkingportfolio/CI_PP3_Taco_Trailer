@@ -756,14 +756,14 @@ The quit is a feature used throughout the app to allow the user to validate they
 - Covered in user stories: 1 & 14
 
 
-### Future implementations
+## Future implementations
 
 In the future as my skills grow I would like to implement the following features:
 
 - Ability to append the placed order to the users account row within google sheets and have a function to display all historical orders place by that logged in account
 - Email address to be one of the required pieces of information when creating a user account so that the order receipt can be emailed to the user on completion via an Email API.
 
-### Python Validation
+## Python Validation
 
 [PEP-8 Validation](http://pep8online.com/) was used to validate the Python code used in the app. <>
 
@@ -1075,7 +1075,20 @@ The website was tested on the following web browsers:
 ### Automated Testing
 
 <details>
-<summary>Screenshots</summary>
+<summary>See unit testing</summary>
+
+Using Pythons unittest library i wrote a unit test to test for correct operation of users entering passwords.
+
+A new test file was created and imported the unittest library and also the taco_trailer_command_line module as it is where the function to be tested originates from.
+
+One test function to test for valid user input and one test function to test for invalid user input was created. 
+
+The test ran and was successful
+
+<details>
+<summary>Unit testing screenshot</summary>
+<img src="docs/images/testing/unit-testing.png">
+</details>
 
 </details>
 
