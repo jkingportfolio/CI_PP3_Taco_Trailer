@@ -156,7 +156,7 @@ Those pieces of data are:
 
 Operation: User keyboard input. All forms of data use validation in which if data entered does not meet the requirements will display a warning message to the user. Once all data has been succcessfully entered the user will be made aware that new accounts can only be accessed upon restart of the app.
 
-###### Continue as guest
+##### Continue as guest
 Selecting the continue as guest will guide users through the neccesary inputs required for creating an order as a guest. 
 
 Those pieces of data are:
@@ -169,7 +169,7 @@ Those pieces of data are:
 
 All forms of data use validation in which if data entered does not meet the requirements will display a warning message to the user. Once all data has been succcessfully entered the user will then be directed to the menu in which they can then make selections via keyboard input (please refer to Menu section of manual for further details).
 
-###### Return to main menu
+##### Return to main menu
 Operation: User keyboard input. Selecting the return to main menu option will give users the opportunity to be redirect users back to the Welcome page.
 
 #### Login
