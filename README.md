@@ -1172,7 +1172,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 <details>
 <summary>Feature - Welcome message</summary>
-<img src="docs/images/testing/testing-user-stories/testing-user-story-15-welcome-message-1.pngg">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-15-welcome-message-1.png">
 </details>
 
 </details>
@@ -1209,8 +1209,10 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Screenshots User Story 17</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - View order records</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-17-view-order-records-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-17-view-order-records-2.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-17-view-order-records-3.png">
 </details>
 
 </details>
@@ -1225,8 +1227,10 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Screenshots User Story 18</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - View pending orders</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-18-view-pending-orders-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-18-view-pending-orders-2.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-18-view-pending-orders-3.png">
 </details>
 
 </details>
@@ -1241,8 +1245,8 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Screenshots User Story 19</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Create account (store in google sheets)</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-19-create-account-1.png">
 </details>
 
 </details>
@@ -1257,8 +1261,8 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Screenshots User Story 20</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Complete order receipt (store in google sheets)</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-20-complete-order-receipt-1.png">
 </details>
 
 </details>
