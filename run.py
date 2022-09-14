@@ -352,7 +352,7 @@ def create_account():
                         while True:
                             inner_func = True
                             print(colored('Password entry was'
-                            ' valid.\n', 'green'))
+                                          ' valid.\n', 'green'))
                             print(
                                 'Please re enter your password. Otherwise'
                                 ' enter [Q] to cancel\naccount'
