@@ -986,16 +986,17 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Screenshots User Story 5</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Member delivery option</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-5-member-delivery-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-5-member-delivery-2.png">
 </details>
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Guest delivery option</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-5-guest-delivery-1.png">
 </details>
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Collection option address populated</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-5-collection-1.png">
 </details>
 
 </details>
