@@ -861,37 +861,24 @@ The website was tested on the following web browsers:
 
 #### Testing User Stories Users
 
+To avoid unnecessary repitition of images, only the feature being referred to will have screenshots. Information on how to navigate to the feature referred to will be described in detail within its relevant table reference. 
+
 1. As a user, I want to be provided with clear instructions throughout the app.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|  All listed features in the Features  |   |     |  |
+|  All listed features in the Features provide the user with feedback based on user input  | Enter user input across the app  | User to be provided with positive and negative feedback based on user input    | Works as expected |
 
-<details>
-<summary>Screenshots User Story 1</summary>
+Due to the sheet amount of images required to cover all please see this user story in action via the extensive amount of images within the rest of the Manual Testing images.
 
-<details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
-</details>
-<details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
-</details>
-<details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
-</details>
-
-</details>
 
 2. As a user, I want to be able to create an account.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
 | Create Account  | Select the create account option from the main page  | Create account process will begin with prompting for details   | Works as expected |
-| Username Validation  | Enter desired user name when prompted  | Feedback to be displayed validating user name    | Works as expected |
-| Password Validation  | Enter desired password when prompted  |  Feedback to be displayed validating password  | Works as expected |
+| Username Validation  | Navigate to the create account section. When prompted, enter desired user name  | Feedback to be displayed validating user name    | Works as expected |
+| Password Validation  | Navigate to the create account section, enter valid user name, when prompted to enter a valid password.   |  Feedback to be displayed validating password  | Works as expected |
 | First / Surname Validation  | Enter desired First & Surname when prompted  | Feedback to be displayed validating First name and Surname   | Works as expected |
 | House number / Street name Validation  | Enter desired House number & Street name when prompted  | Feedback to be displayed validating House number & Street Name   | Works as expected |
 
@@ -899,24 +886,30 @@ The website was tested on the following web browsers:
 <summary>Screenshots User Story 2</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Create Account</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-2-create-account-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-2-create-account-2.png">
 </details>
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Username Validation</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-2-user-name-validation-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-2-user-name-validation-2.png">
 </details>
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Password Validation</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-2-password-validation-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-2-password-validation-2.png">
 </details>
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - First / Surname Validation</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-2-name-validation-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-2-name-validation-2.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-2-name-validation-3.png">
 </details>
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - House number / Street name Validation</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-2-house-validation-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-2-house-validation-2.png">
 </details>
 
 </details>
