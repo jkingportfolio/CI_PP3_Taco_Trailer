@@ -1011,8 +1011,12 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Screenshots User Story 6</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Member delivery option</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-6-member-delivery-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-6-member-delivery-2.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-6-member-delivery-3.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-6-member-delivery-4.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-6-member-delivery-5.png">
 </details>
 
 </details>
