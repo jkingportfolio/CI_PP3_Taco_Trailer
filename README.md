@@ -960,20 +960,16 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Screenshots User Story 4</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Member change password</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-4-member-change-password-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-4-member-change-password-2.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-4-member-change-password-3.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-4-member-change-password-4.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-4-member-change-password-5.png">
 </details>
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
-</details>
-<details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
-</details>
-<details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Member password update warning</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-4-member-change-password-warning-1.png">
 </details>
 
 </details>
