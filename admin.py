@@ -25,7 +25,7 @@ def admin_dashboard():
         print(
             'Please enter a valid input\n\n[1] View records\n[2]'
             ' View pending orders\n[Q] Exit admin dashboard\n')
-        admin_option = input('Please enter a valid input: \n').strip()
+        admin_option = input('Please enter a valid input: ').strip()
         clear_screen()
         if admin_option == '1':
             search_records(total_rec_int)
@@ -80,7 +80,7 @@ def pending_orders(total_rec_int: int):
         else:
             print(colored('There are currently no pending orders!', 'yellow'))
         while True:
-            user_choice = input('\nPress "Q" to return to Admin'
+            user_choice = input('\nEnter "Q" to return to Admin'
                                 ' dashboard.\n')
             if user_choice.capitalize() == 'Q':
                 load_animation('Returning to admin dashboard.')
@@ -113,9 +113,11 @@ def search_records(total_rec_int: int):
             print(colored(
                 'Please note there is no record for order 1 as this'
                 ' is the database header\n', 'yellow'))
-            record_number = input(
+            print(
                 'Please enter record number to display or "0" to return'
-                ' to the Admin dashboard.\n').strip()
+                ' to the Admin dashboard.\n')
+            record_number = input(
+                'Record number: ').strip()
             clear_screen()
             record_number = int(record_number)
             if record_number < total_rec_int and record_number > 1:

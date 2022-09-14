@@ -34,7 +34,7 @@ def welcome(message=''):
         print('[Y] - Yes\n[N] - No')
         print(f'\n{message}')
         place_order = input(
-            'Please enter a valid input:').strip()
+            'Please enter a valid input: ').strip()
         place_order = place_order.capitalize()
         if place_order == 'Y':
             clear_screen()
@@ -66,7 +66,7 @@ def user_login():
     print(prompt)
     print(options)
     while True:
-        user_login_answer = input('Please enter a valid input: \n')
+        user_login_answer = input('Please enter a valid input: ')
         if user_login_answer == '1':
             login_screen()
             break
@@ -219,7 +219,7 @@ def member_delivery_choice(member_name: str,
     while end_func:
         print(prompt)
         print(options)
-        delivery_choice = input('Please select a valid input: \n').strip()
+        delivery_choice = input('Please select a valid input: ').strip()
         delivery_choice = delivery_choice.capitalize()
         clear_screen()
         if delivery_choice == 'D':
@@ -228,9 +228,11 @@ def member_delivery_choice(member_name: str,
                 print(
                     colored(f'We have your address listed as'
                             f' "{_address}".\n', 'green'))
-                accept_delivery = input(
+                print(
                     'Is this correct?\n[Y] - Yes\n[N] - No\n[Q]'
-                    ' - Quit to main menu\n').capitalize()
+                    ' - Quit to main menu\n')
+                accept_delivery = input(
+                    '\nPlease enter a valid input: ').capitalize()
                 if accept_delivery == 'Y':
                     clear_screen()
                     _delivery_type = 'Delivery'
@@ -313,9 +315,11 @@ def create_account():
     clear_screen()
     while end_func:
         print(prompt)
-        user_name = input(
+        print(
             'Please enter a user name. Otherwise enter [Q]'
             ' to cancel\nuser creation and quit.\n')
+        user_name = input(
+            'User name: ')
         if user_name.capitalize() == 'Q':
             clear_screen()
             end_func = quit_option(exit_to='Main')
@@ -437,7 +441,7 @@ def members_area(member_name: str, member_number: str, user_name: str):
     print(pyfiglet.figlet_format(f'Hi {member_name}'))
     print(member_area_instructions)
     while end_func:
-        user_choice = input('Please enter a valid input:\n')
+        user_choice = input('Please enter a valid input: ')
         if user_choice == '1':
             clear_screen()
             member_delivery_choice(member_name, member_number, user_name)
@@ -493,7 +497,7 @@ def customer_details():
     print(options)
     while end_func:
         inner_func = True
-        delivery_choice = input('Please enter a valid input: \n').strip()
+        delivery_choice = input('Please enter a valid input: ').strip()
         delivery_choice = delivery_choice.capitalize()
         if delivery_choice == 'Q':
             clear_screen()
@@ -573,7 +577,7 @@ def order_item():
                     "To preview order enter 'P'.\n"
                     "To complete order enter 'X'.\n")
     print(instructions)
-    food_item = input('Please enter a valid input: \n').strip()
+    food_item = input('Please enter a valid input: ').strip()
     while True:
         food_item = food_item.capitalize()
         if food_item == "Q":
@@ -581,16 +585,17 @@ def order_item():
             print(colored(
                 'Are you sure you want to cancel the order'
                 ' and quit to the welcome page?', 'yellow'))
-            quit = input('\n[Y] - Yes\n[N] - No\n')
-            quit = quit.capitalize()
-            if quit == 'Y':
+            print('\n[Y] - Yes\n[N] - No\n')
+            quit_input = input('Please enter a valid input: ')
+            quit_input = quit_input.capitalize()
+            if quit_input == 'Y':
                 _order_list.clear()
                 clear_screen()
                 load_animation('Returning to welcome page.')
                 clear_screen()
                 welcome()
                 break
-            elif quit == 'N':
+            elif quit_input == 'N':
                 clear_screen()
                 print(FORMATTED_MENU)
                 order_item()
@@ -649,7 +654,8 @@ def order_item():
                     f'\nYou ordered Item {this_item[0]}, {this_item[1]}'
                     f' priced at {this_item[2]}', 'green'))
                 print(instructions)
-                food_item = input('What other item would you like? \n')
+                print('What other item would you like?\n')
+                food_item = input('Please enter a valid input: ')
             except IndexError:
                 clear_screen()
                 print(FORMATTED_MENU)
@@ -693,7 +699,8 @@ def complete_order():
     order_complete = True
     while complete_order:
         print(colored('Are you ready to complete your order?\n', 'yellow'))
-        order_complete = input('[Y] - Yes\n[N] - No\n').strip()
+        print('[Y] - Yes\n[N] - No\n')
+        order_complete = input('Please enter a valid input: ').strip()
         order_complete = order_complete.capitalize()
         if order_complete == 'Y':
             this_order = Order(_name, _delivery_type, _address,
@@ -751,7 +758,7 @@ def quit_option(message='quit to the main menu',
         colored(f'Are you sure you want to {message}?', 'yellow'))
     print('\n[Y] - Yes\n[N] - No\n')
     while True:
-        confirm_quit = input('Please enter a valid input: \n').strip()
+        confirm_quit = input('Please enter a valid input: ').strip()
         if confirm_quit.capitalize() == 'Y' and exit_to == 'Welcome':
             clear_screen()
             load_animation('Returning to welcome page.')

@@ -33,17 +33,20 @@ def validate_address(message: str) -> str:
     Function to accept and validate user input for address.
     @param message(string): Custom quit message.
     """
+    prompt_message = (
+                colored(f'Are you sure you want to'
+                        f' cancel and return to {message}?', 'yellow'))
     while True:
+        print(
+            'Please enter your house number. Or enter [Q] to quit.\n')
         address_number = input(
-            'Please enter your house number. Or enter [Q] to quit.\n').strip()
+            'House number: ').strip()
         if address_number.isdigit():
             address_number = int(address_number)
             break
         elif address_number.capitalize() == 'Q':
             clear_screen()
-            print(
-                colored(f'Are you sure you want to'
-                        f' cancel and return to {message}?', 'yellow'))
+            print(prompt_message)
             while True:
                 confirm_exit = input('\n[Y] - Yes\n[N] - No\n')
                 if confirm_exit.capitalize() == 'Y':
@@ -54,8 +57,7 @@ def validate_address(message: str) -> str:
                     break
                 else:
                     clear_screen()
-                    print(colored('Are you sure you want to quit'
-                          ' to the main page?', 'yellow'))
+                    print(prompt_message)
                     print('\n[Y] - Yes\n[N] - No')
                     print(colored(f'\nIm sorry but "{confirm_exit}'
                           ' is not a valid option.\n\nPlease'
@@ -67,8 +69,9 @@ def validate_address(message: str) -> str:
                 '\n\nPlease enter a valid number.\n', 'yellow'))
     clear_screen()
     while True:
-        address_street = input('Please enter your street name. Or enter'
+        print('Please enter your street name. Or enter'
                                ' [Q] to quit.\n')
+        address_street = input('Street name: ')
         if address_street.capitalize() == 'Q':
             clear_screen()
             print(
@@ -100,15 +103,16 @@ def validate_name() -> str:
     Function to accept and validate user input for name.
     """
     while True:
-        first_name = input('Please enter your first name.'
-                           ' Or enter [Q] to quit.\n').strip()
+        print('Please enter your first name.'
+                           ' Or enter [Q] to quit.\n')
+        first_name = input('First name: ').strip()
         if first_name.capitalize() == 'Q':
             clear_screen()
             print(colored('Are you sure you want to'
                           ' quit to the main page?', 'yellow'))
             print('\n[Y] - Yes\n[N] - No\n')
             while True:
-                confirm_quit = input('Please enter a valid input: \n').strip()
+                confirm_quit = input('Please enter a valid input: ').strip()
                 if confirm_quit.capitalize() == 'Y':
                     clear_screen()
                     return False
@@ -133,15 +137,16 @@ def validate_name() -> str:
                 'Please enter a valid name.\n', 'yellow'))
     clear_screen()
     while True:
-        surname = input('Please enter your surname.'
+        print('Please enter your surname.'
                         ' Or enter [Q] to quit.\n').strip()
+        surname = input('Surname: ').strip()
         if surname.capitalize() == 'Q':
             clear_screen()
             print(colored('Are you sure you want to'
                           ' quit to the main page?', 'yellow'))
             print('\n[Y] - Yes\n[N] - No\n')
             while True:
-                confirm_quit = input('Please enter a valid input: \n').strip()
+                confirm_quit = input('Please enter a valid input: ').strip()
                 if confirm_quit.capitalize() == 'Y':
                     clear_screen()
                     return False
