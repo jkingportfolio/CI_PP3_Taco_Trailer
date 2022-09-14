@@ -350,6 +350,7 @@ def create_account():
                     if validate_password(password):
                         while True:
                             inner_func = True
+                            print(colored('Password entry was valid.\n', 'green'))
                             print(
                                 'Please re enter your password. Otherwise'
                                 ' enter [Q] to cancel\naccount'
@@ -364,8 +365,8 @@ def create_account():
                                     return
                             elif password == password_validate:
                                 clear_screen()
-                                print(colored('Password is valid and matches'
-                                              ' re entry.\n', 'green'))
+                                print(colored('Password re entry'
+                                              ' matches.\n', 'green'))
                                 while True:
                                     _name = validate_name()
                                     if not _name:

@@ -69,6 +69,7 @@ def validate_address(message: str) -> str:
                 '\n\nPlease enter a valid number.\n', 'yellow'))
     clear_screen()
     while True:
+        print(colored(f'"{address_number}" entered as house number.\n', 'green'))
         print('Please enter your street name. Or enter'
               ' [Q] to quit.\n')
         address_street = input('Street name: ')
@@ -95,6 +96,9 @@ def validate_address(message: str) -> str:
                 ' special characters.\n\nPlease enter a'
                 ' valid street name.\n', 'yellow'))
     _address = (f'{address_number} {address_street}')
+    clear_screen()
+    print(colored(f'Full address provided: {_address}', 'green'))
+    sleep(3)
     return _address
 
 
@@ -137,6 +141,7 @@ def validate_name() -> str:
                 'Please enter a valid name.\n', 'yellow'))
     clear_screen()
     while True:
+        print(colored(f'"{first_name}" entered as first name.\n', 'green'))
         print('Please enter your surname.'
               ' Or enter [Q] to quit.\n')
         surname = input('Surname: ').strip()
@@ -168,6 +173,9 @@ def validate_name() -> str:
             print(colored(
                 f'Im sorry "{surname}" contains numbers or special characters.'
                 '\n\nPlease enter a valid surname.\n', 'yellow'))
-    clear_screen()
     _name = (f'{first_name} {surname}')
+    clear_screen()
+    print(colored(f'Full name provided: {_name}', 'green'))
+    sleep(3)
+    clear_screen()
     return _name
