@@ -770,9 +770,9 @@ The display order receipt featured will be displayed upon order completion. It i
 
 - Covered in user stories: 1 & 13
 
-#### Hide users password inputs 
+#### Hidden password inputs 
 
-The hide users password inputs feature is used to replace the characters entered by the user when typing in password with '*'. This will provide a level of security to the user and Admin.
+The hidden password input feature is used to replace the characters entered by the user when typing in password with '*'. This will provide a level of security to the user and Admin.
 
 <details>
 <summary>Hidden password input image</summary>
@@ -781,9 +781,9 @@ The hide users password inputs feature is used to replace the characters entered
 
 - Covered in user stor: 22
 
-#### Incorrect password in password change log out 
+#### Change password auto log out 
 
-The incorrect password in password change lout out feature is used to log a user out if when trying to change password invalid entry of the current password occurs. This will provide a level of security for users who may leave a logged in account un attended.
+The change password auto log out feature is used to log a user out if when trying to change password invalid entry of the current password occurs. This will provide a level of security for users who may leave a logged in account un attended.
 
 <details>
 <summary>Security log out image</summary>
@@ -1315,6 +1315,13 @@ The website was tested on the following web browsers:
 </details>
 
 </details>
+
+22. As the site owner, I would want the app to have security features.
+
+| Feature       | Action        | Expected Result  | Actual Result |
+| ------------- | ------------- | -------------    | ------------- |
+| Hidden password input     |    |      | Works as expected |
+| Change password auto log out | | | Works as expected |
 
 </details>
 
