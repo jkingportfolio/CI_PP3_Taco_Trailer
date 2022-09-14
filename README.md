@@ -292,12 +292,12 @@ This project uses Object Orientated Programming to interact and manipulate the f
 - os - Used to determine operating system and clear CLI.
 - time - Used to create a delay effect.
 - datetime - Used to get current time stamp and assign times to orders.
-- getpass - Used to hide user input whilst entering passwords.
 
 ## Third Party Libraries
 
 - tabulate - JUSTIFICATION: I used this library to output lists and dictionaries in a table format enhancing user experience and overall readability.
 - termcolor - JUSTIFICATION: I used this library to give colour to user feedback and instructions
+- pwinput - JUSTIFICATION: I used this library to provide a level of security when users were entering their passwords. pwinput would replace each character entered with a '*' keeping password inputs safe.
 - pyfiglet - JUSTIFICATION: I used this library to generate the text art messages
 - gspread - JUSTIFICATION: I used this library to add, remove and manipulate data within my Google Sheets worksheets and to interact with Google APIs
 - google.oauth.service_account - JUSTIFICATION: I used this library to set up the authentication needed to access the Google API and connect the Service Account using the Credentials function. From this a cred.json file was generated with all details needed for the API to access the Google account. This information is then stored in the config var section when deploying to Heroku.
