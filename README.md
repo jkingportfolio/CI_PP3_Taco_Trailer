@@ -106,6 +106,7 @@ The Taco Trailer website has been developed to provide users the chance to order
 19. As the site owner, I would want the registered users information to be saved to a google sheets file.
 20. As the site owner, I would want orders to be saved to a google sheets file. 
 21. As the site owner, I would want the user to get feedback in the case of invalid input.
+22. As the site owner, I would want the app to have security features.
 
 ### User Manual
 
