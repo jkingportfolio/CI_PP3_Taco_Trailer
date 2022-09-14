@@ -1230,7 +1230,6 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Feature - View pending orders</summary>
 <img src="docs/images/testing/testing-user-stories/testing-user-story-18-view-pending-orders-1.png">
 <img src="docs/images/testing/testing-user-stories/testing-user-story-18-view-pending-orders-2.png">
-<img src="docs/images/testing/testing-user-stories/testing-user-story-18-view-pending-orders-3.png">
 </details>
 
 </details>
@@ -1340,6 +1339,21 @@ Due to the sheet amount of images required to cover all please see this user sto
 | ------------- | ------------- | -------------    | ------------- |
 | Hidden password input     |    |      | Works as expected |
 | Change password auto log out | | | Works as expected |
+
+<details>
+<summary>Screenshots User Story 22</summary>
+
+<details>
+<summary>Feature - Hidden Password input</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-22-hidden-password-1.png">
+</details>
+<details>
+<summary>Feature - HChange password auto log out</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-22-change-password-log-out-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-22-change-password-log-out-2.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-22-change-password-log-out-3.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-22-change-password-log-out-4.png">
+</details>
 
 </details>
 
