@@ -381,6 +381,11 @@ The login is featured on the main page and will prompt users for a valid user na
 <img src="docs/images/features/invalid-user-entry.png">
 </details>
 
+<details>
+<summary>Valid user name image</summary>
+<img src="docs/images/features/login-valid-user-name.png">
+</details>
+
 - Covered in user stories: 1, 3 & 21
 
 #### Login - Password validation 
@@ -395,6 +400,11 @@ The login is featured on the main page and will prompt users for a valid user na
 <details>
 <summary>Login password invalid image</summary>
 <img src="docs/images/features/login-invalid-password.png">
+</details>
+
+<details>
+<summary>Login password success image</summary>
+<img src="docs/images/features/valid-credentials.png">
 </details>
 
 - Covered in user stories: 1, 3 & 21
@@ -481,6 +491,11 @@ The Admin view order records feature allows Admin users to view all orders that 
 <img src="docs/images/features/admin-order-records.png">
 </details>
 
+<details>
+<summary>Order record image</summary>
+<img src="docs/images/features/admin-order-record-view.png">
+</details>
+
 - Covered in user story: 17
 
 #### Admin - View pending orders
@@ -528,6 +543,11 @@ The user name validation is featured on the create account page and will parse t
 <details>
 <summary>User name taken error image</summary>
 <img src="docs/images/features/create-account-user-name-taken.png">
+</details>
+
+<details>
+<summary>User name valid image</summary>
+<img src="docs/images/features/create-account-password.png">
 </details>
 
 - Covered in user stories: 1, 2 & 21
@@ -596,7 +616,7 @@ The account creation update warning feature will warn users that the account wil
 The Continue as Guest is featured on the main page and will allow users to order without the need for logging into an account.
 
 <details>
-<summary>Guest login image</summary>
+<summary>Guest option image</summary>
 <img src="docs/images/features/guest-name.png">
 </details>
 
@@ -632,15 +652,20 @@ The collection option featured will auto populate the delivery address for these
 <img src="docs/images/features/member-order-choice-collection.png">
 </details>
 
+<details>
+<summary>Collection option receipt image</summary>
+<img src="docs/images/features/order-receipt-collection-address.png">
+</details>
+
 - Covered in user stories: 1 & 5
 
 #### Menu 
 
-The Menu featured will auto populate the delivery address for these orders as 'The Taco Trailer' and will be displayed on the order receipt.
+The Menu feature will display a tablulated format of all items available for order. The menu has 5 options, Add item, remove item, preview order, cancel order and complete order.
 
 <details>
-<summary>Collection option address image</summary>
-<img src="docs/images/features/order-type-collection.png">
+<summary>Menu image</summary>
+<img src="docs/images/features/menu.png">
 </details>
 
 - Covered in user stories: 1 & 7
