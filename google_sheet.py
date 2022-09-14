@@ -6,7 +6,7 @@ from termcolor import colored
 from time import sleep
 import pyfiglet
 import gspread
-import getpass
+import pwinput
 from google.oauth2.service_account import Credentials
 from taco_trailer_command_line import clear_screen, validate_password
 
@@ -94,25 +94,31 @@ def change_password(member_number: str):
     password_guesses = 3
     while True:
         print(colored('Change password\n', 'green'))
-        password_input = getpass.getpass(
+        print(
             'Please enter your current password or enter "Q"'
             ' to cancel password change: \n')
+        password_input = pwinput.pwinput(
+            'Password: ')
         if password_input == current_password:
             clear_screen()
             print(colored('Current password entered correct.\n', 'green'))
             while True:
-                new_password = getpass.getpass(
+                print(
                     'Please enter your new password, or enter "Q"'
                     ' to cancel password change: \n')
+                new_password = pwinput.pwinput(
+                    'Password: ')
                 clear_screen()
                 if validate_password(new_password):
                     clear_screen()
                     while True:
                         print(colored('New password entered has'
                                       ' passed validation.\n', 'green'))
-                        confirm_password = getpass.getpass(
+                        print(
                             'Please confirm your new password, or'
                             ' enter "Q" to quit: \n')
+                        confirm_password = pwinput.pwinput(
+                            'Password: ')
                         clear_screen()
                         if confirm_password == new_password:
                             SHEET.worksheet('Users').update_cell(

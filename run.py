@@ -1,7 +1,7 @@
 """
 Main python file
 """
-import getpass
+import pwinput
 from datetime import datetime, timedelta
 from time import sleep
 from termcolor import colored
@@ -112,7 +112,7 @@ def login_screen(error_message=''):
     while end_func:
         print(prompt)
         print(error_message)
-        user_name = input('Username: \n')
+        user_name = input('Username: ')
         if user_name in users:
             member_number = (
                 next((i for i, x in enumerate(logins)
@@ -157,7 +157,7 @@ def password_check(user_name: str,
     clear_screen()
     while end_func:
         print(pass_prompt)
-        password = getpass.getpass('Password: \n')
+        password = pwinput.pwinput('Password: ')
         if user_name == 'Admin' and password == user_password:
             admin_dashboard()
             welcome()
@@ -325,9 +325,10 @@ def create_account():
         elif validate_new_username(user_name):
             while True:
                 print(PASSWORD_CRITERIA)
-                password = getpass.getpass(colored(
+                print(colored(
                     'Please enter your password. Otherwise enter'
                     ' [Q] to cancel\naccount creation and quit.\n', 'green'))
+                password = pwinput.pwinput('Password: ')
                 if password.capitalize() == 'Q':
                     clear_screen()
                     end_func = quit_option(
@@ -339,10 +340,11 @@ def create_account():
                     if validate_password(password):
                         while True:
                             inner_func = True
-                            password_validate = getpass.getpass(
+                            print(
                                 'Please re enter your password. Otherwise'
                                 ' enter [Q] to cancel\naccount'
                                 ' creation and quit.\n')
+                            password_validate = pwinput.pwinput('Password: ')
                             if password_validate.capitalize() == 'Q':
                                 clear_screen()
                                 end_func = quit_option(
