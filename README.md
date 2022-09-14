@@ -1152,8 +1152,9 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Screenshots User Story 14</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Quit</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-14-quit-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-14-quit-2.png">
 </details>
 
 </details>
@@ -1170,8 +1171,8 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Screenshots User Story 15</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Welcome message</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-15-welcome-message-1.pngg">
 </details>
 
 </details>
@@ -1186,8 +1187,14 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Screenshots User Story 16</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Admin Dashboard</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-16-admin-dashboard-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-16-admin-dashboard-2.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-16-admin-dashboard-3.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-16-admin-dashboard-4.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-16-admin-dashboard-5.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-16-admin-dashboard-6.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-16-admin-dashboard-7.png">
 </details>
 
 </details>
