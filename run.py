@@ -117,11 +117,12 @@ def login_screen(error_message=''):
                 next((i for i, x in enumerate(logins)
                       if x["User Name"] == user_name), None))
             clear_screen()
-            print(colored(f'User name "{user_name}" has been validated.', 'green'))
+            print(colored(f'User name "{user_name}" has'
+                          ' been validated.', 'green'))
             sleep(2)
             user_password = logins[member_number].get('Password')
             _name = logins[member_number].get('Name')
-            password_check(user_name, member_number, user_password)          
+            password_check(user_name, member_number, user_password)
             break
         elif user_name.capitalize() == 'Q':
             clear_screen()
@@ -350,7 +351,8 @@ def create_account():
                     if validate_password(password):
                         while True:
                             inner_func = True
-                            print(colored('Password entry was valid.\n', 'green'))
+                            print(colored('Password entry was'
+                            ' valid.\n', 'green'))
                             print(
                                 'Please re enter your password. Otherwise'
                                 ' enter [Q] to cancel\naccount'

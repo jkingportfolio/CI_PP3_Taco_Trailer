@@ -69,7 +69,8 @@ def validate_address(message: str) -> str:
                 '\n\nPlease enter a valid number.\n', 'yellow'))
     clear_screen()
     while True:
-        print(colored(f'"{address_number}" entered as house number.\n', 'green'))
+        print(colored(f'"{address_number}" entered'
+                      ' as house number.\n', 'green'))
         print('Please enter your street name. Or enter'
               ' [Q] to quit.\n')
         address_street = input('Street name: ')
