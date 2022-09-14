@@ -1348,7 +1348,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 <img src="docs/images/testing/testing-user-stories/testing-user-story-22-hidden-password-1.png">
 </details>
 <details>
-<summary>Feature - HChange password auto log out</summary>
+<summary>Feature - Chhange password auto log out</summary>
 <img src="docs/images/testing/testing-user-stories/testing-user-story-22-change-password-log-out-1.png">
 <img src="docs/images/testing/testing-user-stories/testing-user-story-22-change-password-log-out-2.png">
 <img src="docs/images/testing/testing-user-stories/testing-user-story-22-change-password-log-out-3.png">
@@ -1356,6 +1356,9 @@ Due to the sheet amount of images required to cover all please see this user sto
 </details>
 
 </details>
+
+</details>
+
 
 ### Automated Testing
 
