@@ -1,7 +1,7 @@
 # The Taco Trailer
 Developer: Jamie King
 
-![Mockup image](docs/images/features/landing-page.png.png)
+![Mockup image](docs/images/features/landing-page.png)
 
 The Taco Trailer website has been developed to provide users the chance to order food for delivery or pick-up via a command line based interface. 
 
