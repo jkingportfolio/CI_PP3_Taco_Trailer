@@ -1031,8 +1031,9 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Screenshots User Story 7</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Menu</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-7-menu-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-7-menu-2.png">
 </details>
 
 </details>
