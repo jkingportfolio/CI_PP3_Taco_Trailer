@@ -88,12 +88,12 @@ def pending_orders(total_rec_int: int):
                 break
             else:
                 clear_screen()
-                print(f'The current time and date is: {local_time}\n')
+                print(f'The current time and date is: {local_time}')
 
                 print(tabulate(pending_order_list, headers='keys',
                                tablefmt="simple", numalign="center"))
                 print(
-                    colored(f'\nIm sorry "{user_choice}" is not'
+                    colored(f'Im sorry "{user_choice}" is not'
                             ' a valid input.', 'yellow'))
         break
 
