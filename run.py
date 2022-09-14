@@ -116,9 +116,12 @@ def login_screen(error_message=''):
             member_number = (
                 next((i for i, x in enumerate(logins)
                       if x["User Name"] == user_name), None))
+            clear_screen()
+            print(colored(f'User name "{user_name}" has been validated.', 'green'))
+            sleep(2)
             user_password = logins[member_number].get('Password')
             _name = logins[member_number].get('Name')
-            password_check(user_name, member_number, user_password)
+            password_check(user_name, member_number, user_password)          
             break
         elif user_name.capitalize() == 'Q':
             clear_screen()
@@ -158,6 +161,10 @@ def password_check(user_name: str,
         print(pass_prompt)
         password = pwinput.pwinput('Password: ')
         if user_name == 'Admin' and password == user_password:
+            clear_screen()
+            load_animation(
+                'Credentials are valid.\n\n'
+                f'Logging in as {user_name}.')
             admin_dashboard()
             welcome()
             break
