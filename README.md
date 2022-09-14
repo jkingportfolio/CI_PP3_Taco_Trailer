@@ -1048,8 +1048,9 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Screenshots User Story 8</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Add item to order</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-8-add-item-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-8-add-item-2.png">
 </details>
 
 </details>
@@ -1064,8 +1065,9 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Screenshots User Story 9</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Remove item</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-9-remove-item-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-9-remove-item-2.png">
 </details>
 
 </details>
@@ -1080,8 +1082,9 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Screenshots User Story 10</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Preview order</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-10-preview-order-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-10-preview-order-2.png">
 </details>
 
 </details>
@@ -1096,8 +1099,10 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Screenshots User Story 11</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Cancel order</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-11-cancel-order-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-11-cancel-order-2.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-11-cancel-order-3.png">
 </details>
 
 </details>
@@ -1112,8 +1117,11 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Screenshots User Story 12</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Complete order</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-12-complete-order-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-12-complete-order-2.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-12-complete-order-3.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-12-complete-order-4.png">
 </details>
 
 </details>
@@ -1128,8 +1136,8 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Screenshots User Story 13</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Display receipt</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-13-display-receipt-1.png">
 </details>
 
 </details>
