@@ -563,7 +563,7 @@ def customer_details():
             print(prompt)
             print(options)
             print(colored(
-                f'Im sorry but "{_delivery_type}" is not a valid option.'
+                'Im sorry but thats not a valid option.'
                 ' Please enter a valid input.\n', 'yellow'))
 
 
