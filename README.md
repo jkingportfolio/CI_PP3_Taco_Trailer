@@ -770,6 +770,28 @@ The display order receipt featured will be displayed upon order completion. It i
 
 - Covered in user stories: 1 & 13
 
+#### Hide users password inputs 
+
+The hide users password inputs feature is used to replace the characters entered by the user when typing in password with '*'. This will provide a level of security to the user and Admin.
+
+<details>
+<summary>Hidden password input image</summary>
+<img src="docs/images/features/hidden-password-input.png">
+</details>
+
+- Covered in user stor: 22
+
+#### Incorrect password in password change log out 
+
+The incorrect password in password change lout out feature is used to log a user out if when trying to change password invalid entry of the current password occurs. This will provide a level of security for users who may leave a logged in account un attended.
+
+<details>
+<summary>Security log out image</summary>
+<img src="docs/images/features/logout-change-password-invalid.png">
+</details>
+
+- Covered in user stor: 22
+
 #### Quit 
 
 The quit is a feature used throughout the app to allow the user to validate they do intend to quit and if not return to the current position in the app.
