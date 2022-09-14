@@ -34,8 +34,8 @@ def validate_address(message: str) -> str:
     @param message(string): Custom quit message.
     """
     prompt_message = (
-                colored(f'Are you sure you want to'
-                        f' cancel and return to {message}?', 'yellow'))
+        colored(f'Are you sure you want to'
+                f' cancel and return to {message}?', 'yellow'))
     while True:
         print(
             'Please enter your house number. Or enter [Q] to quit.\n')
@@ -70,7 +70,7 @@ def validate_address(message: str) -> str:
     clear_screen()
     while True:
         print('Please enter your street name. Or enter'
-                               ' [Q] to quit.\n')
+              ' [Q] to quit.\n')
         address_street = input('Street name: ')
         if address_street.capitalize() == 'Q':
             clear_screen()
@@ -104,7 +104,7 @@ def validate_name() -> str:
     """
     while True:
         print('Please enter your first name.'
-                           ' Or enter [Q] to quit.\n')
+              ' Or enter [Q] to quit.\n')
         first_name = input('First name: ').strip()
         if first_name.capitalize() == 'Q':
             clear_screen()
@@ -138,7 +138,7 @@ def validate_name() -> str:
     clear_screen()
     while True:
         print('Please enter your surname.'
-                        ' Or enter [Q] to quit.\n').strip()
+              ' Or enter [Q] to quit.\n')
         surname = input('Surname: ').strip()
         if surname.capitalize() == 'Q':
             clear_screen()
