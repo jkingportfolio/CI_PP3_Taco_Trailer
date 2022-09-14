@@ -1272,13 +1272,13 @@ Due to the sheet amount of images required to cover all please see this user sto
 | ------------- | ------------- | -------------    | ------------- |
 | Welcome message invalid feedback     |  User enters incorrect input  |      |Works as expected  |
 | Login username validation     |  User enters user name  |      |Works as expected  |
-| Login Password validation     | User enters password   |      | Works as expected |
+| Login password validation     | User enters password   |      | Works as expected |
 | Member password update warning     |  Member to update password  | Upon successful password change, user will be displayed warning that password change will only take effect upon restart of the app     | Works as expected |
 | Username validation    | Memeber to attempt to sign in with user name   | User to be prompted      |Works as expected  |
 | Password creation validation     |  User to enter a desired password when creating an account  | User to be provided with feedback based on password validation | Works as expected |
 | First / surname validation     | User to enter a desired First name and Surname when creating an account   |  User to be provided with feedback based on name validation    | Works as expected |
 | House number / Street name validation     |  User to enter a desired House number and Street when creating an account  |  User to be provided with feedback based on House number and Street name validation    | Works as expected |
-| Delivery Type option     | User to chose a delivery type   | User to be provided with feedback stating chosen delivery type | Works as expected |
+| Delivery type option     | User to chose a delivery type   | User to be provided with feedback stating chosen delivery type | Works as expected |
 | Invalid item     | User to enter a wrong item number on the menu page   | User to be provided with feedback stating there was an error in their recent entry     |Works as expected  |
 | Empty basket     | User to try and remove an item from an empty basket   |  User to be provided with feedback stating there was an error due to their basket being empty    |Works as expected |
 
@@ -1287,48 +1287,59 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Screenshots User Story 21</summary>
 
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Welcome message invalid feedback</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-welcome-message-feedback-1.png">
 </details>
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Login username validation</summary>
+<img src="docs/docs/images/testing/testing-user-stories/testing-user-story-21-login-username-feedback-1.png.png">
 </details>
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Login password validation</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-login-password-feedback-1.png">
 </details>
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Member password update warning</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-member-password-change-feedback-1.png">
 </details>
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Username validation</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-new-username-validation-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-new-username-validation-2.png">
 </details>
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Password creation validation</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-new-password-validation-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-new-password-validation-2.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-new-password-validation-3.png">
 </details>
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - First / surname validation</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-new-name-validation-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-new-name-validation-2.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-new-name-validation-3.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-new-name-validation-4.png">
 </details>
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - House number / Street name validation</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-new-address-validation-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-new-address-validation-2.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-new-address-validation-3.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-new-address-validation-4.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-new-address-validation-5.png">
 </details>
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Delivery type option</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-delivery-type-validation-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-invalid-delivery-option-1.png">
 </details>
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Invalid item</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-invalid-item-1.png">
 </details>
 <details>
-<summary>Feature - </summary>
-<img src="docs/testing-user-stories/.png">
+<summary>Feature - Empty basket</summary>
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-empty-basket-1.png">
 </details>
 
 </details>
