@@ -29,13 +29,12 @@ def welcome(message=''):
     clear_screen()
     title = 'Welcome to the Taco Trailer'
     print(pyfiglet.figlet_format(title))
-    print(colored('Hello, would you like to place an order or'
-                  ' login?\n', 'green'))
+    print(colored('Are you ready to begin?\n', 'green'))
     while True:
         print('[Y] - Yes\n[N] - No')
         print(f'\n{message}')
         place_order = input(
-            'Please enter a valid input:\n').strip()
+            'Please enter a valid input:').strip()
         place_order = place_order.capitalize()
         if place_order == 'Y':
             clear_screen()
