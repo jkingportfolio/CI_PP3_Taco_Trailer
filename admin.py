@@ -68,7 +68,7 @@ def pending_orders(total_rec_int: int):
                     (item['Order Time/Date']), "%H:%M:%S %Y-%m-%d")
                 for key in ('Items', 'Address', 'Name'):
                     del item[key]
-        except KeyError:
+        except TypeError:
             pass
 
         pending_order_list = list(
