@@ -51,16 +51,16 @@ The Taco Trailer website has been developed to provide users the chance to order
 - Be able to easily interact with the app to order food for pick up or delivery.
 - Navigate the app seamlessly.
 - Receive clear instructions on their current input options.
-- Be provided with negative and postive feedback based on their inputs.
-- Be able to remove items from an order or cancel the order prior to submission.
+- Be provided with negative and positive feedback based on their inputs.
+- Be able to add and remove items from an order or cancel the order prior to submission.
 - The ability to create an account.
 - The ability to change account password.
 
 ### Site Owner Goals
 
-- Provide potential customers an easy to use app to order food from The Taco Trailer.
+- Provide potential customers an easy-to-use app to order food from The Taco Trailer.
 - Include an admin area in which information intended for staff only can be accessed. 
-- As the site owner i wanted to secure the admin area of the app with a password.
+- As the site owner I wanted to secure the admin area of the app with a password.
 - Have the ability to view previous orders that had been placed.
 - Have the ability to view current pending orders that have yet to be picked up or delivered.
 - Ensure all user inputs are validated and errors handled as to not provide issues with orders and a negative user experience.
@@ -85,8 +85,8 @@ The Taco Trailer website has been developed to provide users the chance to order
 2. As a user, I want to be able to create an account.
 3. As a user, I want to be able to login/out of my account.
 4. As a user, I want to be able to change my account password.
-5. As a user, I want to be able to chose between order pick up or delivery.
-6. As a user, I want to be able to change current order address if the stored one is incorrect.
+5. As a user, I want to be able to choose between order pick up or delivery.
+6. As a user, I want to be able to change the current order address if the stored one is incorrect.
 7. As a user, I want to be able to view the menu.
 8. As a user, I want to be able to add items to my order.
 9. As a user, I want to be able to remove items from my order.
@@ -103,8 +103,8 @@ The Taco Trailer website has been developed to provide users the chance to order
 16. As the site owner, I would want to be able to access a password locked admin area.
 17. As the site owner, I would want to be able to access all previous order records.
 18. As the site owner, I would want to be able to access a list of pending orders.
-19. As the site owner, I would want the registered users information to be saved to a google sheets file.
-20. As the site owner, I would want orders to be saved to a google sheets file. 
+19. As the site owner, I would want the registered users' information to be saved to a Google Sheets file.
+20. As the site owner, I would want orders to be saved to a Google Sheets file. 
 21. As the site owner, I would want the user to get feedback based on their input.
 22. As the site owner, I would want the app to have security features.
 
@@ -252,7 +252,7 @@ Operation: User keyboard input. Initially the user will be provided with a tabul
 
 ### Structure
 
-This app was designed using Code Institutes Python Essentials Template. The template creates a command line interface within a blank page with a run button located above the command line interface. As this project is only intended for use on large screen devices there was no need to incorporate responsivness to the page. On arrival to the page, the user will be presented with a welcome message and instructions on user input choices. 
+This app was designed using Code Institutes Python Essentials Template. The template creates a command line interface within a blank page with a run button located above the command line interface. As this project is only intended for use on large screen devices there was no need to incorporate responsiveness to the page. On arrival to the page, the user will be presented with a welcome message and instructions on user input choices. 
 
 ### Flowchart
 
@@ -281,7 +281,7 @@ This project uses Object Orientated Programming to interact and manipulate the f
 - GitHub - Used to deploy the projects code.
 - Gitpod - Used to develop and test code.
 - LibreOffice Draw - Used to create the flowchart.
-- Google Sheets - Used to store data outside of the program with the User data, food menu and sales records stored on seperate worksheets.
+- Google Sheets - Used to store data outside of the program with the User data, food menu and sales records stored on separate worksheets.
 - Google Cloud Platform - Used to manage access permissions to google services such as google autho and google sheets.
 - Heroku Platform - Used to deploy the live project.
 - PEP8 - Used to validate code against Python conventions.
@@ -323,7 +323,7 @@ The welcome message is featured on the main page and will greet users with a fri
 
 #### Welcome message invalid input feedback 
 
-The welcome message invalid input feedback is featured welcome page and will alert users of an invalid option entry.
+The welcome message invalid input feedback is featured on the welcome page and will alert users of an invalid option entry.
 
 <details>
 <summary>Welcome message invalid input image</summary>
@@ -349,7 +349,7 @@ The main page is featured on the main page and displays 4 options for the user t
 
 #### Login 
 
-The login is featured on the main page and will prompt users for a valid user name to be entered followe by the password.
+The login is featured on the main page and will prompt users for a valid user name to be entered followed by the password.
 
 <details>
 <summary>Login username image</summary>
@@ -439,7 +439,7 @@ The create order feature will begin the process of creating an order. When logge
 
 #### Member delivery options 
 
-The member delivery options feature will allow logged in users to chose between Delivery or Collection. If Collection is selected then the Address on the order receipt will state 'The Taco Trailer'. If the user selects delivery they will be presented with the address data that they had entered when creating an account, this can be selected as correct and if not users will be prompted to enter a new delivery address for this order only, it will not update the database.
+The member delivery options feature will allow logged in users to choose between Delivery or Collection. If Collection is selected then the Address on the order receipt will state 'The Taco Trailer'. If the user selects delivery they will be presented with the address data that they had entered when creating an account, this can be selected as correct and if not users will be prompted to enter a new delivery address for this order only, it will not update the database.
 
 <details>
 <summary>Member delivery order image</summary>
@@ -450,7 +450,7 @@ The member delivery options feature will allow logged in users to chose between 
 
 #### Member change password 
 
-The member change password feature will allow logged in users to change their password. Users must first confirm their current password and then enter a password which meets the criteria and then re enter to validate. Users will then made aware that password changes will only happen upon restart of the app.
+The member change password feature will allow logged in users to change their password. Users must first confirm their current password and then enter a password which meets the criteria and then re enter to validate. Users will then be made aware that password changes will only happen upon restart of the app.
 
 <details>
 <summary>Change password image</summary>
@@ -472,7 +472,7 @@ The member password update warning feature will warn users that password changes
 
 #### Admin Dashboard
 
-The Admin Dashboard feature is a landing page which is only available for the Admin user. It features 2 option:
+The Admin Dashboard feature is a landing page which is only available for the Admin user. It features 2 options:
     - View order records
     - View pending order
 
@@ -571,7 +571,7 @@ The password validation is featured on the create account page and will ensure a
 
 #### First and surname validation 
 
-The name validation feature is used to valid that both the first and surnames entered when creating an account do not contain special characters, nummbers or whitespace and if do prompts the user to re enter the data.
+The name validation feature is used to validate that both the first and surnames entered when creating an account do not contain special characters, numbers or whitespace and if so prompts the user to re enter the data.
 
 <details>
 <summary>First name validation image</summary>
@@ -587,7 +587,7 @@ The name validation feature is used to valid that both the first and surnames en
 
 #### House number and Street name validation 
 
-The house number and street name validation feature is used to valid that both the house number and address entered when creating an account. The house number is checked to make sure it does not contain special characters, characters or whitespace and if do prompts the user to re enter the data. The street name is checked to make sure it doesnt include numbers or special character.
+The house number and street name validation feature is used to validate that both the house number and address entered when creating an account. The house number is checked to make sure it does not contain special characters, characters or whitespace and if so prompts the user to re enter the data. The street name is checked to make sure it doesn't include numbers or special characters.
 
 <details>
 <summary>House number validation image</summary>
@@ -625,7 +625,7 @@ The Continue as Guest is featured on the main page and will allow users to order
 
 #### Delivery Type option 
 
-The delivery type option is featured when a member or guest creates an order. There are two choices, one being delivery and another of collection. Collection will auto populate the address as The Taco Trailer where as delivery will ask a guest for their address and for a member they will be prompted to confirm the details saved in their profile is where they would like this order to be delivered. If not, they will be prompted to enter the new delivery address.
+The delivery type option is featured when a member or guest creates an order. There are two choices, one being delivery and another of collection. Collection will auto populate the address as The Taco Trailer. Delivery works two ways: Guests will be asked to enter their address, whereas members will be prompted to confirm that the details saved in their profile is where they would like this order to be delivered. If not, they will be prompted to enter the new delivery address.
 
 <details>
 <summary>Delivery type (member) image</summary>
@@ -662,7 +662,7 @@ The collection option featured will auto populate the delivery address for these
 
 #### Menu 
 
-The Menu feature will display a tablulated format of all items available for order. The menu has 5 options, Add item, remove item, preview order, cancel order and complete order.
+The Menu feature will display a tabulated format of all items available for order. The menu has 5 options: Add item, remove item, preview order, cancel order and complete order.
 
 <details>
 <summary>Menu image</summary>
@@ -673,7 +673,7 @@ The Menu feature will display a tablulated format of all items available for ord
 
 #### Add item to order 
 
-The Add item to order feature on the Menu page allows users to add an item to their order by typing the relevant number as display on the menu.
+The Add item to order feature on the Menu page allows users to add an item to their order by typing the relevant number as displayed on the menu.
 
 <details>
 <summary>Add item to order image</summary>
@@ -739,7 +739,7 @@ The cancel order feature on the Menu page allows users to cancel their order and
 
 #### Delivery charge 
 
-The delivery charge feature add a delivery cost if the order is for delivery and add nothing if it is for collection.
+The delivery charge feature adds a delivery cost if the order is for delivery and adds nothing if it is for collection.
 
 <details>
 <summary>Delivery charge image</summary>
@@ -779,7 +779,7 @@ The hidden password input feature is used to replace the characters entered by t
 <img src="docs/images/features/hidden-password-input.png">
 </details>
 
-- Covered in user stor: 22
+- Covered in user story: 22
 
 #### Change password auto log out 
 
@@ -790,7 +790,7 @@ The change password auto log out feature is used to log a user out if when tryin
 <img src="docs/images/features/logout-change-password-invalid.png">
 </details>
 
-- Covered in user stor: 22
+- Covered in user story: 22
 
 #### Quit 
 
@@ -808,7 +808,7 @@ The quit is a feature used throughout the app to allow the user to validate they
 
 In the future as my skills grow I would like to implement the following features:
 
-- Ability to append the placed order to the users account row within google sheets and have a function to display all historical orders place by that logged in account
+- Ability to append the placed order to the users account row within Google Sheets and have a function to display all historical orders place by that logged in account
 - Email address to be one of the required pieces of information when creating a user account so that the order receipt can be emailed to the user on completion via an Email API.
 
 ## Python Validation
@@ -1398,17 +1398,17 @@ The test ran and was successful.
 
 ## Bugs
 
-During the project i encountered a number of bugs some of which were solved some of which were not as stated below:
+During the project I encountered a number of bugs some of which were solved some of which were not as stated below:
 
 | Bug           | Fix           |
 | ------------- | ------------- |
 | Pending orders ignoring the date and only checking for difference in time ie if a previous days order time was within 15 minutes of the current time it would display  | Discussions with CI Tutor Support led to looping through the list generated from google sheets, adding a new key with the values to be the string time converted to datetime. This then took the date into account and fixed the issue. |
 | Input order number when ordered was incorrect due to indexing | Food order variable which stores the input from the user had 1 added to display the correct item | 
-| Item number input would allow item 0 to be ordered and would select the last item. This was due to -1 from user input to fix the indexing issue would the allow a value of -1 whch then translates to the last item in the list  | A second condition in the if statement to check if the user input is greater than 0. |
+| Item number input would allow item 0 to be ordered and would select the last item. This was due to -1 from user input to fix the indexing issue would the allow a value of -1 which then translates to the last item in the list  | A second condition in the if statement to check if the user input is greater than 0. |
 | IndexError when removing item when order list is empty   | try and except  block added to handle the error in an elegant fashion |
-| When viewing in deployed heroku app, print receipt will not clear from screen  | This issue only occurs within the Heroku deployed app. As this is a Heroku issue outwith my own control i have resulted in documenting this as a known bug which cannot be fixed. |
-| Application must be restarted in order to use newly created user account  | As the module needs to reload i have yet to find a fix for this without restarting the application, this has been documented as a known bug. |
-| Application must be restarted in order to use changed password | As the module needs to reload i have yet to find a fix for this without restarting the application, this has been documented as a known bug.|
+| When viewing in deployed heroku app, print receipt will not clear from screen  | This issue only occurs within the Heroku deployed app. As this is a Heroku issue outside my own control I have resulted in documenting this as a known bug which cannot be fixed. |
+| Application must be restarted in order to use newly created user account  | As the module needs to reload I have yet to find a fix for this without restarting the application, this has been documented as a known bug. |
+| Application must be restarted in order to use changed password | As the module needs to reload I have yet to find a fix for this without restarting the application, this has been documented as a known bug.|
 
 ## Deployment
 
