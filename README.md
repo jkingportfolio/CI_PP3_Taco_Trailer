@@ -1236,7 +1236,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 </details>
 
-19. As the site owner, I would want the registered users information to be saved to a Google Sheets file.
+19. As the site owner, I would want the registered users' information to be saved to a Google Sheets file.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
