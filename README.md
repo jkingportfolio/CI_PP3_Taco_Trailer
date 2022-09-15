@@ -876,7 +876,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Create Account  | From start up, select Y to navigate to the main page. At the main page via user inpit enter '2' to begin the create account process. when prompted to, enter the desired user name. | Upon entry of a user name the user will be presented with a notification to indicate that the user name has passed validation and has been created   | Works as expected |
+| Create Account  | From start up, select Y to navigate to the main page. At the main page via user input enter '2' to begin the create account process. when prompted to, enter the desired user name. | Upon entry of a user name the user will be presented with a notification to indicate that the user name has passed validation and has been created   | Works as expected |
 | Username Validation  | Navigate to the create account section. When prompted, enter desired user name  | Feedback to be displayed validating user name    | Works as expected |
 | Password Validation  | Navigate to the create account section, enter a valid user name, when prompted to enter a password based on the password criteria provided.   |  Feedback to be displayed stating password entry was valid  | Works as expected |
 | First / Surname Validation  | Navigate to the create account section, enter a valid user name and password, when prompted to enter a first name, upon successful first name input enter a valid surname  | Feedback to be displayed validating First name and a seperate message to indicate Surname has been validated   | Works as expected |
@@ -1294,7 +1294,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 </details>
 <details>
 <summary>Feature - Login username validation</summary>
-<img src="docs/docs/images/testing/testing-user-stories/testing-user-story-21-login-username-feedback-1.png.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-21-login-username-feedback-1.png">
 </details>
 <details>
 <summary>Feature - Login password validation</summary>
