@@ -1489,7 +1489,7 @@ You can make a local clone of a repository via the following steps:
 - A tutorial on the use of Pythons next function was used for learning a new way of iterating the user names stored in the Google Sheets worksheet - [Pythons next() function](https://www.w3schools.com/python/ref_func_next.asp)
 - The gspread documentation was used to aide reading and writing data to the Google Sheet - [Gspread documentation](https://docs.gspread.org/en/latest/)
 - A tutorial on the use of the tabulate module for displaying table data from pyeng.io was used - [Tabulate](https://pyneng.readthedocs.io/en/latest/book/12_useful_modules/tabulate.html)
-- A tutorial on the use of getpass() was used to allow password input to be hidden. This article was from geeksforgeeks.org - [getpass()](https://www.geeksforgeeks.org/getpass-and-getuser-in-python-password-without-echo/#:~:text=The%20getpass()%20function%20is,the%20caller%20as%20a%20string.)
+- Documentation on the use of pwinput() was used to allow password input to be hidden. This article was from pypi.org - [pwinput](https://pypi.org/project/pwinput/)
 
 ### Code
 
