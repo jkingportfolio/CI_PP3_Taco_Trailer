@@ -754,8 +754,10 @@ def thank_you():
     title = 'Thanks for visiting!'
     print(pyfiglet.figlet_format(title))
     print('\nCreated by Jamie King'
-    '\n\nGitHub - https://github.com/jkingportfolio'
-    '\n\nLinkedIn - https://uk.linkedin.com/in/jamie-king-25938123\n\n')
+          '\n\nGitHub - '
+          'https://github.com/jkingportfolio'
+          '\n\nLinkedIn - '
+          'https://uk.linkedin.com/in/jamie-king-25938123\n\n')
 
 
 def quit_option(message='quit to the main menu',
