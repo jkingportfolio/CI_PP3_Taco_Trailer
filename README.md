@@ -928,23 +928,23 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 <details>
 <summary>Feature - Login</summary>
-<img src="/docs/images/testing/testing-user-stories/testing-user-story-3-login-1.png">
-<img src="/docs/images/testing/testing-user-stories/testing-user-story-3-login-2.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-3-login-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-3-login-2.png">
 </details>
 <details>
 <summary>Feature - Login User name validation</summary>
-<img src="/docs/images/testing/testing-user-stories/testing-user-story-3-login-username-validation-1.png">
-<img src="/docs/images/testing/testing-user-stories/testing-user-story-3-login-username-validation-2.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-3-login-username-validation-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-3-login-username-validation-2.png">
 </details>
 <details>
 <summary>Feature - Login Password validation</summary>
-<img src="/docs/images/testing/testing-user-stories/testing-user-story-3-login-password-validation-1.png">
-<img src="/docs/images/testing/testing-user-stories/testing-user-story-3-login-password-validation-2.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-3-login-password-validation-1.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-3-login-password-validation-2.png">
 </details>
 <details>
 <summary>Feature - Log out</summary>
 <img src="/docs/images/testing/testing-user-stories/testing-user-story-3-logout-validation-1.png">
-<img src="/docs/images/testing/testing-user-stories/testing-user-story-3-logout-validation-2.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-3-logout-validation-2.png">
 </details>
 
 </details>
