@@ -1,5 +1,5 @@
 """
-Unit testing for valia and invalid password
+Unit testing for valid and invalid password
 """
 import unittest
 import taco_trailer_command_line as ttcl
