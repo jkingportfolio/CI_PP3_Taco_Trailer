@@ -1,4 +1,5 @@
 from termcolor import colored
+from time import sleep
 from google_sheet import *
 from taco_trailer_command_line import clear_screen
 
