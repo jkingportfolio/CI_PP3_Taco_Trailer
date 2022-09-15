@@ -781,9 +781,9 @@ The hidden password input feature is used to replace the characters entered by t
 
 - Covered in user story: 22
 
-#### Change password auto log out 
+#### Change password cancellation 
 
-The change password auto log out feature is used to log a user out if when trying to change password invalid entry of the current password occurs. This will provide a level of security for users who may leave a logged in account un attended.
+The change password cancellation feature is used to cancel a password change when invalid entry of the current password occurs. This will provide a level of security for users who may leave a logged in account un attended.
 
 <details>
 <summary>Security log out image</summary>
@@ -1352,7 +1352,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
 | Hidden password input     |  User to attempt to log in as per process and enter password which will display '*' in place of entered characters  | Password character to replaced with '*' to hide user password input     | Works as expected |
-| Change password auto log out |User to log in as per process and select change password option from the members area. User to incorrectly enter their current password when prompted to do so | Upon 3rd incorrect password guess, user to be logged out and returned to the welcome page | Works as expected |
+| Change password cancellation |User to log in as per process and select change password option from the members area. User to incorrectly enter their current password when prompted to do so | Upon 3rd incorrect password guess, user password change to be cancelled and user to be returned to the member area | Works as expected |
 
 <details>
 <summary>Screenshots User Story 22</summary>
@@ -1362,7 +1362,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 <img src="docs/images/testing/testing-user-stories/testing-user-story-22-hidden-password-1.png">
 </details>
 <details>
-<summary>Feature - Change password auto log out</summary>
+<summary>Feature - Change password cancellation</summary>
 <img src="docs/images/testing/testing-user-stories/testing-user-story-22-change-password-log-out-1.png">
 <img src="docs/images/testing/testing-user-stories/testing-user-story-22-change-password-log-out-2.png">
 <img src="docs/images/testing/testing-user-stories/testing-user-story-22-change-password-log-out-3.png">
