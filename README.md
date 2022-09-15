@@ -1252,7 +1252,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 </details>
 
-20. As the site owner, I would want orders to be saved to a google sheets file.
+20. As the site owner, I would want orders to be saved to a Google Sheets file.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
