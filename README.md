@@ -1273,25 +1273,15 @@ Due to the sheet amount of images required to cover all please see this user sto
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
 | Welcome message invalid feedback     |  Enter an invalid option at the Welcome screen  | User to be provided with feedback stating that the entered input was invalid     |Works as expected  |
-
 | Login user name validation     |  Follow the process to begin member log in. When prompted to enter user name enter an invalid input  |  User to be provided with feedback stating that the entered input was invalid    |Works as expected  |
-
 | Login password validation     | Follow the process to begin member log in and enter user name, when prompted to enter password, enter an invalid input   |  User to be provided with feedback stating that the entered input was invalid    | Works as expected |
-
 | Member password update warning     |  Follow the process to begin member log in to the members area and change password. View feedback message  | Upon successful password change, user will be displayed warning that password change will only take effect upon restart of the app     | Works as expected |
-
 | Username validation    | Follow process to begin creating an account. When prompted to enter a user name, enter a user name   | User to be provided with feedback stating that the entered input was invalid as that user name is already in use or that the user name is valid and created      |Works as expected  |
-
 | Password creation validation     |  Follow process to begin creating an account and enter a valid user name, when prompted enter a password followed by re entry of the password  | User to be provided with feedback stating that the entered input was valid and that re entry of the password was also valid. else user to be provided with feedback stating that the user input was invalid as password criteria was not met or that the re entry of the password did not meet password intially enter | Works as expected |
-
 | First / surname validation     | Follow process to begin creating an account. When prompted enter a first name then when prompted to enter a surname enter a surname.  |  User to be provided with feedback stating that the entered input was valid for first name and then for full name provided. Otherwise user to be provided with feedback stating that the user input was invalid as either first name or surname did not pass validation  | Works as expected |
-
 | House number / Street name validation     |  Follow process to begin creating an account. Enter a first and surname. When prompted to enter a House number then enter a street name.  |  User to be provided with feedback stating that the entered input was valid for house number and then for full address provided. Otherwise user to be provided with feedback stating that the user input was invalid as either house number or street name did not pass validation | Works as expected |
-
 | Delivery type option     | Follow process to log in / continue as guest and enter all valid inputs required to arrive at the delivery page. Enter input to select the delivery type.   | User to be provided with feedback stating that the entered input was valid for delivery type. Otherwise user to be provided with feedback stating that the user input was invalid  | Works as expected |
-
 | Invalid item     | Follow process to log in / continue as guest, select delivery type and view menu. From the menu enter user input to add and item to the order   | User to be provided with feedback stating there was an error in their recent entry an that the user input does not exist    |Works as expected  |
-
 | Empty basket     | Follow process to log in / continue as guest, select delivery type and view menu. From the menu enter user input to remove an item from the order   |  User to be provided with feedback stating there was an error due to their basket being empty therefore the last item cannot be removed   |Works as expected |
 
 
