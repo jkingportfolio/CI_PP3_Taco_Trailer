@@ -170,7 +170,7 @@ Those pieces of data are:
 
 All forms of data use validation in which if data entered does not meet the requirements will display a warning message to the user. Once all data has been succcessfully entered the user will then be directed to the menu in which they can then make selections via keyboard input (please refer to Menu section of manual for further details).
 
-##### Return to main menu
+##### Return to welcome page
 Operation: User keyboard input. Selecting the return to main menu option will give users the opportunity to be redirect users back to the Welcome page.
 
 #### Login
