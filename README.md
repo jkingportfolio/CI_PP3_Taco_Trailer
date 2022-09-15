@@ -268,7 +268,7 @@ A flowchart was created during the design process to help identify functions tha
 This project uses Object Orientated Programming to interact and manipulate the following:
 
 - Classes - This project uses two classes. The first class called 'User' is used to create an instance of a new user based on inputs and append the details to a Google Sheets file. The second class called 'Order' is used to create an instance of an order based on inputs and then display the receipt of the order and append the order details to a Google Sheets file.
-- Lists and dictionaries - This project uses list and dictionaries to aid the storage of data from the Google Sheets file to variables and vice versa. Using list comprehension dictionaries are used to validate if a new user name is not already, the user input for ordering an item exists and to store/view order records.
+- Lists and dictionaries - This project uses list and dictionaries to aid the storage of data from the Google Sheets file to variables and vice versa. Using list comprehension dictionaries are used to validate if a new user name is not already in use, the user input for ordering an item exists and to store/view order records.
 - Google Sheets API - Google Sheets was used in this project to store all required data outwidth the container and provide a level of security in user name and passwords.
 
 ## Technologies Used
@@ -813,7 +813,7 @@ In the future as my skills grow I would like to implement the following features
 
 ## Python Validation
 
-[PEP-8 Validation](http://pep8online.com/) was used to validate the Python code used in the app. <>
+[PEP-8 Validation](http://pep8online.com/) was used to validate the Python code used in the app.
 
 <details>
 <summary>Python file - run.py</summary>
