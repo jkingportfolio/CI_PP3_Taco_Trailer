@@ -867,7 +867,7 @@ To avoid unnecessary repitition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|  All listed features in the Features section provide the user with feedback based on user input  | At the opportunity to enter user input as prompted to do so  | User to be provided with positive and negative feedback based on user input    | Works as expected |
+|  All listed features in the Features section provide the user with feedback based on user input  | As prompted, enter user input  | User to be provided with positive and negative feedback based on user input    | Works as expected |
 
 Due to the sheet amount of images required to cover all please see this user story in action via the extensive amount of images within the rest of the Manual Testing images.
 
