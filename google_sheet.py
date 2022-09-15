@@ -1,9 +1,9 @@
 """
 Google sheets module
 """
+from time import sleep
 from tabulate import tabulate
 from termcolor import colored
-from time import sleep
 import pyfiglet
 import gspread
 import pwinput
