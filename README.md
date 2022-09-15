@@ -1351,8 +1351,8 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Hidden password input     |    |      | Works as expected |
-| Change password auto log out | | | Works as expected |
+| Hidden password input     |  User to attempt to log in as per process and enter password which will display '*' in place of entered characters  | Password character to replaced with '*' to hide user password input     | Works as expected |
+| Change password auto log out |User to log in as per process and select change password option from the members area. User to incorrectly enter their current password when prompted to do so | Upon 3rd incorrect password guess, user to be logged out and returned to the welcome page | Works as expected |
 
 <details>
 <summary>Screenshots User Story 22</summary>
