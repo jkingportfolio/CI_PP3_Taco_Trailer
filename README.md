@@ -286,15 +286,15 @@ This project uses Object Orientated Programming to interact and manipulate the f
 - Heroku Platform - Used to deploy the live project.
 - PEP8 - Used to validate code against Python conventions.
 
-### Libraries
+## Libraries
 
-## Python Libraries
+### Python Libraries
 
 - os - Used to determine operating system and clear CLI.
 - time - Used to create a delay effect.
 - datetime - Used to get current time stamp and assign times to orders.
 
-## Third Party Libraries
+### Third Party Libraries
 
 - tabulate - JUSTIFICATION: I used this library to output lists and dictionaries in a table format enhancing user experience and overall readability.
 - termcolor - JUSTIFICATION: I used this library to give colour to user feedback and instructions
