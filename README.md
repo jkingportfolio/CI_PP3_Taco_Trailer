@@ -867,7 +867,7 @@ To avoid unnecessary repitition of images, only the feature being referred to wi
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|  All listed features in the Features provide the user with feedback based on user input  | Enter user input across the app  | User to be provided with positive and negative feedback based on user input    | Works as expected |
+|  All listed features in the Features section provide the user with feedback based on user input  | At the opportunity to enter user input as prompted to do so  | User to be provided with positive and negative feedback based on user input    | Works as expected |
 
 Due to the sheet amount of images required to cover all please see this user story in action via the extensive amount of images within the rest of the Manual Testing images.
 
@@ -876,11 +876,11 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Create Account  | Select the create account option from the main page  | Create account process will begin with prompting for details   | Works as expected |
+| Create Account  | From start up, select Y to navigate to the main page. At the main page via user inpit enter '2' to begin the create account process. when prompted to, enter the desired user name. | Upon entry of a user name the user will be presented with a notification to indicate that the user name has passed validation and has been created   | Works as expected |
 | Username Validation  | Navigate to the create account section. When prompted, enter desired user name  | Feedback to be displayed validating user name    | Works as expected |
-| Password Validation  | Navigate to the create account section, enter valid user name, when prompted to enter a valid password.   |  Feedback to be displayed validating password  | Works as expected |
-| First / Surname Validation  | Enter desired First & Surname when prompted  | Feedback to be displayed validating First name and Surname   | Works as expected |
-| House number / Street name Validation  | Enter desired House number & Street name when prompted  | Feedback to be displayed validating House number & Street Name   | Works as expected |
+| Password Validation  | Navigate to the create account section, enter a valid user name, when prompted to enter a password based on the password criteria provided.   |  Feedback to be displayed stating password entry was valid  | Works as expected |
+| First / Surname Validation  | Navigate to the create account section, enter a valid user name and password, when prompted to enter a first name, upon successful first name input enter a valid surname  | Feedback to be displayed validating First name and a seperate message to indicate Surname has been validated   | Works as expected |
+| House number / Street name Validation  | Navigate to the create account section, enter a valid user name, password, first and surname, when prompted to enter a House number which upon successful input enter a Street name when prompted to  | Feedback to be displayed validating House number and a seperate message to indicate Street name has been validated   | Works as expected |
 
 <details>
 <summary>Screenshots User Story 2</summary>
@@ -910,6 +910,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Feature - House number / Street name Validation</summary>
 <img src="docs/images/testing/testing-user-stories/testing-user-story-2-house-validation-1.png">
 <img src="docs/images/testing/testing-user-stories/testing-user-story-2-house-validation-2.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-2-house-validation-2.png">
 </details>
 
 </details>
@@ -918,10 +919,10 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Login | Navigate to the log in section and select log in | Log in screen to ask for credentials | Works as expected |
-| Login User name validation | To enter user name when prompted | Feedback to be displayed validating user name | Works as expected |
-| Login Password validation | To enter password when prompted | Feedback to be displayed validating password and account to log in |Works as expected  |
-| Log out | To select the log out option from the members or admin page | Prompt to user to confirm log out and then log out and return to Welcome page | Works as expected |
+| Login | From start up, select Y to navigate to the main page. At the log in section enter 1 to begin log in process | Log in screen to begin log in process and prompt user for their user name | Works as expected |
+| Login User name validation | Navigate to the log in section. When prompted, enter user name. | Feedback to be displayed validating user name | Works as expected |
+| Login Password validation | Navigate to the log in section. Enter username and when prompted, enter user password. | Feedback to be displayed validating user credentials are correct and user is logging in | Works as expected  |
+| Log out | Once logged in, from the Members area page enter Q to quit, select Y to confirm quit and log out | Feedback to be displayed validating user logging out | Works as expected |
 
 <details>
 <summary>Screenshots User Story 3</summary>
@@ -945,6 +946,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 <summary>Feature - Log out</summary>
 <img src="/docs/images/testing/testing-user-stories/testing-user-story-3-logout-validation-1.png">
 <img src="docs/images/testing/testing-user-stories/testing-user-story-3-logout-validation-2.png">
+<img src="docs/images/testing/testing-user-stories/testing-user-story-3-logout-validation-3.png">
 </details>
 
 </details>
@@ -953,8 +955,8 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Member change password  |  Navigate to the member change password | To be prompted to enter current password, once validated be prompted to enter new password and re enter to confirm | Works as expected  |
-| Member password update warning | Update password | Feedback to display warning message that password change will only occur on restarting the app |Works as expected  |
+| Member change password  |  When logged in press 2 to begin the change password function. Enter current password. Enter new password when prompted and upon successful password validation re enter password to change the password upon restart of the app | Upon successful password change user to be notified that the change was successful and will be usable upon restart of the app | Works as expected  |
+| Member password update warning | User to follow the procedure to change a password | Feedback to display warning message that password change will only occur on restarting the app |Works as expected  |
 
 <details>
 <summary>Screenshots User Story 4</summary>
@@ -978,9 +980,9 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Member delivery option  | Log in and create an order and select delivery type | To be prompted to enter delivery option    | Works as expected |
-| Delivery type option  | As a guest begin an order and after entering First name and surname choose delivery type  | Display delivery types and be able to pick from Delivery or Collection  |Works as expected  |
-| Collection option address  | Select collection as delivery option | App to auto populate the address as The Taco Trailer in the receipt    |Works as expected  |
+| Delivery type option (member)  | Follow procedure to log in as a user. From the members area select option 1 to begin an order. Enter desired order type by entering D for delivery or C for collection. | User to be prompted to enter if this order is for Delivery or Collection   | Works as expected |
+| Delivery type option (guest) | Navigate to the main page and enter 3 to continue as guest. Enter first and surname when prompted. Enter order type by entering D for delivery or C for collection  | Display delivery types and be able to pick from Delivery or Collection  |Works as expected  |
+| Collection option address  | As a member or guest follow process for logging in / providing valid data. From delivery type select 'Collection', add items to order and complete order to display the receipt | App to auto populate the address as The Taco Trailer in the receipt when collection has been selected   |Works as expected  |
 
 <details>
 <summary>Screenshots User Story 5</summary>
@@ -1005,7 +1007,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Member delivery option  | When choosing delivery type, select delivery but when prompted if current address is correct select no  | User to be prompted with entering house number and street name | Works as expected |
+| Member delivery option  | Follow process to log in as a member. Begin an order and when prompted to enter delivery as the choice, select no when prompted if this address is correct. Input new house number and street name as prompted to do so. | User to enter new house number and name to order delivery too | Works as expected |
 
 <details>
 <summary>Screenshots User Story 6</summary>
@@ -1025,7 +1027,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Menu  | Enter all user credentials to gain access to the menu  | Menu and options to be displayed to the user  | Works as expected |
+| Menu  | As a member log in as per typical process, select delivery type and view the menu which is displayed. As a guest enter data as prompted to for name and address, select delivery type and view the menu which is displayed  | Menu and options to be displayed to the user  | Works as expected |
 
 <details>
 <summary>Screenshots User Story 7</summary>
@@ -1042,7 +1044,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Add item to order  | From the menu page enter a valid number to add that item to the basket | Item to be added to the basket and feedback to be provided  |Works as expected |
+| Add item to order  | As a member / guest follow the process to log in / enter data, select delivery type and from the menu enter the desired item from the menu to add to the order | User input item to be validated and added to the basket with feedback being provided to the user  |Works as expected |
 
 <details>
 <summary>Screenshots User Story 8</summary>
@@ -1059,7 +1061,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Remove item  | From the menu page enter R  | Last added item to be removed from order and feedback provided to confirm this | Works as expected  |
+| Remove item  | As a member / guest follow the process to log in / enter data, select delivery type and from the menu enter 'R' to remove the last item added to the order  | User input to be validated and last added item to be removed from order with feedback being provided to the user | Works as expected  |
 
 <details>
 <summary>Screenshots User Story 9</summary>
@@ -1076,7 +1078,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Preview order | From the menu page enter P | Order preview to display all added items to the basket   | Works as expected |
+| Preview order | As a member / guest follow the process to log in / enter data, select delivery type and from the menu enter 'P' to preview the order displaying all items previously added | User to be provided with a table of currently selected items for order  | Works as expected |
 
 <details>
 <summary>Screenshots User Story 10</summary>
@@ -1093,7 +1095,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Cancel order  | From the menu page press Q  | Be prompted to confirm user would like to quit to Welcome page and cancel order  |Works as expected  |
+| Cancel order  | As a member / guest follow the process to log in / enter data, select delivery type and from the menu enter 'Q' to cancel the order. When prompted, confirm cancellation of order by selecting Y  | User to confirm quit which will cancel the order, remove all items from order list and return the user to the welcome page  |Works as expected  |
 
 <details>
 <summary>Screenshots User Story 11</summary>
@@ -1111,7 +1113,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Complete order  | From the menu page press X  | Be prompted to confirm if the user would like to complete the order or return to the menu   | Works as expected |
+| Complete order  | As a member / guest follow the process to log in / enter data, select delivery type and from the menu enter 'X' to complete the order. When prompted, confirm completion of the order by selecting Y  | User to confirm order completion which will display feedback to the user that the order is being processed.    | Works as expected |
 
 <details>
 <summary>Screenshots User Story 12</summary>
@@ -1130,7 +1132,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Display receipt  | Complete an order  | Upon order completion a formatted page of order summary will be shown   | Works as expected |
+| Display receipt  | As a member / guest follow the process to log in / enter data, select delivery type, add items to the order and from the menu enter 'X' to complete the order. View displayed Order receipt  | Upon order completion a formatted page of order summary will be displayed to the user   | Works as expected |
 
 <details>
 <summary>Screenshots User Story 13</summary>
@@ -1146,7 +1148,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|   Quit   |  Press Q at the receipt page  | App to exit upon user entering Q     |Works as expected  |
+|   Quit   |  Follow the process to complete an order, and from the Order Receipt display enter 'Q' to exit the app  | App to exit upon user entering Q and display and thank you message and the developers Social URLs     |Works as expected  |
 
 <details>
 <summary>Screenshots User Story 14</summary>
@@ -1165,7 +1167,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|  Welcome message    | Run the app   |  Welcome message to be displayed    |Works as expected  |
+|  Welcome message    | Run the app   |  Welcome message to be displayed to the user   |Works as expected  |
 
 <details>
 <summary>Screenshots User Story 15</summary>
@@ -1181,7 +1183,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|   Admin Dashboard   |  Login as Admin  | After successful Admin login, Admin will be displayed the Admin Dashboard     |Works as expected  |
+|   Admin Dashboard   |  From the landing page select 'Y', at the main page select '1' to log in. Enter user name as 'Admin' and the Admins password when prompted to.  | After successful Admin login, Admin will be displayed the Admin Dashboard     |Works as expected  |
 
 <details>
 <summary>Screenshots User Story 16</summary>
@@ -1203,7 +1205,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|  View order records   |  From the Admin Dashboard select the option to view order records  | Admin to be displayed with page stating how many records are available  |Works as expected  |
+|  View order records   |  Follow the process to log in as 'Admin'. From the Admin Dashboard, enter '1' to enter the Display order section. Enter a valid order entry to view the order data.  | Admin to be displayed with page stating how many records are available and to display order based on order number input provided by the Admin user  |Works as expected  |
 
 <details>
 <summary>Screenshots User Story 17</summary>
@@ -1221,7 +1223,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|   View pending orders   |    |      |Works as expected  |
+|   View pending orders   |  Follow the process to log in as 'Admin'. From the Admin Dashboard, enter '2' to enter the View pending orders section. View pending orders if there are any.  |   Admin user to be provided with a list of all pending orders in a table format if there are any pending orders and a message to state there are none if that is the case.   |Works as expected  |
 
 <details>
 <summary>Screenshots User Story 18</summary>
@@ -1234,11 +1236,11 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 </details>
 
-19. As the site owner, I would want the registered users information to be saved to a google sheets file.
+19. As the site owner, I would want the registered users information to be saved to a Google Sheets file.
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-|  Create account    |  From the Admin Dashboard select the option to view pending order  |   Admin to be displayed with page indicating all pending orders if there are any   |Works as expected  |
+|  Create account    |  Log into the Google Account used with this app and go to the Sheets section. Navigate to the 'Users' tab and view all created users  |   Admin to be displayed with Google Sheets worksheet with all created users and their data   |Works as expected  |
 
 <details>
 <summary>Screenshots User Story 19</summary>
@@ -1254,7 +1256,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Complete order receipt     |  Users input and complete orders  |  For each order submitted by a user, all information entered during this process will be appended to a google sheets worksheet    | Works as expected |
+| Complete order receipt     |  Log into the Google Account used with this app and go to the Sheets section. Navigate to the 'Sales' tab and view all created orders  |  For each order submitted by a user, all information entered during this process will be appended to a Google Sheets worksheet    | Works as expected |
 
 <details>
 <summary>Screenshots User Story 20</summary>
@@ -1270,7 +1272,7 @@ Due to the sheet amount of images required to cover all please see this user sto
 
 | Feature       | Action        | Expected Result  | Actual Result |
 | ------------- | ------------- | -------------    | ------------- |
-| Welcome message invalid feedback     |  User enters incorrect input  |      |Works as expected  |
+| Welcome message invalid feedback     |  Enter an invalid option at the Welcome screen  | User to be provided with feedback stating that the entered input was invalid     |Works as expected  |
 | Login username validation     |  User enters user name  |      |Works as expected  |
 | Login password validation     | User enters password   |      | Works as expected |
 | Member password update warning     |  Member to update password  | Upon successful password change, user will be displayed warning that password change will only take effect upon restart of the app     | Works as expected |
