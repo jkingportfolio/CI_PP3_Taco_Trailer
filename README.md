@@ -861,7 +861,7 @@ The website was tested on the following web browsers:
 
 #### Testing User Stories Users
 
-To avoid unnecessary repitition of images, only the feature being referred to will have screenshots. Information on how to navigate to the feature referred to will be described in detail within its relevant table reference. 
+To avoid unnecessary repitition of images, only the feature being referred to will have screenshots. Information on how to navigate to the feature referred to will be described within its relevant table reference. 
 
 1. As a user, I want to be provided with clear instructions throughout the app.
 
